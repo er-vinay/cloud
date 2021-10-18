@@ -1,5 +1,5 @@
----
+
 deployment:
   tasks:
     - export DEPLOYPATH=/home/fintechcloud/public_html/cloud/
-    - /bin/cp * $DEPLOYPATH
+    - /bin/cp -R * $DEPLOYPATH
