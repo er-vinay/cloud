@@ -25,9 +25,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 
 if ($_SERVER['HTTP_HOST']=='localhost') {
-	$config['base_url']    = ''.$_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].'/2021/new_lms/';
+    $config['base_url']    = ''.$_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].'/2021/cloud/';
 }else{
-    $config['base_url']    = ''.$_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].'/lms/';
+    $config['base_url']    = ''.$_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'];
 }
 
 /*
