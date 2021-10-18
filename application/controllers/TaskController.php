@@ -40,7 +40,7 @@
 
 		public function index($stage)
 		{
-			// echo "<pre>".$this->uri->segment(1);
+			echo "<pre>".$this->uri->segment(1); exit;
 	        $url = (base_url() . $this->uri->segment(1) ."/". $this->uri->segment(2));
 	        $totalCount = $this->Tasks->getLeadsCount($stage);
 	        $rowperpage = 10;
