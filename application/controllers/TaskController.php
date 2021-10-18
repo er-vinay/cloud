@@ -29,14 +29,14 @@
 	    	$login->index();
 		}
 	    
-	    public function index1($stage)
-	    {
-		    $conditions = "company_id='". company_id ."' AND product_id='". product_id ."' AND stage='". $stage ."'"; 
-	        $data['leadDetails'] = $this->Tasks->index($conditions); 
-	    	$user = $this->Admin->getUser(user_id);
-	    	$data['user'] = $user->row();
-        	$this->load->view('Tasks/GetLeadTaskList', $data);
-	    }
+	    // public function index1($stage)
+	    // {
+		   //  $conditions = "company_id='". company_id ."' AND product_id='". product_id ."' AND stage='". $stage ."'"; 
+	    //     $data['leadDetails'] = $this->Tasks->index($conditions); 
+	    // 	$user = $this->Admin->getUser(user_id);
+	    // 	$data['user'] = $user->row();
+     //    	$this->load->view('Tasks/GetLeadTaskList', $data);
+	    // }
 
 		public function index($stage)
 		{
