@@ -199,7 +199,7 @@
                                         <?php if(agent == 'CR1' || agent == 'CR2') { ?>
                                         <button class="btn btn-success lead-hold-button" onclick="holdLeadsRemark()">Hold</button>
                                         <?php } if(agent == 'CR1') { ?>
-                                        <button class="btn btn-success lead-hold-button" onclick="leadRecommend('<?= $leadDetails->lead_id ?>', '<?= user_id ?>', '<?= $leadDetails->customer_id ?>')">Recommend</button>
+                                        <button class="btn btn-success" id="LeadRecommend" onclick="leadRecommend('<?= $leadDetails->lead_id ?>', '<?= user_id ?>', '<?= $leadDetails->customer_id ?>')">Recommend</button>
                                         <?php } if(agent == 'CR2') { ?>
                                         <button class="btn btn-success lead-sanction-button" onclick="applicationRecommendation()" ?>Recommend</button>
                                         <?php } else if(agent == 'CR3'){ ?>
