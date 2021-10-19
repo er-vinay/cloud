@@ -465,11 +465,7 @@
             if(!empty($cibil_id))
             {
                 $result = $this->db->select('tbl_cibil.cibil_file')->where('cibil_id', $cibil_id)->get('tbl_cibil')->row();
-                
-                $data = [
-                    'customer_name' =>$result->customer_name,
-                    'cibil_file'    =>$result->cibil_file
-                    ];
+                $data = ['cibil_file' => $result->cibil_file];
                 return $data;
             }
         }
@@ -543,7 +539,6 @@
         {
             $data = $this->getCibilFile($cibil_id);
             $filename = $data['cibil_file'];
-            $customer_name = $data['customer_name'];
             
             // $pth    =   file_get_contents($filename);
             // $nme    =   $customer_name. "cibil_". todayDate .".pdf";
