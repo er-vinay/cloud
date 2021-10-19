@@ -6,7 +6,7 @@
         public function __construct()
         {
             parent::__construct();
-            $this->load->model('Task_Model');
+            $this->load->model('Task_Model', 'Tasks');
         }
 
         public function index()
@@ -14,14 +14,13 @@
             if ($this->input->server('REQUEST_METHOD') == 'POST') 
             {   
                 $lead_id = $this->input->post('lead_id');
-                $fetch = 'C.customer_id, C.first_name as name, C.middle_name, C.surname, C.mobile, C.dob, C.pancard, C.gender, LD.state_id, LD.city, LD.pincode, LD.check_cibil_status, LD.loan_amount';
+                $fetch = 'C.customer_id, C.first_name as name, C.middle_name, C.sur_name, C.mobile, C.dob, C.pancard, C.gender, LD.state_id, LD.city, LD.pincode, LD.check_cibil_status, LD.loan_amount';
                 $conditions = ['LD.lead_id' => $lead_id];
                 $table1 = 'leads LD';
                 $table2 = 'customer C';
                 $join2 = 'C.customer_id = LD.customer_id';
                 $query = $this->Tasks->join_two_table_with_where($conditions, $fetch, $table1, $table2, $join2);
                 $leadDetails = $query->row();
-                echo "if called : <pre>"; print_r($leadDetails); exit;
 
                 if($leadDetails->check_cibil_status == 0)
                 {
@@ -297,19 +296,8 @@
                             $data = [
                                     'lead_id'               => $lead_id,
                                     'customer_id'           => $customer_id,
-                                    'customer_name'         => $name,
-                                    'customer_mobile'       => $mobile,
-                                    'pancard'               => $pancard,
-                                    'loan_amount'           => $loanAmount,
-                                    'dob'                   => $dateOfBirth,
-                                    'gender'                => $gender,
-                                    'city'                  => $city,
-                                    'state_id'              => $state_id,
-                                    'state_id'              => $state_id,
-                                    'pincode'               => $pincode,
-                                    'api1_request'          => $input_xml,
-                                    'api1_response'         => $dataResponse,
                                     'applicationId'         => $ApplicationId,
+                                    'created_at'            => timestamp,
                                 ];
                             $this->db->insert('tbl_cibil', $data);
                             $this->getApplication($lead_id, $ApplicationId);
@@ -373,8 +361,6 @@
             $documentId = (string)$xx->ResponseInfo->DocumentDetails->DocumentMetaData->DocumentId;
             
             $data = [
-                    'api2_request'          => $xml2,
-                    'api2_response'         => $data2,
                     'document_Id'           => $documentId,
                 ];
                 
@@ -446,8 +432,6 @@
           $xml = simplexml_load_string( $result) or die("xml not loading");
             $cibilScore = $xml->body->table->tr[8]->td->table->tr->td[1];
             $data = [
-                'api3_request'          => $xml3,
-                'api3_response'         => $data3,
                 'cibil_file'            => $htmlResult,
                 'memberCode'            => $xml->body->table->tr[1]->td->table->tr[1]->td[0]->table->tr[1]->td[1],
                 'cibilScore'            => $cibilScore,

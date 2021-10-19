@@ -154,12 +154,12 @@
         });
     }
     
-    function ViewCibilStatement(lead_id)
+    function ViewCibilStatement(customer_id)
     {
         $.ajax({
             url : '<?= base_url("cibilStatement"); ?>',
             type : 'POST',
-            data : {lead_id : lead_id, csrf_token},
+            data : {customer_id : customer_id, csrf_token},
             dataType : "json",
             beforeSend: function() {
                 $("#cover").show();

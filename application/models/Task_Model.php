@@ -757,17 +757,8 @@
 		    return $data;
 		}
 		
-		public function ViewCivilStatement($lead_id)
+		public function ViewCivilStatement($customer_id)
 		{
-	        $array1 = ['LD.company_id' => company_id, 'LD.product_id' => product_id];
-	        $array2 = ['LD.lead_id' => $lead_id];
-	        $conditions = array_merge($array1, $array2);
-	        $select = 'LD.customer_id';
-	        $table = 'leads LD';
-			$sql = $this->select($conditions, $select, $table);
-			$leadDetails = $sql->row();
-			$customer_id = $leadDetails->customer_id;
-
 			$data = '<div class="table-responsive">
 		        <table class="table table-hover table-striped table-bordered" style="margin-top: 10px;">
                   <thead>
