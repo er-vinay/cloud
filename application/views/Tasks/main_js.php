@@ -165,7 +165,6 @@
                 $("#cover").show();
             },
             success : function(response){
-                $('#cibilStatement').html("");
                 $('#cibilStatement').html(response);
             },
             complete: function() {
