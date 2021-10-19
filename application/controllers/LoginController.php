@@ -34,7 +34,7 @@
 
 	    public function home($labels)
 	    {
-	    	if ($labels == "") {
+	    	if ($this->uri->segment(2) == "") {
 	    		$this->dashboard();
 	    	}
     		$labelname = $this->encrypt->decode($labels);
