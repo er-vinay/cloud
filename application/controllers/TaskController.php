@@ -135,14 +135,6 @@
    //      	$this->load->view('Tasks/GetLeadTaskList', $data);
 	  //   }
 	    
-	  //   public function leadRecommend()
-	  //   {
-	  //   	$data['recommend'] = $this->Tasks->recommend();
-	  //   	$user = $this->Admin->getUser(user_id);
-	  //   	$data['user'] = $user->row();
-   //      	$this->load->view('Tasks/recommend', $data);
-	  //   }
-	    
 	  //   public function leadSendBack()
 	  //   {
 	  //   	$data['sendBack'] = $this->Tasks->leadSendBack();
@@ -939,7 +931,7 @@
 	        }
         }
 
-		public function leadSendBack()
+		public function leadRecommend()
 		{
         	if($this->input->post('user_id') == ''){
         		$json['errSession'] = "Session Expired";
@@ -948,8 +940,8 @@
 			if(isset($_POST["lead_id"]))  
 			{
 				$lead_id = $this->input->post('lead_id');
-				$status = "APPLICATION-SEND-BACK";
-				$stage = "S11";
+				$status = "APPLICATION-NEW";
+				$stage = "S4";
 				$data = ['status' => $status, "stage" => $stage];
 				$data2 = [
 					'lead_id' 		=> $lead_id,
@@ -957,7 +949,7 @@
 					'user_id' 		=> $this->input->post('user_id'),
 					'status' 		=> $status, 
 					"stage" 		=> $stage, 
-					'remarks' 		=> "Head sommething found wrong.",
+					'remarks' 		=> "Leads Recommended.",
 					'created_on'	=> timestamp
 				];
 	        	$conditions = ['company_id' => company_id, 'product_id' => product_id, 'lead_id' => $lead_id];

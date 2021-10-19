@@ -718,7 +718,33 @@
         });
     }
 
-    function leadRecommendation()
+    function leadRecommend(lead_id, user_id, customer_id)
+    {
+        $.ajax({
+            url : '<?= base_url('leadRecommend') ?>',
+            type : 'POST',
+            dataType : "json",
+            data : {lead_id : lead_id, customer_id : customer_id, user_id : user_id, csrf_token},
+            beforeSend: function() {
+                $('#LeadRecommend').html('<span class="spinner-border spinner-border-sm mr-2" role="status"></span>Processing...').prop('disabled', true);
+            },
+            success : function(response){
+                if(response.errSession){
+                    window.location.href = "<?= base_url() ?>";
+                } else if(response.msg){
+                    catchSuccess(response.msg);
+                    history.back(1);
+                }else{
+                    catchError(response.err);
+                }
+            },
+            complete: function() {
+                $('#LeadRecommend').html('Recomend').prop('disabled', false);
+            },
+        });
+    }
+
+    function applicationRecommendation()
     {
         var FormData = $('#FormSaveCAM').serialize();
         
