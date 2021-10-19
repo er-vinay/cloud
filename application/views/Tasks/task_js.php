@@ -72,7 +72,7 @@
                                 </div>
                                 
                                 <div class="footer-support">
-                                    <h2 class="footer-support"><button type="button" class="btn btn-info collapse" data-toggle="collapse" data-target="#cibil_details" onclick="ViewCibilStatement('<?= $leadDetails->customer_id' ?>)">CREDIT BUREAU&nbsp;<i class="fa fa-angle-double-down"></i></button></h2>
+                                    <h2 class="footer-support"><button type="button" class="btn btn-info collapse" data-toggle="collapse" data-target="#cibil_details" onclick="ViewCibilStatement('<?= $leadDetails->customer_id ?>')">CREDIT BUREAU&nbsp;<i class="fa fa-angle-double-down"></i></button></h2>
                                 </div>
                                 <div id="bankStatement"></div>
                                 
