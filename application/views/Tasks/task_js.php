@@ -83,7 +83,7 @@
                                         || agent == "SA") : ?>
                                     <div id="btndivCheckCibil">
                                         <div id="checkCustomerCibil" style="background:#fff !important;">
-                                            <a href="#" class="btn btn-primary" id="btnCheckCibil" onclick="checkCustomerCibil()">Check CIBIL</a>
+                                            <button class="btn btn-primary" id="btnCheckCibil" onclick="checkCustomerCibil(<?= $leadDetails->lead_id ?>)">Check CIBIL</button>
                                         </div>
                                     </div>
                                     <?php endif; ?>

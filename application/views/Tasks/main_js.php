@@ -174,9 +174,8 @@
         });
     }
     
-	function checkCustomerCibil()
+	function checkCustomerCibil(lead_id)
 	{
-	    var lead_id = $('#lead_id').val();
 	    autoCheckCustomerCibil(lead_id);
 	}
 	
@@ -187,7 +186,7 @@
 	        $.ajax({
                 url : '<?= base_url("cibil") ?>',
                 type : 'POST',
-                data:{lead_id : lead_id, csrf_token},
+                data : {lead_id : lead_id, csrf_token},
                 dataType: 'json',
                 beforeSend: function() {
                     $('#checkCustomerCibil a').html('<span class="spinner-border spinner-border-sm" role="status"></span>Processing...').addClass('disabled');
