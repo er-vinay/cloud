@@ -450,9 +450,9 @@
         public function ViewCivilStatement()
         {
             $json = '';
-            if(!empty($_POST['lead_id']))
+            if(!empty($_POST['customer_id']))
             {
-                $json = $this->Task_Model->ViewCivilStatement($_POST['lead_id']);
+                $json = $this->Task_Model->ViewCivilStatement($_POST['customer_id']);
                 echo json_encode($json); 
             }else{
                 echo json_encode($json); 
