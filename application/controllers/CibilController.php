@@ -464,7 +464,7 @@
         {
             if(!empty($cibil_id))
             {
-                $result = $this->db->select('tbl_cibil.cibil_file, tbl_cibil.customer_name')->where('cibil_id', $cibil_id)->get('tbl_cibil')->row();
+                $result = $this->db->select('tbl_cibil.cibil_file')->where('cibil_id', $cibil_id)->get('tbl_cibil')->row();
                 
                 $data = [
                     'customer_name' =>$result->customer_name,
