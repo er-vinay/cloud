@@ -34,6 +34,9 @@
 
 	    public function home($labels)
 	    {
+	    	if ($labels == "") {
+	    		$this->dashboard();
+	    	}
     		$labelname = $this->encrypt->decode($labels);
         	$where = "company_id=".company_id." AND product_id=".product_id;
         	// $data['leadDetails'] = $this->Tasks->getleadsforSanction();
