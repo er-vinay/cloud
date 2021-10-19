@@ -444,8 +444,8 @@
             ];
             $this->db->where('lead_id', $lead_id)->update('leads', ['check_cibil_status'=> 1, 'cibil'=> $cibilScore]); 
             $this->db->where('lead_id', $lead_id)->update('tbl_cibil', $data); 
-            
-            echo json_encode('Cibil generated successfully.');
+            $json['msg'] = 'Cibil generated successfully.';
+            echo json_encode($json);
         }
         
         public function ViewCivilStatement()
