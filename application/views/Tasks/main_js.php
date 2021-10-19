@@ -167,7 +167,6 @@
             success : function(response){
                 $('#cibilStatement').html("");
                 $('#cibilStatement').html(response);
-                catchSuccess(response.msg);
             },
             complete: function() {
                 $("#cover").fadeOut(1750)
@@ -196,8 +195,8 @@
                     if(response.err){
                         catchError(response.err);
                     }else{
-                        catchSuccess(response);
-                        ViewCibilStatement(lead_id);
+                        ViewCibilStatement(response.customer_id);
+                        catchSuccess(response.msg);
                     }
                 },
                 complete: function() {
