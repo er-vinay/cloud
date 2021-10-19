@@ -414,12 +414,12 @@
             $data3 = curl_exec($ch3);
             $filename = base64_decode($data3);
             
-          $newFile = strstr($filename, "<?xml");
-          $file = substr($newFile, 0, strpos($newFile, "</html>"));
-          $file .= "</html>";
-          $htmlResult = preg_replace('/&(?!(quot|amp|pos|lt|gt);)/', '&amp;', $file);
-          
-          $result = mb_convert_encoding($htmlResult, 'UTF-16', 'UTF-8');
+            $newFile = strstr($filename, "<?xml");
+            $file = substr($newFile, 0, strpos($newFile, "</html>"));
+            $file .= "</html>";
+            $htmlResult = preg_replace('/&(?!(quot|amp|pos|lt|gt);)/', '&amp;', $file);
+            
+            $result = mb_convert_encoding($htmlResult, 'UTF-16', 'UTF-8');
             libxml_use_internal_errors(true);
             $xml = simplexml_load_string($result); //or simplexml_load_file
             
@@ -427,24 +427,27 @@
                 print_r($error);
             }
             
-          if (false === $result)
-          {
-              throw new Exception('Input string could not be converted.');
-          }
-          $xml = simplexml_load_string( $result) or die("xml not loading");
+            if (false === $result)
+            {
+                throw new Exception('Input string could not be converted.');
+            }
+            $xml = simplexml_load_string( $result) or die("xml not loading");
+            // echo "<pre>"; print_r($xml); exit;
             $cibilScore = $xml->body->table->tr[8]->td->table->tr->td[1];
             $data = [
+                'api3_request'          => $xml3,
+                'api3_response'         => $data3,
                 'cibil_file'            => $htmlResult,
                 'memberCode'            => $xml->body->table->tr[1]->td->table->tr[1]->td[0]->table->tr[1]->td[1],
-                'cibilScore'            => $cibilScore,
-                'totalAccount'        => strval($xml->body->table->tr[29]->td->table->tr[3]->td[1]->span[0]),
-                'totalBalance'        => strval($xml->body->table->tr[29]->td->table->tr[3]->td[2]->span[0]),
-                'overDueAccount'      => strval($xml->body->table->tr[29]->td->table->tr[4]->td[1]->span[0]),
-                'overDueAmount'       => strval($xml->body->table->tr[29]->td->table->tr[4]->td[3]->span[0]),
-                'zeroBalance'         => strval($xml->body->table->tr[29]->td->table->tr[5]->td[1]->span[0])
+                'cibilScore'            => ($cibilScore) ? $cibilScore : 0,
+                'totalAccount'          => strval($xml->body->table->tr[29]->td->table->tr[3]->td[1]->span[0]),
+                'totalBalance'          => strval($xml->body->table->tr[29]->td->table->tr[3]->td[2]->span[0]),
+                'overDueAccount'        => strval($xml->body->table->tr[29]->td->table->tr[4]->td[1]->span[0]),
+                'overDueAmount'         => strval($xml->body->table->tr[29]->td->table->tr[4]->td[3]->span[0]),
+                'zeroBalance'           => strval($xml->body->table->tr[29]->td->table->tr[5]->td[1]->span[0])
             ];
             $this->db->where('lead_id', $lead_id)->update('leads', ['check_cibil_status'=> 1, 'cibil'=> $cibilScore]); 
-            return $this->db->where('lead_id', $lead_id)->update('tbl_cibil', $data); 
+            $this->db->where($where)->where('lead_id', $lead_id)->update('tbl_cibil', $data); 
         }
         
         public function ViewCivilStatement()
