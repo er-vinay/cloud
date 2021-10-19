@@ -308,6 +308,10 @@
                         $json['err'] = "Lead Id is Required";
                         echo json_encode($json);
                     }
+                } else {
+                    $json['msg'] = "Recently cibil generated.";
+                    echo json_encode($json);
+                    return false;
                 }
             }
         }
@@ -360,11 +364,8 @@
             $xx=simplexml_load_string($xx);
             $documentId = (string)$xx->ResponseInfo->DocumentDetails->DocumentMetaData->DocumentId;
             
-            $data = [
-                    'document_Id'           => $documentId,
-                ];
+            $data = ['document_Id' => $documentId];
                 
-            // echo $lead_id. "api2 : "; print_r($data); exit;
             $this->db->where('lead_id', $lead_id)->update('tbl_cibil', $data);
             $this->getDocument($lead_id, $ApplicationId, $documentId);
         }
@@ -522,7 +523,6 @@
         public function checkpdf()
         {
             $result = $this->db->select('tbl_cibil.cibil_file, tbl_cibil.customer_name')->where('cibil_id', "1718")->get('tbl_cibil')->row();
-           //echo  $cibil_result = $result->cibil_file; exit;
             $mpdf = new \Mpdf\Mpdf();
             $html = $this->load->view('Tasks/cibilpdfview', $data, true);
             $mpdf->WriteHTML($html);
@@ -541,7 +541,6 @@
 
         public function viewDownloadCibilPDF($cibil_id)
         {
-            //echo "test"; exit;
             $data = $this->getCibilFile($cibil_id);
             $filename = $data['cibil_file'];
             $customer_name = $data['customer_name'];
@@ -560,7 +559,6 @@
           // $mpdf = new \Mpdf\Mpdf(['tempDir' => __DIR__ . '']);
           $mpdf->SetProtection(array());
          // $html = $this->load->view('pdf', $data, true);
-        // echo "<pre>"; print_r($html); echo "</pre>"; exit;
           $mpdf->WriteHTML($data);
           $mpdf->defaultfooterline = 1;
           $mpdf->Output();
@@ -605,7 +603,7 @@
                 // // $this->db->where('cibil_id', $cibil_id)->update('tbl_cibil');
                 
                 
-              echo "<pre>";print_r($xml->body->table->tr[1]->td->table->tr[1]->td[0]->table); exit;
+              // echo "<pre>";print_r($xml->body->table->tr[1]->td->table->tr[1]->td[0]->table); exit;
             } else {
                 exit('Failed to open readdata.xml.');
             }
