@@ -22,7 +22,8 @@
                 $query = $this->Tasks->join_two_table_with_where($conditions, $fetch, $table1, $table2, $join2);
                 $leadDetails = $query->row();
 
-                if($leadDetails->check_cibil_status == 0)
+                // if($leadDetails->check_cibil_status == 0)
+                if($leadDetails->check_cibil_status)
                 {
                     if(!empty($lead_id))
                     {
