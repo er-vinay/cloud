@@ -434,7 +434,7 @@
             $xml = simplexml_load_string( $result) or die("xml not loading");
             // echo "<pre>"; print_r($xml); exit;
             $cibilScore = $xml->body->table->tr[8]->td->table->tr->td[1];
-            $data = [
+            $data = [   
                 'cibil_file'            => $htmlResult,
                 'memberCode'            => $xml->body->table->tr[1]->td->table->tr[1]->td[0]->table->tr[1]->td[1],
                 'cibilScore'            => ($cibilScore) ? $cibilScore : 0,
@@ -445,7 +445,7 @@
                 'zeroBalance'           => strval($xml->body->table->tr[29]->td->table->tr[5]->td[1]->span[0])
             ];
             $this->db->where('lead_id', $lead_id)->update('leads', ['check_cibil_status'=> 1, 'cibil'=> $cibilScore]); 
-            $this->db->where($where)->where('lead_id', $lead_id)->update('tbl_cibil', $data); 
+            $this->db->where('lead_id', $lead_id)->update('tbl_cibil', $data); 
         }
         
         public function ViewCivilStatement()
