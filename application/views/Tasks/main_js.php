@@ -167,6 +167,7 @@
             success : function(response){
                 $('#cibilStatement').html("");
                 $('#cibilStatement').html(response);
+                catchSuccess(response.msg);
             },
             complete: function() {
                 $("#cover").fadeOut(1750)
