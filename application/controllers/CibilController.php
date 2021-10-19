@@ -435,8 +435,6 @@
             // echo "<pre>"; print_r($xml); exit;
             $cibilScore = $xml->body->table->tr[8]->td->table->tr->td[1];
             $data = [
-                'api3_request'          => $xml3,
-                'api3_response'         => $data3,
                 'cibil_file'            => $htmlResult,
                 'memberCode'            => $xml->body->table->tr[1]->td->table->tr[1]->td[0]->table->tr[1]->td[1],
                 'cibilScore'            => ($cibilScore) ? $cibilScore : 0,
