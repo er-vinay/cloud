@@ -77,7 +77,7 @@ if ($_SERVER['HTTP_HOST']=='localhost') {
 	$server = 'localhost';
 	$username = 'root';
 	$password = '';
-	$database = 'fintechc_lms';
+	$database = 'latest_lms';
 }else{
 	$server = 'localhost';
 	$username = 'fintechc_lms';

@@ -136,6 +136,14 @@ $route['allocateLeads'] = 'TaskController/allocateLeads';
 $route['applicationHold'] = 'TaskController/applicationHold';
 
 $route['saveVerification'] = 'LeadsController/add_action';
+$route['insertPersonal1'] = 'LeadsController/savepersonal1'; //insertPersonal4
+$route['insertPersonal4'] = 'LeadsController/insertPersonal4';
+$route['insertPersonal3'] = 'LeadsController/insertPersonal3';
+
+
+$route['saveapplocConfirmation'] = 'LeadsController/saveapplocConfirmation';//saveFVCData
+$route['saveFVCData'] = 'LeadsController/saveFVCData';//saveFVCData
+
 
 
 $route['duplicateTaskList'] = 'TaskController/duplicateTaskList';

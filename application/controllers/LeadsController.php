@@ -35,7 +35,44 @@ class LeadsController extends CI_Controller {
     // function for upding the varification table 
     public function add_action()
     {
+        //office_cpv_allocated_to
 
+       //echo "<pre>";print_r($_POST['data']);
+        date_default_timezone_set("Asia/Kolkata");
+        $currentdate = date('Y-m-d H:i:s');
+
+          $checklead_id=getLeadIdstatus('tbl_verification',$_POST['data']['lead_id']);
+       $table='collection';
+       if($checklead_id=='0')
+       {
+
+          $data = array(
+                'pan_verified'                       => $_POST['data']['PANverified'],
+                'bank_statement_verified'            => $_POST['data']['BankStatementSVerified'],
+                'init_office_email_verification'     => $_POST['data']['officeEmailVerification'],
+                'init_mobile_verification'           => $_POST['data']['initiateMobileVerification'],
+                'mobile_otp'                         =>$_POST['data']['enterOTPMobile'],
+                'init_residence_cpv'                 => $_POST['data']['residenceCPV'],
+                'init_office_cpv'                    => $_POST['data']['officeCPV'],
+                'residence_cpv_allocated_on'         =>$_POST['data']['residence_cpv_allocated_on'],
+                'office_cvp_allocated_on'            =>$_POST['data']['office_cvp_allocated_on'],
+                'lead_id '=>$_POST['data']['lead_id']
+            );
+            $table='tbl_verification';
+            $upd_id=$_POST['data']['lead_id'];
+            $colm='lead_id';
+           // $res = $this->Leadmod->globel_update($table,$data,$upd_id,$colm);
+             $res = $this->Leadmod->globel_inset($table,$data);
+
+            echo json_encode(['status' => TRUE]);
+
+
+
+       }
+       else
+       {
+
+      
 
             $data = array(
                 'pan_verified'                       => $_POST['data']['PANverified'],
@@ -45,8 +82,6 @@ class LeadsController extends CI_Controller {
                 'mobile_otp'                         =>$_POST['data']['enterOTPMobile'],
                 'init_residence_cpv'                 => $_POST['data']['residenceCPV'],
                 'init_office_cpv'                    => $_POST['data']['officeCPV'],
-                'residece_cpv_allocated_to'          =>$_POST['data']['residece_cpv_allocated_to'],
-                'office_cpv_allocated_to'            =>$_POST['data']['office_cpv_allocated_to'],
                 'residence_cpv_allocated_on'         =>$_POST['data']['residence_cpv_allocated_on'],
                 'office_cvp_allocated_on'            =>$_POST['data']['office_cvp_allocated_on']
             );
@@ -56,7 +91,7 @@ class LeadsController extends CI_Controller {
             $res = $this->Leadmod->globel_update($table,$data,$upd_id,$colm);
 
             echo json_encode(['status' => TRUE]);
-            
+            }
       }
 
       // function for save the data of personal tab1
@@ -183,6 +218,90 @@ class LeadsController extends CI_Controller {
         }
 
 
+// update Pproved Locatoin conformation
+ public function saveapplocConfirmation()
+    {
+       $checklead_id=getLeadIdstatus('collection',$_POST['data']['lead_id']);
+       
+       $table='collection';
+       if($checklead_id=='0')
+       {
+           $data = array(
+                'approvedLocCon_residenceSince'      => $_POST['data']['residence_since'],
+                'approvedLocCon_scmRemarks'          => $_POST['data']['scm_remarks'],
+                'approvedLocCon_leadId'              => $_POST['data']['lead_id'],
+                'approvedLocCon_by'                  => $_POST['data']['user_id'],
+                'company_id'                         =>$_POST['data']['company_id'],
+                'approvedLocCon_approvedStatus'      => $_POST['data']['status'],
+                'lead_id'                 => $_POST['data']['lead_id']
+            );
+           
+           
+          $res = $this->Leadmod->globel_inset($table,$data);
+
+        }
+        else
+        {
+               $data = array(
+                'approvedLocCon_residenceSince'      => $_POST['data']['residence_since'],
+                'approvedLocCon_scmRemarks'          => $_POST['data']['scm_remarks'],
+                'approvedLocCon_by'                  => $_POST['data']['user_id'],
+                'company_id'                         =>$_POST['data']['company_id'],
+                'approvedLocCon_approvedStatus'      => $_POST['data']['status'],
+               
+            );
+           
+            $upd_id=$_POST['data']['lead_id'];
+            $colm='lead_id';
+            $res = $this->Leadmod->globel_update($table,$data,$upd_id,$colm);
+        }
+
+            echo json_encode(['status' => TRUE]);
+            
+      }
+
+
+// Save Fields Varification Residence
+
+public function saveFVCData()
+    {
+       $checklead_id=getLeadIdstatus('collection',$_POST['data']['lead_id']);
+       $table='collection';
+       if($checklead_id=='0')
+       {
+           $data = array(
+                'fvr_fvr_residenceSince'  => $_POST['data']['residence_since'],
+                'fvr_allocatoTo'          => $_POST['data']['fvr_allocateTo'],
+                'fvr_leadId'              => $_POST['data']['lead_id'],
+                'fvr_user_id'             => $_POST['data']['user_id'],
+                'company_id'              =>$_POST['data']['company_id'],
+                'lead_id'                 => $_POST['data']['lead_id']
+                
+            );
+           
+           
+          $res = $this->Leadmod->globel_inset($table,$data);
+
+        }
+        else
+        {
+               $data = array(
+                'fvr_fvr_residenceSince'  => $_POST['data']['residence_since'],
+                'fvr_allocatoTo'          => $_POST['data']['fvr_allocateTo'],
+                'fvr_leadId'              => $_POST['data']['lead_id'],
+                'fvr_user_id'             => $_POST['data']['user_id'],
+                'company_id'              =>$_POST['data']['company_id'],
+                
+            );
+           
+            $upd_id=$_POST['data']['lead_id'];
+            $colm='lead_id';
+            $res = $this->Leadmod->globel_update($table,$data,$upd_id,$colm);
+        }
+
+            echo json_encode(['status' => TRUE]);
+            
+      }     
 
 
 }

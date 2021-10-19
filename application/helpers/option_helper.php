@@ -12,13 +12,27 @@ if ( ! function_exists('test_method'))
             $ci =& get_instance();
             $ci->load->database();
            // echo "SELECT *   FROM $table where lead_id='$id'   ";
-            $query = $ci->db->query("SELECT *   FROM $table where lead_id='$id'   ");
-            
-             if($query->num_rows() > 0){
-               return $query->result_array();
-              }else{
-               return "No";
-            }
+            $query = $ci->db->query("SELECT *   FROM $table where lead_id='$id' ");
+        // echo "======". $str = $ci->db->last_query(); //die;
+        //  echo "reult---".  $query->num_rows() ;
+//echo "=====".$query->num_rows(); //die;
+          //$query = $ci->db->get();
+          //echo "---->".$query->num_rows();
+
+$data = array();
+if($query !== FALSE && $query->num_rows() > 0){
+    $data = $query->result_array();
+}
+
+return $data;
+         
+          
+         // die;
+             //if($query->num_rows() > 0){
+             //  return $query->result_array();
+            //  }else{
+             //  return "No";
+           // }
         }
      }
 
@@ -43,10 +57,10 @@ if ( ! function_exists('test_method'))
       function getLeadIdstatus($table,$id){
           $ci =& get_instance();
           $ci->load->database();
-                          //   echo "SELECT count(*) as total from $table where lead_id='$id'  ";
+                        
           $query = $ci->db->query("SELECT count(*) as total from $table where lead_id='$id'  "); 
           
-            if($query->num_rows() > 0){
+           if($query->num_rows() > 0){
             foreach ($query->result_array() as $row)  {
                if($row['total']!='0')
                {
