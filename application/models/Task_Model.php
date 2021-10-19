@@ -760,7 +760,7 @@
 		public function ViewCivilStatement($customer_id)
 		{
 			$data = '<div class="table-responsive">
-		        <table class="table table-hover table-striped table-bordered" style="margin-top: 10px;">
+		        <table class="table table-hover table-striped table-bordered" data-order="[[ 0, "desc" ]]" style="margin-top: 10px;">
                   <thead>
                     <tr class="table-primary">
                       <th scope="col">Sr.&nbsp;No</th>
