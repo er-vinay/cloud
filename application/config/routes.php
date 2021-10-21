@@ -157,6 +157,7 @@ $route['PaydayLeadRecommendation'] = 'TaskController/PaydayLeadRecommendation';
 $route['leadRecommend'] = 'TaskController/leadRecommend';
 $route['leadSendBack'] = 'TaskController/leadSendBack';
 $route['leadDisbursed'] = 'TaskController/leadDisbursed';
+$route['scmConfRequest'] = 'TaskController/scmConfRequest';
 
 /////////////////////// PERSONAL ///////////////////////////////////////////////////
 

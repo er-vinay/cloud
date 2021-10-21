@@ -159,6 +159,59 @@
    //      	$this->load->view('Tasks/leadDisbursed', $data);
 	  //   }
 	    
+	    public function scmConfRequest()
+	    {
+	    	if($this->input->post('user_id') == '')
+	    	{
+	    		$json['err'] = 'Session Expired.';
+	    		echo json_encode($json);
+	    		return false;
+	    	}
+
+			if ($this->input->server('REQUEST_METHOD') == 'POST') 
+		    {
+        		$this->form_validation->set_rules('user_id', 'Session Expired', 'required|trim');
+        		$this->form_validation->set_rules('lead_id', 'Lead ID', 'required|trim');
+        		$this->form_validation->set_rules('customer_id', 'Customer ID', 'required|trim');
+
+	        	if($this->form_validation->run() == FALSE) {
+	        		$json['err'] = validation_errors();
+		            echo json_encode($json);
+		            return false;
+	        	} else {
+			        $where = ['company_id' => company_id, 'product_id' => product_id];
+			        $lead_id = $this->input->post('lead_id');
+			        $customer_id = $this->input->post('customer_id');
+
+			        echo "else called : <pre>"; print_r($_POST); exit;
+
+			        $data1 = [
+			            'status'            => $status,
+			            'stage'            	=> $stage,
+			        ];
+			        $data2 = [
+			            'lead_id'  			=> $lead_id, 
+			            'customer_id'  		=> $this->input->post('customer_id'), 
+			            'user_id'       	=> $this->input->post('user_id'),
+			            'status'            => $status,
+			            'stage'            	=> $stage,
+			            'remarks'   		=> $this->input->post('hold_remark'),
+			            'scheduled_date'    => date('d-m-Y h:i:sa' ,strtotime($this->input->post('hold_date'))),
+			            'created_on'    	=> timestamp,
+			        ];
+			        
+			        $conditions = ['lead_id' => $lead_id];
+		            $this->Tasks->updateLeads($conditions, $data1, 'leads');  
+		            $this->Tasks->insert($data2, 'lead_followup');  
+			        $data['msg'] = 'Application Hold Successfuly.';
+			        echo json_encode($data);
+			    }
+			} else {
+	    		$json['err'] = 'Invalid Request.';
+	    		echo json_encode($json);
+			}
+	    }
+	    
 	    public function getLeadDisbursed1()
 	    {
 	        $limit = $this->input->post('limit');
@@ -1352,7 +1405,6 @@
 
 		public function insertPersonal()
 		{
-			// echo "<pre>"; print_r($_POST); exit;
 			if($this->input->post('user_id') == ""){
 				return redirect(base_url(), 'refresh');
 			}
@@ -1367,8 +1419,7 @@
         		$this->form_validation->set_rules('dob', 'DOB', 'required|trim');
         		$this->form_validation->set_rules('pancard', 'Pancard', 'required|trim');
         		$this->form_validation->set_rules('mobile', 'Mobile', 'required|trim');
-        		$this->form_validation->set_rules('alternate_mobile', 'Alternate Mobile', 'required|trim');
-        		$this->form_validation->set_rules('email', 'Alternate Email', 'required|trim');
+        		$this->form_validation->set_rules('email', 'Email', 'required|trim');
 
 				if($state == "" || $city == "" || $pincode == ""){
         			$this->form_validation->set_rules('state', 'State', 'required|trim');

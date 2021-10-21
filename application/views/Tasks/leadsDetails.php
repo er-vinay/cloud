@@ -27,13 +27,13 @@
                 <th>Loan Applied</th>
                 <td><?= ($leadDetails->loan_amount) ? round($leadDetails->loan_amount) :'-' ?></td>
                 <th>Loan Tenure</th>
-                <td><?= ($leadDetails->loan_amount) ? round($leadDetails->loan_amount) :'-' ?></td>
+                <td><?= ($leadDetails->tenure) ? round($leadDetails->tenure) :'-' ?></td>
             </tr>
             <tr>
                 <th>Loan Purpose</th>
-                <td><?= strtoupper($leadDetails->purpose) ?></td>
+                <td><?= ($leadDetails->purpose) ? strtoupper($leadDetails->purpose) : '-' ?></td>
                 <th>First Name</th>
-                <td><?= strtoupper($leadDetails->first_name) ?></td>
+                <td><?= ($leadDetails->first_name) ? strtoupper($leadDetails->first_name) : '-' ?></td>
             </tr>
             <tr>
                 <th>Middle Name</th>
@@ -98,15 +98,18 @@
                 <td><?= ($leadDetails->ip) ? $leadDetails->ip : $leadDetails->imei_no ?></td>
             </tr>
             <tr>
-                <th colspan="2"></th>
+                <th>IMEI No</th>
+                <td><?= ($leadDetails->imei_no) ? $leadDetails->imei_no :'-' ?></td>
                 <th>Status</th>
                 <td><?= ($leadDetails->status) ? $leadDetails->status :'-' ?></td>
             </tr>
             <tr>
                 <th colspan="4">
-                    <input type="checkbox" id="tnc1" name="t&c" class="lead-checkbox2"<?= ($leadDetails->term_and_condition == "YES") ? "checked" :'unchecked' ?> disabled>&nbsp;
+                    <input type="checkbox" id="tnc" name="tnc" class="lead-checkbox2"<?= ($leadDetails->term_and_condition == "YES") ? "checked" :'unchecked' ?> disabled>&nbsp;
                     I agree to Loanwalle's Terrms and Conditions and Privacy Policy and receive communication from Loanwalle via SMS, Email and Whatsapp.
                 </th>
             </tr>
         </table>
     </div>
+
+    shobhna@#$123

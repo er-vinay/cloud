@@ -274,11 +274,11 @@
                     endDate : new Date(),
                 });
 
-                $("#employedSince").datepicker({
+                $("#employedSince, #residenceSince").datepicker({
                     format: 'mm-yyyy',
                     todayHighlight: true,
                     autoclose: true,
-                    // startView: 2,
+                    startView: 2,
                     viewMode: "months", 
                     minViewMode: "months",
                     endDate : new Date()

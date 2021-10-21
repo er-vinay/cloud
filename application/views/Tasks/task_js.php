@@ -29,11 +29,11 @@
                             <?php if(agent == "CR1") { ?>
                             <li role="presentation" class="borderList"><a href="#ApplicationSaction" onclick="modifyLeadsDetails(<?= $leadDetails->lead_id ?>)" aria-controls="lead" role="tab" data-toggle="tab">Application</a></li>
                             <?php } if(agent == "CR2" || agent == "CR3"|| agent == "CO1" || agent == "AC1" || agent == "CA" || agent == "SA" || agent == "DS1" || $url == "search"){ ?>
-                            <li role="presentation" class="borderList"><a href="#DocumentSaction" aria-controls="Document" role="tab" data-toggle="tab">Documents</a></li>
                             
                             <li role="presentation" class="borderList"><a href="#PersonalDetailSaction" onclick="getPersonalDetails(<?= $leadDetails->lead_id ?>)" aria-controls="Personal" role="tab" data-toggle="tab">Personal</a></li>
 
                             <li role="banking" class="borderList"><a href="#BankingDetailSaction" onclick="getCustomerBanking('<?= $leadDetails->customer_id ?>')" aria-controls="Banking" role="tab" data-toggle="tab">Banking</a></li>
+                            <li role="presentation" class="borderList"><a href="#DocumentSaction" aria-controls="Document" role="tab" data-toggle="tab">Documents</a></li>
 
                             <li role="presentation" class="borderList"><a href="#Verification" aria-controls="Verification" role="tab" data-toggle="tab" >Verification</a></li> 
                             

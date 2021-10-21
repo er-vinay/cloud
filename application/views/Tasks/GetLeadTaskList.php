@@ -95,7 +95,7 @@
                                                                             </td>
                                                                             <td class="whitespace"><?= $row->customer_id; ?></td> 
                                                                             <td class="whitespace"><?= ($row->application_no) ? strtoupper($row->application_no) : "-" ?></td>
-                                                                            <td class="whitespace"><?= $row->customer_id; ?></td>
+                                                                            <td class="whitespace"><?= $row->loan_no; ?></td>
                                                                             <td class="whitespace"><?= strtoupper($row->first_name ." ". $row->middle_name ." ". $row->sur_name) ?></td>
                                                                             <td class="whitespace"><?= strtoupper($row->state) ?></td>
                                                                             <td class="whitespace"><?= strtoupper($row->city) ?></td>

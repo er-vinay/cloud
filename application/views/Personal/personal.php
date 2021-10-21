@@ -48,12 +48,12 @@
         </div>
 
         <div class="col-md-6">
-            <label class="labelField">Mobile Alternate &nbsp;<strong class="required_Fields">*</strong></label>
+            <label class="labelField">Mobile Alternate </label>
             <input type="text" class="form-control inputField" id="alternate_mobile" name="alternate_mobile" autocomplete="off">
         </div>
 
         <div class="col-md-6">
-            <label class="labelField">Email (Personal) </label>
+            <label class="labelField">Email (Personal) &nbsp;<strong class="required_Fields">*</strong></label>
             <input  type="text" class="form-control inputField" id="email" name="email" onchange="IsEmail(this)" autocomplete="off">
         </div>
 
@@ -115,11 +115,6 @@
             </div>
 
             <div class="col-md-6">
-                <label class="labelField">State</label>
-                <input type="text" class="form-control inputField" id="state1" name="state1" autocomplete="off">
-            </div>
-
-            <div class="col-md-6">
                 <label class="labelField">City <span class="required_Fields">*</span></label>
                 <input type="text" class="form-control inputField" id="city1" name="city1" autocomplete="off">
             </div>
@@ -127,6 +122,11 @@
             <div class="col-md-6">
                 <label class="labelField">Pincode <span class="required_Fields">*</span></label>
                 <input type="text" class="form-control inputField" id="pincode1" name="pincode1" autocomplete="off">
+            </div>
+
+            <div class="col-md-6">
+                <label class="labelField">State</label>
+                <input type="text" class="form-control inputField" id="state1" name="state1" autocomplete="off">
             </div>
 
             <div class="col-md-6">
@@ -141,7 +141,7 @@
 
             <div class="col-md-12">
                 <label class="labelField">Aadhar Address same as above </label>
-                <input type="checkbox" name="addharAddressSameasAbove" class="form-control inputField" id="addharAddressSameasAbove" value="YES" style="width: 2% !important;">
+                <input type="checkbox" name="addharAddressSameasAbove" class="form-control inputField" id="addharAddressSameasAbove" value="YES" style="width: 14px !important;">
             </div>
 
             <div class="col-md-12">
@@ -158,11 +158,6 @@
                 <label class="labelField">Landmark </label>
                 <input type="text" class="form-control inputField" id="landmark2" name="landmark2" autocomplete="off" style="width: 76% !important;">
             </div>
-            
-            <div class="col-md-6">
-                <label class="labelField">State</label>
-                <input type="text" class="form-control inputField" id="state2" name="state2" autocomplete="off">
-            </div>
 
             <div class="col-md-6">
                 <label class="labelField">City<span class="required_Fields">*</span></label>
@@ -172,6 +167,11 @@
             <div class="col-md-6">
                 <label class="labelField">Pincode<span class="required_Fields">*</span></label>
                 <input type="text" class="form-control inputField" id="pincode2" name="pincode2" autocomplete="off">
+            </div>
+            
+            <div class="col-md-6">
+                <label class="labelField">State</label>
+                <input type="text" class="form-control inputField" id="state2" name="state2" autocomplete="off">
             </div>
 
             <div class="col-md-6">
@@ -189,39 +189,39 @@
             </div>
             
             <div class="col-md-6">
-                <label class="labelField">Residing Since<span class="required_Fields">*</span></label>
+                <label class="labelField">Residing Since Required<span class="required_Fields">*</span></label>
                 <input type="text" class="form-control inputField" id="residenceSince" name="residenceSince" autocomplete="off">
             </div>
 
             <div class="col-md-6">
                 <label class="labelField"> SCM Confirmation Required</label>
-                <input type="checkbox" name="SCM_CONF_REQ" class="form-control inputField" id="SCM_CONF_REQ" style="width: 3% !important;">
-            </div>
-            
-            <div class="col-md-6">
-                <label class="labelField"> SCM Response</label>
-                <input type="text" class="form-control inputField" id="scmResponce" name="scmResponce" autocomplete="off">
+                <input type="checkbox" name="scm_conf_request" class="form-control inputField" id="scm_conf_request" onclick="scmConfRequest('<?= $leadDetails->lead_id ?>', '<?= $leadDetails->customer_id ?>', '<?= user_id ?>')" value="YES" style="width: 3% !important;margin: 0px;">
             </div>
 
             <div class="col-md-6">
                 <label class="labelField"> SCM Confirmation Initiated On</label>
-                <input type="text" class="form-control inputField" id="scmConfIntOn" name="scmConfIntOn" autocomplete="off">
+                <input type="text" class="form-control inputField" id="scm_conf_init" name="scm_conf_init" autocomplete="off" readonly>
+            </div>
+            
+            <div class="col-md-6">
+                <label class="labelField"> SCM Response</label>
+                <input type="text" class="form-control inputField" id="scmResponce" name="scmResponce" autocomplete="off" readonly>
             </div>
             
             <div class="col-md-6">
                 <label class="labelField"> SCM Response On</label>
-                <input type="text" class="form-control inputField" id="scmResponceOn" name="scmResponceOn" autocomplete="off">
+                <input type="text" class="form-control inputField" id="scmResponceOn" name="scmResponceOn" autocomplete="off" readonly>
             </div>
 
             <div class="col-md-12">
                 <label class="labelField"> SCM Remarks</label>
-                <input type="text" class="form-control inputField" id="scmRemarks" name="scmRemarks" autocomplete="off" style="width: 76% !important;">
+                <input type="text" class="form-control inputField" id="scmRemarks" name="scmRemarks" autocomplete="off" style="width: 76% !important;" readonly>
             </div>
         </form>
 
         <div class="col-md-6">        
             <label colspan='4' style="text-align: center;">
-            <button type="Submit" id="saveResidence" class="btn btn-success lead-sanction-button">Save </button> </label>
+            <button id="saveResidence" class="btn btn-success lead-sanction-button">Save </button> </label>
         </div>
         <?php } else { ?>
         <div id="viewResidenceDetails"></div>
@@ -351,44 +351,46 @@
                 <input type="hidden" name="product_id" id="product_id" value="<?= product_id ?>">
                 <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>" />
                 <div class="col-md-6">
-                    <label class="labelField">Reference</label>
+                    <label class="labelField">Reference - 1&nbsp;<span class="required_Fields">*</span></label>
                     <input type="text" class="form-control inputField" id="refrence1" name="refrence1" autocomplete="off">
                 </div>
                 
                 <div class="col-md-6">
-                    <label class="labelField">Reference</label>
+                    <label class="labelField">Reference - 2</label>
                     <input type="text" class="form-control inputField" id="refrence2" name="refrence2" autocomplete="off">
                 </div>
 
                 <div class="col-md-6">
                     <label class="labelField">Relation&nbsp;<span class="required_Fields">*</span></label>
                     <select class="form-control inputField" id="relation1" name="relation1" autocomplete="off">
-                        <option value="Parents">Parents</option>
-                        <option value="Relative">Relative</option>
-                        <option value="Friend">Friend</option>
-                        <option value="Colleague">Colleague</option>
-                        <option value="Other">Other</option>
+                        <option value="">SELECT</option>
+                        <option value="PARENTS">PARENTS</option>
+                        <option value="RELATIVE">RELATIVE</option>
+                        <option value="FRIEND">FRIEND</option>
+                        <option value="COLLEAGUE">COLLEAGUE</option>
+                        <option value="OTHER">OTHER</option>
                     </select>
                 </div>
                 
                 <div class="col-md-6">
-                    <label class="labelField">Relation&nbsp;<span class="required_Fields">*</span></label>
+                    <label class="labelField">Relation</label>
                     <select class="form-control inputField" id="relation2" name="relation2" autocomplete="off">
-                        <option value="Parents">Parents</option>
-                        <option value="Relative">Relative</option>
-                        <option value="Friend">Friend</option>
-                        <option value="Colleague">Colleague</option>
-                        <option value="Other">Other</option>
+                        <option value="">SELECT</option>
+                        <option value="PARENTS">PARENTS</option>
+                        <option value="RELATIVE">RELATIVE</option>
+                        <option value="FRIEND">FRIEND</option>
+                        <option value="COLLEAGUE">COLLEAGUE</option>
+                        <option value="OTHER">OTHER</option>
                     </select>
                 </div>
 
                 <div class="col-md-6">
-                    <label class="labelField">Reference Mobile&nbsp;<span class="required_Fields">*</span></label>
+                    <label class="labelField">Mobile&nbsp;<span class="required_Fields">*</span></label>
                     <input type="text" class="form-control inputField" id="refrence1mobile" name="refrence1mobile" autocomplete="off">
                 </div>
                 
                 <div class="col-md-6">
-                    <label class="labelField">Reference Mobile&nbsp;<span class="required_Fields">*</span></label>
+                    <label class="labelField">Mobile</label>
                     <input type="text" class="form-control inputField" id="refrence2mobile" name="refrence2mobile" autocomplete="off">
                 </div>
             </form>

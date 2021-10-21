@@ -1561,6 +1561,27 @@
             $("#bankA_C_No").focus();
         }
     }
+    
+    function scmConfRequest(lead_id, customer_id, user_id)
+    {
+        if($('#scm_conf_request').prop('checked'))
+        {
+            $.ajax({
+                url : '<?= base_url("scmConfRequest") ?>',
+                type : 'POST',
+                dataType : "json",
+                data : {lead_id : lead_id, customer_id : customer_id, user_id : user_id, csrf_token},
+                success : function(response){
+                    $('#eligible_foir_percentage').val(response.eligible_foir_percentage);
+                    $('#final_foir_percentage').val(response.final_foir_percentage);
+                    $('#eligible_loan').val(response.eligible_loan);
+                }
+            });
+            $('#scm_conf_init').val('<?= date('d-m-Y h:i:s', strtotime(timestamp)) ?>');
+        }else{
+            $('#scm_conf_init').val('');
+        }
+    }
 
     function UpdatePayment() 
     {
@@ -1828,6 +1849,7 @@
     $(document).ready(function(){
 		$("#savePersonal").on('click',function(e) {
             var FormData = $("#insertPersonal").serialize();
+            alert(FormData);
             $.ajax({
                 url : '<?= base_url("insertPersonal") ?>',
                 type : 'POST',
