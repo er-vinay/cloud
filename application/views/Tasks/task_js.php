@@ -143,7 +143,7 @@
 
                             <div role="tabpanel" class="tab-pane fade" id="Verification">
                                 <div id="divVerification">
-                                    <?php //$this->load->view('Verification/verification'); ?>
+                                    <?php $this->load->view('Verification/verification'); ?>
                                 </div>
                             </div>
 

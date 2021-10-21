@@ -1760,68 +1760,122 @@
                 }
             });
         });
-		
-		$("#insertVerification").on('submit', function(e) {
-			e.preventDefault();
-
-            if($('#initiateMobileVerification').is(':checked'))
-            {
-             var initiateMobileVerification='YES';
-            }
-            else 
-            { 
-                var initiateMobileVerification='NO';
-            }
-
-            if($('#residenceCPV').is(':checked'))
-            {
-             var residenceCPV='YES';
-            }
-            else 
-            { 
-                var residenceCPV='NO';
-            }
-
-            if($('#officeEmailVerification').is(':checked'))
-            {
-             var officeEmailVerification='YES';
-            }
-            else 
-            { 
-                var officeEmailVerification='NO';
-            }
-
-            if($('#officeCPV').is(':checked'))
-            {
-             var officeCPV='YES';
-            }
-            else 
-            { 
-                var officeCPV='NO';
-            }
-
-			
-            var params = {
-                PANverified			             :$("#PANverified").val(),
-                BankStatementSVerified	         :$("#BankStatementSVerified").val(),
-				enterOTPMobile			         :$("#enterOTPMobile").val(),
-                lead_id			                 :$("#lead_id").val(),
-                initiateMobileVerification		 :initiateMobileVerification,
-                residenceCPV		             :residenceCPV,
-                officeEmailVerification			 :officeEmailVerification,
-                officeCPV			             :officeCPV
-                
-			}
-
-            $.post('<?= base_url("saveVerification"); ?>', {
-                data: params,csrf_token
-    		}, function(data, status) {
-                setTimeout(function(){
-                    location.reload();
-                }, 2000);
-    		});     
-    	});	
     });	
+
+    $(document).ready(function(){
+		
+		$("#insertVerification").on('submit',function(e) {
+				e.preventDefault();
+                
+
+                if($('#initiateMobileVerification').is(':checked'))
+                {
+                 var initiateMobileVerification='YES';
+                }
+                else 
+                { 
+                    var initiateMobileVerification='NO';
+                }
+
+                if($('#residenceCPV').is(':checked'))
+                {
+                 var residenceCPV='YES';
+                }
+                else 
+                { 
+                    var residenceCPV='NO';
+                }
+
+                if($('#officeEmailVerification').is(':checked'))
+                {
+                 var officeEmailVerification='YES';
+                }
+                else 
+                { 
+                    var officeEmailVerification='NO';
+                }
+
+                if($('#officeCPV').is(':checked'))
+                {
+                 var officeCPV='YES';
+                }
+                else 
+                { 
+                    var officeCPV='NO';
+                }
+
+                //residenceCPVAllocatedTo
+
+				//office_cpv_allocated_to
+               var params = {
+                        PANverified			             :$("#PANverified").val(),
+                        BankStatementSVerified	         :$("#BankStatementSVerified").val(),
+						enterOTPMobile			         :$("#enterOTPMobile").val(),
+                        lead_id			                 :$("#lead_id").val(),
+                        initiateMobileVerification		 :initiateMobileVerification,
+                        residenceCPV		             :residenceCPV,
+                        officeEmailVerification			 :officeEmailVerification,
+                        officeCPV			             :officeCPV
+                        
+        			}
+
+     $.post('<?= base_url("saveVerification"); ?>', {
+		data: params,csrf_token
+		}, function(data, status) {
+            setTimeout(function(){
+                location.reload();
+            }, 2000);
+		});     
+	});	
+});	
+
+
+ function rejectalc(val)
+ {
+    var csrf_token = $("input[name=csrf_token]").val();
+               var params = {
+                        residence_since     :$("#residence_since").val(),
+                        scm_remarks         :$("#scm_remarks").val(),
+                        lead_id             :$("#lead_id").val(),
+                        user_id             :$("#user_id").val(),
+                        company_id          :$("#company_id").val(),
+                        status              :val
+                       
+                    }
+
+                 $.post('<?= base_url("saveapplocConfirmation"); ?>', {
+                    data: params,csrf_token
+                    }, function(data, status) {
+                        setTimeout(function(){
+                            location.reload();
+                        }, 2000);
+                    });     
+  
+}
+
+$("#savefvrData").click(function(){
+    
+
+    var csrf_token = $("input[name=csrf_token]").val();
+               var params = {
+                        residence_since     :$("#fvr_residenceSince").val(),
+                        fvr_allocateTo      :$("#fvr_allocateTo").val(),
+                        lead_id             :$("#lead_id").val(),
+                        user_id             :$("#user_id").val(),
+                        company_id          :$("#company_id").val(),
+                       
+                       
+                    }
+
+                 $.post('<?= base_url("saveFVCData"); ?>', {
+                    data: params,csrf_token
+                    }, function(data, status) {
+                        setTimeout(function(){
+                            location.reload();
+                        }, 2000);
+                    });     
+  
+});
     
 </script>
 <script> 
