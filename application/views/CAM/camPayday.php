@@ -168,15 +168,7 @@
 
                 <div class="col-md-6">
                     <label class="labelField">End Use&nbsp;<span class="required_Fields">*</span></label>
-                    <select class="form-control inputField" id="end_use" name="end_use" autocomplete="off">
-                        <option value="">SELECT</option>
-                        <option <?php if($leadDetails->purpose == "TRAVEL"){echo "selected";} ?>>TRAVEL</option>
-                        <option <?php if($leadDetails->purpose == "MEDICAL"){echo "selected";} ?>>MEDICAL</option>
-                        <option <?php if($leadDetails->purpose == "ACADEMICS"){echo "selected";} ?>>ACADEMICS</option>
-                        <option <?php if($leadDetails->purpose == "OBLIGATIONS"){echo "selected";} ?>>OBLIGATIONS</option>
-                        <option <?php if($leadDetails->purpose == "OCCASION"){echo "selected";} ?>>OCCASION</option>
-                        <option <?php if($leadDetails->purpose == "PURCHASE"){echo "selected";} ?>>PURCHASE</option>
-                    </select>
+                    <input type="text" class="form-control inputField" id="end_use" name="end_use" autocomplete="off" value="<?= (($leadDetails->purpose) ? $leadDetails->purpose : '-') ?>" readonly>
                 </div>
 
                 <div class="col-md-6">
