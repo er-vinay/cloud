@@ -454,7 +454,7 @@
 
 
 
-                $("#pincode, #yourPincode").keypress(function (e) {
+                $("#pincode, #pincode1, #pincode2, #pincode3, #yourPincode").keypress(function (e) {
 
                     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
 

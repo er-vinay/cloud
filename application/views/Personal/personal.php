@@ -100,7 +100,7 @@
             <input type="hidden" name="product_id" id="product_id" value="<?= product_id ?>">
             <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>" />
             <div class="col-md-12">
-                <label class="labelField">House/Flat/ Building No. <span class="required_Fields">*</span></label>
+                <label class="labelField">House/ Flat/ Building No. <span class="required_Fields">*</span></label>
                 <input type="text" class="form-control inputField" id="hfBulNo1" name="hfBulNo1" autocomplete="off" style="width: 76% !important;">
             </div>
 
@@ -115,28 +115,31 @@
             </div>
 
             <div class="col-md-6">
-                <label class="labelField">City <span class="required_Fields">*</span></label>
-                <input type="text" class="form-control inputField" id="city1" name="city1" autocomplete="off">
+                <label class="labelField">Pincode <span class="required_Fields">*</span></label>
+                <input type="text" class="form-control inputField" id="pincode1" name="pincode1" onchange="apiPincode(this, 1)" autocomplete="off">
             </div>
 
             <div class="col-md-6">
-                <label class="labelField">Pincode <span class="required_Fields">*</span></label>
-                <input type="text" class="form-control inputField" id="pincode1" name="pincode1" autocomplete="off">
+                <label class="labelField">City <span class="required_Fields">*</span></label>
+                <select class="form-control inputField" id="city1" name="city1" autocomplete="off">
+                </select>
+
             </div>
 
             <div class="col-md-6">
                 <label class="labelField">State</label>
-                <input type="text" class="form-control inputField" id="state1" name="state1" autocomplete="off">
+                <input type="text" class="form-control inputField" id="state1" name="state1" datalist autocomplete="off" readonly>
             </div>
 
             <div class="col-md-6">
                 <label class="labelField">District</label>
-                <input type="text" class="form-control inputField" id="district1" name="district1" autocomplete="off">
+                <select class="form-control inputField" id="district1" name="district1" autocomplete="off">
+                </select>
             </div>
 
             <div class="col-md-6">
                 <label class="labelField">Aadhar <span class="required_Fields">*</span></label>
-                <input type="text" class="form-control inputField" id="aadhar1" name="aadhar1" autocomplete="off">
+                <input type="text" class="form-control inputField" id="aadhar" name="aadhar" autocomplete="off">
             </div>
 
             <div class="col-md-12">
@@ -145,7 +148,7 @@
             </div>
 
             <div class="col-md-12">
-                <label class="labelField">House/Flat/ Building No. <span class="required_Fields">*</span></label>
+                <label class="labelField">House/ Flat/ Building No. <span class="required_Fields">*</span></label>
                 <input type="text" class="form-control inputField" id="hfBulNo2" name="hfBulNo2" autocomplete="off" style="width: 76% !important;">
             </div>
 
@@ -158,25 +161,28 @@
                 <label class="labelField">Landmark </label>
                 <input type="text" class="form-control inputField" id="landmark2" name="landmark2" autocomplete="off" style="width: 76% !important;">
             </div>
+            
+            <div class="col-md-6">
+                <label class="labelField">Pincode <span class="required_Fields">*</span></label>
+                <input type="text" class="form-control inputField" id="pincode2" name="pincode2" onchange="apiPincode(this, 2)" autocomplete="off">
+            </div>
 
             <div class="col-md-6">
-                <label class="labelField">City<span class="required_Fields">*</span></label>
-                <input type="text" class="form-control inputField" id="city2" name="city2" autocomplete="off">
+                <label class="labelField">City <span class="required_Fields">*</span></label>
+                <select class="form-control inputField" id="city2" name="city2" autocomplete="off">
+                </select>
+
             </div>
-            
-            <div class="col-md-6">
-                <label class="labelField">Pincode<span class="required_Fields">*</span></label>
-                <input type="text" class="form-control inputField" id="pincode2" name="pincode2" autocomplete="off">
-            </div>
-            
+
             <div class="col-md-6">
                 <label class="labelField">State</label>
-                <input type="text" class="form-control inputField" id="state2" name="state2" autocomplete="off">
+                <input type="text" class="form-control inputField" id="state2" name="state2" datalist autocomplete="off" readonly>
             </div>
 
             <div class="col-md-6">
                 <label class="labelField">District</label>
-                <input type="text" class="form-control inputField" id="district2" name="district2" autocomplete="off">
+                <select class="form-control inputField" id="district2" name="district2" autocomplete="off">
+                </select>
             </div>
 
             <div class="col-md-6">

@@ -119,11 +119,35 @@
 	    	$json['city'] = $cityArr->result();
         	echo json_encode($json);
 	    }
+
 		public function getState()
 	    {
 	    	$stateArr = $this->Tasks->getState();
 	    	$json['state'] = $stateArr->result();
         	echo json_encode($json);
+	    }
+	    
+		public function apiPincode($pincode)
+	    {
+	    	$url = 'https://api.postalpincode.in/pincode/'.$pincode;
+			$curl = curl_init();
+			curl_setopt_array($curl, array(
+			  CURLOPT_URL => $url,
+			  CURLOPT_RETURNTRANSFER => true,
+			  CURLOPT_ENCODING => '',
+			  CURLOPT_MAXREDIRS => 10,
+			  CURLOPT_TIMEOUT => 0,
+			  CURLOPT_FOLLOWLOCATION => true,
+			  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+			  CURLOPT_CUSTOMREQUEST => 'GET',
+			));
+
+			$response = curl_exec($curl);
+			curl_close($curl);
+			$result = json_decode($response);
+			$array = $result[0]->PostOffice;
+
+        	echo json_encode($array);
 	    }
 	    
 	  //   public function inProcess($stage)

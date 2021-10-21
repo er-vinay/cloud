@@ -11,6 +11,28 @@
 		}).css("float", 'left');
 </script>
 <script>
+    function apiPincode(pincode, count)
+    {
+        $.ajax({
+            url: "<?= base_url('apiPincode/'); ?>"+ $(pincode).val(),
+            type: "GET",
+            data : csrf_token,
+            dataType : "json",
+            success: function(response) {
+                $("#state"+ count).val(response[0].State);
+                $("#city"+ count).empty().append('<option value="">Select</option>');
+                $("#district"+ count).empty().append('<option value="">Select</option>');
+                $("#city"+ count).append('<option value="'+ response[0].Division +'">'+ response[0].Division +'</option>');
+                // $.each(response, function(index, myarr) { 
+                //     $("#city"+count).append('<option value="'+ myarr.Division +'">'+ myarr.Division +'</option>');
+                // });
+                $.each(response, function(index, myarr) {
+                    $("#district"+count).append('<option value="'+ myarr.Name +'">'+ myarr.Name +'</option>');
+                });
+            }
+        });
+    }
+
     $(function(){
         $('#checkDuplicateItem').click(function() {
             var checkList = [];

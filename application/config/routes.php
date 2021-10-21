@@ -78,6 +78,7 @@ $route['verifyotp'] = 'ForgetPasswordController/verifyotp';
 /////////////////////////// State City /////////////////////////////
 
 $route['getState'] = 'TaskController/getState';
+$route['apiPincode/(:num)'] = 'TaskController/apiPincode/$1';
 $route['getCity/(:num)'] = 'TaskController/getCity/$1';
 
 

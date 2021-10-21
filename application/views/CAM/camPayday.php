@@ -162,7 +162,7 @@
                 </div>
 
                 <div class="col-md-6">
-                    <label class="labelField">Borrower Age (years)</label>
+                    <label class="labelField">Age</label>
                     <input type="text" class="form-control inputField" id="borrower_age" name="borrower_age" value="-" autocomplete="off" readonly>
                 </div>
 
@@ -197,7 +197,7 @@
                 </div>
 
                 <div class="col-md-6">
-                    <label class="labelField">Eligible FOIR %</label>
+                    <label class="labelField">Eligible FOIR (%)</label>
                     <input type="number" class="form-control inputField" id="eligible_foir_percentage" name="eligible_foir_percentage" value="-" autocomplete="off" readonly>
                 </div>
 
@@ -217,12 +217,12 @@
                 </div>
 
                 <div class="col-md-6">
-                    <label class="labelField">Final FOIR %</label>
+                    <label class="labelField">Final FOIR (%)</label>
                     <input type="number" class="form-control inputField" id="final_foir_percentage" name="final_foir_percentage" value="-" autocomplete="off" readonly>
                 </div>
 
                 <div class="col-md-6">
-                    <label class="labelField">FOIR ENHANCED BY %</label>
+                    <label class="labelField">FOIR enhanced by (%)</label>
                     <input type="number" class="form-control inputField" id="foir_enhanced_by" name="foir_enhanced_by" value="-" autocomplete="off" readonly>
                 </div>
                 
@@ -247,7 +247,7 @@
                 </div>
 
                 <div class="col-md-6">
-                    <label class="labelField">GST @18.00 %</label>
+                    <label class="labelField">GST @18.00 (%)</label>
                     <input type="text" class="form-control inputField" id="adminFeeWithGST" name="adminFeeWithGST" value="0" autocomplete="off" readonly>
                 </div>
 
