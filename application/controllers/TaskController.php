@@ -1392,7 +1392,7 @@
 
 	    	$personalDetails = $this->Tasks->join_table($conditions, $fetch, $this->tbl_leads, $this->tbl_customer, $join2, $this->tbl_lead_followup, $join3, $tbl_users, $join3);
 	    	$data['personalDetails1'] = $personalDetails->row();
-			json_encode($data);
+			echo json_encode($data);
 		}
 
 		public function getResidenceDetails($lead_id)
