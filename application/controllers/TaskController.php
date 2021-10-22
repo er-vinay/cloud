@@ -130,7 +130,9 @@
 		public function apiPincode($pincode)
 	    {
 	    	$url = 'https://api.postalpincode.in/pincode/'.$pincode;
+
 			$curl = curl_init();
+
 			curl_setopt_array($curl, array(
 			  CURLOPT_URL => $url,
 			  CURLOPT_RETURNTRANSFER => true,
