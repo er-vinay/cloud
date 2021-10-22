@@ -1431,7 +1431,7 @@
 
 		public function getApplicationDetails($lead_id)
 		{
-	        $fetch = "LD.application_no, LD.lead_id, LD.user_type, LD.loan_amount, LD.tenure, LD.purpose, LD.obligations, LD.city, LD.state_id, LD.pincode, C.first_name, C.middle_name, C.sur_name, C.gender, C.dob, C.pancard, C.email, C.alternate_email, C.mobile, C.alternate_mobile, CE.salary_mode";
+	        $fetch = "LD.application_no, LD.lead_id, LD.user_type, LD.loan_amount, LD.tenure, LD.purpose, LD.obligations, LD.city, LD.state_id, LD.pincode, C.first_name, C.middle_name, C.sur_name, C.gender, C.dob, C.pancard, C.email, C.alternate_email, C.mobile, C.alternate_mobile, CE.monthly_income, CE.salary_mode";
 	        $conditions = ['LD.lead_id' => $lead_id];
 	        $join2 = 'C.customer_id = LD.customer_id';
 			$table3 = "customer_employment CE";
