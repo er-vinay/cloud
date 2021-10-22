@@ -1498,9 +1498,9 @@
 					$conditions2 = ['lead_id' => $lead_id];
 
 					$data2 = [
-	        			'loan_applied'		=> $this->input->post('loan_applied'),
-						'loan_tenure'		=> $this->input->post('loan_tenure'),
-						'loan_purpose'		=> $this->input->post('loan_purpose'),
+	        			'loan_amount'		=> $this->input->post('loan_applied'),
+						'tenure'			=> $this->input->post('loan_tenure'),
+						'purpose'			=> $this->input->post('loan_purpose'),
 						'customer_id' 		=> $this->input->post('customer_id'),
 						'state_id' 			=> $this->input->post('state'),
     					'city' 				=> $this->input->post('city'),
