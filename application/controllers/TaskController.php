@@ -732,7 +732,8 @@
 				$this->upload->initialize($config);
 				if(!$this->upload->do_upload('file_name'))
 				{ 
-					echo $this->upload->display_errors(); 
+		            $json['err'] = $this->upload->display_errors();
+		            echo json_encode($json);
 				}
 				else
 				{  
@@ -771,7 +772,8 @@
     		                'created_on'    => timestamp
     		            );
     		            $result = $this->Tasks->insert($data, 'docs');
-    		            echo $result;
+    		            $json['msg'] = 'Docs saved successfully.';
+    		            echo json_encode($json);
             		}else{
     		            // $data = array (
     		            //     'pwd'           => $password,
@@ -785,7 +787,8 @@
     		            
                   //       $where = ['company_id' => $company_id];
     		            // $this->db->where($where)->where('lead_id', $lead_id)->where('docs_id', $docs_id)->update('docs', $data);
-    		            echo "Required Custome ID and Lead ID";
+    		            $json['msg'] = 'Docs updated successfully.';
+    		            echo json_encode($json);
             		}
 				}   
 	        }

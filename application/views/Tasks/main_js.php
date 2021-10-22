@@ -1818,16 +1818,18 @@
                 cache:false,
                 async:false,
                 success : function(response) {
-                    if(response == "true"){
+                    if(response.errSession){
+                        window.location.href='<?= base_url("saveCustomerDocs") ?>';
+                    } else if(response.msg){
                         if($('#docs_id').val() != ""){
                             $('#docs_id').val('');
                         } 
-                        catchSuccess("Document Uploaded Successfully."); 
+                        catchSuccess(response.msg); 
                         $('#formUserDocsData').trigger("reset");
                         $('input[name="selectdocradio"]').attr('checked', false);
                         $('#docsform').hide();
                     }else{ 
-                        catchError(response);
+                        catchError(response.err);
                     }
                 }
             });
