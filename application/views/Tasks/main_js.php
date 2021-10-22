@@ -851,28 +851,28 @@
                 dataType : "json",
                 success : function(response){
                     var res = response['personalDetails1'];
-                    $("#first_name").val((res.first_name=='')?res.first_name:'-');
-                    $("#middle_name").val((res.middle_name=='')?res.middle_name:'-');
-                    $("#sur_name").val((res.sur_name=='')?res.sur_name:'-');
-                    $("#gender").val((res.gender=='')?res.gender:'-').prop("selected", "selected");
-                    $("#dob").val((res.dob=='')?res.dob:'-');
-                    $("#pancard").val((res.pancard=='')?res.pancard:'-');
-                    $("#mobile").val((res.mobile=='')?res.mobile:'-'); 
-                    $("#alternate_mobile").val((res.alternate_mobile=='')?res.alternate_mobile:'-');
-                    $("#email").val((res.email=='')?res.email:'-');
-                    $("#alternate_email").val((res.alternate_email=='')?res.alternate_email:'-');
-                    $("#screenedBy").val((res.screenedBy=='')?res.screenedBy:'-');
-                    $("#screenedOn").val((res.screenedOn=='')?res.screenedOn:'-');
+                    $("#first_name").val((res.first_name)?res.first_name:'-');
+                    $("#middle_name").val((res.middle_name)?res.middle_name:'-');
+                    $("#sur_name").val((res.sur_name)?res.sur_name:'-');
+                    $("#gender").val((res.gender)?res.gender:'-').prop("selected", "selected");
+                    $("#dob").val((res.dob)?res.dob:'-');
+                    $("#pancard").val((res.pancard)?res.pancard:'-');
+                    $("#mobile").val((res.mobile)?res.mobile:'-'); 
+                    $("#alternate_mobile").val((res.alternate_mobile)?res.alternate_mobile:'-');
+                    $("#email").val((res.email)?res.email:'-');
+                    $("#alternate_email").val((res.alternate_email)?res.alternate_email:'-');
+                    $("#screenedBy").val((res.screenedBy)?res.screenedBy:'-');
+                    $("#screenedOn").val((res.screenedOn)?res.screenedOn:'-');
 
 
                     var html = '<table class="table table-bordered table-striped">';
                         html += '<tbody>';
-                        html += '<tr><th>First&nbsp;Name</th><td>'+ res.first_name +'</td><th>Middle&nbsp;Name</th><td>'+ ((res.middle_name=='')?res.middle_name : '-') +'</td></tr>';
-                        html += '<tr><th>Surname</th><td>'+ ((res.sur_name=='')?res.sur_name : '-') +'</td><th>Gender</th><td>'+ ((res.gender=='')?res.gender : '-') +'</td></tr>';
-                        html += '<tr><th>DOB</th><td>'+ ((res.dob=='')?res.dob : '-') +'</td><th>PAN</th><td>'+ ((res.pancard=='')?res.pancard : '-') +'</td></tr>';
-                        html += '<tr><th>Mobile</th><td>'+ ((res.mobile=='')?res.mobile : '-') +'</td><th>Alternate&nbsp;Mobile</th><td>'+ ((res.alternate_mobile=='')?res.alternate_mobile : '-') +'</td></tr>';
-                        html += '<tr><th>Email&nbsp;Personal</th><td>'+ ((res.email=='')?res.email : '-') +'</td><th>Email&nbsp;Office</th><td>'+ ((res.alternate_email=='')?res.alternate_email : '-') +'</td></tr>';
-                        html += '<tr><th>Screened&nbsp;By</th><td>'+ ((res.screenedBy=='')?res.screenedBy : '-') +'</td><th>Screened&nbsp;On</th><td>'+ ((res.screenedOn=='')?res.screenedOn : '-') +'</td></tr>';
+                        html += '<tr><th>First&nbsp;Name</th><td>'+ res.first_name +'</td><th>Middle&nbsp;Name</th><td>'+ ((res.middle_name)?res.middle_name : '-') +'</td></tr>';
+                        html += '<tr><th>Surname</th><td>'+ ((res.sur_name)?res.sur_name : '-') +'</td><th>Gender</th><td>'+ ((res.gender)?res.gender : '-') +'</td></tr>';
+                        html += '<tr><th>DOB</th><td>'+ ((res.dob)?res.dob : '-') +'</td><th>PAN</th><td>'+ ((res.pancard)?res.pancard : '-') +'</td></tr>';
+                        html += '<tr><th>Mobile</th><td>'+ ((res.mobile)?res.mobile : '-') +'</td><th>Alternate&nbsp;Mobile</th><td>'+ ((res.alternate_mobile)?res.alternate_mobile : '-') +'</td></tr>';
+                        html += '<tr><th>Email&nbsp;Personal</th><td>'+ ((res.email)?res.email : '-') +'</td><th>Email&nbsp;Office</th><td>'+ ((res.alternate_email)?res.alternate_email : '-') +'</td></tr>';
+                        html += '<tr><th>Screened&nbsp;By</th><td>'+ ((res.screenedBy)?res.screenedBy : '-') +'</td><th>Screened&nbsp;On</th><td>'+ ((res.screenedOn)?res.screenedOn : '-') +'</td></tr>';
                         html += '</tbody>';
                         html += '</table>';
 
