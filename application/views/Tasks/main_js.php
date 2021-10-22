@@ -171,7 +171,6 @@
                 $("#cover").show();
             },
             success : function(response){
-                console.log(response);
                 var res = response['application'];
                 $('#borrower_type').val((res.user_type) ? res.user_type : '');
                 $('#pancard').val((res.pancard) ? res.pancard : '-');
@@ -517,8 +516,6 @@
 
     function editsCoustomerPayment(id, received_amount, refrence_no, discount, refund, date_of_recived)
     {
-        console.log(id);
-        // console.log();
         // $('#recovery_id').val(id);
         // $('#received_amount').val(received_amount);
         // $('#refrence_no').val(refrence_no);
@@ -735,7 +732,6 @@
             data : {lead_id : lead_id, customer_id : customer_id, user_id : user_id, csrf_token},
             dataType : "json",
             success : function(response){
-                console.log(response)
                 var html = '<table class="table table-bordered table-striped"><tbody>';  
                     html += '<tr><th class="thbg">Loan No.</th><td>'+ ((response.loan_status == 'DISBURSED') ? response.loan_no : "-") +'</td><th>Status</th><td>'+ ((response.status) ? response.status : '-') +'</td></tr>';
                     html += '<tr><th>Loan Amount</th><td>'+ ((response.loan_recommended) ? response.loan_recommended : '-') +'</td><th>Tenure as on date</th><td>'+ ((response.tenure) ? response.tenure : '-') +'</td></tr>';
@@ -755,7 +751,6 @@
 
     function deleteCoustomerPayment(id, user_id)
     {
-        console.log();
         $.ajax({
             url : '<?= base_url("deleteCoustomerPayment") ?>',
             type : 'POST',
@@ -1591,7 +1586,6 @@
             dataType : "json",
             data : camFormData,
             success : function(response){
-                console.log(response);
                 $('#tenure').val(response.tenure);
                 $('#admin_fee').val(response.admin_fee);
                 $('#repayment_amount').val(response.repayment_amount);
