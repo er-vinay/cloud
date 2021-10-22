@@ -38,13 +38,13 @@
                                                     <a  class="btn inner-page-box" id="allocate" style="background: #0d7ec0 !important;">Allocate</a> 
                                                     <?php } ?>
                                                     <div class="tb_search">
-                                                        <select class="form-control" id='selectRecord' onchange="location = this.value;">
+                                                        <!-- <select class="form-control" id='selectRecord' onchange="location = this.value;">
                                                             <option value="<?= $pageURL ?>/10">10</option>
                                                             <option value="<?= $pageURL ?>/20/-">20</option>
                                                             <option value="<?= $pageURL ?>/30/-">30</option>
                                                             <option value="<?= $pageURL ?>/40/-">40</option>
                                                             <option value="<?= $pageURL ?>/50/-">50</option>
-                                                        </select>
+                                                        </select> -->
                                                         <input type='text' class="form-control" id='txt_searchall' placeholder='Enter search text'>
                                                     </div>
                                                 </div>
