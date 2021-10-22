@@ -132,7 +132,7 @@
         window.location.href="<?= base_url('getleadDetails/'. $this->encrypt->encode($leadDetails->lead_id)) ?>";
     }
 
-    function modifyLeadsDetails(lead_id)
+    function getState(state_id)
     {
         $.ajax({
             url : '<?= base_url("getState") ?>',
@@ -147,8 +147,55 @@
                 $("#state").empty();
                 $("#state").append('<option value="">Select</option>');
                 $.each(response.state, function(index, myarr) { 
-                    $("#state").append('<option value="'+ myarr.state_id +'">'+ myarr.state +'</option>');
+                    var s = ""; 
+                    if(state_id == myarr.state_id){
+                        s = "Selected"; 
+                    }
+                    $("#state").append('<option value="'+ myarr.state_id +'" '+ s +'>'+ myarr.state +'</option>');
                 });
+            },
+            complete: function() {
+                $("#cover").fadeOut(1750)
+            }
+        });
+    }
+
+    function getApplicationDetails(lead_id)
+    {
+        $.ajax({
+            url : '<?= base_url("getApplicationDetails/") ?>'+ lead_id,
+            type : 'POST',
+            dataType : "json",
+            data : {csrf_token},
+            beforeSend: function() {
+                $("#cover").show();
+            },
+            success : function(response){
+                console.log(response);
+                var res = response['application'];
+                $('#borrower_type').val((res.user_type) ? res.user_type : '');
+                $('#pancard').val((res.pancard) ? res.pancard : '-');
+                $('#loan_applied').val((res.loan_amount) ? parseInt(res.loan_amount) : '-');
+                $('#loan_tenure').val((res.tenure) ? res.tenure : '-');
+                $('#loan_purpose').val((res.purpose) ? res.purpose : '-');
+                $('#first_name').val((res.first_name) ? res.first_name : '-');
+                $('#middle_name').val((res.middle_name) ? res.middle_name : '-');
+                $('#sur_name').val((res.sur_name) ? res.sur_name : '-');
+                $('#sur_name').val((res.sur_name) ? res.sur_name : '-');
+                $('#gender').val((res.gender) ? res.gender : '');
+                $('#dob').val((res.dob) ? res.dob : '-');
+                $('#salary_mode').val((res.salary_mode) ? res.salary_mode : '');
+                $('#monthly_income').val((res.monthly_income) ? parseInt(res.monthly_income) : '');
+                $('#obligations').val((res.obligations) ? parseInt(res.obligations) : '-');
+                $('#mobile').val((res.mobile) ? res.mobile : '-');
+                $('#alternate_mobile').val((res.alternate_mobile) ? res.alternate_mobile : '-');
+                $('#email').val((res.email) ? res.email : '-');
+                $('#alternate_email').val((res.alternate_email) ? res.alternate_email : '-');
+                $('#pincode').val((res.pincode) ? res.pincode : '-');
+                $("#city").empty().append('<option value="'+ res.city +'">'+ res.city +'</option>');
+                $('#state').val((res.state_id) ? res.state_id : '');
+
+                getState(res.state_id);
             },
             complete: function() {
                 $("#cover").fadeOut(1750)
@@ -1923,9 +1970,32 @@ $("#savefvrData").click(function(){
     }
 
     $(document).ready(function(){
-		$("#savePersonal").on('click',function(e) {
+		$("#saveApplication").on('click',function(e) {
+            var FormData = $("#insertApplication").serialize();
+            $.ajax({
+                url : '<?= base_url("insertApplication") ?>',
+                type : 'POST',
+                data : FormData,
+                dataType : "json",
+                beforeSend: function() {
+                    $('#saveApplication').html('<span class="spinner-border spinner-border-sm mr-2" role="status"></span>Processing...').prop('disabled', true);
+                },
+                success : function(response){
+                    if(response.msg){
+                        getPersonalDetails($('#lead_id').val());
+                        catchSuccess(response.msg);
+                    }else{
+                        catchError(response.err);
+                    }
+                },
+                complete: function() {
+                    $('#saveApplication').html('Save').prop('disabled', false);
+                },
+            });
+        });
+
+        $("#savePersonal").on('click',function(e) {
             var FormData = $("#insertPersonal").serialize();
-            alert(FormData);
             $.ajax({
                 url : '<?= base_url("insertPersonal") ?>',
                 type : 'POST',
@@ -2068,6 +2138,7 @@ $("#savefvrData").click(function(){
                 },
             });
         });
+
 
         $("#formUpdateReferenceNo").on('submit',function(e) {
             var FormData = $("#formUpdateReferenceNo").serialize();

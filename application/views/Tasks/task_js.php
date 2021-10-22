@@ -27,7 +27,7 @@
                             
                             <li role="presentation" class="borderList"><a href="#LeadSaction" onclick="getLeadsDetails(<?= $leadDetails->lead_id ?>)" aria-controls="lead" role="tab" data-toggle="tab">Lead</a></li>
                             <?php if(agent == "CR1") { ?>
-                            <li role="presentation" class="borderList"><a href="#ApplicationSaction" onclick="modifyLeadsDetails(<?= $leadDetails->lead_id ?>)" aria-controls="lead" role="tab" data-toggle="tab">Application</a></li>
+                            <li role="presentation" class="borderList"><a href="#ApplicationSaction" onclick="getApplicationDetails(<?= $leadDetails->lead_id ?>)" aria-controls="lead" role="tab" data-toggle="tab">Application</a></li>
                             <?php } if(agent == "CR2" || agent == "CR3"|| agent == "CO1" || agent == "AC1" || agent == "CA" || agent == "SA" || agent == "DS1" || $url == "search"){ ?>
                             
                             <li role="presentation" class="borderList"><a href="#PersonalDetailSaction" onclick="getPersonalDetails(<?= $leadDetails->lead_id ?>)" aria-controls="Personal" role="tab" data-toggle="tab">Personal</a></li>

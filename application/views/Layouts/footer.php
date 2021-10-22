@@ -500,20 +500,13 @@
 
                 });
 
-                $("#roi").keypress(function (e) {
-
-                    var val = $j(this).val();
-
+                $("#roi, #loan_applied, #loan_tenure, #obligations").keypress(function (e) {
+                    var val = $(this).val();
                     var regex = /^(\+|-)?(\d*\.?\d*)$/;
-
                     if (regex.test(val + String.fromCharCode(e.charCode))) {
-
                         return true;
-
                     }
-
                     return false;
-
                 });
 
 
@@ -522,7 +515,7 @@
 
 
 
-                $('#first_name, #middle_name, #sur_name, #gender, #pancard, #state, #city, #special_approval, #customer_name, #bankHolder_name').keyup(function(){
+                $('input[type=text]').keyup(function(){
 
                     $(this).val($(this).val().toUpperCase());
 

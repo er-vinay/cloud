@@ -1,11 +1,45 @@
 
-    <form id="insertPersonal" class="form-inline" method="post" enctype="multipart/form-data" style="margin: 10px;">
+    <form id="insertApplication" class="form-inline" method="post" enctype="multipart/form-data" style="margin: 10px;">
         <input type="hidden" name="lead_id" id="lead_id" value="<?php echo $leadDetails->lead_id; ?>" />
         <input type="hidden" name="customer_id" id="customer_id" value="<?php echo $leadDetails->customer_id; ?>" />
         <input type="hidden" name="user_id" id="user_id" value="<?= user_id ?>">
         <input type="hidden" name="company_id" id="company_id" value="<?= company_id ?>">
         <input type="hidden" name="product_id" id="product_id" value="<?= product_id ?>">
         <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>" />
+
+        <div class="col-md-6">
+            <label class="labelField">Borrower Type&nbsp;<strong class="required_Fields">*</strong></label>
+            <select class="form-control inputField" id="borrower_type" name="borrower_type" autocomplete="off">
+                <option value="">SELECT</option>
+                <option value="NEW">NEW</option>
+                <option value="REPEAT">REPEAT</option>
+            </select>
+        </div>
+
+        <div class="col-md-6">
+            <label class="labelField">PAN&nbsp;<strong class="required_Fields">*</strong></label>
+            <input type="text" class="form-control inputField" id="pancard" name="pancard" onchange="validatePanNumber(this)" autocomplete="off">
+        </div>
+
+        <div class="col-md-6">
+            <label class="labelField" class="labelField">Loan Applied&nbsp;<strong class="required_Fields">*</strong></label>
+            <input type="text" class="form-control inputField" id="loan_applied" name="loan_applied" autocomplete="off">
+        </div>
+
+        <div class="col-md-6">
+            <label class="labelField" class="labelField">Loan Tenure&nbsp;<strong class="required_Fields">*</strong></label>
+            <input type="text" class="form-control inputField" id="loan_tenure" name="loan_tenure" autocomplete="off">
+        </div>
+
+        <div class="col-md-6">
+            <label class="labelField">Loan Purpose&nbsp;<strong class="required_Fields">*</strong></label>
+            <input class="form-control inputField" id="loan_purpose" name="loan_purpose" autocomplete="off" readonly>
+            <!-- <select class="form-control inputField" id="loan_purpose" name="loan_purpose" autocomplete="off">
+                <option value="">SELECT</option>
+                <option value="PERSONAL">PERSONAL</option>
+                <option value="MEDICAL">MEDICAL</option>
+            </select> -->
+        </div>
 
         <div class="col-md-6">
             <label class="labelField" class="labelField">First Name &nbsp;<strong class="required_Fields">*</strong></label>
@@ -23,8 +57,9 @@
         </div>
 
         <div class="col-md-6">
-            <label class="labelField">Gender  &nbsp;<strong class="required_Fields">*</strong></label>
+            <label class="labelField">Gender&nbsp;<strong class="required_Fields">*</strong></label>
             <select class="form-control inputField" id="gender" name="gender" autocomplete="off">
+                <option value="">SELECT</option>
                 <option value="MALE">MALE</option>
                 <option value="FEMALE">FEMALE</option>
             </select>
@@ -37,8 +72,22 @@
         </div>
 
         <div class="col-md-6">
-            <label class="labelField">PAN&nbsp;<strong class="required_Fields">*</strong></label>
-            <input type="text" class="form-control inputField" id="pancard" name="pancard" onchange="validatePanNumber(this)" autocomplete="off">
+            <label class="labelField">Salary Mode&nbsp;<strong class="required_Fields">*</strong></label>
+            <select class="form-control inputField" id="salary_mode" name="salary_mode" autocomplete="off">
+                <option value="">SELECT</option>
+                <option value="BANK">BANK</option>
+                <option value="CASH">CASH</option>
+            </select>
+        </div>
+
+        <div class="col-md-6">
+            <label class="labelField">Salary&nbsp;<strong class="required_Fields">*</strong></label>
+            <input type="text" class="form-control inputField" id="monthly_income" name="monthly_income" autocomplete="off">
+        </div>
+
+        <div class="col-md-6">
+            <label class="labelField">Obligations&nbsp;<strong class="required_Fields">*</strong></label>
+            <input type="text" class="form-control inputField" id="obligations" name="obligations" autocomplete="off">
         </div>
 
         <div class="col-md-6">
@@ -52,7 +101,7 @@
         </div>
 
         <div class="col-md-6">
-            <label class="labelField">Email (Personal) </label>
+            <label class="labelField">Email (Personal)&nbsp;<strong class="required_Fields">*</strong></label>
             <input  type="text" class="form-control inputField" id="email" name="email" onchange="IsEmail(this)" autocomplete="off">
         </div>
 
@@ -61,6 +110,10 @@
             <input type="text" class="form-control inputField" id="alternate_email" name="alternate_email" onchange="IsEmail(this)" autocomplete="off">
         </div>
 
+        <div class="col-md-6">
+            <label class="labelField">Pincode&nbsp;<strong class="required_Fields">*</strong></label>
+            <input type="text" class="form-control inputField" id="pincode" name="pincode" autocomplete="off" onchange="apiPincode(this, '')">
+        </div>
 
         <div class="col-md-6">
             <label class="labelField">State&nbsp;<strong class="required_Fields">*</strong></label>
@@ -73,12 +126,7 @@
             <select class="form-control inputField" id="city" name="city" autocomplete="off">
             </select>
         </div>
-
-        <div class="col-md-6">
-            <label class="labelField">Pincode&nbsp;<strong class="required_Fields">*</strong></label>
-            <input type="text" class="form-control inputField" id="pincode" name="pincode" autocomplete="off">
-        </div>
     </form>
     <div class="col-md-12" style="margin: 10px;">
-        <button id="savePersonal" class="btn btn-success lead-sanction-button">Save </button> 
+        <button id="saveApplication" class="btn btn-success lead-sanction-button">Save </button> 
     </div>

@@ -1409,7 +1409,7 @@
 
 		public function getEmploymentDetails($lead_id)
 		{
-	        $fetch = "CE.customer_id, CE.employer_name, CE.emp_state, CE.emp_city, CE.emp_district, CE.emp_pincode, CE.emp_house, CE.emp_street, CE.emp_landmark, CE.emp_residence_since, CE.presentServiceTenure, CE.emp_designation, CE.emp_department, CE.emp_employer_type, CE.emp_website, CE.monthly_income, CE.emp_salary_mode, CE.income_type, CE.industry, CE.sector, CE.salary_mode, CE.emp_status, CE.created_on";
+	        $fetch = "CE.customer_id, CE.employer_name, CE.emp_state, CE.emp_city, CE.emp_district, CE.emp_pincode, CE.emp_house, CE.emp_street, CE.emp_landmark, CE.emp_residence_since, CE.presentServiceTenure, CE.emp_designation, CE.emp_department, CE.emp_employer_type, CE.emp_website, CE.monthly_income, CE.salary_mode, CE.income_type, CE.industry, CE.sector, CE.salary_mode, CE.emp_status, CE.created_on";
 	        $conditions = ['LD.lead_id' => $lead_id];
 	        $join2 = 'CE.customer_id = LD.customer_id';
 
@@ -1429,10 +1429,127 @@
 			echo json_encode($data);
 		}
 
+		public function getApplicationDetails($lead_id)
+		{
+	        $fetch = "LD.application_no, LD.lead_id, LD.user_type, LD.loan_amount, LD.tenure, LD.purpose, LD.obligations, LD.city, LD.state_id, LD.pincode, C.first_name, C.middle_name, C.sur_name, C.gender, C.dob, C.pancard, C.email, C.alternate_email, C.mobile, C.alternate_mobile, CE.salary_mode";
+	        $conditions = ['LD.lead_id' => $lead_id];
+	        $join2 = 'C.customer_id = LD.customer_id';
+			$table3 = "customer_employment CE";
+	        $join3 = 'LD.lead_id = CE.lead_id';
+			$tbl_users = "tbl_state ST";
+	        $join4 = 'LD.state_id = ST.state_id';
+
+	    	$applicationDetails = $this->Tasks->join_table($conditions, $fetch, $this->tbl_leads, $this->tbl_customer, $join2, $table3, $join3, $tbl_users, $join4);
+	    	$data['application'] = $applicationDetails->row();
+			echo json_encode($data);
+		}
+
+		public function insertApplication()
+		{
+			if($this->input->post('user_id') == ""){
+        		$json['errSession'] = "Session Expired.";
+	            echo json_encode($json);
+	            return false;
+			}
+			if($this->input->server('REQUEST_METHOD') == 'POST')
+		    {
+	        	$this->form_validation->set_rules('lead_id', 'Lead ID', 'required|trim');
+	        	// $this->form_validation->set_rules('customer_id', 'Customer ID', 'required|trim');
+	        	$this->form_validation->set_rules('company_id', 'Company ID', 'required|trim');
+	        	$this->form_validation->set_rules('product_id', 'Product ID', 'required|trim');
+	        	$this->form_validation->set_rules('loan_applied', 'Loan Applied', 'required|trim');
+	        	$this->form_validation->set_rules('loan_tenure', 'Loan Tenure', 'required|trim');
+	        	$this->form_validation->set_rules('loan_purpose', 'Loan Purpose', 'required|trim');
+	        	$this->form_validation->set_rules('first_name', 'First Name', 'required|trim');
+	        	$this->form_validation->set_rules('middle_name', 'Middle Name', 'trim');
+	        	$this->form_validation->set_rules('sur_name', 'Surname', 'trim');
+	        	$this->form_validation->set_rules('gender', 'Gender', 'required|trim');
+
+        		$this->form_validation->set_rules('dob', 'DOB', 'required|trim');
+        		$this->form_validation->set_rules('pancard', 'Pancard', 'required|trim');
+        		$this->form_validation->set_rules('mobile', 'Mobile', 'required|trim');
+        		$this->form_validation->set_rules('email', 'Email', 'required|trim');
+        		$this->form_validation->set_rules('salary_mode', 'Salary Mode', 'required|trim');
+        		$this->form_validation->set_rules('monthly_income', 'Salary', 'required|trim');
+        		$this->form_validation->set_rules('obligations', 'Obligations', 'required|trim');
+
+    			$this->form_validation->set_rules('state', 'State', 'required|trim');
+    			$this->form_validation->set_rules('city', 'City', 'required|trim');
+    			$this->form_validation->set_rules('pincode', 'Pincode', 'required|trim');
+	        	if($this->form_validation->run() == FALSE) {
+	        		$json['err'] = validation_errors();
+	        	} else {
+	        		$lead_id = $this->input->post('lead_id');
+	        		$conditions = ['C.customer_id' => $this->input->post('customer_id')];
+	        		$data = [
+					    'first_name' 		=> $this->input->post('first_name'),
+					    'middle_name' 		=> $this->input->post('middle_name'),
+					    'sur_name' 			=> $this->input->post('sur_name'),
+					    'gender' 			=> $this->input->post('gender'),
+					    'dob' 				=> $this->input->post('dob'),
+					    'pancard' 			=> $this->input->post('pancard'),
+					    'mobile' 			=> $this->input->post('mobile'),
+					    'alternate_mobile' 	=> $this->input->post('alternate_mobile'),
+					    'email' 			=> $this->input->post('email'),
+					    'alternate_email' 	=> $this->input->post('alternate_email'),
+	        		];
+
+	        		$result = $this->Tasks->globalUpdate($conditions, $data, $this->tbl_customer);
+					$conditions2 = ['lead_id' => $lead_id];
+
+					$data2 = [
+	        			'loan_applied'		=> $this->input->post('loan_applied'),
+						'loan_tenure'		=> $this->input->post('loan_tenure'),
+						'loan_purpose'		=> $this->input->post('loan_purpose'),
+						'customer_id' 		=> $this->input->post('customer_id'),
+						'state_id' 			=> $this->input->post('state'),
+    					'city' 				=> $this->input->post('city'),
+    					'pincode' 			=> $this->input->post('pincode'),
+						'obligations'		=> $this->input->post('obligations')
+    				];
+
+	        		$result = $this->Tasks->globalUpdate($conditions2, $data2, 'leads');
+    				$empDetails = $this->Tasks->select($conditions2, 'leads', 'customer_employment');
+
+    				if($empDetails->num_rows() > 0){
+						$data3 = [
+							'monthly_income'	=> $this->input->post('monthly_income'),
+						    'salary_mode'		=> $this->input->post('salary_mode')
+	    				];
+	        			$this->Tasks->globalUpdate($conditions2, $data3, 'customer_employment');
+    				}else{
+						$data3 = [
+							'customer_id' 		=> $this->input->post('customer_id'),
+							'company_id' 		=> $this->input->post('company_id'),
+							'product_id' 		=> $this->input->post('product_id'),
+							'lead_id' 			=> $this->input->post('lead_id'),
+							'monthly_income'	=> $this->input->post('monthly_income'),
+						    'salary_mode'		=> $this->input->post('salary_mode')
+	    				];
+	        			$this->Tasks->insert($data3, 'customer_employment');
+    				}
+	        		if($result == true)
+	        		{
+		        		$json['msg'] = "Lead Updated Successfully.";
+		        	}else{
+		        		$json['err'] = "Failed to Updated Customer Details.";
+		        	}
+	        	}
+	            echo json_encode($json);
+        	}
+        	else
+        	{
+        		$json['err'] = "Invalid Request";
+	            echo json_encode($json);
+        	}
+		}
+
 		public function insertPersonal()
 		{
 			if($this->input->post('user_id') == ""){
-				return redirect(base_url(), 'refresh');
+        		$json['errSession'] = "Session Expired.";
+	            echo json_encode($json);
+	            return false;
 			}
 			if($this->input->server('REQUEST_METHOD') == 'POST')
 		    {
@@ -1507,7 +1624,9 @@
 		public function insertResidence()
 		{
 			if($this->input->post('user_id') == ""){
-				return redirect(base_url(), 'refresh');
+        		$json['errSession'] = "Session Expired.";
+	            echo json_encode($json);
+	            return false;
 			}
 			if ($this->input->server('REQUEST_METHOD') == 'POST')
 		    {
@@ -1576,7 +1695,9 @@
 		public function insertEmployment()
 		{
 			if($this->input->post('user_id') == ""){
-				return redirect(base_url(), 'refresh');
+        		$json['errSession'] = "Session Expired.";
+	            echo json_encode($json);
+	            return false;
 			}
 			if ($this->input->server('REQUEST_METHOD') == 'POST')
 		    {
@@ -1667,7 +1788,9 @@
 		{
 	    	echo "<pre>"; print_r($_POST); exit;
 			if($this->input->post('user_id') == ""){
-				return redirect(base_url(), 'refresh');
+        		$json['errSession'] = "Session Expired.";
+	            echo json_encode($json);
+	            return false;
 			}
 			if ($this->input->server('REQUEST_METHOD') == 'POST')
 		    {
@@ -1969,8 +2092,9 @@
 		public function PaydayLeadRecommendation()
 		{
 			if($this->input->post('user_id') == ""){
-				$json['errSession'] = 'Session Expired.';
-				echo json_encode($json);
+        		$json['errSession'] = "Session Expired.";
+	            echo json_encode($json);
+	            return false;
 			}
 			if ($this->input->server('REQUEST_METHOD') == 'POST')
 		    {

@@ -136,6 +136,7 @@ $route['resonForDuplicateLeads'] = 'TaskController/resonForDuplicateLeads';
 $route['allocateLeads'] = 'TaskController/allocateLeads';
 $route['applicationHold'] = 'TaskController/applicationHold';
 
+$route['saveApplication'] = 'LeadsController/saveApplication';
 $route['saveVerification'] = 'LeadsController/add_action';
 $route['insertPersonal1'] = 'LeadsController/savepersonal1'; //insertPersonal4
 $route['insertPersonal4'] = 'LeadsController/insertPersonal4';
@@ -170,11 +171,13 @@ $route['scmConfRequest'] = 'TaskController/scmConfRequest';
 
 /////////////////////// PERSONAL ///////////////////////////////////////////////////
 
+$route['insertApplication'] = 'TaskController/insertApplication';
 $route['insertPersonal'] = 'TaskController/insertPersonal';
 $route['insertResidence'] = 'TaskController/insertResidence';
 $route['insertEmployment'] = 'TaskController/insertEmployment';
 $route['insertReference'] = 'TaskController/insertReference';
 
+$route['getApplicationDetails/(:num)'] = 'TaskController/getApplicationDetails/$1';
 $route['getPersonalDetails/(:num)'] = 'TaskController/getPersonalDetails/$1';
 $route['getResidenceDetails/(:num)'] = 'TaskController/getResidenceDetails/$1';
 $route['getEmploymentDetails/(:num)'] = 'TaskController/getEmploymentDetails/$1';
