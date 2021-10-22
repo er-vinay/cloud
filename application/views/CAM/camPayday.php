@@ -205,7 +205,7 @@
 
                 <div class="col-md-6">
                     <label class="labelField">Loan Recommended (Rs.)&nbsp;<strong class="required_Fields">*</strong></label>
-                    <input type="number" class="form-control inputField" id="loan_recommended" name="loan_recommended" onchange="calculateAmount()" autocomplete="off">
+                    <input type="number" class="form-control inputField" id="loan_recommended" name="loan_recommended" onchange="calculateAmount()" value="<?= round($leadDetails->loan_amount) ?>" autocomplete="off">
                 </div>
 
                 <div class="col-md-6">

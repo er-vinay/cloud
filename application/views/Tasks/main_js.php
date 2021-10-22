@@ -1340,7 +1340,7 @@
         $('#end_use').val((res.end_use) ? res.end_use : "-");
         $('#eligible_foir_percentage').val((res.eligible_foir_percentage) ? res.eligible_foir_percentage : "0");
         $('#eligible_loan').val((res.eligible_loan) ? res.eligible_loan : "0");
-        $('#loan_recommended').val(Math.round(res.loan_recommended) ? Math.round(res.loan_recommended) : $('#loan_applied').val());
+        $('#loan_recommended').val(Math.round(res.loan_recommended) ? Math.round(res.loan_recommended) : '<?= round($leadDetails->loan_amount) ?>');
         $('#final_foir_percentage').val((res.final_foir_percentage) ? res.final_foir_percentage : "0");
         $('#foir_enhanced_by').val((res.foir_enhanced_by) ? res.foir_enhanced_by : "0");
         $('#processing_fee_percent').val((res.processing_fee_percent) ? res.processing_fee_percent : "10");
@@ -1566,9 +1566,6 @@
 
     function checkLoanEligibility()
     {
-        if($('#loan_recommended').val() > $('#loan_applied').val()){
-            $('#loan_recommended').val($('#loan_applied').val());
-        }
         var camFormData = $('#FormSaveCAM').serialize();
         $.ajax({
             url : '<?= base_url("checkLoanEligibility") ?>',
@@ -1585,8 +1582,10 @@
 
     function calculateAmount()
     {
-        if($('#loan_recommended').val() > $('#loan_applied').val()){
-            $('#loan_recommended').val($('#loan_applied').val());
+        var loan_applied = $('#loan_applied').val();
+        var loan_recommended = $('#loan_recommended').val();
+        if(loan_recommended > loan_applied){
+            // $('#loan_recommended').val(loan_applied);
         }
         var camFormData = $('#FormSaveCAM').serialize();
         $.ajax({
