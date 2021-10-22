@@ -1614,7 +1614,7 @@
 	        	$this->form_validation->set_rules('city1', 'city1', 'required|trim');
 	        	$this->form_validation->set_rules('pincode1', 'pincode1', 'required|trim');
 	        	$this->form_validation->set_rules('district1', 'district1', 'trim');
-	        	$this->form_validation->set_rules('aadhar1', 'aadhar1', 'required|trim');
+	        	$this->form_validation->set_rules('aadhar', 'aadhar', 'required|trim');
 	        	$this->form_validation->set_rules('addharAddressSameasAbove', 'addharAddressSameasAbove', 'trim');
 
 	        	$this->form_validation->set_rules('hfBulNo2', 'hfBulNo2', 'required|trim');
@@ -1640,7 +1640,7 @@
 					    'current_city' 				=> $this->input->post('city1'),
 					    'cr_residence_pincode' 		=> $this->input->post('pincode1'),
 					    'current_district' 			=> $this->input->post('district1'),
-					    'aadhar_no' 				=> $this->input->post('aadhar1'),
+					    'aadhar_no' 				=> $this->input->post('aadhar'),
 					    'aa_same_as_current_address'=> $this->input->post('addharAddressSameasAbove'),
 					    'aa_current_house' 			=> $this->input->post('hfBulNo2'),
 					    'aa_current_locality' 		=> $this->input->post('lcss2'),

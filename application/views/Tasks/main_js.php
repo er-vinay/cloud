@@ -1395,7 +1395,8 @@
                 $("#lcss2").val($("#lcss1").val());
                 $("#landmark2").val($("#landmark1").val());
                 $("#state2").val($("#state1").val());
-                $("#city2").val($("#city1").val());
+                // $("#city2").val($("#city1").val());
+                $("#city2").empty().append('<option value="'+ $("#city1").val() +'">'+ $("#city1").val() +'</option>');
                 $("#pincode2").val($("#pincode1").val());
                 $("#district2").val($("#district1").val());
             }else{
