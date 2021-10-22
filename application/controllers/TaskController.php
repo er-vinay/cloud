@@ -721,9 +721,10 @@
 
 		public function saveCustomerDocs()
 		{
-			if($this->input->post('user_id') == ""){
-				return redirect(base_url(), 'refresh');
-			}
+        	if($this->input->post('user_id') == ''){
+        		$json['errSession'] = "Session Expired";
+        		echo json_encode($json);
+        	}
 			if(isset($_FILES['file_name']['name']))  
 			{ 
             	$config['upload_path'] = 'upload/';
@@ -769,8 +770,8 @@
     		                'upload_by'     => $user_id,
     		                'created_on'    => timestamp
     		            );
-    		            $result = $this->Leads->globel_inset('docs', $data);
-    		            echo "true";
+    		            $result = $this->Tasks->insert($data, 'docs');
+    		            echo $result;
             		}else{
     		            // $data = array (
     		            //     'pwd'           => $password,
