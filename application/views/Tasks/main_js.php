@@ -1595,6 +1595,7 @@
             dataType : "json",
             data : camFormData,
             success : function(response){
+                $('#loan_recommended').val($('#loan_recommended').val());
                 $('#tenure').val(response.tenure);
                 $('#admin_fee').val(response.admin_fee);
                 $('#repayment_amount').val(response.repayment_amount);
