@@ -851,16 +851,16 @@
                 dataType : "json",
                 success : function(response){
                     var res = response['personalDetails1'];
-                    $("#first_name").val((res.first_name)?res.first_name:'-');
-                    $("#middle_name").val((res.middle_name)?res.middle_name:'-');
-                    $("#sur_name").val((res.sur_name)?res.sur_name:'-');
-                    $("#gender").val((res.gender)?res.gender:'-').prop("selected", "selected");
-                    $("#dob").val((res.dob)?res.dob:'-');
-                    $("#pancard").val((res.pancard)?res.pancard:'-');
-                    $("#mobile").val((res.mobile)?res.mobile:'-'); 
-                    $("#alternate_mobile").val((res.alternate_mobile)?res.alternate_mobile:'-');
-                    $("#email").val((res.email)?res.email:'-');
-                    $("#alternate_email").val((res.alternate_email)?res.alternate_email:'-');
+                    $("#p_first_name").val((res.first_name)?res.first_name:'-');
+                    $("#p_middle_name").val((res.middle_name)?res.middle_name:'-');
+                    $("#p_sur_name").val((res.sur_name)?res.sur_name:'-');
+                    $("#p_gender").val((res.gender)?res.gender:'-').prop("selected", "selected");
+                    $("#p_dob").val((res.dob)?res.dob:'-');
+                    $("#p_pancard").val((res.pancard)?res.pancard:'-');
+                    $("#p_mobile").val((res.mobile)?res.mobile:'-'); 
+                    $("#p_alternate_mobile").val((res.alternate_mobile)?res.alternate_mobile:'-');
+                    $("#p_email").val((res.email)?res.email:'-');
+                    $("#p_alternate_email").val((res.alternate_email)?res.alternate_email:'-');
                     $("#screenedBy").val((res.screenedBy)?res.screenedBy:'-');
                     $("#screenedOn").val((res.screenedOn)?res.screenedOn:'-');
 

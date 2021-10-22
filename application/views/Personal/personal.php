@@ -10,22 +10,22 @@
 
         <div class="col-md-6">
             <label class="labelField" class="labelField">First Name &nbsp;<strong class="required_Fields">*</strong></label>
-            <input type="text" class="form-control inputField" id="first_name" name="first_name" autocomplete="off">
+            <input type="text" class="form-control inputField" id="p_first_name" name="first_name" autocomplete="off">
         </div>
 
         <div class="col-md-6">
             <label class="labelField">Middle Name</label>
-            <input type="text" class="form-control inputField" id="middle_name" name="middle_name" autocomplete="off">
+            <input type="text" class="form-control inputField" id="p_middle_name" name="middle_name" autocomplete="off">
         </div>
 
         <div class="col-md-6">
             <label class="labelField">Surname</label>
-            <input type="text"  class="form-control inputField" id="sur_name" name="sur_name" autocomplete="off">
+            <input type="text"  class="form-control inputField" id="p_sur_name" name="sur_name" autocomplete="off">
         </div>
 
         <div class="col-md-6">
             <label class="labelField">Gender  &nbsp;<strong class="required_Fields">*</strong></label>
-            <select class="form-control inputField" id="gender" name="gender" autocomplete="off">
+            <select class="form-control inputField" id="p_gender" name="gender" autocomplete="off">
                 <option value="MALE">MALE</option>
                 <option value="FEMALE">FEMALE</option>
             </select>
@@ -33,33 +33,33 @@
 
         <div class="col-md-6">
             <label class="labelField">DOB&nbsp;<strong class="required_Fields">*</strong></label>
-            <input type="text" class="form-control inputField" id="dob" name="dob" autocomplete="off">
+            <input type="text" class="form-control inputField" id="p_dob" name="dob" autocomplete="off">
             <span id="pan_msg" style="color: red;"></span>
         </div>
 
         <div class="col-md-6">
             <label class="labelField">PAN&nbsp;<strong class="required_Fields">*</strong></label>
-            <input type="text" class="form-control inputField" id="pancard" name="pancard" onchange="validatePanNumber(this)" autocomplete="off">
+            <input type="text" class="form-control inputField" id="p_pancard" name="pancard" onchange="validatePanNumber(this)" autocomplete="off">
         </div>
 
         <div class="col-md-6">
             <label class="labelField">Mobile&nbsp;<strong class="required_Fields">*</strong> </label>
-            <input type="text" class="form-control inputField" id="mobile" name="mobile" autocomplete="off">
+            <input type="text" class="form-control inputField" id="p_mobile" name="mobile" autocomplete="off">
         </div>
 
         <div class="col-md-6">
             <label class="labelField">Mobile Alternate </label>
-            <input type="text" class="form-control inputField" id="alternate_mobile" name="alternate_mobile" autocomplete="off">
+            <input type="text" class="form-control inputField" id="p_alternate_mobile" name="alternate_mobile" autocomplete="off">
         </div>
 
         <div class="col-md-6">
             <label class="labelField">Email (Personal) &nbsp;<strong class="required_Fields">*</strong></label>
-            <input  type="text" class="form-control inputField" id="email" name="email" onchange="IsEmail(this)" autocomplete="off">
+            <input  type="text" class="form-control inputField" id="p_email" name="email" onchange="IsEmail(this)" autocomplete="off">
         </div>
 
         <div class="col-md-6">
             <label class="labelField">Email (Office)</label>
-            <input type="text" class="form-control inputField" id="alternate_email" name="alternate_email" onchange="IsEmail(this)" autocomplete="off">
+            <input type="text" class="form-control inputField" id="p_alternate_email" name="alternate_email" onchange="IsEmail(this)" autocomplete="off">
         </div>
 
         <div class="col-md-6">
