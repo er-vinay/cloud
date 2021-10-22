@@ -1340,7 +1340,7 @@
         $('#end_use').val((res.end_use) ? res.end_use : "-");
         $('#eligible_foir_percentage').val((res.eligible_foir_percentage) ? res.eligible_foir_percentage : "0");
         $('#eligible_loan').val((res.eligible_loan) ? res.eligible_loan : "0");
-        $('#loan_recommended').val(Math.round(res.loan_recommended) ? Math.round(res.loan_recommended) : '<?= round($leadDetails->loan_amount) ?>');
+        $('#loan_recommended').val(Math.round(res.loan_recommended) ? Math.round(res.loan_recommended) : $('#loan_applied').val());
         $('#final_foir_percentage').val((res.final_foir_percentage) ? res.final_foir_percentage : "0");
         $('#foir_enhanced_by').val((res.foir_enhanced_by) ? res.foir_enhanced_by : "0");
         $('#processing_fee_percent').val((res.processing_fee_percent) ? res.processing_fee_percent : "10");
@@ -1595,7 +1595,6 @@
             dataType : "json",
             data : camFormData,
             success : function(response){
-                $('#loan_recommended').val($('#loan_recommended').val());
                 $('#tenure').val(response.tenure);
                 $('#admin_fee').val(response.admin_fee);
                 $('#repayment_amount').val(response.repayment_amount);
