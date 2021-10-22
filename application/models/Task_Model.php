@@ -75,7 +75,7 @@
 			return $this->db->insert($table, $data);
 		}
 
-		public function select($conditions = "", $data=null, $table=null)
+		public function select($conditions=null, $data=null, $table=null)
 		{
 			return $this->db->select($data)->where($conditions)->from($table)->get();
 		}

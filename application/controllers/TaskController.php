@@ -1509,7 +1509,7 @@
     				];
 
 	        		$result = $this->Tasks->globalUpdate($conditions2, $data2, 'leads');
-    				$empDetails = $this->Tasks->select($conditions2, 'leads', 'customer_employment');
+    				$empDetails = $this->Tasks->select($conditions2, 'lead_id', 'customer_employment');
 
     				if($empDetails->num_rows() > 0){
 						$data3 = [
