@@ -4,7 +4,7 @@
 <?php if((agent == "CR2" || agent == "DS1" || agent == "CA" || agent == "SA") && ($leadDetails->stage == "S5" || $leadDetails->stage == "S11" || $leadDetails->stage == "S13")) { ?>
 <div class="footer-support">
     <h2 class="footer-support">
-        <button type="button" class="btn btn-info collapse" onclick="getResidenceDetails(<?= $leadDetails->lead_id ?>)" data-toggle="collapse" data-target="#AddBank" style="width: 13% !important;">Add Banking&nbsp;<i class="fa fa-angle-double-down"></i></button>
+        <button type="button" id="btnAddBank" class="btn btn-info collapse" onclick="getResidenceDetails(<?= $leadDetails->lead_id ?>)" data-toggle="collapse" data-target="#AddBank" style="width: 13% !important;">Add Banking&nbsp;<i class="fa fa-angle-double-down"></i></button>
     </h2>
 </div>
 <?php } ?>

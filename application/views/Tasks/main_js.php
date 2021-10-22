@@ -1028,6 +1028,7 @@
                     $('#disbursalBanking').html('');
                     if(response.disbursalBankCount > 0)
                     {
+                        $('#btnAddBank').toggle();
                         var res = response.disbursalBank;
                         var html1 = '<table class="table table-bordered table-striped"><tbody>';
                         html1 += '<tr><th>Customer&nbsp;ID</th><td>'+ res.customer_id +'</td><th>Bank&nbsp;A/C&nbsp;No.</th><td>'+ res.account +'</td></tr>';
