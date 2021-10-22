@@ -953,7 +953,9 @@
                     $("#lcss3").val((response['employmentDetails'].emp_street==null)?'-':response['employmentDetails'].emp_street);
                     $("#lankmark3").val((response['employmentDetails'].emp_landmark==null)?'-':response['employmentDetails'].emp_landmark);
                     $("#state3").val((response['employmentDetails'].emp_state==null)?'-':response['employmentDetails'].emp_state);
-                    $("#city3").val((response['employmentDetails'].emp_city==null)?'-':response['employmentDetails'].emp_city);
+                    // $("#city3").val((response['employmentDetails'].emp_city==null)?'-':response['employmentDetails'].emp_city);
+
+                    $("#city3").append('<option value="'+ response['employmentDetails'].emp_city +'">'+ response['employmentDetails'].emp_city +'</option>');
                     $("#pincode3").val((response['employmentDetails'].emp_pincode==null)?'-':response['employmentDetails'].emp_pincode);
                     $("#district3").val((response['employmentDetails'].emp_district==null)?'-':response['employmentDetails'].emp_district);
                     $("#website").val((response['employmentDetails'].emp_website==null)?'-':response['employmentDetails'].emp_website);
