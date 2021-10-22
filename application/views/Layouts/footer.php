@@ -515,7 +515,7 @@
 
 
 
-                $('input[type=text]').keyup(function(){
+                $('input[type=text], select').keyup(function(){
 
                     $(this).val($(this).val().toUpperCase());
 
