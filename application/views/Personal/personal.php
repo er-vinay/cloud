@@ -252,41 +252,47 @@
             <input type="hidden" name="company_id" id="company_id" value="<?= company_id ?>">
             <input type="hidden" name="product_id" id="product_id" value="<?= product_id ?>">
             <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>" />
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <label class="labelField">Office/ Employer Name&nbsp;<span class="required_Fields">*</span></label>
-                <input type="text" class="form-control inputField" id="officeEmpName" name="officeEmpName" autocomplete="off">
+                <input type="text" class="form-control inputField" id="officeEmpName" name="officeEmpName" autocomplete="off" style="width: 76% !important;">
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <label class="labelField">Shop/ Block/ Building No.&nbsp;<span class="required_Fields">*</span></label>
-                <input type="text" class="form-control inputField" id="hfBulNo3" name="hfBulNo3" autocomplete="off">
+                <input type="text" class="form-control inputField" id="hfBulNo3" name="hfBulNo3" autocomplete="off" style="width: 76% !important;">
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <label class="labelField">Locality/ Colony/ Sector/ Street&nbsp;<span class="required_Fields">*</span></label>
-                <input type="text" class="form-control inputField" id="lcss3" name="lcss3" autocomplete="off">
+                <input type="text" class="form-control inputField" id="lcss3" name="lcss3" autocomplete="off" style="width: 76% !important;">
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <label class="labelField">Landmark</label>
-                <input type="text" class="form-control inputField" id="lankmark3" name="lankmark3" autocomplete="off">
-            </div>
-        
-            <div class="col-md-6">
-                <label class="labelField">City&nbsp;<span class="required_Fields">*</span></label>
-                <input type="text" class="form-control inputField" id="city3" name="city3" autocomplete="off">
+                <input type="text" class="form-control inputField" id="lankmark3" name="lankmark3" autocomplete="off" style="width: 76% !important;">
             </div>
             
             <div class="col-md-6">
                 <label class="labelField">Pincode&nbsp;<span class="required_Fields">*</span></label>
-                <input type="text" class="form-control inputField" id="pincode3" name="pincode3" autocomplete="off">
+                <input type="text" class="form-control inputField" id="pincode3" name="pincode3" autocomplete="off" onchange="apiPincode(this, 3)">
+            </div>
+
+            <div class="col-md-6">
+                <label class="labelField">City <span class="required_Fields">*</span></label>
+                <select class="form-control inputField" id="city3" name="city3" autocomplete="off">
+                </select>
+
+            </div>
+
+            <div class="col-md-6">
+                <label class="labelField">State</label>
+                <input type="text" class="form-control inputField" id="state3" name="state3" datalist autocomplete="off" readonly>
             </div>
 
             <div class="col-md-6">
                 <label class="labelField">District</label>
-                <input type="text" class="form-control inputField" id="district3" name="district3" autocomplete="off">
-                <label class="labelField">State<span class="required_Fields">*</span></label>
-                <input type="text" class="form-control inputField" id="state3" name="state3" autocomplete="off">
+                <select class="form-control inputField" id="district3" name="district3" autocomplete="off">
+                </select>
             </div>
 
             <div class="col-md-6">
