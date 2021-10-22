@@ -72,7 +72,7 @@
 </div>
 <?php } ?>
 <div id="confirmDisbursalBank" class="collapse"> 
-    <form id="verifyDisbursalBank" class="form-inline" method="post" enctype="multipart/form-data" style="margin: 10px;">
+    <form id="FormverifyDisbursalBank" class="form-inline" method="post" enctype="multipart/form-data" style="margin: 10px;">
         <input type="hidden" name="lead_id" id="lead_id" value="<?php echo $leadDetails->lead_id; ?>" />
         <input type="hidden" name="customer_id" id="customer_id" value="<?php echo $leadDetails->customer_id; ?>" />
         <input type="hidden" name="user_id" id="user_id" value="<?= user_id ?>">
@@ -106,6 +106,6 @@
     </form>
 
     <div class="col-md-12" style="margin: 10px;">
-        <button id="allowDisbursalToBank" class="btn btn-success lead-sanction-button">Save </button> 
+        <button id="verifyDisbursalBank" class="btn btn-success lead-sanction-button">Save </button> 
     </div>
 </div>

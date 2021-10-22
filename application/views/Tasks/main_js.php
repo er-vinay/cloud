@@ -2117,6 +2117,31 @@ $("#savefvrData").click(function(){
             });
         });
 
+        $("#verifyDisbursalBank").on('click',function(e) {
+            var FormData = $("#FormverifyDisbursalBank").serialize();
+            $.ajax({
+                url : '<?= base_url("verifyDisbursalBank") ?>',
+                type : 'POST',
+                data : FormData,
+                dataType : "json",
+                beforeSend: function() {
+                    $('#verifyDisbursalBank').html('<span class="spinner-border spinner-border-sm mr-2" role="status"></span>Processing...').prop('disabled', true);
+                },
+                success : function(response){
+                    if(response.msg){
+                        getCustomerBanking($('#customer_id').val());
+                        $("#FormverifyDisbursalBank")[0].reset();
+                        catchSuccess(response.msg);
+                    }else{
+                        catchError(response.err);
+                    }
+                },
+                complete: function() {
+                    $('#verifyDisbursalBank').html('Save').prop('disabled', false);
+                },
+            });
+        });
+
         $("#allowDisbursalToBank").on('click',function(e) {
             var FormData = $("#disbursalPayableDetails").serialize();
             $.ajax({
