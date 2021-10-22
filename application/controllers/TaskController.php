@@ -1564,15 +1564,6 @@
         		$this->form_validation->set_rules('mobile', 'Mobile', 'required|trim');
         		$this->form_validation->set_rules('email', 'Email', 'required|trim');
 
-				if($state == "" || $city == "" || $pincode == ""){
-        			$this->form_validation->set_rules('state', 'State', 'required|trim');
-        			$this->form_validation->set_rules('city', 'City', 'required|trim');
-        			$this->form_validation->set_rules('pincode', 'Pincode', 'required|trim');
-				} else {
-	        		$this->form_validation->set_rules('screenedBy', 'Screener By', 'required|trim');
-	        		$this->form_validation->set_rules('screenedOn', 'Screener ON', 'required|trim');
-				}
-
 	        	if($this->form_validation->run() == FALSE) {
 	        		$json['err'] = validation_errors();
 	        	} else {
@@ -1590,20 +1581,6 @@
 					    'email' 			=> $this->input->post('email'),
 					    'alternate_email' 	=> $this->input->post('alternate_email')
 	        		];
-
-    				if($state == "" || $city == "" || $pincode == "")
-    				{
-    					$conditions2 = ['lead_id' => $lead_id];
-    					$data2 = [
-    						'customer_id' 	=> $this->input->post('customer_id'),
-    						'state_id' 		=> $this->input->post('state'),
-	    					'city' 			=> $this->input->post('city'),
-	    					'pincode' 		=> $this->input->post('pincode')
-	    				];
-	        			$this->Tasks->globalUpdate($conditions2, $data2, 'leads');
-	        		// echo "leads : <pre>"; print_r($data2); exit;
-    				}
-	        		// echo "<pre>"; print_r($_POST); exit;
 	        		$result = $this->Tasks->globalUpdate($conditions, $data, $this->tbl_customer);
 	        		if($result == true)
 	        		{
