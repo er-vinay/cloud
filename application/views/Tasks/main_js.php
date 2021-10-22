@@ -1337,7 +1337,7 @@
         $('#salary_variance').val((res.salary_variance) ? res.salary_variance : "-");
         $('#salary_on_time').val((res.salary_on_time) ? res.salary_on_time : "-");
         $('#borrower_age').val((res.borrower_age != undefined) ? res.borrower_age : response.calculation.borrower_age);
-        $('#end_use').val((res.end_use) ? res.end_use : "-");
+        $('#end_use').val((res.end_use) ? res.end_use : res.purpose);
         $('#eligible_foir_percentage').val((res.eligible_foir_percentage) ? res.eligible_foir_percentage : "0");
         $('#eligible_loan').val((res.eligible_loan) ? res.eligible_loan : "0");
         $('#loan_recommended').val(Math.round(res.loan_recommended) ? Math.round(res.loan_recommended) : '<?= round($leadDetails->loan_amount) ?>');

@@ -48,7 +48,7 @@
 
 		        $conditions2 = ['LD.company_id' => company_id, 'LD.product_id' => product_id, 'LD.lead_id' => $lead_id];
 		        
-	            $select = 'C.alternate_email, C.dob, C.current_residence_type, C.dob, LD.purpose, LD.user_type, LD.loan_amount, LD.tenure, LD.cibil, CE.income_type, CE.salary_mode, CE.monthly_income, CE.presentServiceTenure, CT.city_category, LD.status, LD.stage, LD.schedule_time';
+	            $select = 'C.alternate_email, C.dob, C.current_residence_type, C.dob, LD.purpose, LD.user_type, LD.loan_amount, LD.tenure, LD.cibil, LD.purpose, CE.income_type, CE.salary_mode, CE.monthly_income, CE.presentServiceTenure, CT.city_category, LD.status, LD.stage, LD.schedule_time';
 		        $leadData = $this->Tasks->join_table($conditions2, $select, $table1, $table2, $join2, $table3, $join3, $table4, $join4);
 	            $data['getCamDetails'] = $leadData->row();
 	        	$data['calculation'] = $this->calculation($leadData->row());
