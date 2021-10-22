@@ -1026,7 +1026,7 @@
                 dataType : "json",
                 success : function(response){
                     $('#disbursalBanking').html('');
-                    $('#btnAddBank').toggle();
+                    $('#btnAddBank').click();
                     if(response.disbursalBankCount > 0)
                     {
                         $('#btnAddBank').toggle();
