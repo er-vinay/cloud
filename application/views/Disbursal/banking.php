@@ -106,6 +106,6 @@
     </form>
 
     <div class="col-md-12" style="margin: 10px;">
-        <button id="allowDisbursalBank" class="btn btn-success lead-sanction-button">Save </button> 
+        <button id="allowDisbursalToBank" class="btn btn-success lead-sanction-button">Save </button> 
     </div>
 </div>
