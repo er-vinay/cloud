@@ -1819,7 +1819,7 @@
                 async:false,
                 success : function(response) {
                     if(response.errSession){
-                        window.location.href='<?= base_url("saveCustomerDocs") ?>';
+                        window.location.href='<?= base_url() ?>';
                     } else if(response.msg){
                         if($('#docs_id').val() != ""){
                             $('#docs_id').val('');
