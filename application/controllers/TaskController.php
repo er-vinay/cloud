@@ -1382,14 +1382,17 @@
 		public function getPersonalDetails($lead_id)
 		{
 			$tbl_users = "users U1";
+	    	$followupUser = $this->Tasks->select(['LF.lead_id' => $lead_id], 'LF.user_id', $this->tbl_lead_followup);
+	    	$user = $followupUser->row();
 	        $fetch = "LD.application_no, LD.lead_id, C.first_name, C.middle_name, C.sur_name, C.gender, C.dob, C.pancard, C.email, C.alternate_email, C.mobile, C.alternate_mobile, U1.name as screenedBy, LF.created_on as screenedOn";
 	        $conditions = ['LD.lead_id' => $lead_id];
 	        $join2 = 'C.customer_id = LD.customer_id';
 	        $join3 = 'LD.lead_id = LF.lead_id';
-	        $join4 = 'U1.user_id = LF.user_id';
+	        $join4 = 'U1.'. $user->user_id .' = LF.user_id';
 
 	    	$personalDetails = $this->Tasks->join_table($conditions, $fetch, $this->tbl_leads, $this->tbl_customer, $join2, $this->tbl_lead_followup, $join3, $tbl_users, $join3);
 	    	$data['personalDetails1'] = $personalDetails->row();
+	    	$data['userDetails1'] = $personalDetails->row();
 			echo json_encode($data);
 		}
 
