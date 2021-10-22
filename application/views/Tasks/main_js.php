@@ -850,28 +850,29 @@
                 data : {csrf_token},
                 dataType : "json",
                 success : function(response){
-                    $("#first_name").val((response['personalDetails1'].first_name=='')?'-':response['personalDetails1'].first_name);
-                    $("#middle_name").val((response['personalDetails1'].middle_name=='')?'-':response['personalDetails1'].middle_name);
-                    $("#sur_name").val((response['personalDetails1'].sur_name=='')?'-':response['personalDetails1'].sur_name);
-                    $("#gender").val((response['personalDetails1'].gender=='')?'-':response['personalDetails1'].gender).prop("selected", "selected");
-                    $("#dob").val((response['personalDetails1'].dob=='')?'-':response['personalDetails1'].dob);
-                    $("#pancard").val((response['personalDetails1'].pancard=='')?'-':response['personalDetails1'].pancard);
-                    $("#mobile").val((response['personalDetails1'].mobile=='')?'-':response['personalDetails1'].mobile); 
-                    $("#alternate_mobile").val((response['personalDetails1'].alternate_mobile=='')?'-':response['personalDetails1'].alternate_mobile);
-                    $("#email").val((response['personalDetails1'].email=='')?'-':response['personalDetails1'].email);
-                    $("#alternate_email").val((response['personalDetails1'].alternate_email=='')?'-':response['personalDetails1'].alternate_email);
-                    $("#screenedBy").val((response['personalDetails1'].screenedBy=='')?'-':response['personalDetails1'].screenedBy);
-                    $("#screenedOn").val((response['personalDetails1'].screenedOn=='')?'-':response['personalDetails1'].screenedOn);
+                    var res = response['personalDetails1'];
+                    $("#first_name").val((res.first_name=='')?res.first_name:'-');
+                    $("#middle_name").val((res.middle_name=='')?res.middle_name:'-');
+                    $("#sur_name").val((res.sur_name=='')?res.sur_name:'-');
+                    $("#gender").val((res.gender=='')?res.gender:'-').prop("selected", "selected");
+                    $("#dob").val((res.dob=='')?res.dob:'-');
+                    $("#pancard").val((res.pancard=='')?res.pancard:'-');
+                    $("#mobile").val((res.mobile=='')?res.mobile:'-'); 
+                    $("#alternate_mobile").val((res.alternate_mobile=='')?res.alternate_mobile:'-');
+                    $("#email").val((res.email=='')?res.email:'-');
+                    $("#alternate_email").val((res.alternate_email=='')?res.alternate_email:'-');
+                    $("#screenedBy").val((res.screenedBy=='')?res.screenedBy:'-');
+                    $("#screenedOn").val((res.screenedOn=='')?res.screenedOn:'-');
 
 
                     var html = '<table class="table table-bordered table-striped">';
                         html += '<tbody>';
-                        html += '<tr><th>First&nbsp;Name</th><td>'+ response['personalDetails1'].first_name +'</td><th>Middle&nbsp;Name</th><td>'+ ((response['personalDetails1'].middle_name=='')?'-':response['personalDetails1'].middle_name) +'</td></tr>';
-                        html += '<tr><th>Surname</th><td>'+ ((response['personalDetails1'].sur_name=='')?'-':response['personalDetails1'].sur_name) +'</td><th>Gender</th><td>'+ ((response['personalDetails1'].gender=='')?'-':response['personalDetails1'].gender) +'</td></tr>';
-                        html += '<tr><th>DOB</th><td>'+ ((response['personalDetails1'].dob=='')?'-':response['personalDetails1'].dob) +'</td><th>PAN</th><td>'+ ((response['personalDetails1'].pancard=='')?'-':response['personalDetails1'].pancard) +'</td></tr>';
-                        html += '<tr><th>Mobile</th><td>'+ ((response['personalDetails1'].mobile=='')?'-':response['personalDetails1'].mobile) +'</td><th>Alternate&nbsp;Mobile</th><td>'+ ((response['personalDetails1'].alternate_mobile=='')?'-':response['personalDetails1'].alternate_mobile) +'</td></tr>';
-                        html += '<tr><th>Email&nbsp;Personal</th><td>'+ ((response['personalDetails1'].email=='')?'-':response['personalDetails1'].email) +'</td><th>Email&nbsp;Office</th><td>'+ ((response['personalDetails1'].alternate_email=='')?'-':response['personalDetails1'].alternate_email) +'</td></tr>';
-                        html += '<tr><th>Screened&nbsp;By</th><td>'+ ((response['personalDetails1'].screenedBy=='')?'-':response['personalDetails1'].screenedBy) +'</td><th>Screened&nbsp;On</th><td>'+ ((response['personalDetails1'].screenedOn=='')?'-':response['personalDetails1'].screenedOn) +'</td></tr>';
+                        html += '<tr><th>First&nbsp;Name</th><td>'+ res.first_name +'</td><th>Middle&nbsp;Name</th><td>'+ ((res.middle_name=='')?res.middle_name : '-') +'</td></tr>';
+                        html += '<tr><th>Surname</th><td>'+ ((res.sur_name=='')?res.sur_name : '-') +'</td><th>Gender</th><td>'+ ((res.gender=='')?res.gender : '-') +'</td></tr>';
+                        html += '<tr><th>DOB</th><td>'+ ((res.dob=='')?res.dob : '-') +'</td><th>PAN</th><td>'+ ((res.pancard=='')?res.pancard : '-') +'</td></tr>';
+                        html += '<tr><th>Mobile</th><td>'+ ((res.mobile=='')?res.mobile : '-') +'</td><th>Alternate&nbsp;Mobile</th><td>'+ ((res.alternate_mobile=='')?res.alternate_mobile : '-') +'</td></tr>';
+                        html += '<tr><th>Email&nbsp;Personal</th><td>'+ ((res.email=='')?res.email : '-') +'</td><th>Email&nbsp;Office</th><td>'+ ((res.alternate_email=='')?res.alternate_email : '-') +'</td></tr>';
+                        html += '<tr><th>Screened&nbsp;By</th><td>'+ ((res.screenedBy=='')?res.screenedBy : '-') +'</td><th>Screened&nbsp;On</th><td>'+ ((res.screenedOn=='')?res.screenedOn : '-') +'</td></tr>';
                         html += '</tbody>';
                         html += '</table>';
 
@@ -892,44 +893,45 @@
                 data : {csrf_token},
                 dataType : "json",
                 success : function(response){
-                    $("#hfBulNo1").val((response['residenceDetails'].current_house=='')?'-':response['residenceDetails'].current_house);
-                    $("#lcss1").val((response['residenceDetails'].current_locality=='')?'-':response['residenceDetails'].current_locality);
-                    $("#lankmark1").val((response['residenceDetails'].current_landmark=='')?'-':response['residenceDetails'].current_landmark);
-                    $("#state1").val((response['residenceDetails'].current_state=='')?'-':response['residenceDetails'].current_state);
-                    $("#city1").val((response['residenceDetails'].current_city=='')?'-':response['residenceDetails'].current_city);
-                    $("#pincode1").val((response['residenceDetails'].cr_residence_pincode=='')?'-':response['residenceDetails'].cr_residence_pincode);
-                    $("#district1").val((response['residenceDetails'].current_district=='')?'-':response['residenceDetails'].current_district);
-                    $("#aadhar1").val((response['residenceDetails'].aadhar_no=='')?'-':response['residenceDetails'].aadhar_no);
+                    var res = response['residenceDetails'];
+                    $("#hfBulNo1").val((res.current_house=='')?'-':res.current_house);
+                    $("#lcss1").val((res.current_locality=='')?'-':res.current_locality);
+                    $("#lankmark1").val((res.current_landmark=='')?'-':res.current_landmark);
+                    $("#state1").val((res.current_state=='')?'-':res.current_state);
+                    $("#city1").val((res.current_city=='')?'-':res.current_city);
+                    $("#pincode1").val((res.cr_residence_pincode=='')?'-':res.cr_residence_pincode);
+                    $("#district1").val((res.current_district=='')?'-':res.current_district);
+                    $("#aadhar1").val((res.aadhar_no=='')?'-':res.aadhar_no);
                     
 
-                    $("#addharAddressSameasAbove").val((response['residenceDetails'].aa_same_as_current_address=='')?'NO':response['residenceDetails'].aa_same_as_current_address);
-                    if(response['residenceDetails'].aa_same_as_current_address=='YES'){
+                    $("#addharAddressSameasAbove").val((res.aa_same_as_current_address=='')?'NO':res.aa_same_as_current_address);
+                    if(res.aa_same_as_current_address=='YES'){
                         $("#addharAddressSameasAbove").prop('checked', true);
                     }else{
                         $("#addharAddressSameasAbove").prop('checked', false);   
                     }
 
-                    $("#hfBulNo2").val((response['residenceDetails'].aa_current_house=='')?'-':response['residenceDetails'].aa_current_house);
-                    $("#lcss2").val((response['residenceDetails'].aa_current_locality=='')?'-':response['residenceDetails'].aa_current_locality);
-                    $("#landmark2").val((response['residenceDetails'].aa_current_landmark=='')?'-':response['residenceDetails'].aa_current_landmark);
-                    $("#state2").val((response['residenceDetails'].aa_current_state=='')?'-':response['residenceDetails'].aa_current_state);
-                    $("#city2").val((response['residenceDetails'].aa_current_city=='')?'-':response['residenceDetails'].aa_current_city);
-                    $("#pincode2").val((response['residenceDetails'].aa_cr_residence_pincode=='')?'-':response['residenceDetails'].aa_cr_residence_pincode);
-                    $("#district2").val((response['residenceDetails'].aa_current_district=='')?'-':response['residenceDetails'].aa_current_district);
-                    $("#presentResidenceType").val((response['residenceDetails'].current_residence_type=='')?'OWNED':response['residenceDetails'].current_residence_type);
-                    $("#residenceSince").val((response['residenceDetails'].current_residence_since=='')?'-':response['residenceDetails'].current_residence_since);
+                    $("#hfBulNo2").val((res.aa_current_house=='')?'-':res.aa_current_house);
+                    $("#lcss2").val((res.aa_current_locality=='')?'-':res.aa_current_locality);
+                    $("#landmark2").val((res.aa_current_landmark=='')?'-':res.aa_current_landmark);
+                    $("#state2").val((res.aa_current_state=='')?'-':res.aa_current_state);
+                    $("#city2").val((res.aa_current_city=='')?'-':res.aa_current_city);
+                    $("#pincode2").val((res.aa_cr_residence_pincode=='')?'-':res.aa_cr_residence_pincode);
+                    $("#district2").val((res.aa_current_district=='')?'-':res.aa_current_district);
+                    $("#presentResidenceType").val((res.current_residence_type=='')?'OWNED':res.current_residence_type);
+                    $("#residenceSince").val((res.current_residence_since=='')?'-':res.current_residence_since);
 
                     
                     var html = '<table class="table table-bordered table-striped"><tbody>';
-                        html += '<tr><th>House&nbsp;No.</th><td>'+ ((response['residenceDetails'].current_house=='')?'-':response['residenceDetails'].current_house) +'</td><th>Locality/Street</th><td>'+((response['residenceDetails'].current_locality=='')?'-':response['residenceDetails'].current_locality) +'</td></tr>';
-                        html += '<tr><th>Landmark</th><td>'+ ((response['residenceDetails'].current_landmark=='')?'-':response['residenceDetails'].current_landmark) +'</td><th>State</th><td>'+ ((response['residenceDetails'].current_state=='')?'-':response['residenceDetails'].current_state) +'</td></tr>';
-                        html += '<tr><th>City</th><td>'+ ((response['residenceDetails'].current_city=='')?'-':response['residenceDetails'].current_city) +'</td><th>Pincode</th><td>'+ ((response['residenceDetails'].cr_residence_pincode=='')?'-':response['residenceDetails'].cr_residence_pincode) +'</td></tr>';
-                        html += '<tr><th>District</th><td>'+ ((response['residenceDetails'].current_district=='')?'-':response['residenceDetails'].current_district) +'</td><th>Aadhar</th><td>'+((response['residenceDetails'].aadhar_no=='')?'-':response['residenceDetails'].aadhar_no) +'</td></tr>';
-                        html += '<tr><th>House&nbsp;No.</th><td>'+ ((response['residenceDetails'].aa_current_house=='')?'-':response['residenceDetails'].aa_current_house) +'</td><th>Locality/Street</th><td>'+ ((response['residenceDetails'].aa_current_locality=='')?'-':response['residenceDetails'].aa_current_locality) +'</td></tr>';
-                        html += '<tr><th>Landmark</th><td>'+ ((response['residenceDetails'].aa_current_landmark=='')?'-':response['residenceDetails'].aa_current_landmark) +'</td><th>State</th><td>'+ ((response['residenceDetails'].aa_current_state=='')?'-':response['residenceDetails'].aa_current_state) +'</td></tr>';
-                        html += '<tr><th>City</th><td>'+ ((response['residenceDetails'].aa_current_city=='')?'-':response['residenceDetails'].aa_current_city) +'</td><th>Pincode</th><td>'+ ((response['residenceDetails'].aa_cr_residence_pincode=='')?'-':response['residenceDetails'].aa_cr_residence_pincode) +'</td></tr>';
-                        html += '<tr><th>District</th><td>'+ ((response['residenceDetails'].aa_current_district=='')?'-':response['residenceDetails'].aa_current_district) +'</td><th>Present&nbsp;Residence&nbsp;Type</th><td>'+ ((response['residenceDetails'].current_residence_type=='')?'OWNED':response['residenceDetails'].current_residence_type) +'</td></tr>';
-                        html += '<tr><th>Residing&nbsp;Since</th><td>'+ ((response['residenceDetails'].current_residence_since=='')?'-':response['residenceDetails'].current_residence_since) +'</td></tr>';
+                        html += '<tr><th>House&nbsp;No.</th><td>'+ ((res.current_house=='')?'-':res.current_house) +'</td><th>Locality/Street</th><td>'+((res.current_locality=='')?'-':res.current_locality) +'</td></tr>';
+                        html += '<tr><th>Landmark</th><td>'+ ((res.current_landmark=='')?'-':res.current_landmark) +'</td><th>State</th><td>'+ ((res.current_state=='')?'-':res.current_state) +'</td></tr>';
+                        html += '<tr><th>City</th><td>'+ ((res.current_city=='')?'-':res.current_city) +'</td><th>Pincode</th><td>'+ ((res.cr_residence_pincode=='')?'-':res.cr_residence_pincode) +'</td></tr>';
+                        html += '<tr><th>District</th><td>'+ ((res.current_district=='')?'-':res.current_district) +'</td><th>Aadhar</th><td>'+((res.aadhar_no=='')?'-':res.aadhar_no) +'</td></tr>';
+                        html += '<tr><th>House&nbsp;No.</th><td>'+ ((res.aa_current_house=='')?'-':res.aa_current_house) +'</td><th>Locality/Street</th><td>'+ ((res.aa_current_locality=='')?'-':res.aa_current_locality) +'</td></tr>';
+                        html += '<tr><th>Landmark</th><td>'+ ((res.aa_current_landmark=='')?'-':res.aa_current_landmark) +'</td><th>State</th><td>'+ ((res.aa_current_state=='')?'-':res.aa_current_state) +'</td></tr>';
+                        html += '<tr><th>City</th><td>'+ ((res.aa_current_city=='')?'-':res.aa_current_city) +'</td><th>Pincode</th><td>'+ ((res.aa_cr_residence_pincode=='')?'-':res.aa_cr_residence_pincode) +'</td></tr>';
+                        html += '<tr><th>District</th><td>'+ ((res.aa_current_district=='')?'-':res.aa_current_district) +'</td><th>Present&nbsp;Residence&nbsp;Type</th><td>'+ ((res.current_residence_type=='')?'OWNED':res.current_residence_type) +'</td></tr>';
+                        html += '<tr><th>Residing&nbsp;Since</th><td>'+ ((res.current_residence_since=='')?'-':res.current_residence_since) +'</td></tr>';
                         html += '</tbody></table>';
                     $('#viewResidenceDetails').html(html);
                 }
@@ -948,36 +950,37 @@
                 data : {csrf_token},
                 dataType : "json",
                 success : function(response){
-                    $("#officeEmpName").val((response['employmentDetails'].employer_name==null)?'-':response['employmentDetails'].employer_name);
-                    $("#hfBulNo3").val((response['employmentDetails'].emp_house==null)?'-':response['employmentDetails'].emp_house);
-                    $("#lcss3").val((response['employmentDetails'].emp_street==null)?'-':response['employmentDetails'].emp_street);
-                    $("#lankmark3").val((response['employmentDetails'].emp_landmark==null)?'-':response['employmentDetails'].emp_landmark);
-                    $("#state3").val((response['employmentDetails'].emp_state==null)?'-':response['employmentDetails'].emp_state);
-                    // $("#city3").val((response['employmentDetails'].emp_city==null)?'-':response['employmentDetails'].emp_city);
+                    var res =response['employmentDetails'];
+                    $("#officeEmpName").val((res.employer_name==null)?'-':res.employer_name);
+                    $("#hfBulNo3").val((res.emp_house==null)?'-':res.emp_house);
+                    $("#lcss3").val((res.emp_street==null)?'-':res.emp_street);
+                    $("#lankmark3").val((res.emp_landmark==null)?'-':res.emp_landmark);
+                    $("#state3").val((res.emp_state==null)?'-':res.emp_state);
+                    // $("#city3").val((res.emp_city==null)?'-':res.emp_city);
 
-                    $("#city3").append('<option value="'+ response['employmentDetails'].emp_city +'">'+ response['employmentDetails'].emp_city +'</option>');
-                    $("#pincode3").val((response['employmentDetails'].emp_pincode==null)?'-':response['employmentDetails'].emp_pincode);
-                    $("#district3").val((response['employmentDetails'].emp_district==null)?'-':response['employmentDetails'].emp_district);
-                    $("#website").val((response['employmentDetails'].emp_website==null)?'-':response['employmentDetails'].emp_website);
-                    $("#employeeType").val((response['employmentDetails'].emp_employer_type==null)?'-':response['employmentDetails'].emp_employer_type);
-                    $("#industry").val((response['employmentDetails'].industry==null)?'-':response['employmentDetails'].industry);
-                    $("#sector").val((response['employmentDetails'].sector==null)?'-':response['employmentDetails'].sector);
-                    $("#department").val((response['employmentDetails'].emp_department==null)?'-':response['employmentDetails'].emp_department);
-                    $("#designation").val((response['employmentDetails'].emp_designation==null)?'-':response['employmentDetails'].emp_designation);
-                    $("#employedSince").val((response['employmentDetails'].emp_residence_since==null)?'-':response['employmentDetails'].emp_residence_since);
-                    $("#presentServiceTenure").val((response['employmentDetails'].presentServiceTenure==null)?'-':response['employmentDetails'].presentServiceTenure);
+                    $("#city3").append('<option value="'+ res.emp_city +'">'+ res.emp_city +'</option>');
+                    $("#pincode3").val((res.emp_pincode==null)?'-':res.emp_pincode);
+                    $("#district3").val((res.emp_district==null)?'-':res.emp_district);
+                    $("#website").val((res.emp_website==null)?'-':res.emp_website);
+                    $("#employeeType").val((res.emp_employer_type==null)?'-':res.emp_employer_type);
+                    $("#industry").val((res.industry==null)?'-':res.industry);
+                    $("#sector").val((res.sector==null)?'-':res.sector);
+                    $("#department").val((res.emp_department==null)?'-':res.emp_department);
+                    $("#designation").val((res.emp_designation==null)?'-':res.emp_designation);
+                    $("#employedSince").val((res.emp_residence_since==null)?'-':res.emp_residence_since);
+                    $("#presentServiceTenure").val((res.presentServiceTenure==null)?'-':res.presentServiceTenure);
                     
 
 
                     var html = '<table class="table table-bordered table-striped"><tbody>';
-                        html += '<tr><th>Office/&nbsp;Employer&nbsp;Name</th><td>'+ ((response['employmentDetails'].employer_name==null)?'-':response['employmentDetails'].employer_name) +'</td><th>Shop/&nbsp;Block/&nbsp;Building&nbsp;No.</th><td>'+ ((response['employmentDetails'].emp_house==null)?'-':response['employmentDetails'].emp_house) +'</td></tr>';
-                        html += '<tr><th>Locality/&nbsp;Colony/&nbsp;Sector/&nbsp;Street</th><td>'+ ((response['employmentDetails'].emp_street==null)?'-':response['employmentDetails'].emp_street) +'</td><th>Landmark</th><td>'+ ((response['employmentDetails'].emp_landmark==null)?'-':response['employmentDetails'].emp_landmark) +'</td></tr>';
-                        html += '<tr><th>State</th><td>'+ ((response['employmentDetails'].emp_state==null)?'-':response['employmentDetails'].emp_state) +'</td><th>City</th><td>'+ ((response['employmentDetails'].emp_city==null)?'-':response['employmentDetails'].emp_city) +'</td></tr>';
-                        html += '<tr><th>Pincode</th><td>'+ ((response['employmentDetails'].emp_pincode==null)?'-':response['employmentDetails'].emp_pincode) +'</td><th>District</th><td>'+ ((response['employmentDetails'].emp_district==null)?'-':response['employmentDetails'].emp_district) +'</td></tr>';
-                        html += '<tr><th>Website</th><td>'+ ((response['employmentDetails'].emp_website==null)?'-':response['employmentDetails'].emp_website) +'</td><th>Employer&nbsp;Type</th><td>'+ ((response['employmentDetails'].emp_employer_type==null)?'-':response['employmentDetails'].emp_employer_type) +'</td></tr>';
-                        html += '<tr><th>Industry</th><td>'+ ((response['employmentDetails'].industry==null)?'-':response['employmentDetails'].industry) +'</td><th>Sector</th><td>'+ ((response['employmentDetails'].sector==null)?'-':response['employmentDetails'].sector) +'</td></tr>';
-                        html += '<tr><th>Department</th><td>'+ ((response['employmentDetails'].emp_department==null)?'-':response['employmentDetails'].emp_department) +'</td><th>Designation</th><td>'+ ((response['employmentDetails'].emp_designation==null)?'-':response['employmentDetails'].emp_designation) +'</td></tr>';
-                        html += '<tr><th>Employed&nbsp;Since</th><td>'+ ((response['employmentDetails'].emp_residence_since==null)?'-':response['employmentDetails'].emp_residence_since) +'</td><th>Present&nbsp;Service&nbsp;Tenure</th><td>'+ ((response['employmentDetails'].presentServiceTenure==null)?'-':response['employmentDetails'].presentServiceTenure) +'</td></tr>';
+                        html += '<tr><th>Office/&nbsp;Employer&nbsp;Name</th><td>'+ ((res.employer_name==null)?'-':res.employer_name) +'</td><th>Shop/&nbsp;Block/&nbsp;Building&nbsp;No.</th><td>'+ ((res.emp_house==null)?'-':res.emp_house) +'</td></tr>';
+                        html += '<tr><th>Locality/&nbsp;Colony/&nbsp;Sector/&nbsp;Street</th><td>'+ ((res.emp_street==null)?'-':res.emp_street) +'</td><th>Landmark</th><td>'+ ((res.emp_landmark==null)?'-':res.emp_landmark) +'</td></tr>';
+                        html += '<tr><th>State</th><td>'+ ((res.emp_state==null)?'-':res.emp_state) +'</td><th>City</th><td>'+ ((res.emp_city==null)?'-':res.emp_city) +'</td></tr>';
+                        html += '<tr><th>Pincode</th><td>'+ ((res.emp_pincode==null)?'-':res.emp_pincode) +'</td><th>District</th><td>'+ ((res.emp_district==null)?'-':res.emp_district) +'</td></tr>';
+                        html += '<tr><th>Website</th><td>'+ ((res.emp_website==null)?'-':res.emp_website) +'</td><th>Employer&nbsp;Type</th><td>'+ ((res.emp_employer_type==null)?'-':res.emp_employer_type) +'</td></tr>';
+                        html += '<tr><th>Industry</th><td>'+ ((res.industry==null)?'-':res.industry) +'</td><th>Sector</th><td>'+ ((res.sector==null)?'-':res.sector) +'</td></tr>';
+                        html += '<tr><th>Department</th><td>'+ ((res.emp_department==null)?'-':res.emp_department) +'</td><th>Designation</th><td>'+ ((res.emp_designation==null)?'-':res.emp_designation) +'</td></tr>';
+                        html += '<tr><th>Employed&nbsp;Since</th><td>'+ ((res.emp_residence_since==null)?'-':res.emp_residence_since) +'</td><th>Present&nbsp;Service&nbsp;Tenure</th><td>'+ ((res.presentServiceTenure==null)?'-':res.presentServiceTenure) +'</td></tr>';
                         html += '</tbody></table>';
 
                     $('#ViewEmploymentDetails').html(html);
@@ -995,14 +998,15 @@
                 url : '<?= base_url("getReferenceDetails/") ?>'+lead_id,
                 type : 'POST',
                 data : {csrf_token},
-                dataType : "json",
+                dataType : "json", 
                 success : function(response){
-                    $("#refrence1").val((response['referenceDetails'].reference_one==null)?'-':response['referenceDetails'].reference_one);
-                    $("#refrence2").val((response['referenceDetails'].reference_two==null)?'-':response['referenceDetails'].reference_two);
-                    $("#relation1").val((response['referenceDetails'].relation_one==null)?'-':response['referenceDetails'].relation_one);
-                    $("#relation2").val((response['referenceDetails'].relation_two==null)?'-':response['referenceDetails'].relation_two);
-                    $("#refrence1mobile").val((response['referenceDetails'].ref_one_mobile==null)?'-':response['referenceDetails'].ref_one_mobile);
-                    $("#refrence2mobile").val((response['referenceDetails'].ref_two_mobile==null)?'-':response['referenceDetails'].ref_two_mobile);
+                    var res = response['referenceDetails'];
+                    $("#refrence1").val((res.reference_one==null)?'-':res.reference_one);
+                    $("#refrence2").val((res.reference_two==null)?'-':res.reference_two);
+                    $("#relation1").val((res.relation_one==null)?'-':res.relation_one);
+                    $("#relation2").val((res.relation_two==null)?'-':res.relation_two);
+                    $("#refrence1mobile").val((res.ref_one_mobile==null)?'-':res.ref_one_mobile);
+                    $("#refrence2mobile").val((res.ref_two_mobile==null)?'-':res.ref_two_mobile);
                     
 
                 }
