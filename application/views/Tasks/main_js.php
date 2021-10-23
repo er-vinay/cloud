@@ -657,7 +657,7 @@
                     html += '<tr><th class="thbg">Disbursal Email Delivery status</th><td>'+ ((res.loanAgreementRequest == 1) ? "Sended" : 'Pending') +'</td><th class="thbg">Disbursal Email Response status</th><td>'+ ((res.loanAgreementResponse == 1) ? "Accepted" : '-') +'</td></tr>';
                     html += '<tr><th class="thbg">Disbursal Email Response IP</th><td>'+ ((res.agrementUserIP)?res.agrementUserIP : "-") +'</td><th class="thbg">Acceptance Email</th><td>'+ ((res.loanAgreementResponse == 1) ? res.email : '-') +'</td></tr>';
 
-                    if((res.loan_status !== '') && (res.loan_status != 'DISBURSED-PENDING'))
+                    if((res.loan_status !== '') && ((res.loan_status != 'DISBURSED-PENDING') || (res.loan_status != 'DISBURSED')))
                     {
                         <?php if(agent == "DS1"){ ?>
                             if(res.loan_status == 'DISBURSED-PENDING'){
