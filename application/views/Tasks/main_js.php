@@ -1725,11 +1725,12 @@
                     $('#btnCAM_Approve').html('<span class="spinner-border spinner-border-sm mr-2" role="status"></span>Processing...').prop('disabled', true);
                 },
                 success : function(response){
-                    if(response.notification){
+                    if(response.errSession){
+                        window.location.href="<?= base_url() ?>";
+                    } else if(response.notification){
                         catchNotification(response.notification);
                     } else if(response.msg){
                         catchSuccess(response.msg);
-                        // window.location.reload();
                         history.back(1);
                     }else{
                         catchError(response.err);
