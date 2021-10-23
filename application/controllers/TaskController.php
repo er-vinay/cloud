@@ -977,8 +977,8 @@
 	        		// echo "<pre>"; print_r($sendLetter); exit;
 
 					$data3 = [
-						'company_id' 				=> $this->input->post('company_id'),
-						'product_id' 				=> $this->input->post('product_id'),
+						'company_id' 				=> company_id,
+						'product_id' 				=> product_id,
 						'lead_id' 					=> $this->input->post('lead_id'),
 						'customer_id' 				=> $this->input->post('customer_id'),
 						'loan_no' 					=> $loan_no,
