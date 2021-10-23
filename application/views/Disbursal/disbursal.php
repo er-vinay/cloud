@@ -14,7 +14,7 @@
         <div id="disbursalBank" class="collapse">
             <div class="form-group">
                 <form id="disbursalPayableDetails" class="form-inline" method="post" enctype="multipart/form-data">
-                    <input type="hidden" class="form-control" name="lead_id" id="lead_id" readonly>
+                    <input type="hidden" class="form-control" name="lead_id" id="lead_id" value="<?= $leadDetails->lead_id; ?>" readonly>
                     <input type="hidden" class="form-control" name="company_id" id="company_id" value="<?= company_id ?>" readonly>
                     <input type="hidden" name="customer_id" id="customer_id" value="<?php echo $leadDetails->customer_id; ?>" />
                     <input type="hidden" class="form-control" name="product_id" id="product_id" value="<?= product_id ?>" readonly>
@@ -70,7 +70,7 @@
         <div id="divUpdateReferenceNo" class="collapse">
             <div class="form-group">
                 <form id="formUpdateReferenceNo" method="post" enctype="multipart/form-data">
-                    <input type="hidden" class="form-control" name="lead_id" id="lead_id" readonly>
+                    <input type="hidden" class="form-control" name="lead_id" id="lead_id" value="<?= $leadDetails->lead_id; ?>" readonly>
                     <input type="hidden" class="form-control" name="company_id" id="company_id" value="<?= company_id ?>" readonly>
                     <input type="hidden" name="customer_id" id="customer_id" value="<?php echo $leadDetails->customer_id; ?>" />
                     <input type="hidden" class="form-control" name="product_id" id="product_id" value="<?= product_id ?>" readonly>
