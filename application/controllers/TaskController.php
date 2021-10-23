@@ -949,28 +949,10 @@
         	}
 			if ($this->input->server('REQUEST_METHOD') == 'POST') 
 		    {
-        		$this->form_validation->set_rules('lead_id', 'Lead ID', 'required|trim');
-        		$this->form_validation->set_rules('customer_id', 'Customer ID', 'required|trim');
-        		$this->form_validation->set_rules('company_id', 'Company ID', 'required|trim');
-        		$this->form_validation->set_rules('product_id', 'Product ID', 'required|trim');
-        		$this->form_validation->set_rules('salary_credit1', 'Salary 1', 'required|trim');
-        		$this->form_validation->set_rules('salary_credit2', 'Salary 2', 'required|trim');
-        		$this->form_validation->set_rules('salary_credit3', 'Salary 3', 'required|trim');
-        		$this->form_validation->set_rules('salary_credit1_date', 'Salary Date 1', 'required|trim');
-        		$this->form_validation->set_rules('salary_credit2_date', 'Salary Date 2', 'required|trim');
-        		$this->form_validation->set_rules('salary_credit3_date', 'Salary Date 3', 'required|trim');
-        		$this->form_validation->set_rules('salary_credit1_amount', 'Salary Amount 1', 'required|trim');
-        		$this->form_validation->set_rules('salary_credit2_amount', 'Salary Amount 2', 'required|trim');
-        		$this->form_validation->set_rules('salary_credit3_amount', 'Salary Amount 3', 'required|trim');
-        		$this->form_validation->set_rules('processing_fee_percent', 'Admin Fee Percentage', 'required|trim');
-
-        		$this->form_validation->set_rules('loan_recommended', 'Loan Recommended', 'required|trim');
-	        	$this->form_validation->set_rules('disbursal_date', 'Disbursal Date', 'required|trim');
-	        	$this->form_validation->set_rules('repayment_date', 'Repayment Date', 'required|trim');
-        		$this->form_validation->set_rules('roi', 'ROI', 'required|trim|callback_check_zero');
-
-	        	if($this->form_validation->run() == FALSE) {
-	        		$json['err'] = validation_errors();
+		        $sql2 = $this->Tasks->select(['CAM.lead_id' => $lead_id], 'CAM.cam_status', $this->tbl_cam);
+		        $cam = $sql2->row();
+	        	if(($sql2->num_rows() > 0) && ($cam->cam_status > 0)) {
+	        		$json['err'] = "Something found wrong in CAM, Please re-check";
 		            echo json_encode($json);
 	        	} else {
 					$lead_id = $this->input->post('lead_id');

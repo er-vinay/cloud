@@ -569,7 +569,7 @@
                     }
                 },
                 complete: function() {
-                    $('.lead-sanction-button').html('RECOMMEND').removeClass('disabled');
+                    $('.lead-sanction-button').html('SANCTION').removeClass('disabled');
                    
                 }
             });
