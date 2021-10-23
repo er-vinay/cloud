@@ -619,6 +619,7 @@
 	    					$arrData = [
 							    'updated_by' 	=> $this->input->post('user_id'),
 							    'updated_at' 	=> timestamp,
+						    	'cam_status' 	=> 1,
 	        	        	];
 	    					$data = array_merge($data, $arrData);
 						}
@@ -631,6 +632,7 @@
     					$arrData = [
 						    'user_id' 		=> $this->input->post('user_id'),
 						    'created_at' 	=> timestamp,
+						    'cam_status' 	=> 1,
         	        	];
         	        	
     					$data = array_merge($data, $arrData);
