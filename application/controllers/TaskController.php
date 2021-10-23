@@ -949,6 +949,7 @@
         	}
 			if ($this->input->server('REQUEST_METHOD') == 'POST') 
 		    {
+				$lead_id = $this->input->post('lead_id');
 		        $sql2 = $this->Tasks->select(['CAM.lead_id' => $lead_id], 'CAM.cam_status', $this->tbl_cam);
 		        $cam = $sql2->row();
 	        	if(($sql2->num_rows() == 0)) {
@@ -958,7 +959,6 @@
 	        		$json['err'] = "Something found wrong in CAM, Please re-check";
 		            echo json_encode($json);
 	        	} else {
-					$lead_id = $this->input->post('lead_id');
 					$status = "SANCTION";
 					$stage = "S12";
 					$data = ['status' => $status, "stage" => $stage];
