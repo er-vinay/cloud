@@ -972,7 +972,7 @@
 						'created_on'	=> timestamp
 					];
 
-	        		include ("DisbursalController.php");
+				    require_once(APPPATH.'controllers/DisbursalController.php');
 	        		$DC = new DisbursalController();
 	        		$sendLetter = $DC->sendDisbursalMail($lead_id);
 	        		echo "<pre>"; print_r($sendLetter); exit;
