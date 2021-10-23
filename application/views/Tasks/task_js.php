@@ -204,7 +204,7 @@
                                         <button class="btn btn-success lead-sanction-button" onclick="applicationRecommendation()" ?>Recommend</button>
                                         <?php } else if(agent == 'CR3'){ ?>
                                             <button class="btn btn-success" id="btn_send_back" onclick="leadSendBack('<?= $leadDetails->lead_id ?>', '<?= user_id ?>', '<?= $leadDetails->customer_id ?>')">Send Back</button>
-                                        <?php } if(agent == 'CR2' || agent == 'CR3'){ ?>
+                                        <?php } if(agent == 'CR2' || agent == 'CR3' && ($camDetails->cam_status == 1)){ ?>
                                             <button class="btn btn-primary lead-sanction-button" style="background : #0a5e90 !important;" onclick="sanctionleads('<?= $leadDetails->lead_id ?>', '<?= user_id ?>', '<?= $leadDetails->customer_id ?>')">Sanction</button>
                                         <?php } ?>
                                     </div>
