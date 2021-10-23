@@ -959,7 +959,6 @@
 	        		$json['err'] = "Something found wrong in CAM, Please re-check";
 		            echo json_encode($json);
 	        	} else {
-	        		echo "<pre>"; print_r($_POST); exit;
 					$status = "SANCTION";
 					$stage = "S12";
 					$data = ['status' => $status, "stage" => $stage];
@@ -976,6 +975,7 @@
 	        		include ("DisbursalController.php");
 	        		$DC = new DisbursalController();
 	        		$sendLetter = $DC->sendDisbursalMail($lead_id);
+	        		echo "<pre>"; print_r($sendLetter); exit;
 	        		$loan_no = $this->Tasks->generateLoanNo($lead_id);
 
 					$data3 = [
