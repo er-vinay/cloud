@@ -672,11 +672,11 @@
                     if(typeof res.loan_status !== 'undefined' && typeof res.loan_status == 'SANCTION')
                     {
                         $('#div1disbursalBank, #disbursalBank, #div1UpdateReferenceNo, #divUpdateReferenceNo').hide();
-                    } else if(typeof res.loan_status !== 'undefined' && typeof loan_status == 'DISBURSE-PENDING'){
+                    } else if(typeof res.loan_status !== 'undefined' && typeof res.loan_status == 'DISBURSE-PENDING'){
                         $('#resendAgreementLetter').prop('disabled', true);
                         $('#div1disbursalBank, #disbursalBank').show();
                         $('#div1UpdateReferenceNo, #divUpdateReferenceNo').hide();
-                    } else if(typeof res.loan_status !== 'undefined' && typeof loan_status == 'DISBURSED' && res.disburse_refrence_no == ''){
+                    } else if(typeof res.loan_status !== 'undefined' && typeof res.loan_status == 'DISBURSED' && res.disburse_refrence_no == ''){
                         $('#resendAgreementLetter').prop('disabled', true);
                         $('#div1UpdateReferenceNo, #divUpdateReferenceNo').show();
                         $('div1disbursalBank, #disbursalBank').hide();

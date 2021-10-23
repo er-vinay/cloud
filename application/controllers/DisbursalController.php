@@ -177,7 +177,6 @@
 		    }
 		}
 		
-		// public function loanAgreementLetterResponse($lead_id, $response)
 		public function loanAgreementLetterResponse()
 		{
 			if ($this->input->server('REQUEST_METHOD') == 'POST') 
