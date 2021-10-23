@@ -200,7 +200,8 @@
                                         <button class="btn btn-success lead-hold-button" onclick="holdLeadsRemark()">Hold</button>
                                         <?php } if(agent == 'CR1' && ($leadDetails->application_status == 1)) { ?>
                                         <button class="btn btn-success" id="LeadRecommend" onclick="leadRecommend('<?= $leadDetails->lead_id ?>', '<?= user_id ?>', '<?= $leadDetails->customer_id ?>')">Recommend</button>
-                                        <?php } if(agent == 'CR2' && ($camDetails->cam_status == 1)) { ?>
+                                        <?php } 
+                                        if(agent == 'CR2' && ($camDetails->cam_status == 1)) { ?>
                                         <button class="btn btn-success lead-sanction-button" onclick="applicationRecommendation()" ?>Recommend</button>
                                         <?php } else if(agent == 'CR3'){ ?>
                                             <button class="btn btn-success" id="btn_send_back" onclick="leadSendBack('<?= $leadDetails->lead_id ?>', '<?= user_id ?>', '<?= $leadDetails->customer_id ?>')">Send Back</button>

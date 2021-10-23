@@ -91,8 +91,11 @@
 	        $sql = $leadData->row();
             $data['leadDetails'] = $sql;
 
-	        $sql2 = $this->Tasks->select(['lead_id' => $lead_id], 'cam_status', 'credit_analysis_memo');
-	        $data['camDetails'] = $sql2->row();
+	        $sql2 = $this->Tasks->select(['CAM.lead_id' => $lead_id], 'CAM.cam_status', $this->tbl_cam);
+	        $data['camDetails'] = json_encode(['cam_status' => 0]);
+	        if($sql2->num_rows() > 0){
+		        $data['camDetails'] = $sql2->row();
+		    }
             $data['docs_master'] = $this->Docs->docs_type_master();
     		$this->load->view('Tasks/task_js.php', $data);
 			$this->load->view('Tasks/main_js.php');

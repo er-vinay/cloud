@@ -1987,7 +1987,7 @@ $("#savefvrData").click(function(){
                 },
                 success : function(response){
                     if(response.msg){
-                        getPersonalDetails($('#lead_id').val());
+                        history.back(1);
                         catchSuccess(response.msg);
                     }else{
                         catchError(response.err);
