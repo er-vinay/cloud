@@ -680,8 +680,8 @@
                         $('#div1UpdateReferenceNo, #divUpdateReferenceNo').hide();
                     } else if((res.loan_status == 'DISBURSED') && (res.disburse_refrence_no == null)){
                         $('#resendAgreementLetter').prop('disabled', true);
+                        $('#div1disbursalBank, #disbursalBank').hide();
                         $('#div1UpdateReferenceNo, #divUpdateReferenceNo').show();
-                        $('div1disbursalBank, #disbursalBank').hide();
                     } else {
                         $('#div1disbursalBank, #disbursalBank, #div1UpdateReferenceNo, #divUpdateReferenceNo').hide();
                     }
