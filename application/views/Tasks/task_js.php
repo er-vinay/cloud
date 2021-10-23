@@ -191,7 +191,7 @@
                             <input type="hidden" name="status" id="status" value="<?= $leadDetails->status ?>">
                             <input type="hidden" name="stage" id="stage" value="<?= $leadDetails->stage ?>">
                             
-                            <?php if((agent == "CR1" || agent == "CR2" || agent == "CA" || agent == "SA") || (agent == "CR3" && $leadDetails->stage == "S10")) { ?>
+                            <?php if((agent == "CR1" || (agent == "CR2" && $leadDetails->stage != "S10") || agent == "CA" || agent == "SA") || (agent == "CR3" && $leadDetails->stage == "S10")) { ?>
                             <div id="btndivReject1">  
                                 <div calss="row" style="border-top: solid 1px #ddd;text-align: center; padding-top : 20px; padding-bottom: 20px; background: #f3f3f3; overflow: auto;">
                                     <div class="col-md-12 text-center">
