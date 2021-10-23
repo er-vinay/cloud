@@ -655,7 +655,7 @@
                     html += '<tr><th class="thbg">Disbursal Email Delivery status</th><td>'+ ((res.loanAgreementRequest == 1) ? "Sended" : 'Pending') +'</td><th class="thbg">Disbursal Email Response status</th><td>'+ ((res.loanAgreementResponse == 1) ? "Accepted" : '-') +'</td></tr>';
                     html += '<tr><th class="thbg">Disbursal Email Response IP</th><td>'+ ((res.agrementUserIP)?res.agrementUserIP : "-") +'</td><th class="thbg">Acceptance Email</th><td>'+ ((res.loanAgreementResponse == 1) ? res.email : '-') +'</td></tr>';
 
-                    if(typeof res.loan_status !== 'undefined' && typeof res.loan_status != 'DISBURSED-PENDING')
+                    if((res.loan_status !== '') && (res.loan_status != 'DISBURSED-PENDING'))
                     {
                         <?php if(agent == "DS1"){ ?>
                             html += '<tr><th class="thbg">Resend Disbursal Email</th><td colspan="4"><input type="checkbox" name="resendAgreementLetter" id="resendAgreementLetter" onclick="resendAgreementLetter('+ lead_id  +', '+ user_id +')"></td></tr>';
@@ -669,14 +669,14 @@
                         html += '<tr><th class="thbg">MOP</th><td>'+ ((res.mode_of_payment)?res.mode_of_payment : "-") +'</td><th class="thbg">Disbursal Reference No.</th><td colspan="4">'+ ((res.disburse_refrence_no) ? res.disburse_refrence_no : '-') +'</td></tr>';
                     }
                     html += '</tbody></table>';
-                    if(typeof res.loan_status !== 'undefined' && typeof res.loan_status == 'SANCTION')
+                    if((res.loan_status !== '') && (res.loan_status == 'SANCTION'))
                     {
                         $('#div1disbursalBank, #disbursalBank, #div1UpdateReferenceNo, #divUpdateReferenceNo').hide();
-                    } else if(typeof res.loan_status !== 'undefined' && typeof res.loan_status == 'DISBURSE-PENDING'){
+                    } else if((res.loan_status !== '') && (res.loan_status == 'DISBURSE-PENDING')){
                         $('#resendAgreementLetter').prop('disabled', true);
                         $('#div1disbursalBank, #disbursalBank').show();
                         $('#div1UpdateReferenceNo, #divUpdateReferenceNo').hide();
-                    } else if(typeof res.loan_status !== 'undefined' && typeof res.loan_status == 'DISBURSED' && res.disburse_refrence_no == ''){
+                    } else if((res.loan_status !== '') && (res.loan_status == 'DISBURSED') && (res.disburse_refrence_no == '')){
                         $('#resendAgreementLetter').prop('disabled', true);
                         $('#div1UpdateReferenceNo, #divUpdateReferenceNo').show();
                         $('div1disbursalBank, #disbursalBank').hide();
