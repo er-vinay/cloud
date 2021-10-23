@@ -974,7 +974,7 @@
 
 				    require_once(APPPATH.'controllers/DisbursalController.php');
 	        		$DC = new DisbursalController();
-	        		// $sendLetter = $DC->sendDisbursalMail($lead_id);
+	        		$sendLetter = $DC->sendDisbursalMail($lead_id);
 	        		$loan_no = $this->Tasks->generateLoanNo($lead_id);
 	        		echo "<pre>"; print_r($loan_no); exit;
 
@@ -1990,7 +1990,10 @@
 
 		// function to export the XLX data into the database //
 
-		
+		public function __destruct()
+		{
+			$this->db->close();
+		}
 
 		
 					

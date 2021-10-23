@@ -300,7 +300,7 @@
 	            </html>
 	        ';
 
-	        // echo "<pre>"; print_r($message); exit;
+	        echo "<pre>"; print_r($message); exit;
 
 	        $from = 'info@loanwalle.com';
 	        $conditions = ['CAM.company_id' => company_id];
