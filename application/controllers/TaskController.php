@@ -91,7 +91,7 @@
 	        $sql = $leadData->row();
             $data['leadDetails'] = $sql;
 
-	        $sql2 = $this->Tasks->select($conditions, 'cam_status', 'credit_analysis_memo');
+	        $sql2 = $this->Tasks->select(['lead_id' => $lead_id], 'cam_status', 'credit_analysis_memo');
 	        $data['camDetails'] = $sql2->row();
             $data['docs_master'] = $this->Docs->docs_type_master();
     		$this->load->view('Tasks/task_js.php', $data);
