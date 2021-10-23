@@ -103,6 +103,7 @@ $route['applicationHold/(:any)'] = 'TaskController/index/$1';
 $route['leadSendBack'] = 'TaskController/leadSendBack';
 $route['sanctioned/(:any)'] = 'TaskController/index/$1';
 $route['disbursalPending/(:any)'] = 'TaskController/index/$1';
+$route['disbursed/(:any)'] = 'TaskController/index/$1';
 $route['collection/(:any)'] = 'TaskController/index/$1';
 
 
