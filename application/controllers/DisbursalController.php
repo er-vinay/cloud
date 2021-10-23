@@ -365,6 +365,7 @@
 	        			'recommended_amount' 	=> $this->input->post('payable_amount'),
 	        			'status' 				=> $status,
 	        			'updated_by' 			=> $this->input->post('user_id'),
+	        			'status' 				=> 'DISBURSED',
 	        			'updated_on' 			=> timestamp,
 	        		];
 			// echo "else called : <pre>"; print_r($data); exit;
