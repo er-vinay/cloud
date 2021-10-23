@@ -75,7 +75,7 @@
 	            	return $this->load->view('home', $data);
 	                break;
 	            case 'CR2': // Credit (Credit Manager)
-					$where .= " AND is_active='1' AND (user_labels='CR2' OR user_labels='SA')";
+					$where .= " AND is_active='1' AND (user_labels='CR2' OR user_labels='CR3' OR user_labels='SA')";
 					$data['menusList'] = $this->Menus->menusList($where);
 					$stage = $data['menusList']->result_array();
 					foreach($stage as $st)
@@ -86,7 +86,7 @@
 	            	return $this->load->view('home', $data);
 	                break;
 	            case 'CR3': // Credit (Credit Head)
-					$where .= " AND is_active='1' AND (user_labels='CR1' OR user_labels='CR2' OR user_labels='CR3' OR user_labels='SA')";
+					$where .= " AND is_active='1' AND (user_labels='CR1' OR user_labels='CR2' OR user_labels='CR3' OR user_labels='DS1' OR user_labels='SA')";
 					$data['menusList'] = $this->Menus->menusList($where);
 					$stage = $data['menusList']->result_array();
 					foreach($stage as $st)
