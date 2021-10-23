@@ -959,6 +959,7 @@
 	        		$json['err'] = "Something found wrong in CAM, Please re-check";
 		            echo json_encode($json);
 	        	} else {
+	        		echo "<pre>"; print_r($_POST); exit;
 					$status = "SANCTION";
 					$stage = "S12";
 					$data = ['status' => $status, "stage" => $stage];
