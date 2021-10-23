@@ -974,9 +974,9 @@
 
 				    require_once(APPPATH.'controllers/DisbursalController.php');
 	        		$DC = new DisbursalController();
-	        		$sendLetter = $DC->sendDisbursalMail($lead_id);
-	        		echo "<pre>"; print_r($sendLetter); exit;
+	        		// $sendLetter = $DC->sendDisbursalMail($lead_id);
 	        		$loan_no = $this->Tasks->generateLoanNo($lead_id);
+	        		echo "<pre>"; print_r($loan_no); exit;
 
 					$data3 = [
 						'company_id' 				=> $this->input->post('company_id'),
