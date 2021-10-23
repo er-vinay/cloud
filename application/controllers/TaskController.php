@@ -86,7 +86,7 @@
 
 	        $conditions = ['LD.company_id' => company_id, 'LD.product_id' => product_id, 'LD.lead_id' => $lead_id];
 	        
-            $select = 'LD.lead_id, LD.customer_id, LD.application_no, C.first_name, C.middle_name, C.sur_name, C.email, C.alternate_email, C.gender, C.mobile, C.alternate_mobile, LD.obligations, LD.promocode, LD.purpose, LD.user_type, C.pancard,  LD.loan_amount, LD.tenure, LD.cibil, CE.income_type, CE.salary_mode, CE.monthly_income, LD.source, C.dob, ST.state, LD.city, LD.pincode, LD.status, LD.stage, LD.schedule_time, LD.created_on, LD.coordinates, LD.ip, LD.imei_no, LD.term_and_condition';
+            $select = 'LD.lead_id, LD.customer_id, LD.application_no, C.first_name, C.middle_name, C.sur_name, C.email, C.alternate_email, C.gender, C.mobile, C.alternate_mobile, LD.obligations, LD.promocode, LD.purpose, LD.user_type, C.pancard,  LD.loan_amount, LD.tenure, LD.cibil, CE.income_type, CE.salary_mode, CE.monthly_income, LD.source, C.dob, ST.state, LD.city, LD.pincode, LD.status, LD.stage, LD.schedule_time, LD.created_on, LD.coordinates, LD.ip, LD.imei_no, LD.term_and_condition, LD.application_status';
 	        $leadData = $this->Tasks->join_table($conditions, $select, $table1, $table2, $join2, $table3, $join3, $table4, $join4);
 	        $sql = $leadData->row();
             $data['leadDetails'] = $sql;
@@ -1512,7 +1512,8 @@
 						'state_id' 			=> $this->input->post('state'),
     					'city' 				=> $this->input->post('city'),
     					'pincode' 			=> $this->input->post('pincode'),
-						'obligations'		=> $this->input->post('obligations')
+						'obligations'		=> $this->input->post('obligations'),
+						'application_status'=> 1
     				];
 
 	        		$result = $this->Tasks->globalUpdate($conditions2, $data2, 'leads');

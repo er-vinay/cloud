@@ -198,7 +198,7 @@
                                         <button class="btn btn-success reject-button" onclick="RejectedLoan()">Reject</button>
                                         <?php if(agent == 'CR1' || agent == 'CR2') { ?>
                                         <button class="btn btn-success lead-hold-button" onclick="holdLeadsRemark()">Hold</button>
-                                        <?php } if(agent == 'CR1') { ?>
+                                        <?php } if(agent == 'CR1' && ($leadDetails->application_status == 1)) { ?>
                                         <button class="btn btn-success" id="LeadRecommend" onclick="leadRecommend('<?= $leadDetails->lead_id ?>', '<?= user_id ?>', '<?= $leadDetails->customer_id ?>')">Recommend</button>
                                         <?php } if(agent == 'CR2' && ($camDetails->cam_status == 1)) { ?>
                                         <button class="btn btn-success lead-sanction-button" onclick="applicationRecommendation()" ?>Recommend</button>
