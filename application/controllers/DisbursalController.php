@@ -106,7 +106,7 @@
 	        	} else {
 	        		$lead_id = $this->input->post('lead_id');
 	        		$sendLetter = $this->sendDisbursalMail($lead_id);
-	        		if($sendLetter == true)
+	        		if($sendLetter == 1)
 	        		{
 						$data = [
 							'loanAgreementRequest' 		=> ($sendLetter == 1) ? $sendLetter : 0,
@@ -114,10 +114,10 @@
 						];
 			        	$conditions = ['lead_id' => $lead_id];
 						$this->Tasks->updateLeads($conditions, $data, 'loan');
-	        			$json['msg'] = "SANCTION";
+	        			$json['msg'] = "Email Send Successfully.";
 						echo json_encode($json);
 	        		} else {
-	        			$json['err'] = "FAILED SANCTION";
+	        			$json['err'] = "FAILED to send Email. try again!";
 						echo json_encode($json);
 	        		}
 			    }
