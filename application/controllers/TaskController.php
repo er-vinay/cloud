@@ -90,6 +90,9 @@
 	        $leadData = $this->Tasks->join_table($conditions, $select, $table1, $table2, $join2, $table3, $join3, $table4, $join4);
 	        $sql = $leadData->row();
             $data['leadDetails'] = $sql;
+
+	        $sql2 = $this->Tasks->select($conditions, 'cam_status', 'credit_analysis_memo');
+	        $data['camDetails'] = $sql2->row();
             $data['docs_master'] = $this->Docs->docs_type_master();
     		$this->load->view('Tasks/task_js.php', $data);
 			$this->load->view('Tasks/main_js.php');
