@@ -786,7 +786,7 @@
 
 	        $conditions = ['LD.company_id' => company_id, 'LD.product_id' => product_id, 'LD.lead_id' => $lead_id];
 	        
-            $select = 'LD.lead_id, LD.customer_id, LD.application_no, C.first_name, C.middle_name, C.sur_name, C.email, C.alternate_email, C.gender, C.mobile, C.alternate_mobile, LD.obligations, LD.loan_amount, LD.status, LD.stage, CAM.loan_recommended, CAM.roi, CAM.total_admin_fee, CAM.disbursal_date, CAM.repayment_date, CAM.tenure, CAM.net_disbursal_amount, CAM.repayment_amount, L.loan_no, L.loanAgreementRequest, L.agrementRequestedDate, L.loanAgreementResponse, L.agrementUserIP, L.agrementResponseDate, L.status as loan_status, L.company_ac_no, L.channel, L.mode_of_payment, L.disburse_refrence_no';
+            $select = 'LD.lead_id, LD.customer_id, LD.application_no, C.first_name, C.middle_name, C.sur_name, C.email, C.alternate_email, C.gender, C.mobile, C.alternate_mobile, LD.obligations, LD.loan_amount, LD.status, LD.stage, CAM.loan_recommended, CAM.roi, CAM.total_admin_fee, CAM.disbursal_date, CAM.repayment_date, CAM.tenure, CAM.net_disbursal_amount, CAM.repayment_amount, L.loan_no, L.loanAgreementRequest, L.agrementRequestedDate, L.loanAgreementResponse, L.agrementUserIP, L.agrementResponseDate, L.status as loan_status, L.company_account_no, L.channel, L.mode_of_payment, L.disburse_refrence_no';
 	        return $this->Tasks->join_table($conditions, $select, $table1, $table2, $join2, $table3, $join3, $table4, $join4);
 		}
         

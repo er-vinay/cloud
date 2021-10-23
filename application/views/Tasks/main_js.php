@@ -664,13 +664,13 @@
                                 html += '<tr><th class="thbg">Resend Disbursal Email</th><td colspan="4"><input type="checkbox" name="resendAgreementLetter" id="resendAgreementLetter" onclick="resendAgreementLetter('+ lead_id  +', '+ user_id +')"></td></tr>';
                             }
                         <?php } else { ?>
-                            html += '<tr><th class="thbg">Payable Account</th><td>'+ ((res.company_ac_no)?res.company_ac_no : "-") +'</td><th class="thbg">Channel</th><td>'+ ((res.channel) ? res.channel : '-') +'</td></tr>';
+                            html += '<tr><th class="thbg">Payable Account</th><td>'+ ((res.company_account_no)?res.company_account_no : "-") +'</td><th class="thbg">Channel</th><td>'+ ((res.channel) ? res.channel : '-') +'</td></tr>';
                             html += '<tr><th class="thbg">MOP</th><td>'+ ((res.mode_of_payment)?res.mode_of_payment : "-") +'</td><th class="thbg">Disbursal Reference No.</th><td colspan="4">'+ ((res.disburse_refrence_no) ? res.disburse_refrence_no : '-') +'</td></tr>';
                         <?php } ?>
                     } 
                     if(res.loan_status == 'DISBURSED')
                     {
-                        html += '<tr><th class="thbg">Payable Account</th><td>'+ ((res.company_ac_no)?res.company_ac_no : "-") +'</td><th class="thbg">Channel</th><td>'+ ((res.channel) ? res.channel : '-') +'</td></tr>';
+                        html += '<tr><th class="thbg">Payable Account</th><td>'+ ((res.company_account_no)?res.company_account_no : "-") +'</td><th class="thbg">Channel</th><td>'+ ((res.channel) ? res.channel : '-') +'</td></tr>';
                         html += '<tr><th class="thbg">MOP</th><td>'+ ((res.mode_of_payment)?res.mode_of_payment : "-") +'</td><th class="thbg">Disbursal Reference No.</th><td colspan="4">'+ ((res.disburse_refrence_no) ? res.disburse_refrence_no : '-') +'</td></tr>';
                     }
                     html += '</tbody></table>';
