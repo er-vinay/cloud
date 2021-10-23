@@ -648,7 +648,7 @@
                 $('#disbursal_date').val(res.disbursal_date);
                 var res2 = response['LeadFollowup'];
                 var html = '<table class="table table-bordered table-striped"><tbody>';  
-                    html += '<tr><th class="thbg">Loan No.</th><td colspan="4">'+ ((typeof res.loan_status !== 'undefined' && typeof res.loan_status == 'DISBURSED') ? res.loan_no : "-") +'</td></tr>';
+                    html += '<tr><th class="thbg">Loan No.</th><td colspan="4">'+ ((res.loan_status !== '' && res.loan_status == 'DISBURSED') ? res.loan_no : "-") +'</td></tr>';
                     html += '<tr><th class="thbg">Processed By</th><td>'+ (res2.processed_by) +'</td><th class="thbg">Processed On</th><td>'+ (res2.processed_on) +'</td></tr>';
                     html += '<tr><th class="thbg">Sanctioned By</th><td>'+ (res2.sanctioned_by) +'</td><th class="thbg">Sanctioned On</th><td>'+ (res2.sanctioned_on) +'</td></tr>';
                     html += '<tr><th class="thbg">Loan Approved</th><td>'+ ((res.loan_recommended)?res.loan_recommended : "-") +'</td><th class="thbg">ROI % (p.d.) Approved</th><td>'+ ((res.roi)?res.roi : "-") +'</td></tr>';
