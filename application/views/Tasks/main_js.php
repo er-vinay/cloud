@@ -2166,9 +2166,9 @@ $("#savefvrData").click(function(){
                     if(response.errSession){
                         window.location.href="<?= base_url() ?>";
                     } else if(response.msg){
-                        getCustomerBanking($('#customer_id').val());
-                        $("#verifyDisbursalBank")[0].reset();
+                        disbursalDetails('<?= $leadDetails->lead_id ?>', '<?= $leadDetails->customer_id ?>', '<?= user_id ?>');
                         catchSuccess(response.msg);
+
                     }else{
                         catchError(response.err);
                     }
