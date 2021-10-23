@@ -952,7 +952,7 @@
 		        $sql2 = $this->Tasks->select(['CAM.lead_id' => $lead_id], 'CAM.cam_status', $this->tbl_cam);
 		        $cam = $sql2->row();
 	        	if(($sql2->num_rows() == 0)) {
-	        		$json['err'] = "Something found wrong in CAM, Please re-check";
+	        		$json['err'] = "CAM Fields required, Please re-check";
 		            echo json_encode($json);
 	        	} else if(($cam->cam_status == 0)) {
 	        		$json['err'] = "Something found wrong in CAM, Please re-check";
