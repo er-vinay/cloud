@@ -611,6 +611,8 @@
 			        $conditions = ['CAM.company_id' => company_id, 'CAM.product_id' => product_id, 'CAM.lead_id' => $lead_id];
 			        $fetch = 'CAM.cam_id, CAM.lead_id, CAM.user_id';
 			        $sql = $this->Tasks->select($conditions, $fetch, $this->tbl_cam);
+					$this->Tasks->globalUpdate(['lead_id' => $lead_id], ['obligations' => $_POST['obligations']], 'leads');
+					$this->Tasks->globalUpdate(['lead_id' => $lead_id], ['monthly_income' => $_POST['monthly_salary']], 'customer_employment');
 				
 					if($sql->num_rows() > 0)
 					{
