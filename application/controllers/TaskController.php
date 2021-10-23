@@ -974,7 +974,7 @@
 
 	        		$sendLetter = $this->Tasks->sendDisbursalMail($lead_id);
 	        		$loan_no = $this->Tasks->generateLoanNo($lead_id);
-	        		echo "<pre>"; print_r($sendLetter); exit;
+	        		// echo "<pre>"; print_r($sendLetter); exit;
 
 					$data3 = [
 						'company_id' 				=> $this->input->post('company_id'),
@@ -983,8 +983,8 @@
 						'customer_id' 				=> $this->input->post('customer_id'),
 						'loan_no' 					=> $loan_no,
 						'status' 					=> $status,
-						'loanAgreementRequest' 		=> ($sendLetter == true) ? 1 : 0,
-						'agrementRequestedDate' 	=> ($sendLetter == true) ? timestamp : '',
+						'loanAgreementRequest' 		=> ($sendLetter == 1) ? $sendLetter : 0,
+						'agrementRequestedDate' 	=> ($sendLetter == 1) ? timestamp : '',
 					];
 		        	$conditions = ['company_id' => company_id, 'product_id' => product_id, 'lead_id' => $lead_id];
 					$this->Tasks->updateLeads($conditions, $data, 'leads');

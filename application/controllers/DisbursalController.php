@@ -109,8 +109,8 @@
 	        		if($sendLetter == true)
 	        		{
 						$data = [
-							'loanAgreementRequest' 		=> ($sendLetter == true) ? 1 : 0,
-							'agrementRequestedDate' 	=> ($sendLetter == true) ? timestamp : '',
+							'loanAgreementRequest' 		=> ($sendLetter == 1) ? $sendLetter : 0,
+							'agrementRequestedDate' 	=> ($sendLetter == 1) ? timestamp : '',
 						];
 			        	$conditions = ['lead_id' => $lead_id];
 						$this->Tasks->updateLeads($conditions, $data, 'loan');
