@@ -644,6 +644,8 @@
             dataType : "json",
             success : function(response){
                 var res = response['camDetails'];
+                $('#payable_amount').val(res.loan_recommended);
+                $('#disbursal_date').val(res.disbursal_date);
                 var res2 = response['LeadFollowup'];
                 var html = '<table class="table table-bordered table-striped"><tbody>';  
                     html += '<tr><th class="thbg">Loan No.</th><td colspan="4">'+ ((typeof res.loan_status !== 'undefined' && typeof res.loan_status == 'DISBURSED') ? res.loan_no : "-") +'</td></tr>';
