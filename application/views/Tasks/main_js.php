@@ -667,8 +667,9 @@
                             html += '<tr><th class="thbg">Payable Account</th><td>'+ ((res.company_ac_no)?res.company_ac_no : "-") +'</td><th class="thbg">Channel</th><td>'+ ((res.channel) ? res.channel : '-') +'</td></tr>';
                             html += '<tr><th class="thbg">MOP</th><td>'+ ((res.mode_of_payment)?res.mode_of_payment : "-") +'</td><th class="thbg">Disbursal Reference No.</th><td colspan="4">'+ ((res.disburse_refrence_no) ? res.disburse_refrence_no : '-') +'</td></tr>';
                         <?php } ?>
-                    } else {
-                        // $('#div1disbursalBank, #disbursalBank, #div1UpdateReferenceNo, #divUpdateReferenceNo').hide();
+                    } 
+                    if(res.loan_status == 'DISBURSED')
+                    {
                         html += '<tr><th class="thbg">Payable Account</th><td>'+ ((res.company_ac_no)?res.company_ac_no : "-") +'</td><th class="thbg">Channel</th><td>'+ ((res.channel) ? res.channel : '-') +'</td></tr>';
                         html += '<tr><th class="thbg">MOP</th><td>'+ ((res.mode_of_payment)?res.mode_of_payment : "-") +'</td><th class="thbg">Disbursal Reference No.</th><td colspan="4">'+ ((res.disburse_refrence_no) ? res.disburse_refrence_no : '-') +'</td></tr>';
                     }
