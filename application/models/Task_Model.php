@@ -31,7 +31,7 @@
 
 		public function index($conditions = null, $rowperpage = null, $start = null)
 		{
-            $this->db->select('LD.lead_id, LD.customer_id, LD.application_no, LD.loan_no, CAM.tenure, C.first_name, C.middle_name, C.sur_name, C.email, C.dob, C.mobile, C.pancard, LD.user_type, ST.state, LD.city, LD.created_on, LD.source, LD.status, LD.ip, LD.coordinates, LD.imei_no');
+            $this->db->select('LD.lead_id, LD.customer_id, LD.application_no, L.loan_no, CAM.tenure, C.first_name, C.middle_name, C.sur_name, C.email, C.dob, C.mobile, C.pancard, LD.user_type, ST.state, LD.city, LD.created_on, LD.source, LD.status, LD.ip, LD.coordinates, LD.imei_no');
             $this->db->from($this->table. ' LD');
 			$this->db->limit($rowperpage, $start);
             $this->db->join($this->table_state.' ST', 'ST.state_id = LD.state_id');
