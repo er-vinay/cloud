@@ -974,7 +974,6 @@
 
 	        		$sendLetter = $this->Tasks->sendDisbursalMail($lead_id);
 	        		$loan_no = $this->Tasks->generateLoanNo($lead_id);
-	        		// echo "<pre>"; print_r($sendLetter); exit;
 
 					$data3 = [
 						'company_id' 				=> company_id,

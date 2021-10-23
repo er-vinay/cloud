@@ -40,6 +40,7 @@
                             <li role="presentation" class="borderList "><a href="#CAMSheetSaction" onclick="getCam(<?= $leadDetails->lead_id ?>)" aria-controls="messages" role="tab" data-toggle="tab">CAM</a></li>
                             
                             <?php } if(agent == "DS1" 
+                                || agent == "CR3" 
                                 || agent == "CO1" 
                                 || agent == "AC1" 
                                 || agent == "CA" 
