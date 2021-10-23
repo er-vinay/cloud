@@ -54,18 +54,18 @@
                     <label class="labelField">Salary Credit&nbsp;<span class="required_Fields">*</span></label>
                     <select class="form-control inputField" id="salary_credit1" name="salary_credit1" autocomplete="off">
                         <option value="">SELECT</option>
-                        <option value="JANUARY">JANUARY</option>
-                        <option value="February">February</option>
-                        <option value="MARCH">MARCH</option>
-                        <option value="APRIL">APRIL</option>
-                        <option value="MAY">MAY</option>
-                        <option value="JUNE">JUNE</option>
-                        <option value="JULY">JULY</option>
-                        <option value="AUGUST">AUGUST</option>
-                        <option value="SEPTEMBER">SEPTEMBER</option>
-                        <option value="OCTOBER">OCTOBER</option>
-                        <option value="NOVEMBER">NOVEMBER</option>
-                        <option value="DECEMBER">DECEMBER</option>
+                        <option value="01">JANUARY</option>
+                        <option value="02">February</option>
+                        <option value="03">MARCH</option>
+                        <option value="04">APRIL</option>
+                        <option value="05">MAY</option>
+                        <option value="06">JUNE</option>
+                        <option value="07">JULY</option>
+                        <option value="08">AUGUST</option>
+                        <option value="09">SEPTEMBER</option>
+                        <option value="10">OCTOBER</option>
+                        <option value="11">NOVEMBER</option>
+                        <option value="12">DECEMBER</option>
                     </select>
                 </div>
 
@@ -81,18 +81,18 @@
                     <label class="labelField">Salary Credit&nbsp;<span class="required_Fields">*</span></label>
                     <select class="form-control inputField" id="salary_credit2" name="salary_credit2" autocomplete="off">
                         <option value="">SELECT</option>
-                        <option value="JANUARY">JANUARY</option>
-                        <option value="February">February</option>
-                        <option value="MARCH">MARCH</option>
-                        <option value="APRIL">APRIL</option>
-                        <option value="MAY">MAY</option>
-                        <option value="JUNE">JUNE</option>
-                        <option value="JULY">JULY</option>
-                        <option value="AUGUST">AUGUST</option>
-                        <option value="SEPTEMBER">SEPTEMBER</option>
-                        <option value="OCTOBER">OCTOBER</option>
-                        <option value="NOVEMBER">NOVEMBER</option>
-                        <option value="DECEMBER">DECEMBER</option>
+                        <option value="01">JANUARY</option>
+                        <option value="02">February</option>
+                        <option value="03">MARCH</option>
+                        <option value="04">APRIL</option>
+                        <option value="05">MAY</option>
+                        <option value="06">JUNE</option>
+                        <option value="07">JULY</option>
+                        <option value="08">AUGUST</option>
+                        <option value="09">SEPTEMBER</option>
+                        <option value="10">OCTOBER</option>
+                        <option value="11">NOVEMBER</option>
+                        <option value="12">DECEMBER</option>
                     </select>
                 </div>
 
@@ -108,18 +108,18 @@
                     <label class="labelField">Salary Credit&nbsp;<span class="required_Fields">*</span> </label>
                     <select class="form-control inputField" id="salary_credit3" name="salary_credit3" autocomplete="off">
                         <option value="">SELECT</option>
-                        <option value="JANUARY">JANUARY</option>
-                        <option value="February">February</option>
-                        <option value="MARCH">MARCH</option>
-                        <option value="APRIL">APRIL</option>
-                        <option value="MAY">MAY</option>
-                        <option value="JUNE">JUNE</option>
-                        <option value="JULY">JULY</option>
-                        <option value="AUGUST">AUGUST</option>
-                        <option value="SEPTEMBER">SEPTEMBER</option>
-                        <option value="OCTOBER">OCTOBER</option>
-                        <option value="NOVEMBER">NOVEMBER</option>
-                        <option value="DECEMBER">DECEMBER</option>
+                        <option value="01">JANUARY</option>
+                        <option value="02">February</option>
+                        <option value="03">MARCH</option>
+                        <option value="04">APRIL</option>
+                        <option value="05">MAY</option>
+                        <option value="06">JUNE</option>
+                        <option value="07">JULY</option>
+                        <option value="08">AUGUST</option>
+                        <option value="09">SEPTEMBER</option>
+                        <option value="10">OCTOBER</option>
+                        <option value="11">NOVEMBER</option>
+                        <option value="12">DECEMBER</option>
                     </select>
                 </div>
 

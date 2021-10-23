@@ -283,15 +283,21 @@
                     minViewMode: "months",
                     endDate : new Date()
                 });
+                var currentM = '';
+                $('#salary_credit1').change(function(){
+                    currentM = $(this).val();
+                    console.log(currentM);
+                });
 
                 $("#salary_credit1_date, #salary_credit2_date, #salary_credit3_date").datepicker({
                     format: 'dd-mm',
                     todayHighlight: true,
                     autoclose: true,
                     // startView: 2,
-                    // viewMode: "months", 
+                    viewMode: "months", 
                     // minViewMode: "months",
-                    endDate : new Date()
+                    startMonth : currentM,
+                    endMonth : currentM
                 });
 
                 
