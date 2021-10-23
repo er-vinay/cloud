@@ -167,14 +167,6 @@
    //      	$this->load->view('Tasks/GetLeadTaskList', $data);
 	  //   }
 	    
-	  //   public function leadSendBack()
-	  //   {
-	  //   	$data['sendBack'] = $this->Tasks->leadSendBack();
-	  //   	$user = $this->Admin->getUser(user_id);
-	  //   	$data['user'] = $user->row();
-   //      	$this->load->view('Tasks/leadSendBack', $data);
-	  //   }
-	    
 	  //   public function leadSanctioned()
 	  //   {
 	  //   	$data['leadSanctioned'] = $this->Tasks->leadSanctioned();
@@ -1044,205 +1036,39 @@
 	        	$conditions = ['company_id' => company_id, 'product_id' => product_id, 'lead_id' => $lead_id];
 				$this->Tasks->updateLeads($conditions, $data, 'leads');
             	$this->Tasks->insert($data2, 'lead_followup');   
-	            $data['msg'] = 'Application Send Back.';
+	            $data['msg'] = 'Application Recommended.';
 	            echo json_encode($data);
 	        }
 		}
-
-		// public function AddContactDetails($lead_id)
-		// {
-		// 	if ($this->input->server('REQUEST_METHOD') == 'POST') 
-	 //        {
-	 //        	$this->form_validation->set_rules('mobile', 'Mobile', 'required|trim');
-	 //        	$this->form_validation->set_rules('alternateMobileNo', 'Alternate Mobile No', 'required|trim');
-	 //        	$this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email');
-	 //        	$this->form_validation->set_rules('alternateEmailAddress', 'Alternate Email Address', 'required|trim|valid_email');
-	 //        	$this->form_validation->set_rules('gender', 'Gender', 'required|trim');
-	 //        	$this->form_validation->set_rules('pancard', 'Pancard', 'required|trim|regex_match[/^([a-zA-Z]){5}([0-9]){4}([a-zA-Z]){1}?$/]');
-	 //        	$this->form_validation->set_rules('addressLine1', 'Address Line1', 'required|trim');
-	 //        	$this->form_validation->set_rules('area', 'Area', 'required|trim');
-	 //        	$this->form_validation->set_rules('pincode', 'Pincode', 'required|trim');
-	 //        	$this->form_validation->set_rules('landmark', 'Landmark', 'required|trim');
-
-	 //        	if($this->form_validation->run() == FALSE) {
-	 //        		$json['error'] = validation_errors();
-		//             echo json_encode($json);
-	 //        	} else {
-		// 			$alternateMobileNo = $this->input->post('alternateMobileNo');
-		// 			$alternateEmailAddress = $this->input->post('alternateEmailAddress');
-		// 			$addressLine1 = $this->input->post('addressLine1');
-		// 			$area = $this->input->post('area');
-		// 			$landmark = $this->input->post('landmark');
-		// 			$mobile = $this->input->post('mobile');
-		// 			$email = $this->input->post('email');
-		// 			$gender = ucfirst($this->input->post('gender'));
-		// 			$pincode = $this->input->post('pincode');
-		// 			$pancard = $this->input->post('pancard');
-		// 			$dob     = $this->input->post('dob');
-
-		//             $data = array (
-		//                 'pancard'       			=> $pancard,
-		//                 'mobile'       				=> $mobile,
-		//                 'alternateMobileNo'       	=> $alternateMobileNo,
-		//                 'email'   					=> $email,
-		//                 'alternateEmailAddress'   	=> $alternateEmailAddress,
-		//                 'gender'   					=> $gender,
-		//                 'pincode'   				=> $pincode,
-		//                 'addressLine1'       		=> $addressLine1,
-		//                 'area'       				=> $area,
-		//                 'landmark'       			=> $landmark,
-		//                 'dob'       		    	=> $dob,
-		//                 'contactUpdatedBy'       	=> 1,
-		//             );
-
-		//             $this->db->where('lead_id', $lead_id)->update('leads', $data);
-		//             $result = "true";
-		//             echo json_encode($result);
-		//         }
-	 //        }
-		// }
-
-		// public function saveCustomerEmployeeDetails($lead_id)
-		// {
-		// 	if ($this->input->server('REQUEST_METHOD') == 'POST') 
-	 //        {
-	 //        	$this->form_validation->set_rules('employeeType', 'Employee Type', 'required|trim');
-	 //        	$this->form_validation->set_rules('dateOfJoining', 'Date Of Joining', 'required|trim');
-	 //        	$this->form_validation->set_rules('designation', 'Designation', 'required|trim');
-	 //        	$this->form_validation->set_rules('currentEmployer', 'Current Employer', 'required|trim');
-	 //        	$this->form_validation->set_rules('companyAddress', 'Company Address', 'required|trim');
-	 //        	$this->form_validation->set_rules('otherDetails', 'Other Details', 'required|trim');
-
-	 //        	if($this->form_validation->run() == FALSE) {
-	 //        		$json['error'] = validation_errors();
-		//             echo json_encode($json);
-	 //        	} else {
-		//             $data = array (
-		// 				'lead_id'		 	 => $lead_id,
-		// 				'employeeType'		 => $this->input->post('employeeType'),
-		// 				'dateOfJoining'		 => $this->input->post('dateOfJoining'),
-		// 				'designation'		 => $this->input->post('designation'),
-		// 				'currentEmployer'	 => $this->input->post('currentEmployer'),
-		// 				'companyAddress'	 => $this->input->post('companyAddress'),
-		// 				'otherDetails'		 => $this->input->post('otherDetails'),
-		// 				'updated_by'		 => $_SESSION['isUserSession']['user_id'],
-		//             );
-		//             $result = $this->db->insert('tbl_customerEmployeeDetails', $data);
-		//             $this->db->where('lead_id', $lead_id)->update('leads', ['employeeDetailsAdded' => 1]);
-		//             echo json_encode($result);
-		//         }
-	 //        }
-		// }
-
-		// public function ShowCustomerEmploymentDetails($lead_id)
-		// {
-	 //    	if(!empty($lead_id))
-	 //    	{
-	 //    		$result = $this->Tasks->ShowCustomerEmploymentDetails($lead_id);
-		//         echo json_encode($result);
-	 //    	}
-		// }
-
-		public function RequestForApproveLoan()
-		{
-			if(isset($_POST["lead_id"]))  
-			{
-				$lead_id = $this->input->post('lead_id');
-	            $query = $this->db->select('leads.contactUpdatedBy, leads.employeeDetailsAdded, leads.credit_added')
-	            ->where('leads.created_on BETWEEN "'. date('Y-m-d', strtotime("2020-12-06")). '" and "'. date('Y-m-d', strtotime(todayDate)).'"')
-	            
-                //->where('date(leads.created_on)', todayDate)
-	            ->where('lead_id', $lead_id)->get('leads')->row();
-				$contactUpdatedBy = $query->contactUpdatedBy;
-				$employeeDetailsAdded = $query->employeeDetailsAdded;
-				$credit_added = $query->credit_added;
-				// if($contactUpdatedBy == 0) {
-				// 	$json["err"] = "Contact Details Required.";
-				// } else if($employeeDetailsAdded == 0) {
-				// 	$json["err"] = "Employee Details Required.";
-				// } else if($credit_added == 0) {
-				// 	$json["err"] = "Credit Details Required.";
-				// } else {
-					$data = [
-							'loan_approved'     => 1,
-							'status' 	 	    => "Credit",
-							'credit_manager_id' 	 	=> $_SESSION['isUserSession']['user_id']
-						];
-		            $this->db->where('lead_id', $lead_id)->update('leads', $data);
-					$json["msg"] = "Request Send to Head.";
-				// }
-			    echo json_encode($json);
-	        }
-		}
-
-		public function taskRequestForApprove()
-	    {
-            $this->db->select('leads.lead_id, leads.name, leads.email, tb_states.state, leads.created_on, leads.source, leads.status, leads.credit_manager_id, leads.partPayment')
-                ->where('leads.loan_approved', 1)
-                ->from(tableLeads)
-                ->join('tb_states', 'leads.state_id = tb_states.id');
-            $query = $this->db->order_by('leads.lead_id', 'desc')->get();
-			$data['taskCount'] = $query->num_rows();
-			$data['listTask'] = $query->result();
-            
-        	$this->load->view('Tasks/taskRequestForApprove', $data);
-	    }
 	    
-		public function ApproveSenctionLoan()
-		{
+	    public function leadSendBack()
+	    {
+        	if($this->input->post('user_id') == ''){
+        		$json['errSession'] = "Session Expired";
+        		echo json_encode($json);
+        		return false;
+        	}
 			if(isset($_POST["lead_id"]))  
 			{
 				$lead_id = $this->input->post('lead_id');
-
-				$this->db->select('leads.lead_id, leads.name, leads.email, leads.mobile, leads.source, leads.status, leads.credit_manager_id, leads.partPayment, credit.loan_amount_approved, credit.tenure, credit.roi, credit.repay_amount, credit.repayment_date, credit.updated_on, credit.processing_fee')
-	               // ->where('leads.created_on BETWEEN "'. date('Y-m-d', strtotime("2020-12-01")). '" and "'. date('Y-m-d', strtotime("2020-12-03")).'"')
-	                ->where('leads.lead_id', $lead_id)
-	                ->from('leads')
-	                ->join('credit', 'credit.lead_id = leads.lead_id')
-	                ->join('tb_states', 'leads.state_id = tb_states.id');
-	            $query = $this->db->get()->row();
-
-				$name = $query->name;
-				$mobile = $query->mobile;
-
-				$msg = "Dear ".$name .",\nYour loan amount of \nRs. ".$query->loan_amount_approved."\nis sanctioned of ROI ".$query->roi."/ day \nIf you fail to pay \nRepay amount : ".$query->repay_amount." \non Repayment date : ".$query->repayment_date." \nthen the interest rate will be double of interest \nThanks & Regards \nLoanwalle";
-
-	            $this->notification($mobile, $msg); 
-                $loan_approved = 3;
-                if($_SESSION['isUserSession']['role'] == "Client Admin"){
-                	$loan_approved = 0;
-                }
-	            $data = array (
-	            	'loan_approved' => $loan_approved, 
-	            	'status' 		=> "Sanction", 
-	            	'is_Disbursed' 	=> 1
-	            );
-	            $this->db->where('lead_id', $lead_id)->update('leads', $data);
-	            $this->db->where('lead_id', $lead_id)->update('credit', ['is_Senctioned' => 3]);
-	            echo "true";
+				$status = "APPLICATION-SEND-BACK";
+				$stage = "S11";
+				$data = ['status' => $status, "stage" => $stage];
+				$data2 = [
+					'lead_id' 		=> $lead_id,
+					'customer_id' 	=> $this->input->post('customer_id'),
+					'user_id' 		=> $this->input->post('user_id'),
+					'status' 		=> $status, 
+					"stage" 		=> $stage, 
+					'remarks' 		=> "Leads Send Back.",
+					'created_on'	=> timestamp
+				];
+	        	$conditions = ['company_id' => company_id, 'product_id' => product_id, 'lead_id' => $lead_id];
+				$this->Tasks->updateLeads($conditions, $data, 'leads');
+            	$this->Tasks->insert($data2, 'lead_followup');   
+	            $data['msg'] = 'Application Send Back.';
+	            echo json_encode($data);
 	        }
-		}
-
-		public function getReasonList()
-		{
-			$data = $this->db->get('tbl_rejected_reson')->result();
-			echo "<pre>"; print_r($data); exit;
-		} 
-		
-		public function followUp()
-	    { 
-	        $lead_id = $this->input->post('lead_id');
-	        $remark = $this->input->post('reson');
-	        $data = array (
-	            	'lead_status'   => "Hold", 
-	            	'status' 		=> "Hold", 
-	            	'remark' 		=> $remark, 
-	            	'updated_on' 	=> date('Y-m-d H:i:s'),
-	            );
-	       if($this->db->where('lead_id', $lead_id)->update('leads', $data))
-	       {
-	          echo "true"; 
-	       } 
 	    }
 		
 		public function sanctionLetter($lead_id)

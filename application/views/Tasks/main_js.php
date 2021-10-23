@@ -602,7 +602,7 @@
                     }
                 },
                 complete: function() {
-                    $('#btn_send_back').html('RECOMMEND').removeClass('disabled');
+                    $('#btn_send_back').html('Send Back').removeClass('disabled');
                    
                 }
             });
