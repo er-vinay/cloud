@@ -99,6 +99,7 @@
         {	
 	        $leadData = $this->getCAMDetails($lead_id);
 	        $camDetails = $leadData->row();
+	        echo "<pre>"; print_r($camDetails); exit;
 	        $LeadFollowup = $this->leadFollowUpUser($lead_id);
 	        if($email == null){
 	        	$email = $camDetails->email;
