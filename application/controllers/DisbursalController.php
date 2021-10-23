@@ -363,7 +363,7 @@
 	        			'company_id' 			=> $this->input->post('company_id'),
 	        			'company_account_no' 	=> $this->input->post('payableAccount'),
 	        			'channel' 				=> $this->input->post('channel'),
-	        			'payable_amount' 		=> $this->input->post('payable_amount'),
+	        			'recommended_amount' 	=> $this->input->post('payable_amount'),
 	        			'status' 				=> $status,
 	        			'updated_by' 			=> $this->input->post('user_id'),
 	        			'updated_on' 			=> timestamp,
