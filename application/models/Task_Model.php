@@ -1018,9 +1018,9 @@
 	        $this->email->message($message);
 	        
 	        if($this->email->send() == true){
-	        	$data = 'true';
+	        	$data = true;
 	        }else{
-	        	$data = 'false';
+	        	$data = false;
 	        }
 	        return $data;
         }
