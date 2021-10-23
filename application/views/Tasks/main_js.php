@@ -660,7 +660,7 @@
                     if((res.loan_status !== '') && (res.loan_status != 'DISBURSED-PENDING'))
                     {
                         <?php if(agent == "DS1"){ ?>
-                            if(res.loan_status != 'DISBURSED-PENDING'){
+                            if(res.loan_status == 'DISBURSED-PENDING'){
                                 html += '<tr><th class="thbg">Resend Disbursal Email</th><td colspan="4"><input type="checkbox" name="resendAgreementLetter" id="resendAgreementLetter" onclick="resendAgreementLetter('+ lead_id  +', '+ user_id +')"></td></tr>';
                             }
                         <?php } else { ?>
