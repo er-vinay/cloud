@@ -213,79 +213,6 @@
 			return $loan_no;
 		}
 
-		// public function getLeadDetails()
-	 //    {
-	 //        $fromDate = date('Y-m-d', strtotime('-20 days', strtotime(todayDate)));
-	 //    	$where = ['company_id' => company_id, 'product_id' => product_id];
-  //           $this->db->select('leads.lead_id,leads.application_no, leads.name, leads.middle_name, leads.sur_name, leads.email, leads.dob, leads.ip, leads.coordinates, leads.mobile, leads.pancard, tb_states.state, leads.city, leads.created_on, leads.source, leads.status, leads.credit_manager_id, leads.partPayment')
-		// 		// ->where('date(leads.created_on) BETWEEN "'. date('Y-m-d', strtotime($fromDate)). '" and "'. date('Y-m-d', strtotime(todayDate)).'"')
-  //               ->where('leads.screener_id', 0)
-  //               ->where('leads.leads_duplicate', 0)
-  //               ->where('leads.lead_rejected', 0)
-  //               ->where('leads.screener_status', 0)
-  //               ->where($where)
-  //               ->from('leads')
-  //               ->join('tb_states', 'leads.state_id = tb_states.id');
-  //           return $this->db->order_by('leads.lead_id', 'desc')->get();
-	 //    }
-	    
-	 //    public function getleadsforSanction()
-	 //    {
-	 //        $where = ['company_id' => company_id, 'product_id' => product_id];
-  //           $this->db->select('leads.lead_id,leads.application_no, leads.name, leads.middle_name, leads.sur_name, leads.email, leads.dob, leads.ip, leads.coordinates, leads.mobile, leads.pancard, tb_states.state, leads.city, leads.stage, leads.created_on, leads.source, leads.status, leads.credit_manager_id, leads.partPayment')
-		// 		// ->where('leads.screener_status', 2)
-  //               ->where('leads.leads_duplicate', 0)
-  //               ->where('leads.lead_rejected', 0)
-  //               // ->where($where)
-  //               ->from('leads')
-  //               ->join('tbl_state', 'leads.state_id = tb_states.id');
-  //           return $this->db->order_by('leads.screenin_time', 'desc')->get();   
-
-	 //    }
-	    
-	 //    public function applicationinprocess()
-	 //    {
-	 //        $where = ['company_id' => company_id, 'product_id' => product_id];
-  //           $this->db->select('leads.lead_id,leads.application_no, leads.name, leads.middle_name, leads.sur_name, leads.email, leads.dob, leads.ip, leads.coordinates, leads.mobile, leads.pancard, tb_states.state, leads.city, leads.created_on, leads.source, leads.status, leads.credit_manager_id, leads.partPayment')
-		// 		->where($where)
-  //               ->where('leads.screener_id', $_SESSION['isUserSession']['user_id'])
-  //               ->where('leads.leads_duplicate', 0)
-  //               ->where('leads.screener_status', 0)
-  //               ->where('leads.lead_rejected', 0) 
-  //               ->where($where)
-  //               ->from('leads')
-  //               ->join('tb_states', 'leads.state_id = tb_states.id');
-  //           return $this->db->order_by('leads.screenin_time', 'asc')->get();
-	 //    }
-	    
-	 //     public function applicationHold()
-	 //    {
-	 //        $where = ['company_id' => company_id, 'product_id' => product_id];
-  //           $this->db->select('leads.lead_id,leads.application_no, leads.name, leads.middle_name, leads.screener_remarks, leads.sur_name, leads.email, leads.dob, leads.ip, leads.coordinates, leads.mobile, leads.pancard, tb_states.state, leads.city, leads.created_on, leads.source, leads.status, leads.credit_manager_id, leads.partPayment')
-		// 		->where('leads.screener_id', user_id)
-  //               ->where($where)
-  //               ->where('leads.leads_duplicate', 0)
-  //               ->where('leads.status', 'HOLD')
-  //               ->where('leads.screener_status', 1)
-  //               ->where('leads.lead_rejected', 0)
-  //               ->from('leads')
-  //               ->join('tb_states', 'leads.state_id = tb_states.id');
-  //           return $this->db->order_by('leads.lead_id', 'desc')->get();
-	 //    }
-
-
-		// public function inProcess()
-	 //    {
-	 //        $where = ['company_id' => company_id, 'product_id' => product_id];
-  //           $this->db->select('leads.lead_id,leads.application_no, leads.name, leads.middle_name, leads.sur_name, leads.email, leads.mobile, leads.pancard, tb_states.state, leads.city, leads.created_on, leads.source, leads.status, leads.credit_manager_id, leads.partPayment')
-  //               ->where($where)
-  //               // ->where('leads.status', "IN PROCESS")
-  //               ->where('leads.screener_status', 3)
-  //               ->from('leads')
-  //               ->join('tb_states', 'leads.state_id = tb_states.id');
-  //           return $this->db->order_by('leads.lead_id', 'desc')->get();
-	 //    }
-
 		public function recommend()
 	    {
 	        $where = ['company_id' => company_id, 'product_id' => product_id];
@@ -846,323 +773,257 @@
             return $query->get();
 	    }
 	    
-		// public function getCustomerDocs($lead_id, $type)
-	 //    {
-  //           $docsHistory = $this->db->select('docs.docs_id, docs.type, docs.docs, docs.file, docs.pwd, docs.created_on')
-  //                   ->where('docs.lead_id', $lead_id)
-  //                   ->where('docs.product_id', product_id)
-  //                   ->from('docs')
-  //                   ->order_by('docs.docs_id', 'desc')
-  //                   ->get();
-  //           if($docsHistory->num_rows() != 1)
-  //           {
-		//         $sql = $this->db->select('leads.pancard')->where('lead_id', $lead_id)->from('leads')->get()->row();
-		//         $pancard = $sql->pancard;
-		//         if(!empty($pancard))
-		//         {
-	 //    			$docsHistory = $this->db->select('docs.docs_id, docs.type, docs.docs, docs.pwd, docs.file, docs.created_on')
-	 //                    ->where("docs.pancard LIKE '%$pancard%'")
-  //                       // ->where('product_id', product_id)
-		// 		        ->from('docs')
-		// 		        ->order_by('docs.docs_id', 'desc')
-		// 		        ->get();
-		//         }
-  //           }
-  //           return $docsHistory;
-	 // //    }
-		
-		// public function getCAM($lead_id, $fetch)
-		// {
-  //           $where = ['CAM.company_id' => company_id, 'CAM.product_id' => product_id];
-		// 	return $this->db->select($fetch)->where('CAM.lead_id', $lead_id)->where($where)->from('tbl_cam as CAM')->order_by('cam_id', 'desc')->get();
-		// }
-		
-		// public function getAgreementDetails($lead_id, $fetch)
-		// {
-		// 	return $this->db->select($fetch)->where('D.lead_id', $lead_id)->where('product_id', product_id)->from('tbl_disburse as D')->order_by('D.loan_id', 'desc')->get();
-		// }
-		
-		// public function getStateName($state_id)
-		// {
-		// 	return $this->db->select('st.state')->where('st.id', $state_id)->from('tb_states as st')->get();
-		// }
-		
-		// public function getCityName($city_id)
-		// {
-		// 	return $this->db->select('city.city, city.city_id')->where('city.city_id', $city_id)->from('tb_city as city')->get();
-		// }
-		
 
-		// public function getDisbursalDetails($lead_id)
-		// {	
-		// 	$fetch = 'CAM.company_id, CAM.customer_id, CAM.borrower_name, CAM.gender, CAM.dob, CAM.pancard, CAM.mobile, CAM.alternate_no, CAM.email, CAM.alternateEmail, CAM.usr_created_by, CAM.usr_created_at, CAM.usr_updated_by, CAM.usr_updated_at, CAM.customer_bank_name, CAM.account_type, CAM.customer_account_no, CAM.customer_name, 
-		// 		CAM.isDisburseBankAC,
-		// 		CAM.bankIFSC_Code,	
-		// 		CAM.bank_name,		
-		// 		CAM.bank_branch,	
-		// 		CAM.bankA_C_No,	
-		// 		CAM.bankHolder_name,
-		// 		CAM.bank_account_type, CAM.loan_applied, CAM.loan_recomended, CAM.processing_fee, CAM.roi, CAM.net_disbursal_amount, CAM.disbursal_date, CAM.repayment_date, CAM.tenure, CAM.repayment_amount, CAM.special_approval, CAM.cam_created_by, CAM.cam_created_date, CAM.cam_updated_by, CAM.cam_updated_date';
+		public function getCAMDetails($lead_id)
+		{
+            $table1 = 'leads LD';
+            $table2 = 'customer C';
+            $join2 	= 'C.customer_id = LD.customer_id';
+            $table3 = 'credit_analysis_memo CAM';
+            $join3 	= 'CAM.lead_id = LD.lead_id';
+            $table4 = 'loan L';
+            $join4 	= 'L.lead_id = LD.lead_id';
 
-		// 	$query = $this->Task_Model->getCAM($lead_id, $fetch);
-		// 	$data['CAM'] = $query->row();
-		// 	$fetchDisburse = 'D.customer_name, D.loanAgreementRequest, D.agrementRequestedDate, D.loanAgreementResponse, D.agrementUserIP, D.agrementResponseDate, 
-		// 	    D.status, D.company_account_no, D.channel, D.disburse_refrence_no, D.screenshot, D.payable_amount, D.updated_by, D.updated_on';
-		// 	$queryDisburse = $this->Task_Model->getAgreementDetails($lead_id, $fetchDisburse);
-		// 	$disburse = $queryDisburse->row();
-
-		// 	$loanAgreementRequest = "FAILURE";
-		// 	$loanAgreementRequest2 = "";
-		// 	$loanAgreementResponse = "PENDING";
-		// 	$responseEmail = "PENDING";
-		// 	$disburse_refrence_no = $disburse->disburse_refrence_no;
-
-		// 	if($disburse->loanAgreementRequest == 1){
-		// 		$loanAgreementRequest = "SUCCESS";
-		// 	}
-		// 	if(!empty($data['CAM']->alternateEmail)){
-		// 		$loanAgreementRequest2 = "SUCCESS";
-		// 	}
-			
-  //   		$personalDetails = $this->Task_Model->getPersonalDetails($lead_id);
-		// 	if($disburse->loanAgreementResponse == 1) {
-		// 		$loanAgreementResponse = "APPROVED";
-		// 		$responseEmail = $personalDetails['leadDetails']['email'];
-		// 	}
-		// 	if($disburse->loanAgreementResponse == 2) {
-		// 		$loanAgreementResponse = "APPROVED";
-		// 		$responseEmail = $personalDetails['leadDetails']['alternateEmail'];
-		// 	}
-		// 	if($disburse->disburse_refrence_no == null){
-		// 		$disburse_refrence_no = "";
-		// 	}
-
-		// 	$data['Disburse'] = [
-		// 		'loanAgreementRequest' 		=> strtoupper($loanAgreementRequest),
-		// 		'loanAgreementRequest2' 	=> strtoupper($loanAgreementRequest2),
-		// 		'agrementRequestedDate' 	=> date('d-m-Y h:i:s', strtotime($disburse->agrementRequestedDate)),
-		// 		'loanAgreementResponse' 	=> strtoupper($loanAgreementResponse),
-		// 		'agrementResponseDate' 		=> date('d-m-Y h:i:s', strtotime($disburse->agrementResponseDate)),
-		// 		'responseEmail' 		    => $responseEmail,
-		// 		'agrementUserIP' 			=> $disburse->agrementUserIP,
-		// 		'loan_status' 				=> $disburse->status,
-		// 		'company_account_no' 		=> $disburse->company_account_no,
-		// 		'channel' 					=> $disburse->channel,
-		// 		'disburse_refrence_no' 		=> $disburse_refrence_no,
-		// 		'screenshot' 				=> $disburse->screenshot,
-		// 		'payable_amount' 			=> $disburse->payable_amount,
-		// 		'disburse_By' 			    => $disburse->updated_by,
-		// 		'disburse_date' 			=> $disburse->updated_on,
-		// 	];
-		// 	return $data;
-		// }
-		
-		// public function disburseDetails($lead_id)
-		// {
-		//     $url = $this->uri->segment(1);
-		//     $disburse = $this->db->select('loan.lead_id, loan.loan_no, loan.customer_bank_ifsc, loan.customer_bank, loan.customer_account_no, loan.customer_name, 
-		//             loan.loan_account_type, loan.loan_amount, loan.loan_intrest, loan.loan_admin_fee, loan.loan_fee_ref, loan.loan_tenure, 
-		//             loan.company_account_no, loan.modeOfPayment, credit.loan_amount_approved, credit.customer_id, loan.channel, loan.loanAgreementLetter, loan.loanAgreementRequest,
-		//             loan.loanAgreementResponse, loan.agrementRequestedDate, loan.agrementResponseDate, loan.agrementUserIP')
-  //   	        	->where('loan.lead_id', $lead_id)
-  //   	        	->from('loan')
-  //   		        ->join('credit', 'credit.lead_id = loan.lead_id');
-	 //        $disbursalDetails = $disburse->get();
-	 //        $countDisburse = $disbursalDetails->num_rows();
-	 //        $lead_details = $this->db->select('leads.is_Disbursed')->where('product_id', product_id)->where('leads.lead_id', $lead_id)->get('leads')->row();
-	 //        $data = "";
+	        $conditions = ['LD.company_id' => company_id, 'LD.product_id' => product_id, 'LD.lead_id' => $lead_id];
 	        
-	 //        if($countDisburse > 0)
-	 //        {
-	 //            $column = $disbursalDetails->row();
-	 //            $loanDisbursedAmount = ($column->loan_amount - $column->loan_admin_fee);
-	 //            $mailSend = "Failed";
-	 //            if($column->loanAgreementRequest == 1){
-	 //                $mailSend = "Sended";
-	 //            }
-	            
-	 //            $requestedDate = "";
-	 //            $responseDate = "";
-	 //            if(!empty($column->agrementRequestedDate)){
-	 //                $requestedDate = date("d-m-Y h:i:s", strtotime($column->agrementRequestedDate));
-	 //            }
-	 //            if(!empty($column->agrementResponseDate)){
-  //                   $responseDate = date("d-m-Y h:i:s", strtotime($column->agrementResponseDate));
-	 //            }
-	 //            $mailResponse = "Pending";
-	 //            if(!empty($column->loanAgreementResponse)){
-	 //                $mailResponse = $column->loanAgreementResponse;
-	 //            }
-  //               $data = '<div class="table-responsive">
-  //   		        <table class="table table-hover table-striped">
-		// 		        <tbody>
-    							
-  //                           <tr>
-  //                               <th>CIF ID</th>
-  //                               <td>'. $column->customer_id .'</td>
-  //                               <th>Loan No</th>
-  //                               <td>'. $column->loan_no .'</td>
-  //                           </tr>
-  //                           <tr>
-  //                               <th>Credit Card A/C No.</th>
-  //                               <td>'. $column->customer_account_no .'</td>
-  //                               <th>Customer Credit Card Bank</th>
-  //                               <td>'. $column->customer_bank .'</td>
-  //                           </tr>
-  //                           <tr>
-  //                               <th>Credit Card Holder Name</th>
-  //                               <td>'. $column->customer_name .'</td>
-  //                               <th>Credit Card Type</th>
-  //                               <td>'. $column->loan_account_type .'</td>
-  //                           </tr>
-  //                           <tr>
-  //                               <th>Loan Approved Amount</th>
-  //                               <td>'. number_format($column->loan_amount_approved, 2) .'</td>
-  //                               <th>Admin Fee</th>
-  //                               <td>Rs. '. number_format($column->loan_admin_fee, 2) .'</td>
-  //                           </tr>
-  //                           <tr>
-  //                               <th>Loan Tenure</th>
-  //                               <td>'. $column->loan_tenure .' Days</td>
-  //                               <th>Disbursal Amount</th>
-  //                               <input type="hidden" name="payAmount" id="payAmount" value="'. $loanDisbursedAmount .'">
-  //                               <td>Rs. '. number_format($loanDisbursedAmount, 2) .'</td>
-  //                           </tr>
-		// 				</tbody>
-		// 			</table>
-		// 		</div>
-		// 		';
-		// 		$data .= '
-		// 		        <div class="footer-supports">
-  //                           <h2 class="footer-supports" style="background: #0b5e90;color : #fff; font-size: 14px; text-align: center;padding: 12px; border-radius: 3px;">Customer Confirmation Details &nbsp;<i class="fa fa-angle-double-down"></i></h2>
-  //                       </div>
-  //       				<div class="table-responsive">
-  //           		        <table class="table table-hover table-striped">
-  //       				        <tbody>
-  //                                   <tr>
-  //                                       <th>Agreement Sent Date</th>
-  //                                       <td>'. $requestedDate .'</td>
-  //                                       <th>Agreement Sent Status</th>
-  //                                       <td>'. $mailSend .'</td>
-  //                                   </tr>
-  //                                   <tr>
-  //                                       <th>Agreement Response Date</th>
-  //                                       <td>'. $responseDate .'</td>
-  //                                       <th>Agreement Response Status</th>
-  //                                       <td>'. $mailResponse .'</td>
-  //                                   </tr>
-  //                                   <tr>
-  //                                       <th>Customer IP</th>
-  //                                       <td>'. $column->agrementUserIP .'</td>
-  //                                       <th colspan="2"></th>
-  //                                   </tr>
-  //       						</tbody>
-  //       					</table>
-  //       				</div>
-		// 		    ';
-                
-		// 		if(!empty($column->company_account_no) && !empty($column->modeOfPayment) && !empty($column->loan_amount_approved) && !empty($column->channel))
-		// 		{
-  //   				$data .= '
-  //                       <div class="footer-support">
-  //                           <h2 class="footer-support">Other Details &nbsp;<i class="fa fa-angle-double-down"></i></h2>
-  //                       </div>
-  //       				<div class="table-responsive">
-  //           		        <table class="table table-hover table-striped">
-  //       				        <tbody>
-  //                                   <tr>
-  //                                       <th>MOP</th>
-  //                                       <td>'. $column->modeOfPayment .'</td>
-  //                                       <th>Disbursal A/C</th>
-  //                                       <td>'. $column->company_account_no .'</td>
-  //                                   </tr>
-  //                                   <tr>
-  //                                       <th>Channel</th>
-  //                                       <td>'. $column->channel .'</td>
-  //                                       <th>Loan Disbursed Amount</th>
-  //                                       <td>Rs. '. number_format($loanDisbursedAmount, 2).'</td>
-  //                                   </tr>
-  //                                   <tr>
-  //                                       <th>Reference No.</th>
-  //                                       <td>'. $column->loan_fee_ref .'</td>
-  //                                       <th></th>
-  //                                       <td></td>
-  //                                   </tr>
-  //       						</tbody>
-  //       					</table>
-  //       				</div>
-  //                   ';
-  //                   if($_SESSION['isUserSession']['role'] == "Disbursal"){
-                        
-	 //                    if($lead_details->is_Disbursed == 1){
-	 //                        $data .= '<button class="btn btn-control btn-primary" id="PayAmountToCustomer" onclick="PayAmountToCustomer()">Pay to customer</button>';
-	 //                    }
-	 //                    if($lead_details->is_Disbursed == 2)
-	 //                    {
-	 //                        $data .= '
-	 //                            <form id="FormPaymentReference" method="post" enctype="multipart/form-data">
-	 //                                <input type="hidden" class="form-control" name="lead_id" id="lead_id" value="'. $lead_id .'">
-	 //                                <div class="col-md-8">
-	 //                                    <input class="form-control" name="payment_reference_no" id="payment_reference_no" placeholder="Enter Reference No" required>
-	 //                                </div>
-	 //                            </form>
-  //                               <div class="col-md-4">
-  //                               	<button id="updatePaymentReference" class="btn btn-primary" onclick="UpdateDisburseReferenceNo()">Update Reference NO</button>
-  //                               </div>
-	 //                        ';
-	 //                    }
-  //                   }
-		// 		}
-    				
-	 //        }
-	 //        return $data;
-		// }
+            $select = 'LD.lead_id, LD.customer_id, LD.application_no, C.first_name, C.middle_name, C.sur_name, C.email, C.alternate_email, C.gender, C.mobile, C.alternate_mobile, LD.obligations, LD.loan_amount, LD.status, LD.stage, CAM.loan_recommended, CAM.roi, CAM.total_admin_fee, CAM.disbursal_date, CAM.repayment_date, CAM.tenure, CAM.net_disbursal_amount, CAM.repayment_amount, L.loan_no, L.loanAgreementRequest, L.agrementRequestedDate, L.loanAgreementResponse, L.agrementUserIP, L.agrementResponseDate, L.status as loan_status, L.company_ac_no, L.channel, L.mode_of_payment, L.disburse_refrence_no';
+	        return $this->Tasks->join_table($conditions, $select, $table1, $table2, $join2, $table3, $join3, $table4, $join4);
+		}
+        
+        public function sendDisbursalMail($lead_id)
+        {
+        	$sql = $this->getCAMDetails($lead_id);
+        	$camDetails = $sql->row();
+		    $message = '
+	            <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	            <html xmlns="http://www.w3.org/1999/xhtml">
+	               <head>
+	                  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	                  <title>Mailer</title>
+	               </head>
+	               <body>
+	                  <table width="778" border="0" align="center" cellpadding="0" cellspacing="0" style="padding:10px; border:solid 1px #ccc; font-family:Arial, Helvetica, sans-serif;">
+	                     <tr>
+	                        <td width="381" align="left"><img src="'. base_url('public/front/images/logo.gif') .'" class="img-responsive" alt="logo"/></td>
+	                        <td width="11" align="left">&nbsp;</td>
+	                        <td width="384" align="right">
+	                           <table width="100%" border="0">
+	                              <tr>
+	                                 <td align="right"><strong style="line-height:25px;">Dear &nbsp;'. $camDetails->first_name .'</strong></td>
+	                              </tr>
+	                              <tr>
+	                                 <td align="right">Loan No.: -</td>
+	                              </tr>
+	                           </table>
+	                        </td>
+	                     </tr>
+	                     <tr>
+	                        <td colspan="3">
+	                           <hr / style="background:#ddd !important;">
+	                        </td>
+	                     </tr>
+	                     <tr>
+	                        <td colspan="3">&nbsp;</td>
+	                     </tr>
+	                     <tr>
+	                        <td><strong>Loanwalle app Lead partner of Naman Finlease Pvt. Ltd.</strong></td>
+	                        <td>&nbsp;</td>
+	                        <td rowspan="4" align="center" valign="top"><img class="img-responsive" src="https://www.loanwalle.com/public/front/images/image-loan.jpg" width="384" height="406" / style="border:solid 1px #ccc; padding:10px;"></td>
+	                     </tr>
+	                     <tr>
+	                        <td><span style="font-size:17px;
+	                           line-height: 25px;
+	                           padding-bottom: 6px; text-align:justify;">Thank you for choosing us and giving us the opportunity to be of service to you. Hope you are satisfied with us.</span></td>
+	                        <td>&nbsp;</td>
+	                     </tr>
+	                     <tr>
+	                        <td><span style="font-size:17px;
+	                           line-height: 25px;
+	                           padding-bottom: 6px; text-align:justify;">In order to avail this loan, you have already filled up and submitted a loan application and signed our loan agreement in acceptance of the terms and conditions. </span></td>
+	                        <td>&nbsp;</td>
+	                     </tr>
+	                     <tr>
+	                        <td><span style="font-size:17px;
+	                           line-height: 25px;
+	                           padding-bottom: 6px; text-align:justify;">To avoid any kind of ambiguity in future we are sending you this term sheet detailing the terms and conditions of the loan. Please go through this  carefully and give your approval so we can go forth and disburse the loan amount.</span></td>
+	                        <td>&nbsp;</td>
+	                     </tr>
+	                     <tr>
+	                        <td>&nbsp;</td>
+	                        <td>&nbsp;</td>
+	                        <td align="center" valign="top">&nbsp;</td>
+	                     </tr>
+	                     <tr>
+	                        <td colspan="3" style="font-size:17px;
+	                           line-height: 25px;
+	                           padding-bottom: 6px;"><strong>Loanwalle.com Powered by Naman Finlease Pvt. Ltd. (RBI approved NBFC) </strong></td>
+	                     </tr>
+	                     <tr>
+	                        <td colspan="3" style="font-size:17px;
+	                           line-height: 25px;
+	                           padding-bottom: 6px;"><strong>S-370 Panchsheel Park, Near Panchsheel Park Metro Station Gate No.1, New Delhi- 110017 </strong></td>
+	                     </tr>
+	                     <tr>
+	                        <td colspan="3" style="font-size:17px;
+	                           line-height: 25px;
+	                           padding-bottom: 6px;"><strong>Loan Terms to be agreed by the Customer</strong></td>
+	                     </tr>
+	                     <tr>
+	                        <td colspan="3" style="font-size:17px;
+	                           line-height: 25px;
+	                           padding-bottom: 6px;">&nbsp;</td>
+	                     </tr>
+	                     <tr>
+	                        <td colspan="3">
+	                           <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#CCCCCC">
+	                              <tr>
+	                                 <td width="42%" bgcolor="#FFFFFF" style="padding:10px;">Name </td>
+	                                 <td width="58%" bgcolor="#FFFFFF" style="padding:10px;">'. $camDetails->first_name .'</td>
+	                              </tr>
+	                              <tr>
+	                                 <td bgcolor="#FFFFFF" style="padding:10px;">Loan Amount</td>
+	                                 <td bgcolor="#FFFFFF" style="padding:10px;">Rs. '. ($camDetails->loan_recommended).' /- </td>
+	                              </tr>
+	                              <tr>
+	                                 <td bgcolor="#FFFFFF" style="padding:10px;">Rate of Interest (%)</td>
+	                                 <td bgcolor="#FFFFFF" style="padding:10px;">'. $camDetails->roi .' per day</td>
+	                              </tr>
+	                              <tr>
+	                                 <td bgcolor="#FFFFFF" style="padding:10px;">Disbursal Date</td>
+	                                 <td bgcolor="#FFFFFF" style="padding:10px;">'. $camDetails->disbursal_date .' </td>
+	                              </tr>
+	                              <tr>
+	                                 <td bgcolor="#FFFFFF" style="padding:10px;">Commitment Payback Date</td>
+	                                 <td bgcolor="#FFFFFF" style="padding:10px;">'. $camDetails->repayment_date .'</td>
+	                              </tr>
+	                              <tr>
+	                                 <td bgcolor="#FFFFFF" style="padding:10px;">Repayment Amount</td>
+	                                 <td bgcolor="#FFFFFF" style="padding:10px;">'. $camDetails->repayment_amount .' </td>
+	                              </tr>
+	                              <tr>
+	                                 <td bgcolor="#FFFFFF" style="padding:10px;">Period</td>
+	                                 <td bgcolor="#FFFFFF" style="padding:10px;">'. $camDetails->tenure .' </td>
+	                              </tr>
+	                              <tr>
+	                                 <td bgcolor="#FFFFFF" style="padding:10px;">Penalty (%)</td>
+	                                 <td bgcolor="#FFFFFF" style="padding:10px;">2.00</td>
+	                              </tr>
+	                              <tr>
+	                                 <td bgcolor="#FFFFFF" style="padding:10px;">Administrative Fee </td>
+	                                 <td bgcolor="#FFFFFF" style="padding:10px;">Rs. '. $camDetails->total_admin_fee .'/-</td>
+	                              </tr>
+	                              <tr>
+	                                 <td bgcolor="#FFFFFF" style="padding:10px;">Repayment Cheque(s)</td>
+	                                 <td bgcolor="#FFFFFF" style="padding:10px;">&nbsp;-</td>
+	                              </tr>
+	                              <tr>
+	                                 <td bgcolor="#FFFFFF" style="padding:10px;">Cheque drawn on (Bank Name) </td>
+	                                 <td bgcolor="#FFFFFF" style="padding:10px;">&nbsp;-</td>
+	                              </tr>
+	                              <tr>
+	                                 <td bgcolor="#FFFFFF" style="padding:10px;">Cheque &amp;NACHBouncing Charges </td>
+	                                 <td bgcolor="#FFFFFF" style="padding:10px;">Rs. 1000/- every time</td>
+	                              </tr>
+	                           </table>
+	                        </td>
+	                     </tr>
+	                     <tr>
+	                        <td>&nbsp;</td>
+	                        <td>&nbsp;</td>
+	                        <td>&nbsp;</td>
+	                     </tr>
+	                     <tr>
+	                        <td>&nbsp;</td>
+	                        <td>&nbsp;</td>
+	                        <td>&nbsp;</td>
+	                     </tr>
+	                     <tr>
+	                        <td colspan="3" style="font-size:17px;
+	                           line-height: 25px;
+	                           padding-bottom: 6px;">Non-payment of loan on time will affect your CIBIL Score and will affect your chance of getting <br />
+	                           further loans 
+	                        </td>
+	                     </tr>
+	                     <tr>
+	                        <td colspan="3" style="font-size:17px;
+	                           line-height: 25px;
+	                           padding-bottom: 6px;">from Banks and financial institutions  In case your cheque bounces we are liable to take legal action u/s 138 of IPC  </td>
+	                     </tr>
+	                     <tr>
+	                        <td colspan="3" style="font-size:17px;
+	                           line-height: 25px;
+	                           padding-bottom: 6px;">Please send confirmation mail that you are agreed with the above term.</td>
+	                     </tr>
+	                     <tr>
+	                        <td style="padding-bottom:10px; padding-top:10px;"><strong>Best Regards,  </strong></td>
+	                        <td style="padding-bottom:10px; padding-top:10px;">&nbsp;</td>
+	                        <td>&nbsp;</td>
+	                     </tr>
+	                     <tr>
+	                        <td><strong>Team Loanwalle</strong></td>
+	                        <td>&nbsp;</td>
+	                        <td>&nbsp;</td>
+	                     </tr>
+	                     <tr>
+	                        <td>&nbsp;</td>
+	                        <td>&nbsp;</td>
+	                        <td>&nbsp;</td>
+                        </tr>
+	                     <tr>
+	                        <td>
+		                        <form action="'. base_url('loanAgreementLetterResponse') .'" method="post" enctype="mutlipart-from/data">
+                    				<input type="hidden" name="'. $this->security->get_csrf_token_name() .'" value="'. $this->security->get_csrf_hash() .'" />
+		                        	<input type="hidden" name="lead_id" value="'. $lead_id .'">
+		                        	<input type="hidden" name="email" value="'. $camDetails->email .'">
+		                        	<input type="hidden" name="response" value="1">
+		                        	<input type="hidden" name="ip" value="'. $_SERVER['REMOTE_ADDR'] .'">
+		                        	<input type="submit" name="Accept Terms & Conditions" value="Accept Terms & Conditions" style="color: #fff; background: #0d70ac; border-bottom: none !important; padding: 12px 9px !important;">
+		                        </form>
+	                        </td>
+	                     </tr>
+	                     <tr>
+	                        <td>&nbsp;</td>
+	                        <td>&nbsp;</td>
+	                        <td>&nbsp;</td>
+	                     </tr>
+	                  </table>
+	               </body>
+	            </html>
+	        ';
 
-		//************** function to get data from lead id  *************//
+	        echo "<pre>"; print_r($message); exit;
 
-		// public function generateApplicationNo($lead_id)
-		// {
-  //          $sql="SELECT leads.source,leads.pancard,tbl_city.city_code,tbl_product.product_code FROM `leads` JOIN `tb_states` ON `leads`.`state_id` = `tb_states`.`id` JOIN `tbl_city` ON `leads`.`state_id` = `tbl_city`.`state_id`
-		//    inner JOIN tbl_product on leads.product_id=tbl_product.product_id
-		//    WHERE leads.`company_id` = '1' AND leads.`product_id` = '1' AND `leads`.`lead_id` = '$lead_id' group BY `leads`.`lead_id` DESC";
-
-		// 	$data = $this->db->query($sql);
-		// 	return $data->result_array();
-		// }
-
-		// //****************** function to get the total count from the dynamic table*********************/
-		// public function gettotalleadsCount($table)
-		// {
-		//    $sql="Select count(lead_id) as total from $table";
-		//    $query = $this->db->query($sql);
-		//    if($query->num_rows() > 0){
-		// 	foreach ($query->result_array() as $row) 
-		// 	 {
-		// 	    return $row['total'];
-		//      }
-		// 	 }else
-		// 	 {
-		// 	   return "0";
-		//      } 
-		// }
-
-		// //****************** function to get the Borrower type from pancard *********************/
-
-		// public function getBorrowerType($table,$coulmn)
-		// {
-		//    $sql="SELECT pancard,status FROM $table WHERE pancard='$coulmn' and  (status='Disbursal' || status='Closed') ";
-		//    $query = $this->db->query($sql);
-		//    $query->num_rows();
-		//    if($query->num_rows() > 0){
-		// 	foreach ($query->result_array() as $row) 
-		// 	 {
-		// 	    return "REPEAT";
-		//      }
-		// 	 }else
-		// 	 {
-		// 		return "NEW";
-		// 	 } 
-		// }
+	        $from = 'info@loanwalle.com';
+	        $conditions = ['CAM.company_id' => company_id];
+	        $fetch = 'CAM.*';
+	        $sql = $this->Tasks->select($conditions, $fetch, 'tbl_email_credentails');
+	        
+	        $config['protocol']     = 'sendmail';
+	        $config['smtp_host']    = "smtp.gmail.com";
+	        $config['smtp_port']    = 25;
+	        $config['smtp_user']    = $sql->smtp_user;
+	        $config['smtp_pass']    = $sql->smtp_pass;
+	        $config['charset']      = 'iso-8859-1';
+	        $config['wordwrap']     = TRUE;
+	        $config['mailtype']     = 'html';
+	        $config['priority']     = '1';
+	        
+	        $this->load->library('email');
+	        $this->email->initialize($config);
+	        $this->email->set_newline("\r\n");
+	        $this->email->from($from);
+	        $this->email->to($camDetails->email);
+	        $this->email->bcc("info@loanwalle.com, vinay.kumar@loanwalle.com");
+	        $this->email->subject('Loan Disbursal Letter - Loanwalle');
+	        $this->email->message($message);
+	        
+	        if($this->email->send() == true){
+	        	$data = 'true';
+	        }else{
+	        	$data = 'false';
+	        }
+	        return $data;
+        }
 		
     }
 ?>
