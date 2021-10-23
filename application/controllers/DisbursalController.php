@@ -379,18 +379,6 @@
 	        }
 		}
 
-		// public function PayAmountToCustomer($lead_id)
-		// {
-		// 	if(!empty($lead_id)) {
-		// 		$data = array(
-	 //          		'status' 		=>"DISBURSED",
-	 //          	);
-	 //    		$result = $this->db->where('lead_id', $lead_id)->update('leads', $data);
-	 //    		$json = "Paid Successfully";
-	 //    		echo json_encode($json);
-	 //    	}
-		// }
-
         public function UpdateDisburseReferenceNo()
 		{
 			if($this->input->post('user_id') == '')
@@ -446,9 +434,9 @@
 					];
 	        		
 	        		$conditions = ['lead_id' => $lead_id];
-					$result1 = $this->Tasks->updateLeads($conditions, ['status' => $status, 'stage'=>$stage], 'leads');
     			    $result2 = $this->Tasks->updateLeads($conditions, $data, 'loan');
 	        		$result3 = $this->Tasks->insert($data2, 'lead_followup');
+					$result1 = $this->Tasks->updateLeads($conditions, ['status' => $status, 'stage'=>$stage], 'leads');
 	        		
 	        		if($result1 == 1 && $result2 == 1 && $result3 == 1){
 		        		$json['msg'] = 'Loan Disbursed Successfully.';
