@@ -355,7 +355,6 @@
 	        				'total_admin_fee' 		=> $calcAmount->total_admin_fee,
 	        				'disbursal_date' 		=> $disbursal_date,
 	        			];
-			// echo "if called : <pre>"; print_r($CamData); exit;
 	        			$result = $this->Tasks->updateLeads($conditions2, $CamData, 'credit_analysis_memo');
 	        		}
 	        		$data = [
@@ -368,7 +367,6 @@
 	        			'status' 				=> 'DISBURSED',
 	        			'updated_on' 			=> timestamp,
 	        		];
-			// echo "else called : <pre>"; print_r($data); exit;
 	        		$result = $this->Tasks->updateLeads($conditions2, $data, 'loan');
 	        		if($result == 1){
 		        		$json['msg'] = 'Disbursed Successfully.';

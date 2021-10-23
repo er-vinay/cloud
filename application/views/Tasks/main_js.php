@@ -678,7 +678,7 @@
                         $('#resendAgreementLetter').prop('disabled', true);
                         $('#div1disbursalBank, #disbursalBank').show();
                         $('#div1UpdateReferenceNo, #divUpdateReferenceNo').hide();
-                    } else if((res.loan_status !== '') && (res.loan_status == 'DISBURSED') && (res.disburse_refrence_no == '')){
+                    } else if((res.loan_status == 'DISBURSED') && (res.disburse_refrence_no == '')){
                         $('#resendAgreementLetter').prop('disabled', true);
                         $('#div1UpdateReferenceNo, #divUpdateReferenceNo').show();
                         $('div1disbursalBank, #disbursalBank').hide();
