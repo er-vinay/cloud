@@ -996,7 +996,7 @@
 	        $from = 'info@loanwalle.com';
 	        $conditions = ['CAM.company_id' => company_id];
 	        $fetch = 'CAM.*';
-	        $sql = $this->Tasks->select($conditions, $fetch, 'tbl_email_credentails');
+	        $sql = $this->select($conditions, $fetch, 'tbl_email_credentails');
 	        
 	        $config['protocol']     = 'sendmail';
 	        $config['smtp_host']    = "smtp.gmail.com";
