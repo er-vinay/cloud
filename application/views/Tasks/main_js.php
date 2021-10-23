@@ -2163,7 +2163,9 @@ $("#savefvrData").click(function(){
                     $('#allowDisbursalToBank').html('<span class="spinner-border spinner-border-sm mr-2" role="status"></span>Processing...').prop('disabled', true);
                 },
                 success : function(response){
-                    if(response.msg){
+                    if(response.errSession){
+                        window.location.href="<?= base_url() ?>";
+                    } else if(response.msg){
                         getCustomerBanking($('#customer_id').val());
                         $("#verifyDisbursalBank")[0].reset();
                         catchSuccess(response.msg);

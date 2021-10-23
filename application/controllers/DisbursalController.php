@@ -319,7 +319,6 @@
 	        	if($this->form_validation->run() == FALSE) {
 	        		$json['err'] = validation_errors();
 	        		echo json_encode($json);
-	        		return false;
 	        	}
 	        	else
 	        	{
@@ -373,11 +372,9 @@
 	        		if($result == 1){
 		        		$json['msg'] = 'Disbursed Successfully.';
 	        			echo json_encode($json);
-	        			return true;
 		        	}else{
 		        		$json['err'] = 'Disbursed Failed. try again';
 	        			echo json_encode($json);
-	        			return false;
 		        	}
 	        	}
 	        }
