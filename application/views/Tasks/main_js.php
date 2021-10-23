@@ -649,9 +649,6 @@
                     html += '<tr><th class="thbg">Disbursal Email Delivery status</th><td>'+ ((res.loanAgreementRequest == 1) ? "Sended" : 'Pending') +'</td><th class="thbg">Disbursal Email Response status</th><td>'+ ((res.loanAgreementResponse == 1) ? "Accepted" : '-') +'</td></tr>';
                     html += '<tr><th class="thbg">Disbursal Email Response IP</th><td>'+ ((res.agrementUserIP)?res.agrementUserIP : "-") +'</td><th class="thbg">Acceptance Email</th><td>'+ ((res.loanAgreementResponse == 1) ? res.email : '-') +'</td></tr>';
 
-                    <?php if(agent == "DS1"){ ?>
-                        html += '<tr><th class="thbg">Resend Disbursal Email</th><td colspan="4"><input type="checkbox" name="resendAgreementLetter" id="resendAgreementLetter" onclick="resendAgreementLetter('+ lead_id  +', '+ user_id +')"></td></tr>';
-                    <?php } ?>
                     if(typeof res.loan_status !== 'undefined' && typeof res.loan_status != 'DISBURSED-PENDING')
                     {
                         <?php if(agent == "DS1"){ ?>
