@@ -620,7 +620,13 @@
                 data : {lead_id : lead_id, user_id : user_id, csrf_token},
                 dataType : "json",
                 success : function(response){
-                    catchSuccess(lead_id +" - "+ resendAggLetter);
+                    if(response.errSession){
+                        window.location.href='<?= base_url() ?>';
+                    } else if(response.msg){
+                        catchSuccess(response.msg);
+                    } else{
+                        catchError(response.err);
+                    }
                 }
             });
         }else{
