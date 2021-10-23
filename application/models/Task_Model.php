@@ -994,8 +994,8 @@
 	        // echo "<pre>"; print_r($message); exit;
 
 	        $from = 'info@loanwalle.com';
-	        $conditions = ['CAM.company_id' => company_id];
-	        $fetch = 'CAM.*';
+	        $conditions = ['company_id' => company_id];
+	        $fetch = '*';
 	        $sql = $this->select($conditions, $fetch, 'tbl_email_credentails');
 	        
 	        $config['protocol']     = 'sendmail';
