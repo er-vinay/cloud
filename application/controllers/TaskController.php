@@ -972,9 +972,9 @@
 						'created_on'	=> timestamp
 					];
 
-				    require_once(APPPATH.'controllers/DisbursalController.php');
-	        		$DC = new DisbursalController();
-	        		$sendLetter = $DC->sendDisbursalMail($lead_id);
+				    // require_once(APPPATH.'controllers/DisbursalController.php');
+	       //  		$DC = new DisbursalController();
+	       //  		$sendLetter = $DC->sendDisbursalMail($lead_id);
 					// $this->load->library('../controllers/DisbursalController'); 
 	    //     		$sendLetter = $this->DisbursalController->sendDisbursalMail($lead_id);
 	        		$loan_no = $this->Tasks->generateLoanNo($lead_id);
