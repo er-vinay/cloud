@@ -42,7 +42,7 @@
 	        	$conditions = ['CO.company_id' => company_id, 'CO.product_id' => product_id, 'CO.lead_id' => $lead_id, 'CO.refrence_no' =>$refrence_no];
             }
 	        
-            $select = 'LD.lead_id, LD.customer_id, CO.id, CO.loan_no, CO.payment_mode, CO.discount, CO.refund, CO.date_of_recived, CO.received_amount, CO.refrence_no, CO.recovery_status, CO.payment_verification, CO.created_on';
+            $select = 'LD.lead_id, LD.customer_id, CO.id, CO.loan_no, CO.payment_mode, CO.discount, CO.refund, CO.date_of_recived, CO.received_amount, CO.refrence_no, CO.repayment_type, CO.payment_verification, CO.created_on';
 	        $data = $this->Tasks->join_table($conditions, $select, $table1, $table2, $join2, $table3, $join3, $table4, $join4);
 	        return $data;	    	
 	    }
