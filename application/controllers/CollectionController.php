@@ -320,7 +320,6 @@
 	        	if($this->form_validation->run() == FALSE) {
 	        		$json['err'] = validation_errors();
 		            echo json_encode($json);
-            		return false;
 	        	} else {
 	    			$recovery_id = $this->input->post('recovery_id');
 	    			$lead_id = $this->input->post('lead_id');
@@ -368,20 +367,27 @@
 						'stage'				=> $getLeadStatus['stage'],
 						'created_on'		=> timestamp,
 		            ]; 
+
+		            $conditions = ['company_id' => $company_id, 'product_id' => $product_id, 'lead_id' => $lead_id, 'recovery_id' => $recovery_id];
+
 		            if(isset($recovery_id)) {
-						$arr = ['payment_verification' => 'VERIFIED'];
-						$data = array_merge($data, $arr);
+		            	if(agent == 'CO1'){
+			            	$result = $this->Tasks->updateLeads($conditions, $data, 'collection');
+		            	} else if(agent == 'AC1'){
+							$arr = ['payment_verification' => 'VERIFIED'];
+							$data = array_merge($data, $arr);
 
-						$arr2 = ['remarks' => $ops_remarks];
-						$data2 = array_merge($data2, $arr2);
+							$arr2 = ['remarks' => $ops_remarks];
+							$data2 = array_merge($data2, $arr2);
+				            $result = $this->Tasks->updateLeads($conditions, $data, 'collection');
+				            $result2 = $this->Tasks->insert($data2, 'lead_followup');
+						}
 
-			            $result = $this->Tasks->updateLeads($data, 'collection');
-			            $result2 = $this->Tasks->insert($data2, 'lead_followup');
 			            $json['msg'] = 'Upload Successfully.';
 			            echo json_encode($json);
 
 			        } else  if($sqlRecovery->num_rows() == 0 ) {
-		    			$config['upload_path'] = 'public/upload/paymentslip';
+		    			$config['upload_path'] = '.public/upload/paymentslip';
 		                $config['allowed_types'] = 'pdf|jpg|png|jpeg';
 						$this->upload->initialize($config);
 						if(!$this->upload->do_upload('upload_payment'))
