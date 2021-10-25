@@ -374,10 +374,10 @@
                             <td class="whitespace">'. $row->discount .'</td>
                             <td class="whitespace">'. $row->refund .'</td>
                             <td class="whitespace">'. $row->refrence_no .'</td>
-                            <td class="whitespace">'. $row->date_of_recived.'</td>
+                            <td class="whitespace">'. date('d-m-Y', strtotime($row->date_of_recived)) .'</td>
                             <td class="whitespace">'. $row->repayment_type .'</td>
                             <td class="whitespace">'. $row->payment_verification.'</td>
-                            <td class="whitespace">'. $row->created_on .'</td>
+                            <td class="whitespace">'. date('d-m-Y h:i', strtotime($row->created_on)) .'</td>
                             <td class="whitespace">
 		                        <a class="btn btn-control btn-danger" onclick="viewCustomerPaidSlip(this.title)" title="'. $row->id .'"><i class="fa fa-eye"></i></a>&nbsp;'. $editBtn .'&nbsp;'. $deleteBtn .'
                             </td>
