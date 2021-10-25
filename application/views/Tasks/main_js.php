@@ -1683,7 +1683,7 @@
                     if(response.errSession){
                         window.location.href="<?= base_url() ?>";
                     } else if(response.msg){
-                        $("#UpdatePayment")[0].reset();
+                        $("#FormUpdatePayment")[0].reset();
                         catchSuccess(response.msg);
                         history.back(1);
                     }else{
