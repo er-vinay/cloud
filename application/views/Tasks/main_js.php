@@ -772,7 +772,7 @@
                     window.location.href = "<?= base_url() ?>";
                 } else if(response.msg){
                     catchSuccess(response.msg);
-                    history.back(1);
+                    collectionHistory('<?= $leadDetails->lead_id ?>', '<?= $leadDetails->customer_id ?>', '<?= user_id ?>');
                 }else{
                     catchError(response.err);
                 }
