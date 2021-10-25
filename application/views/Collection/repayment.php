@@ -79,6 +79,8 @@
                 <label class="labelField">SCM Remarks&nbsp;<strong class="required_Fields">*</strong></label>
                 <textarea class="form-control" id="scm_remarks" name="scm_remarks" autocomplete="off" cols="93" rows="1"></textarea>
             </div>
+            <!-- onclick="UpdatePayment()" -->
+            <button class="btn btn-success" id="btnUpdatePayment" style="background : #22774e !important;">Update</button>
 
             <?php } else if(agent == 'AC1'){ ?>
             <div class="col-md-12">
@@ -95,10 +97,7 @@
 
         <div calss="row" style="margin-top: 10px; border-top: solid 1px #ddd;text-align: center; padding-top : 20px; padding-bottom: 20px; background: #f3f3f3;">
             <div class="col-md-12 text-center" style="margin-top: 20px;">
-                <?php if(agent == 'CO1') { ?>
-                     <!-- onclick="UpdatePayment()" -->
-                <button class="btn btn-success" id="btnUpdatePayment" style="background : #22774e !important;">Update</button>
-                <?php //} else if(agent == 'AC1'){ ?>
+                <?php if(agent == 'AC1'){ ?>
                 <button class="btn btn-success" id="btn_send_back" onclick="leadSendBack('<?= $leadDetails->lead_id ?>', '<?= user_id ?>', '<?= $leadDetails->customer_id ?>')">Send NOC</button>
                 <button class="btn btn-success reject-button" onclick="RejectedLoan()">Reject</button>
                 <button class="btn btn-success" id="UpdatePayment" onclick="UpdatePayment()">Verify</button>
