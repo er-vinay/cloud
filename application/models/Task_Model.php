@@ -361,7 +361,7 @@
 				        $editBtn = '<a class="btn btn-control btn-primary" onclick="editsCoustomerPayment('. $row->id.', '.$row->received_amount.', '. $row->refrence_no .', '. $row->discount .', '. $row->refund .', '. $row->date_of_recived .')"><i class="fa fa-pencil"></i></a>';
                     }
     			    if($row->payment_verification == "PENDING" && agent == "CO1"){
-				        $deleteBtn = '<a class="btn btn-control btn-danger" onclick="deleteCoustomerPayment('.$row->id.', '. user_id .')"><i class="fa fa-trash"></i></a>';
+				        $deleteBtn = '<a type="button" class="btn btn-control btn-danger" onclick="deleteCoustomerPayment('.$row->id.', '. user_id .')"><i class="fa fa-trash"></i></a>';
     			    }
     				$data .= '
                         <tr>
