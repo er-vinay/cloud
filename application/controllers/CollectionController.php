@@ -370,7 +370,7 @@
 
 		            $conditions = ['company_id' => $company_id, 'product_id' => $product_id, 'lead_id' => $lead_id, 'recovery_id' => $recovery_id];
 
-		            if(isset($recovery_id)) {
+		            if(!empty($recovery_id)) {
 		            	if(agent == 'CO1'){
 			            	$result = $this->Tasks->updateLeads($conditions, $data, 'collection');
 		            	} else if(agent == 'AC1'){
