@@ -43,15 +43,12 @@
 			{
 	    		$collectionDate = date('d-m-Y', strtotime('+5 days', strtotime(timestamp)));
 				$this->db->where('CAM.repayment_date BETWEEN "'. date('d-m-Y', strtotime(timestamp)). '" and "'. date('d-m-Y', strtotime($collectionDate)).'"');
-            	$this->db->join('credit_analysis_memo CAM', 'CAM.lead_id = LD.lead_id', 'left');
 			}else{
         		$this->db->where($conditions);
 			}
-
             return $this->db->order_by('LD.lead_id', 'desc')->get();   
 		}
 
-		
 		public function getState()
 		{
 			return $this->db->select('ST.state_id, ST.state')->from('tbl_state as ST')->get();
