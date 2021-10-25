@@ -1664,37 +1664,6 @@
             $('#scm_conf_init').val('');
         }
     }
-
-    // function UpdatePayment() 
-    // {
-    //     var FormData = $("#FormUpdatePayment").serialize();
-    //     $.ajax({
-    //         url : '<?= base_url("UpdatePayment") ?>',
-    //         type : 'POST',
-    //         // data : FormData,
-    //         data : new FormData(this),
-    //         processData : false,
-    //         contentType : false,
-    //         // dataType : "json",
-    //         beforeSend: function() {
-    //             $('#UpdatePayment').html('<span class="spinner-border spinner-border-sm mr-2" role="status"></span>Processing...').prop('disabled', true);
-    //         },
-    //         success : function(response){
-    //             if(response.errSession){
-    //                 window.location.href="<?= base_url() ?>";
-    //             } else if(response.msg){
-    //                 $("#UpdatePayment")[0].reset();
-    //                 catchSuccess(response.msg);
-    //             }else{
-    //                 catchError(response.err);
-    //             }
-    //         },
-    //         complete: function() {
-    //             $('#UpdatePayment').html('Update').prop('disabled', false);
-    //         },
-    //     });
-    // }
-
 </script>
 
 <script>
@@ -1707,8 +1676,6 @@
                 data : new FormData(this),
                 processData : false,
                 contentType : false,
-                // cache : false,
-                // async : false,
                 beforeSend: function() {
                     $('#UpdatePayment').html('<span class="spinner-border spinner-border-sm mr-2" role="status"></span>Processing...').prop('disabled', true);
                 },

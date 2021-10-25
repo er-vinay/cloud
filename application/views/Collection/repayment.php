@@ -38,13 +38,23 @@
                 <label class="labelField">Reference No.&nbsp;<strong class="required_Fields">*</strong></label>
                 <input type="text" class="form-control inputField" id="refrence_no" name="refrence_no" autocomplete="off">
             </div>
-
             <div class="col-md-6">
                 <label class="labelField">Payment Mode&nbsp;<strong class="required_Fields">*</strong></label>
                 <select class="form-control inputField" id="payment_mode" name="payment_mode" autocomplete="off">
                     <option value="">SELECT</option>
-                    <option value="NEFT">NEFT</option>
-                    <option value="IMPS">IMPS</option>
+                    <option value="Account">Account</option>
+                    <option value="Cash">Cash</option>
+                    <option value="PayTM">PayTM</option>
+                    <option value="Payment Gateway">Payment Gateway</option>
+                    <option value="ACH Bounce">ACH Bounce</option>
+                    <option value="UPI">UPI</option>
+                    <option value="Account-201003286273">Account-201003286273</option>
+                    <option value="Account-201003286242">Account-201003286242</option>
+                    <option value="Account-201003178196">Account-201003178196</option>
+                    <option value="Account-201002831962">Account-201002831962</option>
+                    <option value="Account-084305001370">Account-084305001370</option>
+                    <option value="ICICI Gateway">ICICI Gateway</option>
+                    <option value="Approval">Approval</option>
                 </select>
             </div>
 
