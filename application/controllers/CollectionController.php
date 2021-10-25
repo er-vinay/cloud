@@ -419,7 +419,7 @@
 						{
 							$filename = array('upload_data' => $this->upload->data());
 							$paymentSlips = $filename['upload_data']['file_name'];
-							$arr = ['docs' => $paymentSlips, 'created_on' => timestamp];
+							$arr = ['docs' => $paymentSlips, 'remarks' => $scm_remarks, 'created_on' => timestamp];
 							$data = array_merge($data, $arr);
 
 							$arr2 = ['remarks' => $scm_remarks];
