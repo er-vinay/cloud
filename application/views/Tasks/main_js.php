@@ -1699,6 +1699,38 @@
 
 <script>
     $(document).ready(function(){
+        $('#FormUpdatePayment').submit(function(e){
+            e.preventDefault();
+            $.ajax({
+                url : '<?= base_url("UpdatePayment") ?>',
+                type : 'POST',
+                data : new FormData(this),
+                processData : false,
+                contentType : false,
+                // cache : false,
+                // async : false,
+                beforeSend: function() {
+                    $('#UpdatePayment').html('<span class="spinner-border spinner-border-sm mr-2" role="status"></span>Processing...').prop('disabled', true);
+                },
+                success : function(response) {
+                    if(response.errSession){
+                        window.location.href="<?= base_url() ?>";
+                    } else if(response.msg){
+                        $("#UpdatePayment")[0].reset();
+                        catchSuccess(response.msg);
+                        history.back(1);
+                    }else{
+                        catchError(response.err);
+                    }
+                },
+                complete: function() {
+                    $('#UpdatePayment').html('Payment Received').prop('disabled', false);
+                }
+            });
+        });
+    });
+
+    $(document).ready(function(){
         $('#docsform').hide();
         $('#btnFormSaveCAM').click(function(){
             
