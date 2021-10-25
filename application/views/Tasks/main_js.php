@@ -1671,8 +1671,11 @@
         $.ajax({
             url : '<?= base_url("UpdatePayment") ?>',
             type : 'POST',
-            data : FormData,
-            dataType : "json",
+            // data : FormData,
+            data : new FormData(this),
+            processData : false,
+            contentType : false,
+            // dataType : "json",
             beforeSend: function() {
                 $('#UpdatePayment').html('<span class="spinner-border spinner-border-sm mr-2" role="status"></span>Processing...').prop('disabled', true);
             },
