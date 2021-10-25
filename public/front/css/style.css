@@ -1724,6 +1724,7 @@ max-height: 552px;
 .tooltip .fa
 {
     color: #058839;
+    font-size: 20px;
 }
 
 .tooltip .tooltiptext {
@@ -1739,7 +1740,7 @@ max-height: 552px;
     z-index: 99999999;
     bottom: 125%;
     left: -120%;
-    margin-left: -130px;
+    margin-left: -118 px;
     opacity: 10!important;
     transition: opacity 0.3s;
     box-shadow: 0 0 3px #058839;
