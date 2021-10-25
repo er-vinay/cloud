@@ -403,17 +403,17 @@
 						{
 							$filename = array('upload_data' => $this->upload->data());
 							$paymentSlips = $filename['upload_data']['file_name'];
+							$arr = ['docs' => $paymentSlips, 'created_on' => timestamp];
+							$data = array_merge($data, $arr);
+
+							$arr2 = ['remarks' => $scm_remarks];
+							$data2 = array_merge($data2, $arr2);
+
+				            $result = $this->Tasks->insert($data, 'collection');
+				            $result2 = $this->Tasks->insert($data2, 'lead_followup');
+				            $json['msg'] = 'Upload Successfully.';
+				            echo json_encode($json);
 						}
-						$arr = ['docs' => $paymentSlips, 'created_on' => timestamp];
-						$data = array_merge($data, $arr);
-
-						$arr2 = ['remarks' => $scm_remarks];
-						$data2 = array_merge($data2, $arr2);
-
-			            $result = $this->Tasks->insert($data, 'collection');
-			            $result2 = $this->Tasks->insert($data2, 'lead_followup');
-			            $json['msg'] = 'Upload Successfully.';
-			            echo json_encode($json);
 			        } else  {
 			        	$data = $sqlRecovery->row();
 			            $json['msg'] = 'Payment already uploaded.';
