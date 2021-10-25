@@ -335,6 +335,7 @@
                             <tr>
                                 <th class="whitespace"><b>#</b></th>
                                 <th class="whitespace"><b>Loan&nbsp;No</b></th>
+                                <th class="whitespace"><b>Remarks</b></th>
                                 <th class="whitespace"><b>Payment&nbsp;Mode</b></th>
                                 <th class="whitespace"><b>Payment&nbsp;Amount</b></th>
                                 <th class="whitespace"><b>Discount</b></th>
@@ -367,6 +368,7 @@
                         <tr>
                             <td class="whitespace">'. $row->id .'</td>
                             <td class="whitespace">'. $row->loan_no .'</td>
+                            <td class="whitespace"><div class="tooltip"><i class="fa fa-comment"></i><span class="tooltiptext">'. $row->remark.'</span></div></td>
                             <td class="whitespace">'. $row->payment_mode .'</td>
                             <td class="whitespace">'. $row->received_amount .'</td>
                             <td class="whitespace">'. $row->discount .'</td>

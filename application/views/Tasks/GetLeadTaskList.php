@@ -48,6 +48,7 @@
                                                         <input type='text' class="form-control" id='txt_searchall' placeholder='Enter search text'>
                                                     </div>
                                                 </div>
+
                                                 <div class="widget-container">
                                                     <div class=" widget-block">
                                                         <div class="row">
