@@ -324,7 +324,7 @@
 	    			$recovery_id = $this->input->post('recovery_id');
 	    			$lead_id = $this->input->post('lead_id');
 					$customer_id = $this->input->post('customer_id');
-					$loan_no = $this->input->post('loan_no');
+
 					$user_id = $this->input->post('user_id');
 					$company_id = $this->input->post('company_id');
 					$product_id = $this->input->post('product_id');
@@ -342,12 +342,15 @@
 					$getLeadStatus = $this->Tasks->getLeadStatus($repayment_type);
 					$sqlRecovery = $this->collectionDetails($lead_id, $refrence_no);
 
+	        		$cond = ['lead_id' => $lead_id];
+					$sql = $this->getLoanDetail($cond);
+					$loan = $sql->row();
 		            $data = [
 						'lead_id'		 	=> $lead_id,
 						'company_id'		=> $company_id,
 						'product_id'		=> $product_id,
 						'customer_id'		=> $customer_id,
-						'loan_no'			=> $loan_no,
+						'loan_no'			=> $loan->loan_no,
 						'received_amount'	=> $received_amount,
 						'refrence_no'		=> $refrence_no,
 						'payment_mode'	 	=> $payment_mode,
@@ -387,8 +390,8 @@
 			            echo json_encode($json);
 
 			        } else  if($sqlRecovery->num_rows() == 0 ) {
-		    			$config['upload_path'] = 'public/uploads/paymentslip';
-		    			// $config['upload_path'] = 'upload/';
+		    			// $config['upload_path'] = 'public/uploads/paymentslip';
+		    			$config['upload_path'] = 'upload/';
 		                $config['allowed_types'] = 'pdf|jpg|png|jpeg';
 						$this->upload->initialize($config);
 						if(!$this->upload->do_upload('image'))

@@ -373,7 +373,7 @@
                             <td class="whitespace">'. $row->refund .'</td>
                             <td class="whitespace">'. $row->refrence_no .'</td>
                             <td class="whitespace">'. $row->date_of_recived.'</td>
-                            <td class="whitespace">'. $row->recovery_status .'</td>
+                            <td class="whitespace">'. $row->repayment_type .'</td>
                             <td class="whitespace">'. $row->payment_verification.'</td>
                             <td class="whitespace">'. $row->created_on .'</td>
                             <td class="whitespace">
