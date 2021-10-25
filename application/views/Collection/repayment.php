@@ -42,12 +42,10 @@
                 <label class="labelField">Payment Mode&nbsp;<strong class="required_Fields">*</strong></label>
                 <select class="form-control inputField" id="payment_mode" name="payment_mode" autocomplete="off">
                     <option value="">SELECT</option>
-                    <option value="Account">Account</option>
-                    <option value="Cash">Cash</option>
+                    <option value="UPI">UPI</option>
                     <option value="PayTM">PayTM</option>
                     <option value="Payment Gateway">Payment Gateway</option>
                     <option value="ACH Bounce">ACH Bounce</option>
-                    <option value="UPI">UPI</option>
                     <option value="Account-201003286273">Account-201003286273</option>
                     <option value="Account-201003286242">Account-201003286242</option>
                     <option value="Account-201003178196">Account-201003178196</option>
