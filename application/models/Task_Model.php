@@ -377,7 +377,7 @@
                             <td class="whitespace">'. $row->payment_verification.'</td>
                             <td class="whitespace">'. $row->created_on .'</td>
                             <td class="whitespace">
-		                        <a class="btn btn-control btn-success" onclick="viewCustomerPaidSlip(this.title)" title="'. $row->id .'"><i class="fa fa-eye"></i></a>&nbsp;'. $editBtn .'&nbsp;'. $deleteBtn .'
+		                        <a class="btn btn-control btn-danger" onclick="viewCustomerPaidSlip(this.title)" title="'. $row->id .'"><i class="fa fa-eye"></i></a>&nbsp;'. $editBtn .'&nbsp;'. $deleteBtn .'
                             </td>
                         </tr>
     				';
