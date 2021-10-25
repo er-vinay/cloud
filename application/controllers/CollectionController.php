@@ -297,7 +297,7 @@
 	    {
 	    	if(!empty($recovery_id))
 	    	{
-		    	$query = $this->db->where("recovery_id", $recovery_id)->get('collection')->row_array();
+		    	$query = $this->db->where("id", $recovery_id)->get('collection')->row_array();
 		    	$img = $query['docs'];
 		    	$match_http = substr($img, 0, 4);
 		    	if($match_http == "http")
