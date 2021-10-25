@@ -387,7 +387,8 @@
 			            echo json_encode($json);
 
 			        } else  if($sqlRecovery->num_rows() == 0 ) {
-		    			$config['upload_path'] = '.public/uploads/paymentslip';
+		    			$config['upload_path'] = 'public/uploads/paymentslip';
+		    			// $config['upload_path'] = 'upload/';
 		                $config['allowed_types'] = 'pdf|jpg|png|jpeg';
 						$this->upload->initialize($config);
 						if(!$this->upload->do_upload('image'))
