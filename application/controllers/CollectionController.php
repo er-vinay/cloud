@@ -401,8 +401,8 @@
 						}
 						else
 						{
-							$file = array('docs' => $this->upload->data());
-							$paymentSlips = $file['upload_data']['file_name'];
+							$filename = array('upload_data' => $this->upload->data());
+							$paymentSlips = $filename['upload_data']['file_name'];
 						}
 						$arr = ['docs' => $paymentSlips, 'created_on' => timestamp];
 						$data = array_merge($data, $arr);
