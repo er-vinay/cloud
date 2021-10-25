@@ -637,22 +637,6 @@
 		    }
 	    }
 
-	    public function viewCustomerPaidSlip($recovery_id)
-	    {
-	    	if(!empty($recovery_id))
-	    	{
-		    	$query = $this->db->where("recovery_id", $recovery_id)->get('recovery')->row_array();
-		    	$img = $query['docs'];
-		    	$match_http = substr($img, 0, 4);
-		    	if($match_http == "http")
-		    	{
-		    		echo json_encode($img);
-		    	}else{
-		    		echo json_encode(base_url().'public/images/'.$img);
-		    	}
-		    }
-	    }
-
 	    public function downloadCustomerdocs($docs_id)
 	    {
 	    	if(!empty($docs_id))

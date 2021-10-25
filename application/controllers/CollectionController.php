@@ -293,6 +293,22 @@
 	    	}
 	    }
 
+	    public function viewCustomerPaidSlip($recovery_id)
+	    {
+	    	if(!empty($recovery_id))
+	    	{
+		    	$query = $this->db->where("recovery_id", $recovery_id)->get('collection')->row_array();
+		    	$img = $query['docs'];
+		    	$match_http = substr($img, 0, 4);
+		    	if($match_http == "http")
+		    	{
+		    		echo json_encode($img);
+		    	}else{
+		    		echo json_encode(base_url().'upload/'.$img);
+		    	}
+		    }
+	    }
+
 	    public function UpdatePayment()
 	    {
 			if($this->input->post('user_id') == '')

@@ -130,7 +130,6 @@ $route['deleteCustomerDocsById/(:num)'] = 'TaskController/deleteCustomerDocsById
 $route['oldUserHistory/(:num)'] = 'TaskController/oldUserHistory/$1';
 $route['viewCustomerDocs/(:num)'] = 'TaskController/viewCustomerDocs/$1';
 $route['downloadCustomerdocs/(:num)'] = 'TaskController/downloadCustomerdocs/$1';  
-$route['viewCustomerPaidSlip/(:num)'] = 'TaskController/viewCustomerPaidSlip/$1';
 $route['sendRequestToCustomerForUploadDocs'] = 'TaskController/sendRequestToCustomerForUploadDocs';
 $route['saveCustomerDocs'] = 'TaskController/saveCustomerDocs';
 $route['resonForDuplicateLeads'] = 'TaskController/resonForDuplicateLeads';
@@ -250,6 +249,7 @@ $route['Collection'] = "CollectionController/index";
 $route['repaymentLoanDetails'] = 'CollectionController/repaymentLoanDetails';
 $route['collectionHistory'] = 'CollectionController/collectionHistory';
 $route['UpdatePayment'] = "CollectionController/UpdatePayment";
+$route['viewCustomerPaidSlip/(:num)'] = 'CollectionController/viewCustomerPaidSlip/$1';
 $route['editCoustomerPayment'] = "CollectionController/editCoustomerPayment";
 $route['deleteCoustomerPayment'] = "CollectionController/deleteCoustomerPayment";
 
