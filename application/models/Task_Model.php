@@ -368,7 +368,7 @@
                         <tr>
                             <td class="whitespace">'. $row->id .'</td>
                             <td class="whitespace">'. $row->loan_no .'</td>
-                            <td class="whitespace"><div class="tooltip"><i class="fa fa-comment"></i><span class="tooltiptext">'. $row->remark.'</span></div></td>
+                            <td class="whitespace"><div class="tooltip"><i class="fa fa-comment"></i><span class="tooltiptext">'. $row->payment_mode.'</span></div></td>
                             <td class="whitespace">'. $row->payment_mode .'</td>
                             <td class="whitespace">'. $row->received_amount .'</td>
                             <td class="whitespace">'. $row->discount .'</td>
