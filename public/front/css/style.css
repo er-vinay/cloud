@@ -1710,7 +1710,8 @@ max-height: 552px;
 }
 
 .tooltip {
-  position: absolute;
+    position: relative;
+    text-align: center;
   display: inline-block;
   border-bottom: 1px dotted black;
   opacity:10 !important;
@@ -1738,7 +1739,7 @@ max-height: 552px;
     z-index: 99999999;
     bottom: 125%;
     left: -120%;
-    margin-left: -130px;
+    margin-left: -65px;
     opacity: 10!important;
     transition: opacity 0.3s;
     box-shadow: 0 0 3px #058839;
