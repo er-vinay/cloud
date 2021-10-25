@@ -47,6 +47,12 @@
 	        return $data;	    	
 	    }
 
+	    public function getLoanDetail($conditions)
+	    {
+			$fetech = 'L.lead_id, L.customer_id, L.loan_no';
+        	return $this->Tasks->select($conditions, $fetch, 'loan L');
+	    }
+
 	    public function getLeadDetail($conditions)
 	    {
 			$fetech = 'LD.lead_id, LD.customer_id, LD.status, LD.stage';
@@ -64,6 +70,8 @@
 	    	$conditions = ['company_id' => company_id, 'product_id' => product_id, 'lead_id' => $lead_id];
             $sql = $this->getLeadDetail($conditions);
             $leads = $sql->row();
+            $sqlLoan = $this->getLoanDetail($conditions);
+            $loan = $sqlLoan->row();
             $fetch = 'CO.date_of_recived, CO.recovery_status';
             $sql1 = $this->getCAMDetail($conditions);
             $sql2 = $this->Tasks->select($conditions, $fetch, 'collection CO');
@@ -186,6 +194,7 @@
             }
             $todalDue = $repaymentAmt - $ReceivedAmount;
 
+			$data['loan_no'] = $loan->loan_no;
 			$data['status'] = $status;
 			$data['disbursal_date'] = $disbursal_date;
 			$data['repayment_date'] = $repayment_date;
