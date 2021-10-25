@@ -401,10 +401,10 @@
 						}
 						else
 						{
-							$data = array('docs' => $this->upload->data());
-							$paymentSlips = $data['upload_data']['file_name'];
+							$file = array('docs' => $this->upload->data());
+							$paymentSlips = $file['upload_data']['file_name'];
 						}
-						$arr = ['created_on' => timestamp];
+						$arr = ['docs' => $paymentSlips, 'created_on' => timestamp];
 						$data = array_merge($data, $arr);
 
 						$arr2 = ['remarks' => $scm_remarks];
