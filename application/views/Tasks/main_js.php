@@ -744,7 +744,7 @@
             dataType : "json",
             success : function(response){
                 var html = '<table class="table table-bordered table-striped"><tbody>';  
-                    html += '<tr><th class="thbg">Loan No.</th><td>'+ ((response.loan_status == 'DISBURSED') ? response.loan_no : "-") +'</td><th>Status</th><td>'+ ((response.status) ? response.status : '-') +'</td></tr>';
+                    html += '<tr><th class="thbg">Loan No.</th><td>'+ ((response.loan_no) ? response.loan_no : "-") +'</td><th>Status</th><td>'+ ((response.status) ? response.status : '-') +'</td></tr>';
                     html += '<tr><th>Loan Amount</th><td>'+ ((response.loan_recommended) ? response.loan_recommended : '-') +'</td><th>Tenure as on date</th><td>'+ ((response.tenure) ? response.tenure : '-') +'</td></tr>';
                     html += '<tr><th>ROI</th><td>'+ ((response.roi) ? response.roi : '-') +'</td><th>Interest as on date</th><td>'+ ((response.real_interest) ? response.real_interest : '-') +'</td></tr>';
                     html += '<tr><th>Disbursal Date</th><td>'+ ((response.disbursal_date) ? response.disbursal_date : '-') +'</td><th>Delay (days)</th><td>'+ ((response.penalty_days) ? response.penalty_days : 0) +'</td></tr>';

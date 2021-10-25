@@ -186,7 +186,7 @@
             }
             $todalDue = $repaymentAmt - $ReceivedAmount;
 
-			$data['status'] = $status;
+			$data['loan_status'] = $status;
 			$data['disbursal_date'] = $disbursal_date;
 			$data['repayment_date'] = $repayment_date;
             $data['loan_recommended'] = $loan_recommended;
