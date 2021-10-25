@@ -387,10 +387,10 @@
 			            echo json_encode($json);
 
 			        } else  if($sqlRecovery->num_rows() == 0 ) {
-		    			$config['upload_path'] = '.public/upload/paymentslip';
+		    			$config['upload_path'] = '.public/uploads/paymentslip';
 		                $config['allowed_types'] = 'pdf|jpg|png|jpeg';
 						$this->upload->initialize($config);
-						if(!$this->upload->do_upload('upload_payment'))
+						if(!$this->upload->do_upload('image'))
 						{
 							$json['err'] = $this->upload->display_errors();
 		            		echo json_encode($json);
@@ -400,7 +400,7 @@
 							$data = array('upload_data' => $this->upload->data());
 							$paymentSlips = $data['upload_data']['file_name'];
 						}
-						$arr = ['created_on' => timestamp,];
+						$arr = ['created_on' => timestamp];
 						$data = array_merge($data, $arr);
 
 						$arr2 = ['remarks' => $scm_remarks];

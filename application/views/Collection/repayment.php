@@ -72,7 +72,7 @@
             <?php if(agent == 'CO1'){ ?>
             <div class="col-md-12">
                 <label class="labelField">Upload Payment&nbsp;<strong class="required_Fields">*</strong></label>
-                <input type="file" class="form-control" id="upload_payment" name="upload_payment" autocomplete="off" accept=".jpeg, .jpg, .png">
+                <input type="file" class="form-control" id="image" name="image" autocomplete="off" accept=".jpeg, .jpg, .png">
             </div>
 
             <div class="col-md-12" style="margin-top: 10px;">
