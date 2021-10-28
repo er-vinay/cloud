@@ -91,7 +91,7 @@ $route['holdleads/(:any)(/:any)?'] = 'TaskController/index/$1';
 
 $route['saveHoldleads/(:any)'] = 'TaskController/saveHoldleads/$1';
 $route['getleadDetails/(:any)'] = 'TaskController/getLeadDetails/$1';
-$route['viewOldHistory/(:any)'] = 'TaskController/viewOldHistory/$1';
+$route['viewOldHistory/(:any)(/:any)?'] = 'TaskController/viewOldHistory/$1/$2';
 $route['sanctionleads'] = 'TaskController/sanctionleads';
 $route['generateLoanNo'] = 'TaskController/generateLoanNo';
 

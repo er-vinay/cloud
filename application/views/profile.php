@@ -10,7 +10,7 @@
 
         <div class="taskPageSize taskPageSizeDashboard">
 
-            <div class="row">
+            <div class="row default-page-height">
 
                 <div class="col-md-6 col-md-offset-3">
 

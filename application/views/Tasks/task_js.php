@@ -18,7 +18,7 @@
                     <a href="#" class="alert-link">Try Again.</a>
                 </div>
             </div>
-                <div class="row sushil-hight">
+                <div class="row default-page-height">
                 <div class="col-md-8 col-sm-offset-2">
                     <div class="tab" role="tabpanel">
                         <input type="hidden" name="lead_id" id="lead_id" value="<?= $leadDetails->lead_id ?>" readonly>
@@ -66,7 +66,7 @@
                                 </div>
                                 
                                 <div class="footer-support">
-                                    <h2 class="footer-support"><button type="button" class="btn btn-info collapse" data-toggle="collapse" data-target="#old_leads" onclick="viewOldHistory(<?= $leadDetails->lead_id ?>)">INTERNAL DEDUPE&nbsp;<i class="fa fa-angle-double-down"></i></button></h2>
+                                    <h2 class="footer-support"><button type="button" class="btn btn-info collapse" data-toggle="collapse" data-target="#old_leads" onclick="viewOldHistory(<?= $leadDetails->lead_id ?>, '<?= $leadDetails->customer_id ?>')">INTERNAL DEDUPE&nbsp;<i class="fa fa-angle-double-down"></i></button></h2>
                                 </div>
                                 <div id="old_leads" class="collapse"> 
                                     <div id="oldTaskHistory"></div>

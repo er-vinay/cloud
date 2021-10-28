@@ -14,7 +14,7 @@
 
         <div class="taskPageSizeDashboard dashboardMargin" style="margin-top: 53px !important;">
 
-            <div class="row">
+            <div class="row default-page-height">
 
                 <?php //echo "<pre>";print_r($menusList->result());
 

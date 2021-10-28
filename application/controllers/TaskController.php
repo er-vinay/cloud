@@ -368,39 +368,25 @@
 	  //   }
 
 
-		public function viewOldHistory($lead_id)
+		public function viewOldHistory($lead_id, $customer_id)
 	    {
 	    	$table1 = 'leads LD';
             $table2 = 'customer C';
             $join2 	= 'C.customer_id = LD.customer_id';
             $table3 = 'customer_employment CE';
-            $join3 	= 'CE.customer_id = LD.customer_id';
+            $join3 	= 'CE.lead_id = LD.lead_id';
             $table4 = 'tbl_state ST';
             $join4 	= 'ST.state_id = LD.state_id';
 
-	        $conditions = ['LD.company_id' => company_id, 'LD.product_id' => product_id, 'LD.lead_id' => $lead_id];
+	        $conditions = ['LD.customer_id' => $customer_id];
 	        
-            $select = 'LD.lead_id, LD.customer_id, LD.loan_no, LD.application_no, C.first_name, C.middle_name, C.sur_name, C.email, C.alternate_email, C.gender, C.mobile, C.alternate_mobile, LD.obligations, LD.promocode, LD.purpose, LD.user_type, C.pancard, C.aadhar_no,  LD.loan_amount, LD.tenure, LD.cibil, CE.income_type, CE.salary_mode, CE.monthly_income, LD.source, C.dob, ST.state, LD.city, LD.pincode, LD.status, LD.stage, LD.schedule_time, LD.created_on, LD.coordinates, LD.ip, LD.imei_no, LD.term_and_condition';
+            $select = 'LD.lead_id, LD.customer_id, LD.loan_no, LD.application_no, C.first_name, C.middle_name, C.sur_name, C.email, C.alternate_email, C.gender, C.mobile, C.alternate_mobile, LD.obligations, LD.promocode, LD.purpose, LD.user_type, C.pancard, C.aadhar_no,  LD.loan_amount, LD.tenure, LD.cibil, CE.income_type, CE.salary_mode, CE.monthly_income, LD.source, C.dob, ST.state, LD.city, LD.pincode, LD.status, LD.stage, LD.schedule_time, LD.created_on as lead_initiated_date, LD.coordinates, LD.ip, LD.imei_no, LD.term_and_condition';
 	        $leadData = $this->Tasks->join_table($conditions, $select, $table1, $table2, $join2, $table3, $join3, $table4, $join4);
 
 			$data = '<div class="table-responsive">
 		        <table class="table table-hover table-striped table-bordered">
                   <thead>
-                    <tr class="table-primary">
-                        <th>Sr.&nbsp;No</th>
-                        <th>Status</th>
-						<th>Application&nbsp;No</th>
-                        <th>Loan&nbsp;No</th>
-                        <th>Borrower</th>
-                        <th>PAN</th>
-                        <th>Aadhar</th>
-                        <th>Email</th>
-                        <th>Mobile</th>
-                        <th>State</th>
-                        <th>City</th>
-                        <th>Loan&nbsp;Amount</th>
-                        <th>Open&nbsp;Date</th>
-                        <th>Product</th>
+                    <tr class="table-primary"><th>Sr.&nbsp;No</th><th>Status</th><th>Application&nbsp;No</th><th>Loan&nbsp;No</th><th>Borrower</th><th>PAN</th><th>Aadhar</th><th>Email</th><th>Mobile</th><th>State</th><th>City</th><th>Loan&nbsp;Amount</th><th>Initiated&nbsp;On</th><th>Open&nbsp;On</th><th>Product</th><th>Source</th>
                     </tr>
                   </thead>';
             if($leadData->num_rows() > 0)
@@ -408,17 +394,17 @@
       			$i = 1; 
 				foreach($leadData->result() as $colum)
 				{
-				    if($colum->status == 'Full Payment' || $colum->status == 'Settelment')
-				    {
-				        $optn = '<i class="fa fa-check" style="font-size:24px;color:green"></i>';
-				        $status = 'Full Payment';
-				    }else{
-				        $status='ACTIVE';
-				    }
+				    // if($colum->status == 'Full Payment' || $colum->status == 'Settelment')
+				    // {
+				    //     $optn = '<i class="fa fa-check" style="font-size:24px;color:green"></i>';
+				    //     $status = 'Full Payment';
+				    // }else{
+				    //     $status='ACTIVE';
+				    // }
 				    $data .='<tbody>
                 		<tr>
 							<td>'. $i .'</th>
-                            <td>'. $status .'</td>
+                            <td>'. $colum->status .'</td>
 							<td><a href="#">'. $colum->application_no .'</a></td>
                             <td><a href="#">'. $colum->loan_no .'</a></td>
 							<td>'. $colum->first_name.''.$colum->middle_name.''.$colum->sur_name .'</td>
@@ -429,7 +415,9 @@
                             <td>'. $colum->state .'</td>
                             <td>'. $colum->city .'</td>
                             <td>'. $colum->loan_amount .'</td>
+                            <td>'. date('d/m/Y', strtotime($colum->lead_initiated_date)) .'</td> 
                             <td>'. date('d/m/Y', strtotime($colum->created_on)) .'</td> 
+                            <td>'. $colum->source .'</td>
                             <td>'. $colum->source .'</td>
 						</tr>';
 					$i++;

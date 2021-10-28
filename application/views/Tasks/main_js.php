@@ -202,10 +202,10 @@
         });
     }
 
-    function viewOldHistory(lead_id)
+    function viewOldHistory(lead_id, customer_id)
     {
         $.ajax({
-            url : '<?= base_url("viewOldHistory/") ?>'+lead_id,
+            url : '<?= base_url("viewOldHistory/") ?>'+ lead_id +'/'+ customer_id,
             type : 'POST',
             dataType : "json",
             data : {csrf_token},

@@ -3928,3 +3928,2130 @@ INFO - 2021-10-28 16:56:47 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\appli
 INFO - 2021-10-28 16:56:47 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/GetLeadTaskList.php
 INFO - 2021-10-28 16:56:47 --> Final output sent to browser
 DEBUG - 2021-10-28 16:56:47 --> Total execution time: 0.0514
+INFO - 2021-10-28 13:32:39 --> Config Class Initialized
+INFO - 2021-10-28 13:32:39 --> Hooks Class Initialized
+DEBUG - 2021-10-28 13:32:39 --> UTF-8 Support Enabled
+INFO - 2021-10-28 13:32:39 --> Utf8 Class Initialized
+INFO - 2021-10-28 13:32:39 --> URI Class Initialized
+INFO - 2021-10-28 13:32:39 --> Router Class Initialized
+INFO - 2021-10-28 13:32:39 --> Output Class Initialized
+INFO - 2021-10-28 13:32:39 --> Security Class Initialized
+DEBUG - 2021-10-28 13:32:39 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 13:32:39 --> CSRF cookie sent
+INFO - 2021-10-28 13:32:39 --> Input Class Initialized
+INFO - 2021-10-28 13:32:39 --> Language Class Initialized
+INFO - 2021-10-28 13:32:39 --> Loader Class Initialized
+INFO - 2021-10-28 13:32:39 --> Helper loaded: url_helper
+INFO - 2021-10-28 13:32:39 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 13:32:39 --> Helper loaded: form_helper
+INFO - 2021-10-28 13:32:39 --> Helper loaded: file_helper
+INFO - 2021-10-28 13:32:39 --> Helper loaded: download_helper
+INFO - 2021-10-28 13:32:39 --> Helper loaded: date_helper
+INFO - 2021-10-28 13:32:39 --> Helper loaded: security_helper
+INFO - 2021-10-28 13:32:39 --> Helper loaded: option_helper
+INFO - 2021-10-28 13:32:39 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 13:32:39 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 13:32:39 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 13:32:39 --> Form Validation Class Initialized
+INFO - 2021-10-28 13:32:39 --> Upload Class Initialized
+INFO - 2021-10-28 13:32:39 --> Parser Class Initialized
+INFO - 2021-10-28 13:32:39 --> Email Class Initialized
+DEBUG - 2021-10-28 13:32:39 --> Encrypt Class Initialized
+INFO - 2021-10-28 13:32:39 --> Table Class Initialized
+INFO - 2021-10-28 13:32:39 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 13:32:39 --> Pagination Class Initialized
+INFO - 2021-10-28 13:32:39 --> Model "Leadmod" initialized
+INFO - 2021-10-28 13:32:39 --> Controller Class Initialized
+INFO - 2021-10-28 13:32:39 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:02:39 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:02:39 --> Model "Menu_Model" initialized
+INFO - 2021-10-28 17:02:39 --> Model "User_Model" initialized
+INFO - 2021-10-28 13:32:39 --> Config Class Initialized
+INFO - 2021-10-28 13:32:39 --> Hooks Class Initialized
+DEBUG - 2021-10-28 13:32:39 --> UTF-8 Support Enabled
+INFO - 2021-10-28 13:32:39 --> Utf8 Class Initialized
+INFO - 2021-10-28 13:32:39 --> URI Class Initialized
+INFO - 2021-10-28 13:32:39 --> Router Class Initialized
+INFO - 2021-10-28 13:32:39 --> Output Class Initialized
+INFO - 2021-10-28 13:32:39 --> Security Class Initialized
+DEBUG - 2021-10-28 13:32:39 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 13:32:39 --> CSRF cookie sent
+INFO - 2021-10-28 13:32:39 --> Input Class Initialized
+INFO - 2021-10-28 13:32:39 --> Language Class Initialized
+INFO - 2021-10-28 13:32:39 --> Loader Class Initialized
+INFO - 2021-10-28 13:32:39 --> Helper loaded: url_helper
+INFO - 2021-10-28 13:32:39 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 13:32:39 --> Helper loaded: form_helper
+INFO - 2021-10-28 13:32:39 --> Helper loaded: file_helper
+INFO - 2021-10-28 13:32:39 --> Helper loaded: download_helper
+INFO - 2021-10-28 13:32:39 --> Helper loaded: date_helper
+INFO - 2021-10-28 13:32:39 --> Helper loaded: security_helper
+INFO - 2021-10-28 13:32:39 --> Helper loaded: option_helper
+INFO - 2021-10-28 13:32:39 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 13:32:39 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 13:32:39 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 13:32:39 --> Form Validation Class Initialized
+INFO - 2021-10-28 13:32:39 --> Upload Class Initialized
+INFO - 2021-10-28 13:32:39 --> Parser Class Initialized
+INFO - 2021-10-28 13:32:39 --> Email Class Initialized
+DEBUG - 2021-10-28 13:32:39 --> Encrypt Class Initialized
+INFO - 2021-10-28 13:32:39 --> Table Class Initialized
+INFO - 2021-10-28 13:32:39 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 13:32:39 --> Pagination Class Initialized
+INFO - 2021-10-28 13:32:39 --> Model "Leadmod" initialized
+INFO - 2021-10-28 13:32:39 --> Controller Class Initialized
+INFO - 2021-10-28 13:32:39 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:02:39 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:02:39 --> Model "Menu_Model" initialized
+INFO - 2021-10-28 17:02:39 --> Model "User_Model" initialized
+INFO - 2021-10-28 17:02:39 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/header.php
+INFO - 2021-10-28 17:02:39 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/footer.php
+INFO - 2021-10-28 17:02:39 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\home.php
+INFO - 2021-10-28 17:02:39 --> Final output sent to browser
+DEBUG - 2021-10-28 17:02:39 --> Total execution time: 0.0509
+INFO - 2021-10-28 13:32:41 --> Config Class Initialized
+INFO - 2021-10-28 13:32:41 --> Hooks Class Initialized
+DEBUG - 2021-10-28 13:32:41 --> UTF-8 Support Enabled
+INFO - 2021-10-28 13:32:41 --> Utf8 Class Initialized
+INFO - 2021-10-28 13:32:41 --> URI Class Initialized
+INFO - 2021-10-28 13:32:41 --> Router Class Initialized
+INFO - 2021-10-28 13:32:41 --> Output Class Initialized
+INFO - 2021-10-28 13:32:41 --> Security Class Initialized
+DEBUG - 2021-10-28 13:32:41 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 13:32:41 --> CSRF cookie sent
+INFO - 2021-10-28 13:32:41 --> Input Class Initialized
+INFO - 2021-10-28 13:32:41 --> Language Class Initialized
+INFO - 2021-10-28 13:32:41 --> Loader Class Initialized
+INFO - 2021-10-28 13:32:41 --> Helper loaded: url_helper
+INFO - 2021-10-28 13:32:41 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 13:32:41 --> Helper loaded: form_helper
+INFO - 2021-10-28 13:32:41 --> Helper loaded: file_helper
+INFO - 2021-10-28 13:32:41 --> Helper loaded: download_helper
+INFO - 2021-10-28 13:32:41 --> Helper loaded: date_helper
+INFO - 2021-10-28 13:32:41 --> Helper loaded: security_helper
+INFO - 2021-10-28 13:32:41 --> Helper loaded: option_helper
+INFO - 2021-10-28 13:32:41 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 13:32:41 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 13:32:41 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 13:32:41 --> Form Validation Class Initialized
+INFO - 2021-10-28 13:32:41 --> Upload Class Initialized
+INFO - 2021-10-28 13:32:41 --> Parser Class Initialized
+INFO - 2021-10-28 13:32:41 --> Email Class Initialized
+DEBUG - 2021-10-28 13:32:41 --> Encrypt Class Initialized
+INFO - 2021-10-28 13:32:41 --> Table Class Initialized
+INFO - 2021-10-28 13:32:41 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 13:32:41 --> Pagination Class Initialized
+INFO - 2021-10-28 13:32:41 --> Model "Leadmod" initialized
+INFO - 2021-10-28 13:32:41 --> Controller Class Initialized
+INFO - 2021-10-28 13:32:41 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:02:41 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:02:41 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:02:41 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:02:41 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:02:41 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:02:41 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:02:41 --> Model "SMS_Model" initialized
+INFO - 2021-10-28 17:02:41 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/header.php
+INFO - 2021-10-28 17:02:41 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/footer.php
+ERROR - 2021-10-28 17:02:41 --> Severity: Warning --> Undefined property: CI_DB_mysqli_result::$lead_id E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks\main_js.php 132
+ERROR - 2021-10-28 17:02:41 --> Severity: Warning --> Undefined property: CI_DB_mysqli_result::$lead_id E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks\main_js.php 775
+ERROR - 2021-10-28 17:02:41 --> Severity: Warning --> Undefined property: CI_DB_mysqli_result::$customer_id E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks\main_js.php 775
+ERROR - 2021-10-28 17:02:41 --> Severity: Warning --> Undefined property: CI_DB_mysqli_result::$loan_amount E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks\main_js.php 1354
+ERROR - 2021-10-28 17:02:41 --> Severity: Warning --> Undefined property: CI_DB_mysqli_result::$cibil E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks\main_js.php 1374
+ERROR - 2021-10-28 17:02:41 --> Severity: Warning --> Undefined property: CI_DB_mysqli_result::$monthly_income E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks\main_js.php 1382
+ERROR - 2021-10-28 17:02:41 --> Severity: Warning --> Undefined property: CI_DB_mysqli_result::$obligations E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks\main_js.php 1382
+ERROR - 2021-10-28 17:02:41 --> Severity: Warning --> Undefined property: CI_DB_mysqli_result::$lead_id E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks\main_js.php 2174
+ERROR - 2021-10-28 17:02:41 --> Severity: Warning --> Undefined property: CI_DB_mysqli_result::$customer_id E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks\main_js.php 2174
+INFO - 2021-10-28 17:02:41 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/main_js.php
+INFO - 2021-10-28 17:02:41 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/GetLeadTaskList.php
+INFO - 2021-10-28 17:02:41 --> Final output sent to browser
+DEBUG - 2021-10-28 17:02:41 --> Total execution time: 0.0585
+INFO - 2021-10-28 13:32:42 --> Config Class Initialized
+INFO - 2021-10-28 13:32:42 --> Hooks Class Initialized
+DEBUG - 2021-10-28 13:32:42 --> UTF-8 Support Enabled
+INFO - 2021-10-28 13:32:42 --> Utf8 Class Initialized
+INFO - 2021-10-28 13:32:42 --> URI Class Initialized
+INFO - 2021-10-28 13:32:42 --> Router Class Initialized
+INFO - 2021-10-28 13:32:42 --> Output Class Initialized
+INFO - 2021-10-28 13:32:42 --> Security Class Initialized
+DEBUG - 2021-10-28 13:32:42 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 13:32:42 --> CSRF cookie sent
+INFO - 2021-10-28 13:32:42 --> Input Class Initialized
+INFO - 2021-10-28 13:32:42 --> Language Class Initialized
+INFO - 2021-10-28 13:32:42 --> Loader Class Initialized
+INFO - 2021-10-28 13:32:42 --> Helper loaded: url_helper
+INFO - 2021-10-28 13:32:42 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 13:32:42 --> Helper loaded: form_helper
+INFO - 2021-10-28 13:32:42 --> Helper loaded: file_helper
+INFO - 2021-10-28 13:32:42 --> Helper loaded: download_helper
+INFO - 2021-10-28 13:32:42 --> Helper loaded: date_helper
+INFO - 2021-10-28 13:32:42 --> Helper loaded: security_helper
+INFO - 2021-10-28 13:32:42 --> Helper loaded: option_helper
+INFO - 2021-10-28 13:32:42 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 13:32:43 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 13:32:43 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 13:32:43 --> Form Validation Class Initialized
+INFO - 2021-10-28 13:32:43 --> Upload Class Initialized
+INFO - 2021-10-28 13:32:43 --> Parser Class Initialized
+INFO - 2021-10-28 13:32:43 --> Email Class Initialized
+DEBUG - 2021-10-28 13:32:43 --> Encrypt Class Initialized
+INFO - 2021-10-28 13:32:43 --> Table Class Initialized
+INFO - 2021-10-28 13:32:43 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 13:32:43 --> Pagination Class Initialized
+INFO - 2021-10-28 13:32:43 --> Model "Leadmod" initialized
+INFO - 2021-10-28 13:32:43 --> Controller Class Initialized
+INFO - 2021-10-28 13:32:43 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:02:43 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:02:43 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:02:43 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:02:43 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:02:43 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:02:43 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:02:43 --> Model "SMS_Model" initialized
+INFO - 2021-10-28 17:02:43 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/header.php
+INFO - 2021-10-28 17:02:43 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/leadsDetails.php
+INFO - 2021-10-28 17:02:43 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/application.php
+INFO - 2021-10-28 17:02:43 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Document/docs.php
+INFO - 2021-10-28 17:02:43 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Personal/personal.php
+INFO - 2021-10-28 17:02:43 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Disbursal/banking.php
+ERROR - 2021-10-28 17:02:43 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 87
+ERROR - 2021-10-28 17:02:43 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 87
+ERROR - 2021-10-28 17:02:43 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 88
+ERROR - 2021-10-28 17:02:43 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 88
+ERROR - 2021-10-28 17:02:43 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 90
+ERROR - 2021-10-28 17:02:43 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 90
+INFO - 2021-10-28 17:02:43 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification/verification.php
+INFO - 2021-10-28 17:02:43 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\CAM/camPayday.php
+INFO - 2021-10-28 17:02:43 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Disbursal/disbursal.php
+INFO - 2021-10-28 17:02:43 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection/repayment.php
+ERROR - 2021-10-28 17:02:43 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 114
+ERROR - 2021-10-28 17:02:43 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 114
+ERROR - 2021-10-28 17:02:43 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 121
+ERROR - 2021-10-28 17:02:43 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 121
+ERROR - 2021-10-28 17:02:43 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 183
+ERROR - 2021-10-28 17:02:43 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 183
+ERROR - 2021-10-28 17:02:43 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 190
+ERROR - 2021-10-28 17:02:43 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 190
+ERROR - 2021-10-28 17:02:43 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 191
+ERROR - 2021-10-28 17:02:43 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 191
+ERROR - 2021-10-28 17:02:43 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 192
+ERROR - 2021-10-28 17:02:43 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 192
+INFO - 2021-10-28 17:02:43 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection/collection.php
+INFO - 2021-10-28 17:02:43 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/footer.php
+INFO - 2021-10-28 17:02:43 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/task_js.php
+INFO - 2021-10-28 17:02:43 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/main_js.php
+INFO - 2021-10-28 17:02:43 --> Final output sent to browser
+DEBUG - 2021-10-28 17:02:43 --> Total execution time: 0.0860
+INFO - 2021-10-28 13:32:45 --> Config Class Initialized
+INFO - 2021-10-28 13:32:45 --> Hooks Class Initialized
+DEBUG - 2021-10-28 13:32:45 --> UTF-8 Support Enabled
+INFO - 2021-10-28 13:32:45 --> Utf8 Class Initialized
+INFO - 2021-10-28 13:32:45 --> URI Class Initialized
+INFO - 2021-10-28 13:32:45 --> Router Class Initialized
+INFO - 2021-10-28 13:32:45 --> Output Class Initialized
+INFO - 2021-10-28 13:32:45 --> Security Class Initialized
+DEBUG - 2021-10-28 13:32:45 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 13:32:45 --> CSRF cookie sent
+INFO - 2021-10-28 13:32:45 --> CSRF token verified
+INFO - 2021-10-28 13:32:45 --> Input Class Initialized
+INFO - 2021-10-28 13:32:45 --> Language Class Initialized
+INFO - 2021-10-28 13:32:45 --> Loader Class Initialized
+INFO - 2021-10-28 13:32:45 --> Helper loaded: url_helper
+INFO - 2021-10-28 13:32:45 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 13:32:45 --> Helper loaded: form_helper
+INFO - 2021-10-28 13:32:45 --> Helper loaded: file_helper
+INFO - 2021-10-28 13:32:45 --> Helper loaded: download_helper
+INFO - 2021-10-28 13:32:45 --> Helper loaded: date_helper
+INFO - 2021-10-28 13:32:45 --> Helper loaded: security_helper
+INFO - 2021-10-28 13:32:45 --> Helper loaded: option_helper
+INFO - 2021-10-28 13:32:45 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 13:32:45 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 13:32:45 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 13:32:45 --> Form Validation Class Initialized
+INFO - 2021-10-28 13:32:45 --> Upload Class Initialized
+INFO - 2021-10-28 13:32:45 --> Parser Class Initialized
+INFO - 2021-10-28 13:32:45 --> Email Class Initialized
+DEBUG - 2021-10-28 13:32:45 --> Encrypt Class Initialized
+INFO - 2021-10-28 13:32:45 --> Table Class Initialized
+INFO - 2021-10-28 13:32:45 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 13:32:45 --> Pagination Class Initialized
+INFO - 2021-10-28 13:32:45 --> Model "Leadmod" initialized
+INFO - 2021-10-28 13:32:45 --> Controller Class Initialized
+INFO - 2021-10-28 13:32:45 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:02:45 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:02:45 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:02:45 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:02:45 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:02:45 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:02:45 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:02:45 --> Model "SMS_Model" initialized
+INFO - 2021-10-28 17:02:45 --> Final output sent to browser
+DEBUG - 2021-10-28 17:02:45 --> Total execution time: 0.0479
+INFO - 2021-10-28 13:32:51 --> Config Class Initialized
+INFO - 2021-10-28 13:32:51 --> Hooks Class Initialized
+DEBUG - 2021-10-28 13:32:51 --> UTF-8 Support Enabled
+INFO - 2021-10-28 13:32:51 --> Utf8 Class Initialized
+INFO - 2021-10-28 13:32:51 --> URI Class Initialized
+INFO - 2021-10-28 13:32:51 --> Router Class Initialized
+INFO - 2021-10-28 13:32:51 --> Output Class Initialized
+INFO - 2021-10-28 13:32:51 --> Security Class Initialized
+DEBUG - 2021-10-28 13:32:51 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 13:32:51 --> CSRF cookie sent
+INFO - 2021-10-28 13:32:51 --> CSRF token verified
+INFO - 2021-10-28 13:32:51 --> Input Class Initialized
+INFO - 2021-10-28 13:32:51 --> Language Class Initialized
+INFO - 2021-10-28 13:32:51 --> Loader Class Initialized
+INFO - 2021-10-28 13:32:51 --> Helper loaded: url_helper
+INFO - 2021-10-28 13:32:51 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 13:32:51 --> Helper loaded: form_helper
+INFO - 2021-10-28 13:32:51 --> Helper loaded: file_helper
+INFO - 2021-10-28 13:32:51 --> Helper loaded: download_helper
+INFO - 2021-10-28 13:32:51 --> Helper loaded: date_helper
+INFO - 2021-10-28 13:32:51 --> Helper loaded: security_helper
+INFO - 2021-10-28 13:32:51 --> Helper loaded: option_helper
+INFO - 2021-10-28 13:32:51 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 13:32:51 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 13:32:51 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 13:32:51 --> Form Validation Class Initialized
+INFO - 2021-10-28 13:32:51 --> Upload Class Initialized
+INFO - 2021-10-28 13:32:51 --> Parser Class Initialized
+INFO - 2021-10-28 13:32:51 --> Email Class Initialized
+DEBUG - 2021-10-28 13:32:51 --> Encrypt Class Initialized
+INFO - 2021-10-28 13:32:51 --> Table Class Initialized
+INFO - 2021-10-28 13:32:51 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 13:32:51 --> Pagination Class Initialized
+INFO - 2021-10-28 13:32:51 --> Model "Leadmod" initialized
+INFO - 2021-10-28 13:32:51 --> Controller Class Initialized
+INFO - 2021-10-28 13:32:51 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:02:51 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:02:51 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:02:51 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:02:51 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:02:51 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:02:51 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:02:51 --> Model "SMS_Model" initialized
+INFO - 2021-10-28 17:02:51 --> Final output sent to browser
+DEBUG - 2021-10-28 17:02:51 --> Total execution time: 0.0518
+INFO - 2021-10-28 13:32:53 --> Config Class Initialized
+INFO - 2021-10-28 13:32:53 --> Hooks Class Initialized
+DEBUG - 2021-10-28 13:32:53 --> UTF-8 Support Enabled
+INFO - 2021-10-28 13:32:53 --> Utf8 Class Initialized
+INFO - 2021-10-28 13:32:53 --> URI Class Initialized
+INFO - 2021-10-28 13:32:53 --> Router Class Initialized
+INFO - 2021-10-28 13:32:53 --> Output Class Initialized
+INFO - 2021-10-28 13:32:53 --> Security Class Initialized
+DEBUG - 2021-10-28 13:32:53 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 13:32:53 --> CSRF cookie sent
+INFO - 2021-10-28 13:32:53 --> Input Class Initialized
+INFO - 2021-10-28 13:32:53 --> Language Class Initialized
+INFO - 2021-10-28 13:32:53 --> Loader Class Initialized
+INFO - 2021-10-28 13:32:53 --> Helper loaded: url_helper
+INFO - 2021-10-28 13:32:53 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 13:32:53 --> Helper loaded: form_helper
+INFO - 2021-10-28 13:32:53 --> Helper loaded: file_helper
+INFO - 2021-10-28 13:32:53 --> Helper loaded: download_helper
+INFO - 2021-10-28 13:32:53 --> Helper loaded: date_helper
+INFO - 2021-10-28 13:32:53 --> Helper loaded: security_helper
+INFO - 2021-10-28 13:32:53 --> Helper loaded: option_helper
+INFO - 2021-10-28 13:32:53 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 13:32:53 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 13:32:53 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 13:32:53 --> Form Validation Class Initialized
+INFO - 2021-10-28 13:32:53 --> Upload Class Initialized
+INFO - 2021-10-28 13:32:53 --> Parser Class Initialized
+INFO - 2021-10-28 13:32:53 --> Email Class Initialized
+DEBUG - 2021-10-28 13:32:53 --> Encrypt Class Initialized
+INFO - 2021-10-28 13:32:53 --> Table Class Initialized
+INFO - 2021-10-28 13:32:53 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 13:32:53 --> Pagination Class Initialized
+INFO - 2021-10-28 13:32:53 --> Model "Leadmod" initialized
+INFO - 2021-10-28 13:32:53 --> Controller Class Initialized
+INFO - 2021-10-28 13:32:53 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:02:53 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:02:53 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:02:53 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:02:53 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:02:53 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:02:53 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:02:53 --> Model "SMS_Model" initialized
+INFO - 2021-10-28 17:02:53 --> Final output sent to browser
+DEBUG - 2021-10-28 17:02:53 --> Total execution time: 0.0462
+INFO - 2021-10-28 13:38:30 --> Config Class Initialized
+INFO - 2021-10-28 13:38:30 --> Hooks Class Initialized
+DEBUG - 2021-10-28 13:38:30 --> UTF-8 Support Enabled
+INFO - 2021-10-28 13:38:30 --> Utf8 Class Initialized
+INFO - 2021-10-28 13:38:30 --> URI Class Initialized
+INFO - 2021-10-28 13:38:30 --> Router Class Initialized
+INFO - 2021-10-28 13:38:30 --> Output Class Initialized
+INFO - 2021-10-28 13:38:30 --> Security Class Initialized
+DEBUG - 2021-10-28 13:38:30 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 13:38:30 --> CSRF cookie sent
+INFO - 2021-10-28 13:38:30 --> Input Class Initialized
+INFO - 2021-10-28 13:38:30 --> Language Class Initialized
+INFO - 2021-10-28 13:38:30 --> Loader Class Initialized
+INFO - 2021-10-28 13:38:30 --> Helper loaded: url_helper
+INFO - 2021-10-28 13:38:30 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 13:38:30 --> Helper loaded: form_helper
+INFO - 2021-10-28 13:38:30 --> Helper loaded: file_helper
+INFO - 2021-10-28 13:38:30 --> Helper loaded: download_helper
+INFO - 2021-10-28 13:38:30 --> Helper loaded: date_helper
+INFO - 2021-10-28 13:38:30 --> Helper loaded: security_helper
+INFO - 2021-10-28 13:38:30 --> Helper loaded: option_helper
+INFO - 2021-10-28 13:38:30 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 13:38:30 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 13:38:30 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 13:38:30 --> Form Validation Class Initialized
+INFO - 2021-10-28 13:38:30 --> Upload Class Initialized
+INFO - 2021-10-28 13:38:30 --> Parser Class Initialized
+INFO - 2021-10-28 13:38:30 --> Email Class Initialized
+DEBUG - 2021-10-28 13:38:30 --> Encrypt Class Initialized
+INFO - 2021-10-28 13:38:30 --> Table Class Initialized
+INFO - 2021-10-28 13:38:30 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 13:38:30 --> Pagination Class Initialized
+INFO - 2021-10-28 13:38:30 --> Model "Leadmod" initialized
+INFO - 2021-10-28 13:38:30 --> Controller Class Initialized
+INFO - 2021-10-28 13:38:30 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:08:30 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:08:30 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:08:30 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:08:30 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:08:30 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:08:30 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:08:30 --> Model "SMS_Model" initialized
+ERROR - 2021-10-28 17:08:30 --> Severity: error --> Exception: Too few arguments to function TaskController::viewOldHistory(), 1 passed in E:\VIN\xampp\htdocs\2021\cloud\system\core\CodeIgniter.php on line 532 and exactly 2 expected E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 371
+INFO - 2021-10-28 13:38:36 --> Config Class Initialized
+INFO - 2021-10-28 13:38:36 --> Hooks Class Initialized
+DEBUG - 2021-10-28 13:38:36 --> UTF-8 Support Enabled
+INFO - 2021-10-28 13:38:36 --> Utf8 Class Initialized
+INFO - 2021-10-28 13:38:36 --> URI Class Initialized
+INFO - 2021-10-28 13:38:36 --> Router Class Initialized
+INFO - 2021-10-28 13:38:36 --> Output Class Initialized
+INFO - 2021-10-28 13:38:36 --> Security Class Initialized
+DEBUG - 2021-10-28 13:38:36 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 13:38:36 --> CSRF cookie sent
+INFO - 2021-10-28 13:38:36 --> Input Class Initialized
+INFO - 2021-10-28 13:38:36 --> Language Class Initialized
+INFO - 2021-10-28 13:38:36 --> Loader Class Initialized
+INFO - 2021-10-28 13:38:36 --> Helper loaded: url_helper
+INFO - 2021-10-28 13:38:36 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 13:38:36 --> Helper loaded: form_helper
+INFO - 2021-10-28 13:38:36 --> Helper loaded: file_helper
+INFO - 2021-10-28 13:38:36 --> Helper loaded: download_helper
+INFO - 2021-10-28 13:38:36 --> Helper loaded: date_helper
+INFO - 2021-10-28 13:38:36 --> Helper loaded: security_helper
+INFO - 2021-10-28 13:38:36 --> Helper loaded: option_helper
+INFO - 2021-10-28 13:38:36 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 13:38:36 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 13:38:36 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 13:38:36 --> Form Validation Class Initialized
+INFO - 2021-10-28 13:38:36 --> Upload Class Initialized
+INFO - 2021-10-28 13:38:36 --> Parser Class Initialized
+INFO - 2021-10-28 13:38:36 --> Email Class Initialized
+DEBUG - 2021-10-28 13:38:36 --> Encrypt Class Initialized
+INFO - 2021-10-28 13:38:36 --> Table Class Initialized
+INFO - 2021-10-28 13:38:36 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 13:38:36 --> Pagination Class Initialized
+INFO - 2021-10-28 13:38:36 --> Model "Leadmod" initialized
+INFO - 2021-10-28 13:38:36 --> Controller Class Initialized
+INFO - 2021-10-28 13:38:36 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:08:36 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:08:36 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:08:36 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:08:36 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:08:36 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:08:36 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:08:36 --> Model "SMS_Model" initialized
+INFO - 2021-10-28 17:08:36 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/header.php
+INFO - 2021-10-28 17:08:36 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/leadsDetails.php
+INFO - 2021-10-28 17:08:36 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/application.php
+INFO - 2021-10-28 17:08:36 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Document/docs.php
+INFO - 2021-10-28 17:08:36 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Personal/personal.php
+INFO - 2021-10-28 17:08:36 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Disbursal/banking.php
+ERROR - 2021-10-28 17:08:36 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 87
+ERROR - 2021-10-28 17:08:36 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 87
+ERROR - 2021-10-28 17:08:36 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 88
+ERROR - 2021-10-28 17:08:36 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 88
+ERROR - 2021-10-28 17:08:36 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 90
+ERROR - 2021-10-28 17:08:36 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 90
+INFO - 2021-10-28 17:08:36 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification/verification.php
+INFO - 2021-10-28 17:08:36 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\CAM/camPayday.php
+INFO - 2021-10-28 17:08:36 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Disbursal/disbursal.php
+INFO - 2021-10-28 17:08:36 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection/repayment.php
+ERROR - 2021-10-28 17:08:36 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 114
+ERROR - 2021-10-28 17:08:36 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 114
+ERROR - 2021-10-28 17:08:36 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 121
+ERROR - 2021-10-28 17:08:36 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 121
+ERROR - 2021-10-28 17:08:36 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 183
+ERROR - 2021-10-28 17:08:36 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 183
+ERROR - 2021-10-28 17:08:36 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 190
+ERROR - 2021-10-28 17:08:36 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 190
+ERROR - 2021-10-28 17:08:36 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 191
+ERROR - 2021-10-28 17:08:36 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 191
+ERROR - 2021-10-28 17:08:36 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 192
+ERROR - 2021-10-28 17:08:36 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 192
+INFO - 2021-10-28 17:08:36 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection/collection.php
+INFO - 2021-10-28 17:08:36 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/footer.php
+INFO - 2021-10-28 17:08:36 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/task_js.php
+INFO - 2021-10-28 17:08:36 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/main_js.php
+INFO - 2021-10-28 17:08:36 --> Final output sent to browser
+DEBUG - 2021-10-28 17:08:36 --> Total execution time: 0.0713
+INFO - 2021-10-28 13:38:39 --> Config Class Initialized
+INFO - 2021-10-28 13:38:39 --> Hooks Class Initialized
+DEBUG - 2021-10-28 13:38:39 --> UTF-8 Support Enabled
+INFO - 2021-10-28 13:38:39 --> Utf8 Class Initialized
+INFO - 2021-10-28 13:38:39 --> URI Class Initialized
+INFO - 2021-10-28 13:38:39 --> Router Class Initialized
+INFO - 2021-10-28 13:38:39 --> Output Class Initialized
+INFO - 2021-10-28 13:38:39 --> Security Class Initialized
+DEBUG - 2021-10-28 13:38:39 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 13:38:39 --> CSRF cookie sent
+INFO - 2021-10-28 13:38:39 --> CSRF token verified
+INFO - 2021-10-28 13:38:39 --> Input Class Initialized
+INFO - 2021-10-28 13:38:39 --> Language Class Initialized
+INFO - 2021-10-28 13:38:39 --> Loader Class Initialized
+INFO - 2021-10-28 13:38:39 --> Helper loaded: url_helper
+INFO - 2021-10-28 13:38:39 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 13:38:39 --> Helper loaded: form_helper
+INFO - 2021-10-28 13:38:39 --> Helper loaded: file_helper
+INFO - 2021-10-28 13:38:39 --> Helper loaded: download_helper
+INFO - 2021-10-28 13:38:39 --> Helper loaded: date_helper
+INFO - 2021-10-28 13:38:39 --> Helper loaded: security_helper
+INFO - 2021-10-28 13:38:39 --> Helper loaded: option_helper
+INFO - 2021-10-28 13:38:39 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 13:38:39 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 13:38:39 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 13:38:39 --> Form Validation Class Initialized
+INFO - 2021-10-28 13:38:39 --> Upload Class Initialized
+INFO - 2021-10-28 13:38:39 --> Parser Class Initialized
+INFO - 2021-10-28 13:38:39 --> Email Class Initialized
+DEBUG - 2021-10-28 13:38:39 --> Encrypt Class Initialized
+INFO - 2021-10-28 13:38:39 --> Table Class Initialized
+INFO - 2021-10-28 13:38:39 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 13:38:39 --> Pagination Class Initialized
+INFO - 2021-10-28 13:38:39 --> Model "Leadmod" initialized
+INFO - 2021-10-28 13:38:39 --> Controller Class Initialized
+INFO - 2021-10-28 13:38:39 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:08:39 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:08:39 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:08:39 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:08:39 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:08:39 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:08:39 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:08:39 --> Model "SMS_Model" initialized
+ERROR - 2021-10-28 17:08:39 --> Severity: error --> Exception: Too few arguments to function TaskController::viewOldHistory(), 1 passed in E:\VIN\xampp\htdocs\2021\cloud\system\core\CodeIgniter.php on line 532 and exactly 2 expected E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 371
+INFO - 2021-10-28 13:38:42 --> Config Class Initialized
+INFO - 2021-10-28 13:38:42 --> Hooks Class Initialized
+DEBUG - 2021-10-28 13:38:42 --> UTF-8 Support Enabled
+INFO - 2021-10-28 13:38:42 --> Utf8 Class Initialized
+INFO - 2021-10-28 13:38:42 --> URI Class Initialized
+INFO - 2021-10-28 13:38:42 --> Router Class Initialized
+INFO - 2021-10-28 13:38:42 --> Output Class Initialized
+INFO - 2021-10-28 13:38:42 --> Security Class Initialized
+DEBUG - 2021-10-28 13:38:42 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 13:38:42 --> CSRF cookie sent
+INFO - 2021-10-28 13:38:42 --> CSRF token verified
+INFO - 2021-10-28 13:38:42 --> Input Class Initialized
+INFO - 2021-10-28 13:38:42 --> Language Class Initialized
+INFO - 2021-10-28 13:38:42 --> Loader Class Initialized
+INFO - 2021-10-28 13:38:42 --> Helper loaded: url_helper
+INFO - 2021-10-28 13:38:42 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 13:38:42 --> Helper loaded: form_helper
+INFO - 2021-10-28 13:38:42 --> Helper loaded: file_helper
+INFO - 2021-10-28 13:38:42 --> Helper loaded: download_helper
+INFO - 2021-10-28 13:38:42 --> Helper loaded: date_helper
+INFO - 2021-10-28 13:38:42 --> Helper loaded: security_helper
+INFO - 2021-10-28 13:38:42 --> Helper loaded: option_helper
+INFO - 2021-10-28 13:38:42 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 13:38:42 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 13:38:42 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 13:38:42 --> Form Validation Class Initialized
+INFO - 2021-10-28 13:38:42 --> Upload Class Initialized
+INFO - 2021-10-28 13:38:42 --> Parser Class Initialized
+INFO - 2021-10-28 13:38:42 --> Email Class Initialized
+DEBUG - 2021-10-28 13:38:42 --> Encrypt Class Initialized
+INFO - 2021-10-28 13:38:42 --> Table Class Initialized
+INFO - 2021-10-28 13:38:42 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 13:38:42 --> Pagination Class Initialized
+INFO - 2021-10-28 13:38:42 --> Model "Leadmod" initialized
+INFO - 2021-10-28 13:38:42 --> Controller Class Initialized
+INFO - 2021-10-28 13:38:42 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:08:42 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:08:42 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:08:42 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:08:42 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:08:42 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:08:42 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:08:42 --> Model "SMS_Model" initialized
+ERROR - 2021-10-28 17:08:42 --> Severity: error --> Exception: Too few arguments to function TaskController::viewOldHistory(), 1 passed in E:\VIN\xampp\htdocs\2021\cloud\system\core\CodeIgniter.php on line 532 and exactly 2 expected E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 371
+INFO - 2021-10-28 13:40:16 --> Config Class Initialized
+INFO - 2021-10-28 13:40:16 --> Hooks Class Initialized
+DEBUG - 2021-10-28 13:40:16 --> UTF-8 Support Enabled
+INFO - 2021-10-28 13:40:16 --> Utf8 Class Initialized
+INFO - 2021-10-28 13:40:16 --> URI Class Initialized
+INFO - 2021-10-28 13:40:16 --> Router Class Initialized
+INFO - 2021-10-28 13:40:16 --> Output Class Initialized
+INFO - 2021-10-28 13:40:16 --> Security Class Initialized
+DEBUG - 2021-10-28 13:40:16 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 13:40:16 --> CSRF cookie sent
+INFO - 2021-10-28 13:40:16 --> Input Class Initialized
+INFO - 2021-10-28 13:40:16 --> Language Class Initialized
+INFO - 2021-10-28 13:40:16 --> Loader Class Initialized
+INFO - 2021-10-28 13:40:16 --> Helper loaded: url_helper
+INFO - 2021-10-28 13:40:16 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 13:40:16 --> Helper loaded: form_helper
+INFO - 2021-10-28 13:40:16 --> Helper loaded: file_helper
+INFO - 2021-10-28 13:40:16 --> Helper loaded: download_helper
+INFO - 2021-10-28 13:40:16 --> Helper loaded: date_helper
+INFO - 2021-10-28 13:40:16 --> Helper loaded: security_helper
+INFO - 2021-10-28 13:40:16 --> Helper loaded: option_helper
+INFO - 2021-10-28 13:40:16 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 13:40:16 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 13:40:16 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 13:40:16 --> Form Validation Class Initialized
+INFO - 2021-10-28 13:40:16 --> Upload Class Initialized
+INFO - 2021-10-28 13:40:16 --> Parser Class Initialized
+INFO - 2021-10-28 13:40:16 --> Email Class Initialized
+DEBUG - 2021-10-28 13:40:16 --> Encrypt Class Initialized
+INFO - 2021-10-28 13:40:16 --> Table Class Initialized
+INFO - 2021-10-28 13:40:16 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 13:40:16 --> Pagination Class Initialized
+INFO - 2021-10-28 13:40:16 --> Model "Leadmod" initialized
+INFO - 2021-10-28 13:40:16 --> Controller Class Initialized
+INFO - 2021-10-28 13:40:16 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:10:16 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:10:16 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:10:16 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:10:16 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:10:16 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:10:16 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:10:16 --> Model "SMS_Model" initialized
+INFO - 2021-10-28 17:10:16 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/header.php
+INFO - 2021-10-28 17:10:16 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/leadsDetails.php
+INFO - 2021-10-28 17:10:16 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/application.php
+INFO - 2021-10-28 17:10:16 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Document/docs.php
+INFO - 2021-10-28 17:10:16 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Personal/personal.php
+INFO - 2021-10-28 17:10:16 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Disbursal/banking.php
+ERROR - 2021-10-28 17:10:16 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 87
+ERROR - 2021-10-28 17:10:16 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 87
+ERROR - 2021-10-28 17:10:16 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 88
+ERROR - 2021-10-28 17:10:16 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 88
+ERROR - 2021-10-28 17:10:16 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 90
+ERROR - 2021-10-28 17:10:16 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 90
+INFO - 2021-10-28 17:10:16 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification/verification.php
+INFO - 2021-10-28 17:10:16 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\CAM/camPayday.php
+INFO - 2021-10-28 17:10:16 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Disbursal/disbursal.php
+INFO - 2021-10-28 17:10:16 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection/repayment.php
+ERROR - 2021-10-28 17:10:16 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 114
+ERROR - 2021-10-28 17:10:16 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 114
+ERROR - 2021-10-28 17:10:16 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 121
+ERROR - 2021-10-28 17:10:16 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 121
+ERROR - 2021-10-28 17:10:16 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 183
+ERROR - 2021-10-28 17:10:16 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 183
+ERROR - 2021-10-28 17:10:16 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 190
+ERROR - 2021-10-28 17:10:16 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 190
+ERROR - 2021-10-28 17:10:16 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 191
+ERROR - 2021-10-28 17:10:16 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 191
+ERROR - 2021-10-28 17:10:16 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 192
+ERROR - 2021-10-28 17:10:16 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 192
+INFO - 2021-10-28 17:10:16 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection/collection.php
+INFO - 2021-10-28 17:10:16 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/footer.php
+INFO - 2021-10-28 17:10:16 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/task_js.php
+INFO - 2021-10-28 17:10:16 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/main_js.php
+INFO - 2021-10-28 17:10:16 --> Final output sent to browser
+DEBUG - 2021-10-28 17:10:16 --> Total execution time: 0.0449
+INFO - 2021-10-28 13:40:28 --> Config Class Initialized
+INFO - 2021-10-28 13:40:28 --> Hooks Class Initialized
+DEBUG - 2021-10-28 13:40:28 --> UTF-8 Support Enabled
+INFO - 2021-10-28 13:40:28 --> Utf8 Class Initialized
+INFO - 2021-10-28 13:40:28 --> URI Class Initialized
+INFO - 2021-10-28 13:40:28 --> Router Class Initialized
+INFO - 2021-10-28 13:40:28 --> Output Class Initialized
+INFO - 2021-10-28 13:40:28 --> Security Class Initialized
+DEBUG - 2021-10-28 13:40:28 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 13:40:28 --> CSRF cookie sent
+INFO - 2021-10-28 13:40:28 --> CSRF token verified
+INFO - 2021-10-28 13:40:28 --> Input Class Initialized
+INFO - 2021-10-28 13:40:28 --> Language Class Initialized
+INFO - 2021-10-28 13:40:28 --> Loader Class Initialized
+INFO - 2021-10-28 13:40:28 --> Helper loaded: url_helper
+INFO - 2021-10-28 13:40:28 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 13:40:28 --> Helper loaded: form_helper
+INFO - 2021-10-28 13:40:28 --> Helper loaded: file_helper
+INFO - 2021-10-28 13:40:28 --> Helper loaded: download_helper
+INFO - 2021-10-28 13:40:28 --> Helper loaded: date_helper
+INFO - 2021-10-28 13:40:28 --> Helper loaded: security_helper
+INFO - 2021-10-28 13:40:28 --> Helper loaded: option_helper
+INFO - 2021-10-28 13:40:28 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 13:40:28 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 13:40:28 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 13:40:28 --> Form Validation Class Initialized
+INFO - 2021-10-28 13:40:28 --> Upload Class Initialized
+INFO - 2021-10-28 13:40:28 --> Parser Class Initialized
+INFO - 2021-10-28 13:40:28 --> Email Class Initialized
+DEBUG - 2021-10-28 13:40:28 --> Encrypt Class Initialized
+INFO - 2021-10-28 13:40:28 --> Table Class Initialized
+INFO - 2021-10-28 13:40:28 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 13:40:28 --> Pagination Class Initialized
+INFO - 2021-10-28 13:40:28 --> Model "Leadmod" initialized
+INFO - 2021-10-28 13:40:28 --> Controller Class Initialized
+INFO - 2021-10-28 13:40:28 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:10:28 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:10:28 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:10:28 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:10:28 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:10:28 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:10:28 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:10:28 --> Model "SMS_Model" initialized
+ERROR - 2021-10-28 17:10:28 --> Severity: error --> Exception: Too few arguments to function TaskController::viewOldHistory(), 1 passed in E:\VIN\xampp\htdocs\2021\cloud\system\core\CodeIgniter.php on line 532 and exactly 2 expected E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 371
+INFO - 2021-10-28 13:40:54 --> Config Class Initialized
+INFO - 2021-10-28 13:40:54 --> Hooks Class Initialized
+DEBUG - 2021-10-28 13:40:54 --> UTF-8 Support Enabled
+INFO - 2021-10-28 13:40:54 --> Utf8 Class Initialized
+INFO - 2021-10-28 13:40:54 --> URI Class Initialized
+INFO - 2021-10-28 13:40:54 --> Router Class Initialized
+INFO - 2021-10-28 13:40:54 --> Output Class Initialized
+INFO - 2021-10-28 13:40:54 --> Security Class Initialized
+DEBUG - 2021-10-28 13:40:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 13:40:54 --> CSRF cookie sent
+INFO - 2021-10-28 13:40:54 --> Input Class Initialized
+INFO - 2021-10-28 13:40:54 --> Language Class Initialized
+INFO - 2021-10-28 13:40:54 --> Loader Class Initialized
+INFO - 2021-10-28 13:40:54 --> Helper loaded: url_helper
+INFO - 2021-10-28 13:40:54 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 13:40:54 --> Helper loaded: form_helper
+INFO - 2021-10-28 13:40:54 --> Helper loaded: file_helper
+INFO - 2021-10-28 13:40:54 --> Helper loaded: download_helper
+INFO - 2021-10-28 13:40:54 --> Helper loaded: date_helper
+INFO - 2021-10-28 13:40:54 --> Helper loaded: security_helper
+INFO - 2021-10-28 13:40:54 --> Helper loaded: option_helper
+INFO - 2021-10-28 13:40:54 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 13:40:54 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 13:40:54 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 13:40:54 --> Form Validation Class Initialized
+INFO - 2021-10-28 13:40:54 --> Upload Class Initialized
+INFO - 2021-10-28 13:40:54 --> Parser Class Initialized
+INFO - 2021-10-28 13:40:54 --> Email Class Initialized
+DEBUG - 2021-10-28 13:40:54 --> Encrypt Class Initialized
+INFO - 2021-10-28 13:40:54 --> Table Class Initialized
+INFO - 2021-10-28 13:40:54 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 13:40:54 --> Pagination Class Initialized
+INFO - 2021-10-28 13:40:54 --> Model "Leadmod" initialized
+INFO - 2021-10-28 13:40:54 --> Controller Class Initialized
+INFO - 2021-10-28 13:40:54 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:10:54 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:10:54 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:10:54 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:10:54 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:10:54 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:10:54 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:10:54 --> Model "SMS_Model" initialized
+INFO - 2021-10-28 17:10:54 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/header.php
+INFO - 2021-10-28 17:10:54 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/leadsDetails.php
+INFO - 2021-10-28 17:10:54 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/application.php
+INFO - 2021-10-28 17:10:54 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Document/docs.php
+INFO - 2021-10-28 17:10:54 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Personal/personal.php
+INFO - 2021-10-28 17:10:54 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Disbursal/banking.php
+ERROR - 2021-10-28 17:10:54 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 87
+ERROR - 2021-10-28 17:10:54 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 87
+ERROR - 2021-10-28 17:10:54 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 88
+ERROR - 2021-10-28 17:10:54 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 88
+ERROR - 2021-10-28 17:10:54 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 90
+ERROR - 2021-10-28 17:10:54 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 90
+INFO - 2021-10-28 17:10:54 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification/verification.php
+INFO - 2021-10-28 17:10:54 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\CAM/camPayday.php
+INFO - 2021-10-28 17:10:54 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Disbursal/disbursal.php
+INFO - 2021-10-28 17:10:54 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection/repayment.php
+ERROR - 2021-10-28 17:10:54 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 114
+ERROR - 2021-10-28 17:10:54 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 114
+ERROR - 2021-10-28 17:10:54 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 121
+ERROR - 2021-10-28 17:10:54 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 121
+ERROR - 2021-10-28 17:10:54 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 183
+ERROR - 2021-10-28 17:10:54 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 183
+ERROR - 2021-10-28 17:10:54 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 190
+ERROR - 2021-10-28 17:10:54 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 190
+ERROR - 2021-10-28 17:10:54 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 191
+ERROR - 2021-10-28 17:10:54 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 191
+ERROR - 2021-10-28 17:10:54 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 192
+ERROR - 2021-10-28 17:10:54 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 192
+INFO - 2021-10-28 17:10:54 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection/collection.php
+INFO - 2021-10-28 17:10:54 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/footer.php
+INFO - 2021-10-28 17:10:54 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/task_js.php
+INFO - 2021-10-28 17:10:54 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/main_js.php
+INFO - 2021-10-28 17:10:54 --> Final output sent to browser
+DEBUG - 2021-10-28 17:10:54 --> Total execution time: 0.0569
+INFO - 2021-10-28 13:40:57 --> Config Class Initialized
+INFO - 2021-10-28 13:40:57 --> Hooks Class Initialized
+DEBUG - 2021-10-28 13:40:57 --> UTF-8 Support Enabled
+INFO - 2021-10-28 13:40:57 --> Utf8 Class Initialized
+INFO - 2021-10-28 13:40:57 --> URI Class Initialized
+INFO - 2021-10-28 13:40:57 --> Router Class Initialized
+INFO - 2021-10-28 13:40:57 --> Output Class Initialized
+INFO - 2021-10-28 13:40:57 --> Security Class Initialized
+DEBUG - 2021-10-28 13:40:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 13:40:57 --> CSRF cookie sent
+INFO - 2021-10-28 13:40:57 --> CSRF token verified
+INFO - 2021-10-28 13:40:57 --> Input Class Initialized
+INFO - 2021-10-28 13:40:57 --> Language Class Initialized
+INFO - 2021-10-28 13:40:57 --> Loader Class Initialized
+INFO - 2021-10-28 13:40:57 --> Helper loaded: url_helper
+INFO - 2021-10-28 13:40:57 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 13:40:57 --> Helper loaded: form_helper
+INFO - 2021-10-28 13:40:57 --> Helper loaded: file_helper
+INFO - 2021-10-28 13:40:57 --> Helper loaded: download_helper
+INFO - 2021-10-28 13:40:57 --> Helper loaded: date_helper
+INFO - 2021-10-28 13:40:57 --> Helper loaded: security_helper
+INFO - 2021-10-28 13:40:57 --> Helper loaded: option_helper
+INFO - 2021-10-28 13:40:57 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 13:40:57 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 13:40:57 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 13:40:57 --> Form Validation Class Initialized
+INFO - 2021-10-28 13:40:57 --> Upload Class Initialized
+INFO - 2021-10-28 13:40:57 --> Parser Class Initialized
+INFO - 2021-10-28 13:40:57 --> Email Class Initialized
+DEBUG - 2021-10-28 13:40:57 --> Encrypt Class Initialized
+INFO - 2021-10-28 13:40:57 --> Table Class Initialized
+INFO - 2021-10-28 13:40:57 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 13:40:57 --> Pagination Class Initialized
+INFO - 2021-10-28 13:40:57 --> Model "Leadmod" initialized
+INFO - 2021-10-28 13:40:57 --> Controller Class Initialized
+INFO - 2021-10-28 13:40:57 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:10:57 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:10:57 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:10:57 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:10:57 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:10:57 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:10:57 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:10:57 --> Model "SMS_Model" initialized
+INFO - 2021-10-28 17:10:57 --> Final output sent to browser
+DEBUG - 2021-10-28 17:10:57 --> Total execution time: 0.0630
+INFO - 2021-10-28 13:42:26 --> Config Class Initialized
+INFO - 2021-10-28 13:42:26 --> Hooks Class Initialized
+DEBUG - 2021-10-28 13:42:26 --> UTF-8 Support Enabled
+INFO - 2021-10-28 13:42:26 --> Utf8 Class Initialized
+INFO - 2021-10-28 13:42:26 --> URI Class Initialized
+INFO - 2021-10-28 13:42:26 --> Router Class Initialized
+INFO - 2021-10-28 13:42:26 --> Output Class Initialized
+INFO - 2021-10-28 13:42:26 --> Security Class Initialized
+DEBUG - 2021-10-28 13:42:26 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 13:42:26 --> CSRF cookie sent
+INFO - 2021-10-28 13:42:26 --> Input Class Initialized
+INFO - 2021-10-28 13:42:26 --> Language Class Initialized
+INFO - 2021-10-28 13:42:26 --> Loader Class Initialized
+INFO - 2021-10-28 13:42:26 --> Helper loaded: url_helper
+INFO - 2021-10-28 13:42:26 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 13:42:26 --> Helper loaded: form_helper
+INFO - 2021-10-28 13:42:26 --> Helper loaded: file_helper
+INFO - 2021-10-28 13:42:26 --> Helper loaded: download_helper
+INFO - 2021-10-28 13:42:26 --> Helper loaded: date_helper
+INFO - 2021-10-28 13:42:26 --> Helper loaded: security_helper
+INFO - 2021-10-28 13:42:26 --> Helper loaded: option_helper
+INFO - 2021-10-28 13:42:26 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 13:42:26 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 13:42:26 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 13:42:26 --> Form Validation Class Initialized
+INFO - 2021-10-28 13:42:26 --> Upload Class Initialized
+INFO - 2021-10-28 13:42:26 --> Parser Class Initialized
+INFO - 2021-10-28 13:42:26 --> Email Class Initialized
+DEBUG - 2021-10-28 13:42:26 --> Encrypt Class Initialized
+INFO - 2021-10-28 13:42:26 --> Table Class Initialized
+INFO - 2021-10-28 13:42:26 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 13:42:26 --> Pagination Class Initialized
+INFO - 2021-10-28 13:42:26 --> Model "Leadmod" initialized
+INFO - 2021-10-28 13:42:26 --> Controller Class Initialized
+INFO - 2021-10-28 13:42:26 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:12:26 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:12:26 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:12:26 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:12:26 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:12:26 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:12:26 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:12:26 --> Model "SMS_Model" initialized
+INFO - 2021-10-28 17:12:26 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/header.php
+INFO - 2021-10-28 17:12:26 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/leadsDetails.php
+INFO - 2021-10-28 17:12:26 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/application.php
+INFO - 2021-10-28 17:12:26 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Document/docs.php
+INFO - 2021-10-28 17:12:26 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Personal/personal.php
+INFO - 2021-10-28 17:12:26 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Disbursal/banking.php
+ERROR - 2021-10-28 17:12:26 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 87
+ERROR - 2021-10-28 17:12:26 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 87
+ERROR - 2021-10-28 17:12:26 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 88
+ERROR - 2021-10-28 17:12:26 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 88
+ERROR - 2021-10-28 17:12:26 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 90
+ERROR - 2021-10-28 17:12:26 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 90
+INFO - 2021-10-28 17:12:26 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification/verification.php
+INFO - 2021-10-28 17:12:26 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\CAM/camPayday.php
+INFO - 2021-10-28 17:12:26 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Disbursal/disbursal.php
+INFO - 2021-10-28 17:12:26 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection/repayment.php
+ERROR - 2021-10-28 17:12:26 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 114
+ERROR - 2021-10-28 17:12:26 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 114
+ERROR - 2021-10-28 17:12:26 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 121
+ERROR - 2021-10-28 17:12:26 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 121
+ERROR - 2021-10-28 17:12:26 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 183
+ERROR - 2021-10-28 17:12:26 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 183
+ERROR - 2021-10-28 17:12:26 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 190
+ERROR - 2021-10-28 17:12:26 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 190
+ERROR - 2021-10-28 17:12:26 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 191
+ERROR - 2021-10-28 17:12:26 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 191
+ERROR - 2021-10-28 17:12:26 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 192
+ERROR - 2021-10-28 17:12:26 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 192
+INFO - 2021-10-28 17:12:26 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection/collection.php
+INFO - 2021-10-28 17:12:26 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/footer.php
+INFO - 2021-10-28 17:12:26 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/task_js.php
+INFO - 2021-10-28 17:12:26 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/main_js.php
+INFO - 2021-10-28 17:12:26 --> Final output sent to browser
+DEBUG - 2021-10-28 17:12:26 --> Total execution time: 0.0511
+INFO - 2021-10-28 13:42:27 --> Config Class Initialized
+INFO - 2021-10-28 13:42:27 --> Hooks Class Initialized
+DEBUG - 2021-10-28 13:42:27 --> UTF-8 Support Enabled
+INFO - 2021-10-28 13:42:27 --> Utf8 Class Initialized
+INFO - 2021-10-28 13:42:27 --> URI Class Initialized
+INFO - 2021-10-28 13:42:27 --> Router Class Initialized
+INFO - 2021-10-28 13:42:27 --> Output Class Initialized
+INFO - 2021-10-28 13:42:27 --> Security Class Initialized
+DEBUG - 2021-10-28 13:42:27 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 13:42:27 --> CSRF cookie sent
+INFO - 2021-10-28 13:42:27 --> CSRF token verified
+INFO - 2021-10-28 13:42:27 --> Input Class Initialized
+INFO - 2021-10-28 13:42:27 --> Language Class Initialized
+INFO - 2021-10-28 13:42:27 --> Loader Class Initialized
+INFO - 2021-10-28 13:42:27 --> Helper loaded: url_helper
+INFO - 2021-10-28 13:42:27 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 13:42:27 --> Helper loaded: form_helper
+INFO - 2021-10-28 13:42:27 --> Helper loaded: file_helper
+INFO - 2021-10-28 13:42:27 --> Helper loaded: download_helper
+INFO - 2021-10-28 13:42:27 --> Helper loaded: date_helper
+INFO - 2021-10-28 13:42:27 --> Helper loaded: security_helper
+INFO - 2021-10-28 13:42:27 --> Helper loaded: option_helper
+INFO - 2021-10-28 13:42:27 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 13:42:27 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 13:42:27 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 13:42:27 --> Form Validation Class Initialized
+INFO - 2021-10-28 13:42:27 --> Upload Class Initialized
+INFO - 2021-10-28 13:42:27 --> Parser Class Initialized
+INFO - 2021-10-28 13:42:27 --> Email Class Initialized
+DEBUG - 2021-10-28 13:42:27 --> Encrypt Class Initialized
+INFO - 2021-10-28 13:42:27 --> Table Class Initialized
+INFO - 2021-10-28 13:42:27 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 13:42:27 --> Pagination Class Initialized
+INFO - 2021-10-28 13:42:27 --> Model "Leadmod" initialized
+INFO - 2021-10-28 13:42:27 --> Controller Class Initialized
+INFO - 2021-10-28 13:42:27 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:12:27 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:12:27 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:12:27 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:12:27 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:12:27 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:12:27 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:12:27 --> Model "SMS_Model" initialized
+INFO - 2021-10-28 17:12:27 --> Final output sent to browser
+DEBUG - 2021-10-28 17:12:27 --> Total execution time: 0.0542
+INFO - 2021-10-28 13:44:01 --> Config Class Initialized
+INFO - 2021-10-28 13:44:01 --> Hooks Class Initialized
+DEBUG - 2021-10-28 13:44:01 --> UTF-8 Support Enabled
+INFO - 2021-10-28 13:44:01 --> Utf8 Class Initialized
+INFO - 2021-10-28 13:44:01 --> URI Class Initialized
+INFO - 2021-10-28 13:44:01 --> Router Class Initialized
+INFO - 2021-10-28 13:44:01 --> Output Class Initialized
+INFO - 2021-10-28 13:44:01 --> Security Class Initialized
+DEBUG - 2021-10-28 13:44:01 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 13:44:01 --> CSRF cookie sent
+INFO - 2021-10-28 13:44:01 --> Input Class Initialized
+INFO - 2021-10-28 13:44:01 --> Language Class Initialized
+INFO - 2021-10-28 13:44:01 --> Loader Class Initialized
+INFO - 2021-10-28 13:44:01 --> Helper loaded: url_helper
+INFO - 2021-10-28 13:44:01 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 13:44:01 --> Helper loaded: form_helper
+INFO - 2021-10-28 13:44:01 --> Helper loaded: file_helper
+INFO - 2021-10-28 13:44:01 --> Helper loaded: download_helper
+INFO - 2021-10-28 13:44:02 --> Helper loaded: date_helper
+INFO - 2021-10-28 13:44:02 --> Helper loaded: security_helper
+INFO - 2021-10-28 13:44:02 --> Helper loaded: option_helper
+INFO - 2021-10-28 13:44:02 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 13:44:02 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 13:44:02 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 13:44:02 --> Form Validation Class Initialized
+INFO - 2021-10-28 13:44:02 --> Upload Class Initialized
+INFO - 2021-10-28 13:44:02 --> Parser Class Initialized
+INFO - 2021-10-28 13:44:02 --> Email Class Initialized
+DEBUG - 2021-10-28 13:44:02 --> Encrypt Class Initialized
+INFO - 2021-10-28 13:44:02 --> Table Class Initialized
+INFO - 2021-10-28 13:44:02 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 13:44:02 --> Pagination Class Initialized
+INFO - 2021-10-28 13:44:02 --> Model "Leadmod" initialized
+INFO - 2021-10-28 13:44:02 --> Controller Class Initialized
+INFO - 2021-10-28 13:44:02 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:14:02 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:14:02 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:14:02 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:14:02 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:14:02 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:14:02 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:14:02 --> Model "SMS_Model" initialized
+INFO - 2021-10-28 17:14:02 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/header.php
+INFO - 2021-10-28 17:14:02 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/leadsDetails.php
+INFO - 2021-10-28 17:14:02 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/application.php
+INFO - 2021-10-28 17:14:02 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Document/docs.php
+INFO - 2021-10-28 17:14:02 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Personal/personal.php
+INFO - 2021-10-28 17:14:02 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Disbursal/banking.php
+ERROR - 2021-10-28 17:14:02 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 87
+ERROR - 2021-10-28 17:14:02 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 87
+ERROR - 2021-10-28 17:14:02 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 88
+ERROR - 2021-10-28 17:14:02 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 88
+ERROR - 2021-10-28 17:14:02 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 90
+ERROR - 2021-10-28 17:14:02 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 90
+INFO - 2021-10-28 17:14:02 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification/verification.php
+INFO - 2021-10-28 17:14:02 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\CAM/camPayday.php
+INFO - 2021-10-28 17:14:02 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Disbursal/disbursal.php
+INFO - 2021-10-28 17:14:02 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection/repayment.php
+ERROR - 2021-10-28 17:14:02 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 114
+ERROR - 2021-10-28 17:14:02 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 114
+ERROR - 2021-10-28 17:14:02 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 121
+ERROR - 2021-10-28 17:14:02 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 121
+ERROR - 2021-10-28 17:14:02 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 183
+ERROR - 2021-10-28 17:14:02 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 183
+ERROR - 2021-10-28 17:14:02 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 190
+ERROR - 2021-10-28 17:14:02 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 190
+ERROR - 2021-10-28 17:14:02 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 191
+ERROR - 2021-10-28 17:14:02 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 191
+ERROR - 2021-10-28 17:14:02 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 192
+ERROR - 2021-10-28 17:14:02 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 192
+INFO - 2021-10-28 17:14:02 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection/collection.php
+INFO - 2021-10-28 17:14:02 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/footer.php
+INFO - 2021-10-28 17:14:02 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/task_js.php
+INFO - 2021-10-28 17:14:02 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/main_js.php
+INFO - 2021-10-28 17:14:02 --> Final output sent to browser
+DEBUG - 2021-10-28 17:14:02 --> Total execution time: 0.0481
+INFO - 2021-10-28 13:44:03 --> Config Class Initialized
+INFO - 2021-10-28 13:44:03 --> Hooks Class Initialized
+DEBUG - 2021-10-28 13:44:03 --> UTF-8 Support Enabled
+INFO - 2021-10-28 13:44:03 --> Utf8 Class Initialized
+INFO - 2021-10-28 13:44:03 --> URI Class Initialized
+INFO - 2021-10-28 13:44:03 --> Router Class Initialized
+INFO - 2021-10-28 13:44:03 --> Output Class Initialized
+INFO - 2021-10-28 13:44:03 --> Security Class Initialized
+DEBUG - 2021-10-28 13:44:03 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 13:44:03 --> CSRF cookie sent
+INFO - 2021-10-28 13:44:03 --> CSRF token verified
+INFO - 2021-10-28 13:44:03 --> Input Class Initialized
+INFO - 2021-10-28 13:44:03 --> Language Class Initialized
+INFO - 2021-10-28 13:44:03 --> Loader Class Initialized
+INFO - 2021-10-28 13:44:03 --> Helper loaded: url_helper
+INFO - 2021-10-28 13:44:03 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 13:44:03 --> Helper loaded: form_helper
+INFO - 2021-10-28 13:44:03 --> Helper loaded: file_helper
+INFO - 2021-10-28 13:44:03 --> Helper loaded: download_helper
+INFO - 2021-10-28 13:44:03 --> Helper loaded: date_helper
+INFO - 2021-10-28 13:44:03 --> Helper loaded: security_helper
+INFO - 2021-10-28 13:44:03 --> Helper loaded: option_helper
+INFO - 2021-10-28 13:44:03 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 13:44:03 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 13:44:03 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 13:44:03 --> Form Validation Class Initialized
+INFO - 2021-10-28 13:44:03 --> Upload Class Initialized
+INFO - 2021-10-28 13:44:03 --> Parser Class Initialized
+INFO - 2021-10-28 13:44:03 --> Email Class Initialized
+DEBUG - 2021-10-28 13:44:03 --> Encrypt Class Initialized
+INFO - 2021-10-28 13:44:03 --> Table Class Initialized
+INFO - 2021-10-28 13:44:03 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 13:44:03 --> Pagination Class Initialized
+INFO - 2021-10-28 13:44:03 --> Model "Leadmod" initialized
+INFO - 2021-10-28 13:44:03 --> Controller Class Initialized
+INFO - 2021-10-28 13:44:03 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:14:03 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:14:03 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:14:03 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:14:03 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:14:03 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:14:03 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:14:03 --> Model "SMS_Model" initialized
+INFO - 2021-10-28 17:14:03 --> Final output sent to browser
+DEBUG - 2021-10-28 17:14:03 --> Total execution time: 0.0506
+INFO - 2021-10-28 13:46:17 --> Config Class Initialized
+INFO - 2021-10-28 13:46:17 --> Hooks Class Initialized
+DEBUG - 2021-10-28 13:46:17 --> UTF-8 Support Enabled
+INFO - 2021-10-28 13:46:17 --> Utf8 Class Initialized
+INFO - 2021-10-28 13:46:17 --> URI Class Initialized
+INFO - 2021-10-28 13:46:17 --> Router Class Initialized
+INFO - 2021-10-28 13:46:17 --> Output Class Initialized
+INFO - 2021-10-28 13:46:17 --> Security Class Initialized
+DEBUG - 2021-10-28 13:46:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 13:46:17 --> CSRF cookie sent
+INFO - 2021-10-28 13:46:17 --> Input Class Initialized
+INFO - 2021-10-28 13:46:17 --> Language Class Initialized
+INFO - 2021-10-28 13:46:17 --> Loader Class Initialized
+INFO - 2021-10-28 13:46:17 --> Helper loaded: url_helper
+INFO - 2021-10-28 13:46:17 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 13:46:17 --> Helper loaded: form_helper
+INFO - 2021-10-28 13:46:17 --> Helper loaded: file_helper
+INFO - 2021-10-28 13:46:17 --> Helper loaded: download_helper
+INFO - 2021-10-28 13:46:17 --> Helper loaded: date_helper
+INFO - 2021-10-28 13:46:17 --> Helper loaded: security_helper
+INFO - 2021-10-28 13:46:17 --> Helper loaded: option_helper
+INFO - 2021-10-28 13:46:17 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 13:46:17 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 13:46:17 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 13:46:17 --> Form Validation Class Initialized
+INFO - 2021-10-28 13:46:17 --> Upload Class Initialized
+INFO - 2021-10-28 13:46:17 --> Parser Class Initialized
+INFO - 2021-10-28 13:46:17 --> Email Class Initialized
+DEBUG - 2021-10-28 13:46:17 --> Encrypt Class Initialized
+INFO - 2021-10-28 13:46:17 --> Table Class Initialized
+INFO - 2021-10-28 13:46:17 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 13:46:17 --> Pagination Class Initialized
+INFO - 2021-10-28 13:46:17 --> Model "Leadmod" initialized
+INFO - 2021-10-28 13:46:17 --> Controller Class Initialized
+INFO - 2021-10-28 13:46:17 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:16:17 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:16:17 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:16:17 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:16:17 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:16:17 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:16:17 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:16:17 --> Model "SMS_Model" initialized
+INFO - 2021-10-28 17:16:17 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/header.php
+INFO - 2021-10-28 17:16:17 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/leadsDetails.php
+INFO - 2021-10-28 17:16:17 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/application.php
+INFO - 2021-10-28 17:16:17 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Document/docs.php
+INFO - 2021-10-28 17:16:17 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Personal/personal.php
+INFO - 2021-10-28 17:16:17 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Disbursal/banking.php
+ERROR - 2021-10-28 17:16:17 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 87
+ERROR - 2021-10-28 17:16:17 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 87
+ERROR - 2021-10-28 17:16:17 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 88
+ERROR - 2021-10-28 17:16:17 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 88
+ERROR - 2021-10-28 17:16:17 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 90
+ERROR - 2021-10-28 17:16:17 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 90
+INFO - 2021-10-28 17:16:17 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification/verification.php
+INFO - 2021-10-28 17:16:17 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\CAM/camPayday.php
+INFO - 2021-10-28 17:16:17 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Disbursal/disbursal.php
+INFO - 2021-10-28 17:16:17 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection/repayment.php
+ERROR - 2021-10-28 17:16:17 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 114
+ERROR - 2021-10-28 17:16:17 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 114
+ERROR - 2021-10-28 17:16:17 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 121
+ERROR - 2021-10-28 17:16:17 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 121
+ERROR - 2021-10-28 17:16:17 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 183
+ERROR - 2021-10-28 17:16:17 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 183
+ERROR - 2021-10-28 17:16:17 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 190
+ERROR - 2021-10-28 17:16:17 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 190
+ERROR - 2021-10-28 17:16:17 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 191
+ERROR - 2021-10-28 17:16:17 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 191
+ERROR - 2021-10-28 17:16:17 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 192
+ERROR - 2021-10-28 17:16:17 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 192
+INFO - 2021-10-28 17:16:17 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection/collection.php
+INFO - 2021-10-28 17:16:17 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/footer.php
+INFO - 2021-10-28 17:16:17 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/task_js.php
+INFO - 2021-10-28 17:16:17 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/main_js.php
+INFO - 2021-10-28 17:16:17 --> Final output sent to browser
+DEBUG - 2021-10-28 17:16:17 --> Total execution time: 0.0548
+INFO - 2021-10-28 13:46:20 --> Config Class Initialized
+INFO - 2021-10-28 13:46:20 --> Hooks Class Initialized
+DEBUG - 2021-10-28 13:46:20 --> UTF-8 Support Enabled
+INFO - 2021-10-28 13:46:20 --> Utf8 Class Initialized
+INFO - 2021-10-28 13:46:20 --> URI Class Initialized
+INFO - 2021-10-28 13:46:20 --> Router Class Initialized
+INFO - 2021-10-28 13:46:20 --> Output Class Initialized
+INFO - 2021-10-28 13:46:20 --> Security Class Initialized
+DEBUG - 2021-10-28 13:46:20 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 13:46:20 --> CSRF cookie sent
+INFO - 2021-10-28 13:46:20 --> CSRF token verified
+INFO - 2021-10-28 13:46:20 --> Input Class Initialized
+INFO - 2021-10-28 13:46:20 --> Language Class Initialized
+INFO - 2021-10-28 13:46:20 --> Loader Class Initialized
+INFO - 2021-10-28 13:46:20 --> Helper loaded: url_helper
+INFO - 2021-10-28 13:46:20 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 13:46:20 --> Helper loaded: form_helper
+INFO - 2021-10-28 13:46:20 --> Helper loaded: file_helper
+INFO - 2021-10-28 13:46:20 --> Helper loaded: download_helper
+INFO - 2021-10-28 13:46:20 --> Helper loaded: date_helper
+INFO - 2021-10-28 13:46:20 --> Helper loaded: security_helper
+INFO - 2021-10-28 13:46:20 --> Helper loaded: option_helper
+INFO - 2021-10-28 13:46:20 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 13:46:20 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 13:46:20 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 13:46:20 --> Form Validation Class Initialized
+INFO - 2021-10-28 13:46:20 --> Upload Class Initialized
+INFO - 2021-10-28 13:46:20 --> Parser Class Initialized
+INFO - 2021-10-28 13:46:20 --> Email Class Initialized
+DEBUG - 2021-10-28 13:46:20 --> Encrypt Class Initialized
+INFO - 2021-10-28 13:46:20 --> Table Class Initialized
+INFO - 2021-10-28 13:46:20 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 13:46:20 --> Pagination Class Initialized
+INFO - 2021-10-28 13:46:20 --> Model "Leadmod" initialized
+INFO - 2021-10-28 13:46:20 --> Controller Class Initialized
+INFO - 2021-10-28 13:46:20 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:16:20 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:16:20 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:16:20 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:16:20 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:16:20 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:16:20 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:16:20 --> Model "SMS_Model" initialized
+ERROR - 2021-10-28 17:16:20 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:16:20 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:16:20 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:16:20 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:16:20 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:16:20 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:16:20 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:16:20 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:16:20 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:16:20 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:16:20 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:16:20 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:16:20 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:16:20 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:16:20 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:16:20 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:16:20 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:16:20 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+INFO - 2021-10-28 17:16:20 --> Final output sent to browser
+DEBUG - 2021-10-28 17:16:20 --> Total execution time: 0.0638
+INFO - 2021-10-28 13:49:26 --> Config Class Initialized
+INFO - 2021-10-28 13:49:26 --> Hooks Class Initialized
+DEBUG - 2021-10-28 13:49:26 --> UTF-8 Support Enabled
+INFO - 2021-10-28 13:49:26 --> Utf8 Class Initialized
+INFO - 2021-10-28 13:49:26 --> URI Class Initialized
+INFO - 2021-10-28 13:49:26 --> Router Class Initialized
+INFO - 2021-10-28 13:49:26 --> Output Class Initialized
+INFO - 2021-10-28 13:49:26 --> Security Class Initialized
+DEBUG - 2021-10-28 13:49:26 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 13:49:26 --> CSRF cookie sent
+INFO - 2021-10-28 13:49:26 --> Input Class Initialized
+INFO - 2021-10-28 13:49:26 --> Language Class Initialized
+INFO - 2021-10-28 13:49:26 --> Loader Class Initialized
+INFO - 2021-10-28 13:49:26 --> Helper loaded: url_helper
+INFO - 2021-10-28 13:49:26 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 13:49:26 --> Helper loaded: form_helper
+INFO - 2021-10-28 13:49:26 --> Helper loaded: file_helper
+INFO - 2021-10-28 13:49:26 --> Helper loaded: download_helper
+INFO - 2021-10-28 13:49:26 --> Helper loaded: date_helper
+INFO - 2021-10-28 13:49:26 --> Helper loaded: security_helper
+INFO - 2021-10-28 13:49:26 --> Helper loaded: option_helper
+INFO - 2021-10-28 13:49:26 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 13:49:26 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 13:49:26 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 13:49:26 --> Form Validation Class Initialized
+INFO - 2021-10-28 13:49:26 --> Upload Class Initialized
+INFO - 2021-10-28 13:49:26 --> Parser Class Initialized
+INFO - 2021-10-28 13:49:26 --> Email Class Initialized
+DEBUG - 2021-10-28 13:49:26 --> Encrypt Class Initialized
+INFO - 2021-10-28 13:49:26 --> Table Class Initialized
+INFO - 2021-10-28 13:49:26 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 13:49:26 --> Pagination Class Initialized
+INFO - 2021-10-28 13:49:26 --> Model "Leadmod" initialized
+INFO - 2021-10-28 13:49:26 --> Controller Class Initialized
+INFO - 2021-10-28 13:49:26 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:19:26 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:19:26 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:19:26 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:19:26 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:19:26 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:19:26 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:19:26 --> Model "SMS_Model" initialized
+INFO - 2021-10-28 17:19:26 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/header.php
+INFO - 2021-10-28 17:19:26 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/leadsDetails.php
+INFO - 2021-10-28 17:19:26 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/application.php
+INFO - 2021-10-28 17:19:26 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Document/docs.php
+INFO - 2021-10-28 17:19:26 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Personal/personal.php
+INFO - 2021-10-28 17:19:26 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Disbursal/banking.php
+ERROR - 2021-10-28 17:19:26 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 87
+ERROR - 2021-10-28 17:19:26 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 87
+ERROR - 2021-10-28 17:19:26 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 88
+ERROR - 2021-10-28 17:19:26 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 88
+ERROR - 2021-10-28 17:19:26 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 90
+ERROR - 2021-10-28 17:19:26 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 90
+INFO - 2021-10-28 17:19:26 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification/verification.php
+INFO - 2021-10-28 17:19:26 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\CAM/camPayday.php
+INFO - 2021-10-28 17:19:26 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Disbursal/disbursal.php
+INFO - 2021-10-28 17:19:26 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection/repayment.php
+ERROR - 2021-10-28 17:19:26 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 114
+ERROR - 2021-10-28 17:19:26 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 114
+ERROR - 2021-10-28 17:19:26 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 121
+ERROR - 2021-10-28 17:19:26 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 121
+ERROR - 2021-10-28 17:19:26 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 183
+ERROR - 2021-10-28 17:19:26 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 183
+ERROR - 2021-10-28 17:19:26 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 190
+ERROR - 2021-10-28 17:19:26 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 190
+ERROR - 2021-10-28 17:19:26 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 191
+ERROR - 2021-10-28 17:19:26 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 191
+ERROR - 2021-10-28 17:19:26 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 192
+ERROR - 2021-10-28 17:19:26 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 192
+INFO - 2021-10-28 17:19:26 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection/collection.php
+INFO - 2021-10-28 17:19:26 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/footer.php
+INFO - 2021-10-28 17:19:26 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/task_js.php
+INFO - 2021-10-28 17:19:26 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/main_js.php
+INFO - 2021-10-28 17:19:26 --> Final output sent to browser
+DEBUG - 2021-10-28 17:19:26 --> Total execution time: 0.0575
+INFO - 2021-10-28 13:49:30 --> Config Class Initialized
+INFO - 2021-10-28 13:49:30 --> Hooks Class Initialized
+DEBUG - 2021-10-28 13:49:30 --> UTF-8 Support Enabled
+INFO - 2021-10-28 13:49:30 --> Utf8 Class Initialized
+INFO - 2021-10-28 13:49:30 --> URI Class Initialized
+INFO - 2021-10-28 13:49:30 --> Router Class Initialized
+INFO - 2021-10-28 13:49:30 --> Output Class Initialized
+INFO - 2021-10-28 13:49:30 --> Security Class Initialized
+DEBUG - 2021-10-28 13:49:30 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 13:49:30 --> CSRF cookie sent
+INFO - 2021-10-28 13:49:30 --> CSRF token verified
+INFO - 2021-10-28 13:49:30 --> Input Class Initialized
+INFO - 2021-10-28 13:49:30 --> Language Class Initialized
+INFO - 2021-10-28 13:49:30 --> Loader Class Initialized
+INFO - 2021-10-28 13:49:30 --> Helper loaded: url_helper
+INFO - 2021-10-28 13:49:30 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 13:49:30 --> Helper loaded: form_helper
+INFO - 2021-10-28 13:49:30 --> Helper loaded: file_helper
+INFO - 2021-10-28 13:49:30 --> Helper loaded: download_helper
+INFO - 2021-10-28 13:49:30 --> Helper loaded: date_helper
+INFO - 2021-10-28 13:49:30 --> Helper loaded: security_helper
+INFO - 2021-10-28 13:49:30 --> Helper loaded: option_helper
+INFO - 2021-10-28 13:49:30 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 13:49:30 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 13:49:30 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 13:49:30 --> Form Validation Class Initialized
+INFO - 2021-10-28 13:49:30 --> Upload Class Initialized
+INFO - 2021-10-28 13:49:30 --> Parser Class Initialized
+INFO - 2021-10-28 13:49:30 --> Email Class Initialized
+DEBUG - 2021-10-28 13:49:30 --> Encrypt Class Initialized
+INFO - 2021-10-28 13:49:30 --> Table Class Initialized
+INFO - 2021-10-28 13:49:30 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 13:49:30 --> Pagination Class Initialized
+INFO - 2021-10-28 13:49:30 --> Model "Leadmod" initialized
+INFO - 2021-10-28 13:49:30 --> Controller Class Initialized
+INFO - 2021-10-28 13:49:30 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:19:30 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:19:30 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:19:30 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:19:30 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:19:30 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:19:30 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:19:30 --> Model "SMS_Model" initialized
+ERROR - 2021-10-28 17:19:30 --> Query error: Unknown column 'C.lead_id' in 'on clause' - Invalid query: SELECT `LD`.`lead_id`, `LD`.`customer_id`, `LD`.`loan_no`, `LD`.`application_no`, `C`.`first_name`, `C`.`middle_name`, `C`.`sur_name`, `C`.`email`, `C`.`alternate_email`, `C`.`gender`, `C`.`mobile`, `C`.`alternate_mobile`, `LD`.`obligations`, `LD`.`promocode`, `LD`.`purpose`, `LD`.`user_type`, `C`.`pancard`, `C`.`aadhar_no`, `LD`.`loan_amount`, `LD`.`tenure`, `LD`.`cibil`, `CE`.`income_type`, `CE`.`salary_mode`, `CE`.`monthly_income`, `LD`.`source`, `C`.`dob`, `ST`.`state`, `LD`.`city`, `LD`.`pincode`, `LD`.`status`, `LD`.`stage`, `LD`.`schedule_time`, `LD`.`created_on` as `lead_initiated_date`, `LD`.`coordinates`, `LD`.`ip`, `LD`.`imei_no`, `LD`.`term_and_condition`
+FROM `leads` `LD`
+LEFT JOIN `customer` `C` ON `C`.`lead_id` = `LD`.`lead_id`
+LEFT JOIN `customer_employment` `CE` ON `CE`.`lead_id` = `LD`.`lead_id`
+LEFT JOIN `tbl_state` `ST` ON `ST`.`state_id` = `LD`.`state_id`
+WHERE `LD`.`customer_id` = ''
+INFO - 2021-10-28 17:19:30 --> Language file loaded: language/english/db_lang.php
+INFO - 2021-10-28 13:49:41 --> Config Class Initialized
+INFO - 2021-10-28 13:49:41 --> Hooks Class Initialized
+DEBUG - 2021-10-28 13:49:41 --> UTF-8 Support Enabled
+INFO - 2021-10-28 13:49:41 --> Utf8 Class Initialized
+INFO - 2021-10-28 13:49:41 --> URI Class Initialized
+INFO - 2021-10-28 13:49:41 --> Router Class Initialized
+INFO - 2021-10-28 13:49:41 --> Output Class Initialized
+INFO - 2021-10-28 13:49:41 --> Security Class Initialized
+DEBUG - 2021-10-28 13:49:41 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 13:49:41 --> CSRF cookie sent
+INFO - 2021-10-28 13:49:41 --> CSRF token verified
+INFO - 2021-10-28 13:49:41 --> Input Class Initialized
+INFO - 2021-10-28 13:49:41 --> Language Class Initialized
+INFO - 2021-10-28 13:49:41 --> Loader Class Initialized
+INFO - 2021-10-28 13:49:41 --> Helper loaded: url_helper
+INFO - 2021-10-28 13:49:41 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 13:49:41 --> Helper loaded: form_helper
+INFO - 2021-10-28 13:49:41 --> Helper loaded: file_helper
+INFO - 2021-10-28 13:49:41 --> Helper loaded: download_helper
+INFO - 2021-10-28 13:49:41 --> Helper loaded: date_helper
+INFO - 2021-10-28 13:49:41 --> Helper loaded: security_helper
+INFO - 2021-10-28 13:49:41 --> Helper loaded: option_helper
+INFO - 2021-10-28 13:49:41 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 13:49:41 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 13:49:41 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 13:49:41 --> Form Validation Class Initialized
+INFO - 2021-10-28 13:49:41 --> Upload Class Initialized
+INFO - 2021-10-28 13:49:41 --> Parser Class Initialized
+INFO - 2021-10-28 13:49:41 --> Email Class Initialized
+DEBUG - 2021-10-28 13:49:41 --> Encrypt Class Initialized
+INFO - 2021-10-28 13:49:41 --> Table Class Initialized
+INFO - 2021-10-28 13:49:41 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 13:49:41 --> Pagination Class Initialized
+INFO - 2021-10-28 13:49:41 --> Model "Leadmod" initialized
+INFO - 2021-10-28 13:49:41 --> Controller Class Initialized
+INFO - 2021-10-28 13:49:41 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:19:41 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:19:41 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:19:41 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:19:41 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:19:41 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:19:41 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:19:41 --> Model "SMS_Model" initialized
+ERROR - 2021-10-28 17:19:41 --> Query error: Unknown column 'C.lead_id' in 'on clause' - Invalid query: SELECT `LD`.`lead_id`, `LD`.`customer_id`, `LD`.`loan_no`, `LD`.`application_no`, `C`.`first_name`, `C`.`middle_name`, `C`.`sur_name`, `C`.`email`, `C`.`alternate_email`, `C`.`gender`, `C`.`mobile`, `C`.`alternate_mobile`, `LD`.`obligations`, `LD`.`promocode`, `LD`.`purpose`, `LD`.`user_type`, `C`.`pancard`, `C`.`aadhar_no`, `LD`.`loan_amount`, `LD`.`tenure`, `LD`.`cibil`, `CE`.`income_type`, `CE`.`salary_mode`, `CE`.`monthly_income`, `LD`.`source`, `C`.`dob`, `ST`.`state`, `LD`.`city`, `LD`.`pincode`, `LD`.`status`, `LD`.`stage`, `LD`.`schedule_time`, `LD`.`created_on` as `lead_initiated_date`, `LD`.`coordinates`, `LD`.`ip`, `LD`.`imei_no`, `LD`.`term_and_condition`
+FROM `leads` `LD`
+LEFT JOIN `customer` `C` ON `C`.`lead_id` = `LD`.`lead_id`
+LEFT JOIN `customer_employment` `CE` ON `CE`.`lead_id` = `LD`.`lead_id`
+LEFT JOIN `tbl_state` `ST` ON `ST`.`state_id` = `LD`.`state_id`
+WHERE `LD`.`customer_id` = ''
+INFO - 2021-10-28 17:19:41 --> Language file loaded: language/english/db_lang.php
+INFO - 2021-10-28 13:49:59 --> Config Class Initialized
+INFO - 2021-10-28 13:49:59 --> Hooks Class Initialized
+DEBUG - 2021-10-28 13:49:59 --> UTF-8 Support Enabled
+INFO - 2021-10-28 13:49:59 --> Utf8 Class Initialized
+INFO - 2021-10-28 13:49:59 --> URI Class Initialized
+INFO - 2021-10-28 13:49:59 --> Router Class Initialized
+INFO - 2021-10-28 13:49:59 --> Output Class Initialized
+INFO - 2021-10-28 13:49:59 --> Security Class Initialized
+DEBUG - 2021-10-28 13:49:59 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 13:49:59 --> CSRF cookie sent
+INFO - 2021-10-28 13:49:59 --> Input Class Initialized
+INFO - 2021-10-28 13:49:59 --> Language Class Initialized
+INFO - 2021-10-28 13:49:59 --> Loader Class Initialized
+INFO - 2021-10-28 13:49:59 --> Helper loaded: url_helper
+INFO - 2021-10-28 13:49:59 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 13:49:59 --> Helper loaded: form_helper
+INFO - 2021-10-28 13:49:59 --> Helper loaded: file_helper
+INFO - 2021-10-28 13:49:59 --> Helper loaded: download_helper
+INFO - 2021-10-28 13:49:59 --> Helper loaded: date_helper
+INFO - 2021-10-28 13:49:59 --> Helper loaded: security_helper
+INFO - 2021-10-28 13:49:59 --> Helper loaded: option_helper
+INFO - 2021-10-28 13:49:59 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 13:49:59 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 13:49:59 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 13:49:59 --> Form Validation Class Initialized
+INFO - 2021-10-28 13:49:59 --> Upload Class Initialized
+INFO - 2021-10-28 13:49:59 --> Parser Class Initialized
+INFO - 2021-10-28 13:49:59 --> Email Class Initialized
+DEBUG - 2021-10-28 13:49:59 --> Encrypt Class Initialized
+INFO - 2021-10-28 13:49:59 --> Table Class Initialized
+INFO - 2021-10-28 13:49:59 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 13:49:59 --> Pagination Class Initialized
+INFO - 2021-10-28 13:49:59 --> Model "Leadmod" initialized
+INFO - 2021-10-28 13:49:59 --> Controller Class Initialized
+INFO - 2021-10-28 13:49:59 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:19:59 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:19:59 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:19:59 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:19:59 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:19:59 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:19:59 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:19:59 --> Model "SMS_Model" initialized
+INFO - 2021-10-28 17:19:59 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/header.php
+INFO - 2021-10-28 17:19:59 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/leadsDetails.php
+INFO - 2021-10-28 17:19:59 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/application.php
+INFO - 2021-10-28 17:19:59 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Document/docs.php
+INFO - 2021-10-28 17:19:59 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Personal/personal.php
+INFO - 2021-10-28 17:19:59 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Disbursal/banking.php
+ERROR - 2021-10-28 17:19:59 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 87
+ERROR - 2021-10-28 17:19:59 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 87
+ERROR - 2021-10-28 17:19:59 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 88
+ERROR - 2021-10-28 17:19:59 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 88
+ERROR - 2021-10-28 17:19:59 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 90
+ERROR - 2021-10-28 17:19:59 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 90
+INFO - 2021-10-28 17:19:59 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification/verification.php
+INFO - 2021-10-28 17:19:59 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\CAM/camPayday.php
+INFO - 2021-10-28 17:19:59 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Disbursal/disbursal.php
+INFO - 2021-10-28 17:19:59 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection/repayment.php
+ERROR - 2021-10-28 17:19:59 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 114
+ERROR - 2021-10-28 17:19:59 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 114
+ERROR - 2021-10-28 17:19:59 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 121
+ERROR - 2021-10-28 17:19:59 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 121
+ERROR - 2021-10-28 17:19:59 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 183
+ERROR - 2021-10-28 17:19:59 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 183
+ERROR - 2021-10-28 17:19:59 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 190
+ERROR - 2021-10-28 17:19:59 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 190
+ERROR - 2021-10-28 17:19:59 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 191
+ERROR - 2021-10-28 17:19:59 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 191
+ERROR - 2021-10-28 17:19:59 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 192
+ERROR - 2021-10-28 17:19:59 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 192
+INFO - 2021-10-28 17:19:59 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection/collection.php
+INFO - 2021-10-28 17:19:59 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/footer.php
+INFO - 2021-10-28 17:19:59 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/task_js.php
+INFO - 2021-10-28 17:19:59 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/main_js.php
+INFO - 2021-10-28 17:19:59 --> Final output sent to browser
+DEBUG - 2021-10-28 17:19:59 --> Total execution time: 0.0735
+INFO - 2021-10-28 13:50:02 --> Config Class Initialized
+INFO - 2021-10-28 13:50:02 --> Hooks Class Initialized
+DEBUG - 2021-10-28 13:50:02 --> UTF-8 Support Enabled
+INFO - 2021-10-28 13:50:02 --> Utf8 Class Initialized
+INFO - 2021-10-28 13:50:02 --> URI Class Initialized
+INFO - 2021-10-28 13:50:02 --> Router Class Initialized
+INFO - 2021-10-28 13:50:02 --> Output Class Initialized
+INFO - 2021-10-28 13:50:02 --> Security Class Initialized
+DEBUG - 2021-10-28 13:50:02 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 13:50:02 --> CSRF cookie sent
+INFO - 2021-10-28 13:50:02 --> CSRF token verified
+INFO - 2021-10-28 13:50:02 --> Input Class Initialized
+INFO - 2021-10-28 13:50:02 --> Language Class Initialized
+INFO - 2021-10-28 13:50:02 --> Loader Class Initialized
+INFO - 2021-10-28 13:50:02 --> Helper loaded: url_helper
+INFO - 2021-10-28 13:50:02 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 13:50:02 --> Helper loaded: form_helper
+INFO - 2021-10-28 13:50:02 --> Helper loaded: file_helper
+INFO - 2021-10-28 13:50:02 --> Helper loaded: download_helper
+INFO - 2021-10-28 13:50:02 --> Helper loaded: date_helper
+INFO - 2021-10-28 13:50:02 --> Helper loaded: security_helper
+INFO - 2021-10-28 13:50:02 --> Helper loaded: option_helper
+INFO - 2021-10-28 13:50:02 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 13:50:02 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 13:50:02 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 13:50:02 --> Form Validation Class Initialized
+INFO - 2021-10-28 13:50:02 --> Upload Class Initialized
+INFO - 2021-10-28 13:50:02 --> Parser Class Initialized
+INFO - 2021-10-28 13:50:02 --> Email Class Initialized
+DEBUG - 2021-10-28 13:50:02 --> Encrypt Class Initialized
+INFO - 2021-10-28 13:50:02 --> Table Class Initialized
+INFO - 2021-10-28 13:50:02 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 13:50:02 --> Pagination Class Initialized
+INFO - 2021-10-28 13:50:02 --> Model "Leadmod" initialized
+INFO - 2021-10-28 13:50:02 --> Controller Class Initialized
+INFO - 2021-10-28 13:50:02 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:20:02 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:20:02 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:20:02 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:20:02 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:20:02 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:20:02 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:20:02 --> Model "SMS_Model" initialized
+ERROR - 2021-10-28 17:20:02 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:20:02 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:20:02 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:20:02 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:20:02 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:20:02 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:20:02 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:20:02 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:20:02 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:20:02 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:20:02 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:20:02 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:20:02 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:20:02 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:20:02 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:20:02 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:20:02 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+ERROR - 2021-10-28 17:20:02 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 435
+INFO - 2021-10-28 17:20:02 --> Final output sent to browser
+DEBUG - 2021-10-28 17:20:02 --> Total execution time: 0.0609
+INFO - 2021-10-28 14:06:04 --> Config Class Initialized
+INFO - 2021-10-28 14:06:04 --> Hooks Class Initialized
+DEBUG - 2021-10-28 14:06:04 --> UTF-8 Support Enabled
+INFO - 2021-10-28 14:06:04 --> Utf8 Class Initialized
+INFO - 2021-10-28 14:06:04 --> URI Class Initialized
+INFO - 2021-10-28 14:06:04 --> Router Class Initialized
+INFO - 2021-10-28 14:06:04 --> Output Class Initialized
+INFO - 2021-10-28 14:06:04 --> Security Class Initialized
+DEBUG - 2021-10-28 14:06:04 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 14:06:04 --> CSRF cookie sent
+INFO - 2021-10-28 14:06:04 --> CSRF token verified
+INFO - 2021-10-28 14:06:04 --> Input Class Initialized
+INFO - 2021-10-28 14:06:04 --> Language Class Initialized
+INFO - 2021-10-28 14:06:04 --> Loader Class Initialized
+INFO - 2021-10-28 14:06:04 --> Helper loaded: url_helper
+INFO - 2021-10-28 14:06:04 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 14:06:04 --> Helper loaded: form_helper
+INFO - 2021-10-28 14:06:04 --> Helper loaded: file_helper
+INFO - 2021-10-28 14:06:04 --> Helper loaded: download_helper
+INFO - 2021-10-28 14:06:04 --> Helper loaded: date_helper
+INFO - 2021-10-28 14:06:04 --> Helper loaded: security_helper
+INFO - 2021-10-28 14:06:04 --> Helper loaded: option_helper
+INFO - 2021-10-28 14:06:04 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 14:06:04 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 14:06:04 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 14:06:04 --> Form Validation Class Initialized
+INFO - 2021-10-28 14:06:04 --> Upload Class Initialized
+INFO - 2021-10-28 14:06:04 --> Parser Class Initialized
+INFO - 2021-10-28 14:06:04 --> Email Class Initialized
+DEBUG - 2021-10-28 14:06:04 --> Encrypt Class Initialized
+INFO - 2021-10-28 14:06:04 --> Table Class Initialized
+INFO - 2021-10-28 14:06:04 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 14:06:04 --> Pagination Class Initialized
+INFO - 2021-10-28 14:06:04 --> Model "Leadmod" initialized
+INFO - 2021-10-28 14:06:04 --> Controller Class Initialized
+INFO - 2021-10-28 14:06:04 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:36:04 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:36:04 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:36:04 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:36:04 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:36:04 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:36:04 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:36:04 --> Model "SMS_Model" initialized
+ERROR - 2021-10-28 17:36:04 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:04 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:04 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:04 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:04 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:04 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:04 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:04 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:04 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:04 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:04 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:04 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:04 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:04 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:04 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:04 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:04 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:04 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+INFO - 2021-10-28 17:36:04 --> Final output sent to browser
+DEBUG - 2021-10-28 17:36:04 --> Total execution time: 0.0694
+INFO - 2021-10-28 14:06:05 --> Config Class Initialized
+INFO - 2021-10-28 14:06:05 --> Hooks Class Initialized
+DEBUG - 2021-10-28 14:06:05 --> UTF-8 Support Enabled
+INFO - 2021-10-28 14:06:05 --> Utf8 Class Initialized
+INFO - 2021-10-28 14:06:05 --> URI Class Initialized
+INFO - 2021-10-28 14:06:05 --> Router Class Initialized
+INFO - 2021-10-28 14:06:05 --> Output Class Initialized
+INFO - 2021-10-28 14:06:05 --> Security Class Initialized
+DEBUG - 2021-10-28 14:06:05 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 14:06:05 --> CSRF cookie sent
+INFO - 2021-10-28 14:06:05 --> CSRF token verified
+INFO - 2021-10-28 14:06:05 --> Input Class Initialized
+INFO - 2021-10-28 14:06:05 --> Language Class Initialized
+INFO - 2021-10-28 14:06:05 --> Loader Class Initialized
+INFO - 2021-10-28 14:06:05 --> Helper loaded: url_helper
+INFO - 2021-10-28 14:06:05 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 14:06:05 --> Helper loaded: form_helper
+INFO - 2021-10-28 14:06:05 --> Helper loaded: file_helper
+INFO - 2021-10-28 14:06:05 --> Helper loaded: download_helper
+INFO - 2021-10-28 14:06:05 --> Helper loaded: date_helper
+INFO - 2021-10-28 14:06:05 --> Helper loaded: security_helper
+INFO - 2021-10-28 14:06:05 --> Helper loaded: option_helper
+INFO - 2021-10-28 14:06:05 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 14:06:05 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 14:06:05 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 14:06:05 --> Form Validation Class Initialized
+INFO - 2021-10-28 14:06:05 --> Upload Class Initialized
+INFO - 2021-10-28 14:06:05 --> Parser Class Initialized
+INFO - 2021-10-28 14:06:05 --> Email Class Initialized
+DEBUG - 2021-10-28 14:06:05 --> Encrypt Class Initialized
+INFO - 2021-10-28 14:06:05 --> Table Class Initialized
+INFO - 2021-10-28 14:06:05 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 14:06:05 --> Pagination Class Initialized
+INFO - 2021-10-28 14:06:05 --> Model "Leadmod" initialized
+INFO - 2021-10-28 14:06:05 --> Controller Class Initialized
+INFO - 2021-10-28 14:06:05 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:36:05 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:36:05 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:36:05 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:36:05 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:36:05 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:36:05 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:36:05 --> Model "SMS_Model" initialized
+ERROR - 2021-10-28 17:36:05 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:05 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:05 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:05 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:05 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:05 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:05 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:05 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:05 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:05 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:05 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:05 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:05 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:05 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:05 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:05 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:05 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:36:05 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+INFO - 2021-10-28 17:36:05 --> Final output sent to browser
+DEBUG - 2021-10-28 17:36:05 --> Total execution time: 0.0573
+INFO - 2021-10-28 14:07:28 --> Config Class Initialized
+INFO - 2021-10-28 14:07:28 --> Hooks Class Initialized
+DEBUG - 2021-10-28 14:07:28 --> UTF-8 Support Enabled
+INFO - 2021-10-28 14:07:28 --> Utf8 Class Initialized
+INFO - 2021-10-28 14:07:28 --> URI Class Initialized
+INFO - 2021-10-28 14:07:28 --> Router Class Initialized
+INFO - 2021-10-28 14:07:28 --> Output Class Initialized
+INFO - 2021-10-28 14:07:28 --> Security Class Initialized
+DEBUG - 2021-10-28 14:07:28 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 14:07:28 --> CSRF cookie sent
+INFO - 2021-10-28 14:07:28 --> Input Class Initialized
+INFO - 2021-10-28 14:07:28 --> Language Class Initialized
+INFO - 2021-10-28 14:07:28 --> Loader Class Initialized
+INFO - 2021-10-28 14:07:28 --> Helper loaded: url_helper
+INFO - 2021-10-28 14:07:28 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 14:07:28 --> Helper loaded: form_helper
+INFO - 2021-10-28 14:07:28 --> Helper loaded: file_helper
+INFO - 2021-10-28 14:07:28 --> Helper loaded: download_helper
+INFO - 2021-10-28 14:07:28 --> Helper loaded: date_helper
+INFO - 2021-10-28 14:07:28 --> Helper loaded: security_helper
+INFO - 2021-10-28 14:07:28 --> Helper loaded: option_helper
+INFO - 2021-10-28 14:07:28 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 14:07:28 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 14:07:28 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 14:07:28 --> Form Validation Class Initialized
+INFO - 2021-10-28 14:07:28 --> Upload Class Initialized
+INFO - 2021-10-28 14:07:28 --> Parser Class Initialized
+INFO - 2021-10-28 14:07:28 --> Email Class Initialized
+DEBUG - 2021-10-28 14:07:28 --> Encrypt Class Initialized
+INFO - 2021-10-28 14:07:28 --> Table Class Initialized
+INFO - 2021-10-28 14:07:28 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 14:07:28 --> Pagination Class Initialized
+INFO - 2021-10-28 14:07:28 --> Model "Leadmod" initialized
+INFO - 2021-10-28 14:07:28 --> Controller Class Initialized
+INFO - 2021-10-28 14:07:28 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:37:28 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:37:28 --> Model "Menu_Model" initialized
+INFO - 2021-10-28 17:37:28 --> Model "User_Model" initialized
+INFO - 2021-10-28 17:37:28 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/header.php
+INFO - 2021-10-28 17:37:28 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/footer.php
+INFO - 2021-10-28 17:37:28 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\profile.php
+INFO - 2021-10-28 17:37:28 --> Final output sent to browser
+DEBUG - 2021-10-28 17:37:28 --> Total execution time: 0.0365
+INFO - 2021-10-28 14:07:39 --> Config Class Initialized
+INFO - 2021-10-28 14:07:39 --> Hooks Class Initialized
+DEBUG - 2021-10-28 14:07:39 --> UTF-8 Support Enabled
+INFO - 2021-10-28 14:07:39 --> Utf8 Class Initialized
+INFO - 2021-10-28 14:07:39 --> URI Class Initialized
+INFO - 2021-10-28 14:07:39 --> Router Class Initialized
+INFO - 2021-10-28 14:07:39 --> Output Class Initialized
+INFO - 2021-10-28 14:07:39 --> Security Class Initialized
+DEBUG - 2021-10-28 14:07:39 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 14:07:39 --> CSRF cookie sent
+INFO - 2021-10-28 14:07:39 --> Input Class Initialized
+INFO - 2021-10-28 14:07:39 --> Language Class Initialized
+INFO - 2021-10-28 14:07:39 --> Loader Class Initialized
+INFO - 2021-10-28 14:07:39 --> Helper loaded: url_helper
+INFO - 2021-10-28 14:07:39 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 14:07:39 --> Helper loaded: form_helper
+INFO - 2021-10-28 14:07:39 --> Helper loaded: file_helper
+INFO - 2021-10-28 14:07:39 --> Helper loaded: download_helper
+INFO - 2021-10-28 14:07:39 --> Helper loaded: date_helper
+INFO - 2021-10-28 14:07:39 --> Helper loaded: security_helper
+INFO - 2021-10-28 14:07:39 --> Helper loaded: option_helper
+INFO - 2021-10-28 14:07:39 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 14:07:39 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 14:07:39 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 14:07:39 --> Form Validation Class Initialized
+INFO - 2021-10-28 14:07:39 --> Upload Class Initialized
+INFO - 2021-10-28 14:07:39 --> Parser Class Initialized
+INFO - 2021-10-28 14:07:39 --> Email Class Initialized
+DEBUG - 2021-10-28 14:07:39 --> Encrypt Class Initialized
+INFO - 2021-10-28 14:07:39 --> Table Class Initialized
+INFO - 2021-10-28 14:07:39 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 14:07:39 --> Pagination Class Initialized
+INFO - 2021-10-28 14:07:39 --> Model "Leadmod" initialized
+INFO - 2021-10-28 14:07:39 --> Controller Class Initialized
+INFO - 2021-10-28 14:07:39 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:37:39 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:37:39 --> Model "Menu_Model" initialized
+INFO - 2021-10-28 17:37:39 --> Model "User_Model" initialized
+INFO - 2021-10-28 14:07:39 --> Config Class Initialized
+INFO - 2021-10-28 14:07:39 --> Hooks Class Initialized
+DEBUG - 2021-10-28 14:07:39 --> UTF-8 Support Enabled
+INFO - 2021-10-28 14:07:39 --> Utf8 Class Initialized
+INFO - 2021-10-28 14:07:39 --> URI Class Initialized
+INFO - 2021-10-28 14:07:39 --> Router Class Initialized
+INFO - 2021-10-28 14:07:39 --> Output Class Initialized
+INFO - 2021-10-28 14:07:39 --> Security Class Initialized
+DEBUG - 2021-10-28 14:07:39 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 14:07:39 --> CSRF cookie sent
+INFO - 2021-10-28 14:07:39 --> Input Class Initialized
+INFO - 2021-10-28 14:07:39 --> Language Class Initialized
+INFO - 2021-10-28 14:07:39 --> Loader Class Initialized
+INFO - 2021-10-28 14:07:39 --> Helper loaded: url_helper
+INFO - 2021-10-28 14:07:39 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 14:07:39 --> Helper loaded: form_helper
+INFO - 2021-10-28 14:07:39 --> Helper loaded: file_helper
+INFO - 2021-10-28 14:07:39 --> Helper loaded: download_helper
+INFO - 2021-10-28 14:07:39 --> Helper loaded: date_helper
+INFO - 2021-10-28 14:07:39 --> Helper loaded: security_helper
+INFO - 2021-10-28 14:07:39 --> Helper loaded: option_helper
+INFO - 2021-10-28 14:07:39 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 14:07:39 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 14:07:39 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 14:07:39 --> Form Validation Class Initialized
+INFO - 2021-10-28 14:07:39 --> Upload Class Initialized
+INFO - 2021-10-28 14:07:39 --> Parser Class Initialized
+INFO - 2021-10-28 14:07:39 --> Email Class Initialized
+DEBUG - 2021-10-28 14:07:39 --> Encrypt Class Initialized
+INFO - 2021-10-28 14:07:39 --> Table Class Initialized
+INFO - 2021-10-28 14:07:39 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 14:07:39 --> Pagination Class Initialized
+INFO - 2021-10-28 14:07:39 --> Model "Leadmod" initialized
+INFO - 2021-10-28 14:07:39 --> Controller Class Initialized
+INFO - 2021-10-28 14:07:39 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:37:39 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:37:39 --> Model "Menu_Model" initialized
+INFO - 2021-10-28 17:37:39 --> Model "User_Model" initialized
+INFO - 2021-10-28 17:37:39 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/header.php
+INFO - 2021-10-28 17:37:39 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/footer.php
+INFO - 2021-10-28 17:37:39 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\home.php
+INFO - 2021-10-28 17:37:39 --> Final output sent to browser
+DEBUG - 2021-10-28 17:37:39 --> Total execution time: 0.0471
+INFO - 2021-10-28 14:07:45 --> Config Class Initialized
+INFO - 2021-10-28 14:07:45 --> Hooks Class Initialized
+DEBUG - 2021-10-28 14:07:45 --> UTF-8 Support Enabled
+INFO - 2021-10-28 14:07:45 --> Utf8 Class Initialized
+INFO - 2021-10-28 14:07:45 --> URI Class Initialized
+INFO - 2021-10-28 14:07:45 --> Router Class Initialized
+INFO - 2021-10-28 14:07:45 --> Output Class Initialized
+INFO - 2021-10-28 14:07:45 --> Security Class Initialized
+DEBUG - 2021-10-28 14:07:45 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 14:07:45 --> CSRF cookie sent
+INFO - 2021-10-28 14:07:45 --> Input Class Initialized
+INFO - 2021-10-28 14:07:45 --> Language Class Initialized
+INFO - 2021-10-28 14:07:45 --> Loader Class Initialized
+INFO - 2021-10-28 14:07:45 --> Helper loaded: url_helper
+INFO - 2021-10-28 14:07:45 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 14:07:45 --> Helper loaded: form_helper
+INFO - 2021-10-28 14:07:45 --> Helper loaded: file_helper
+INFO - 2021-10-28 14:07:45 --> Helper loaded: download_helper
+INFO - 2021-10-28 14:07:45 --> Helper loaded: date_helper
+INFO - 2021-10-28 14:07:45 --> Helper loaded: security_helper
+INFO - 2021-10-28 14:07:45 --> Helper loaded: option_helper
+INFO - 2021-10-28 14:07:45 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 14:07:45 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 14:07:45 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 14:07:45 --> Form Validation Class Initialized
+INFO - 2021-10-28 14:07:45 --> Upload Class Initialized
+INFO - 2021-10-28 14:07:45 --> Parser Class Initialized
+INFO - 2021-10-28 14:07:45 --> Email Class Initialized
+DEBUG - 2021-10-28 14:07:45 --> Encrypt Class Initialized
+INFO - 2021-10-28 14:07:45 --> Table Class Initialized
+INFO - 2021-10-28 14:07:45 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 14:07:45 --> Pagination Class Initialized
+INFO - 2021-10-28 14:07:45 --> Model "Leadmod" initialized
+INFO - 2021-10-28 14:07:45 --> Controller Class Initialized
+INFO - 2021-10-28 14:07:45 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:37:45 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:37:45 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:37:45 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:37:45 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:37:45 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:37:45 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:37:45 --> Model "SMS_Model" initialized
+INFO - 2021-10-28 17:37:45 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/header.php
+INFO - 2021-10-28 17:37:45 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/footer.php
+ERROR - 2021-10-28 17:37:45 --> Severity: Warning --> Undefined property: CI_DB_mysqli_result::$lead_id E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks\main_js.php 132
+ERROR - 2021-10-28 17:37:45 --> Severity: Warning --> Undefined property: CI_DB_mysqli_result::$lead_id E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks\main_js.php 775
+ERROR - 2021-10-28 17:37:45 --> Severity: Warning --> Undefined property: CI_DB_mysqli_result::$customer_id E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks\main_js.php 775
+ERROR - 2021-10-28 17:37:45 --> Severity: Warning --> Undefined property: CI_DB_mysqli_result::$loan_amount E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks\main_js.php 1354
+ERROR - 2021-10-28 17:37:45 --> Severity: Warning --> Undefined property: CI_DB_mysqli_result::$cibil E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks\main_js.php 1374
+ERROR - 2021-10-28 17:37:45 --> Severity: Warning --> Undefined property: CI_DB_mysqli_result::$monthly_income E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks\main_js.php 1382
+ERROR - 2021-10-28 17:37:45 --> Severity: Warning --> Undefined property: CI_DB_mysqli_result::$obligations E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks\main_js.php 1382
+ERROR - 2021-10-28 17:37:45 --> Severity: Warning --> Undefined property: CI_DB_mysqli_result::$lead_id E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks\main_js.php 2174
+ERROR - 2021-10-28 17:37:45 --> Severity: Warning --> Undefined property: CI_DB_mysqli_result::$customer_id E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks\main_js.php 2174
+INFO - 2021-10-28 17:37:45 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/main_js.php
+INFO - 2021-10-28 17:37:45 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/GetLeadTaskList.php
+INFO - 2021-10-28 17:37:45 --> Final output sent to browser
+DEBUG - 2021-10-28 17:37:45 --> Total execution time: 0.0659
+INFO - 2021-10-28 14:07:55 --> Config Class Initialized
+INFO - 2021-10-28 14:07:55 --> Hooks Class Initialized
+DEBUG - 2021-10-28 14:07:55 --> UTF-8 Support Enabled
+INFO - 2021-10-28 14:07:55 --> Utf8 Class Initialized
+INFO - 2021-10-28 14:07:55 --> URI Class Initialized
+INFO - 2021-10-28 14:07:55 --> Router Class Initialized
+INFO - 2021-10-28 14:07:55 --> Output Class Initialized
+INFO - 2021-10-28 14:07:55 --> Security Class Initialized
+DEBUG - 2021-10-28 14:07:55 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 14:07:55 --> CSRF cookie sent
+INFO - 2021-10-28 14:07:55 --> Input Class Initialized
+INFO - 2021-10-28 14:07:55 --> Language Class Initialized
+INFO - 2021-10-28 14:07:55 --> Loader Class Initialized
+INFO - 2021-10-28 14:07:55 --> Helper loaded: url_helper
+INFO - 2021-10-28 14:07:55 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 14:07:55 --> Helper loaded: form_helper
+INFO - 2021-10-28 14:07:55 --> Helper loaded: file_helper
+INFO - 2021-10-28 14:07:55 --> Helper loaded: download_helper
+INFO - 2021-10-28 14:07:55 --> Helper loaded: date_helper
+INFO - 2021-10-28 14:07:55 --> Helper loaded: security_helper
+INFO - 2021-10-28 14:07:55 --> Helper loaded: option_helper
+INFO - 2021-10-28 14:07:55 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 14:07:55 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 14:07:55 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 14:07:55 --> Form Validation Class Initialized
+INFO - 2021-10-28 14:07:55 --> Upload Class Initialized
+INFO - 2021-10-28 14:07:55 --> Parser Class Initialized
+INFO - 2021-10-28 14:07:55 --> Email Class Initialized
+DEBUG - 2021-10-28 14:07:55 --> Encrypt Class Initialized
+INFO - 2021-10-28 14:07:55 --> Table Class Initialized
+INFO - 2021-10-28 14:07:55 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 14:07:55 --> Pagination Class Initialized
+INFO - 2021-10-28 14:07:55 --> Model "Leadmod" initialized
+INFO - 2021-10-28 14:07:55 --> Controller Class Initialized
+INFO - 2021-10-28 14:07:55 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:37:55 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:37:55 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:37:55 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:37:55 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:37:55 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:37:55 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:37:55 --> Model "SMS_Model" initialized
+INFO - 2021-10-28 17:37:55 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/header.php
+INFO - 2021-10-28 17:37:55 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/leadsDetails.php
+INFO - 2021-10-28 17:37:55 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/application.php
+INFO - 2021-10-28 17:37:55 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Document/docs.php
+INFO - 2021-10-28 17:37:55 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Personal/personal.php
+INFO - 2021-10-28 17:37:55 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Disbursal/banking.php
+ERROR - 2021-10-28 17:37:55 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 87
+ERROR - 2021-10-28 17:37:55 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 87
+ERROR - 2021-10-28 17:37:55 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 88
+ERROR - 2021-10-28 17:37:55 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 88
+ERROR - 2021-10-28 17:37:55 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 90
+ERROR - 2021-10-28 17:37:55 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification\verification.php 90
+INFO - 2021-10-28 17:37:55 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Verification/verification.php
+INFO - 2021-10-28 17:37:55 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\CAM/camPayday.php
+INFO - 2021-10-28 17:37:55 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Disbursal/disbursal.php
+INFO - 2021-10-28 17:37:55 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection/repayment.php
+ERROR - 2021-10-28 17:37:55 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 114
+ERROR - 2021-10-28 17:37:55 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 114
+ERROR - 2021-10-28 17:37:55 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 121
+ERROR - 2021-10-28 17:37:55 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 121
+ERROR - 2021-10-28 17:37:55 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 183
+ERROR - 2021-10-28 17:37:55 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 183
+ERROR - 2021-10-28 17:37:55 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 190
+ERROR - 2021-10-28 17:37:55 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 190
+ERROR - 2021-10-28 17:37:55 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 191
+ERROR - 2021-10-28 17:37:55 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 191
+ERROR - 2021-10-28 17:37:55 --> Severity: Warning --> Undefined array key 0 E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 192
+ERROR - 2021-10-28 17:37:55 --> Severity: Warning --> Trying to access array offset on value of type null E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection\collection.php 192
+INFO - 2021-10-28 17:37:55 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Collection/collection.php
+INFO - 2021-10-28 17:37:55 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Layouts/footer.php
+INFO - 2021-10-28 17:37:55 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/task_js.php
+INFO - 2021-10-28 17:37:55 --> File loaded: E:\VIN\xampp\htdocs\2021\cloud\application\views\Tasks/main_js.php
+INFO - 2021-10-28 17:37:55 --> Final output sent to browser
+DEBUG - 2021-10-28 17:37:55 --> Total execution time: 0.0679
+INFO - 2021-10-28 14:07:57 --> Config Class Initialized
+INFO - 2021-10-28 14:07:57 --> Hooks Class Initialized
+DEBUG - 2021-10-28 14:07:57 --> UTF-8 Support Enabled
+INFO - 2021-10-28 14:07:57 --> Utf8 Class Initialized
+INFO - 2021-10-28 14:07:57 --> URI Class Initialized
+INFO - 2021-10-28 14:07:57 --> Router Class Initialized
+INFO - 2021-10-28 14:07:57 --> Output Class Initialized
+INFO - 2021-10-28 14:07:57 --> Security Class Initialized
+DEBUG - 2021-10-28 14:07:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 14:07:57 --> CSRF cookie sent
+INFO - 2021-10-28 14:07:57 --> CSRF token verified
+INFO - 2021-10-28 14:07:57 --> Input Class Initialized
+INFO - 2021-10-28 14:07:57 --> Language Class Initialized
+INFO - 2021-10-28 14:07:57 --> Loader Class Initialized
+INFO - 2021-10-28 14:07:57 --> Helper loaded: url_helper
+INFO - 2021-10-28 14:07:57 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 14:07:57 --> Helper loaded: form_helper
+INFO - 2021-10-28 14:07:57 --> Helper loaded: file_helper
+INFO - 2021-10-28 14:07:57 --> Helper loaded: download_helper
+INFO - 2021-10-28 14:07:57 --> Helper loaded: date_helper
+INFO - 2021-10-28 14:07:57 --> Helper loaded: security_helper
+INFO - 2021-10-28 14:07:57 --> Helper loaded: option_helper
+INFO - 2021-10-28 14:07:57 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 14:07:57 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 14:07:57 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 14:07:57 --> Form Validation Class Initialized
+INFO - 2021-10-28 14:07:57 --> Upload Class Initialized
+INFO - 2021-10-28 14:07:57 --> Parser Class Initialized
+INFO - 2021-10-28 14:07:57 --> Email Class Initialized
+DEBUG - 2021-10-28 14:07:57 --> Encrypt Class Initialized
+INFO - 2021-10-28 14:07:57 --> Table Class Initialized
+INFO - 2021-10-28 14:07:57 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 14:07:57 --> Pagination Class Initialized
+INFO - 2021-10-28 14:07:57 --> Model "Leadmod" initialized
+INFO - 2021-10-28 14:07:57 --> Controller Class Initialized
+INFO - 2021-10-28 14:07:57 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:37:57 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:37:57 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:37:57 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:37:57 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:37:57 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:37:57 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:37:57 --> Model "SMS_Model" initialized
+ERROR - 2021-10-28 17:37:57 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:57 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:57 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:57 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:57 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:57 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:57 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:57 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:57 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:57 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:57 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:57 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:57 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:57 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:57 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:57 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:57 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:57 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+INFO - 2021-10-28 17:37:57 --> Final output sent to browser
+DEBUG - 2021-10-28 17:37:57 --> Total execution time: 0.0602
+INFO - 2021-10-28 14:07:59 --> Config Class Initialized
+INFO - 2021-10-28 14:07:59 --> Hooks Class Initialized
+DEBUG - 2021-10-28 14:07:59 --> UTF-8 Support Enabled
+INFO - 2021-10-28 14:07:59 --> Utf8 Class Initialized
+INFO - 2021-10-28 14:07:59 --> URI Class Initialized
+INFO - 2021-10-28 14:07:59 --> Router Class Initialized
+INFO - 2021-10-28 14:07:59 --> Output Class Initialized
+INFO - 2021-10-28 14:07:59 --> Security Class Initialized
+DEBUG - 2021-10-28 14:07:59 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 14:07:59 --> CSRF cookie sent
+INFO - 2021-10-28 14:07:59 --> CSRF token verified
+INFO - 2021-10-28 14:07:59 --> Input Class Initialized
+INFO - 2021-10-28 14:07:59 --> Language Class Initialized
+INFO - 2021-10-28 14:07:59 --> Loader Class Initialized
+INFO - 2021-10-28 14:07:59 --> Helper loaded: url_helper
+INFO - 2021-10-28 14:07:59 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 14:07:59 --> Helper loaded: form_helper
+INFO - 2021-10-28 14:07:59 --> Helper loaded: file_helper
+INFO - 2021-10-28 14:07:59 --> Helper loaded: download_helper
+INFO - 2021-10-28 14:07:59 --> Helper loaded: date_helper
+INFO - 2021-10-28 14:07:59 --> Helper loaded: security_helper
+INFO - 2021-10-28 14:07:59 --> Helper loaded: option_helper
+INFO - 2021-10-28 14:07:59 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 14:07:59 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 14:07:59 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 14:07:59 --> Form Validation Class Initialized
+INFO - 2021-10-28 14:07:59 --> Upload Class Initialized
+INFO - 2021-10-28 14:07:59 --> Parser Class Initialized
+INFO - 2021-10-28 14:07:59 --> Email Class Initialized
+DEBUG - 2021-10-28 14:07:59 --> Encrypt Class Initialized
+INFO - 2021-10-28 14:07:59 --> Table Class Initialized
+INFO - 2021-10-28 14:07:59 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 14:07:59 --> Pagination Class Initialized
+INFO - 2021-10-28 14:07:59 --> Model "Leadmod" initialized
+INFO - 2021-10-28 14:07:59 --> Controller Class Initialized
+INFO - 2021-10-28 14:07:59 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:37:59 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:37:59 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:37:59 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:37:59 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:37:59 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:37:59 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:37:59 --> Model "SMS_Model" initialized
+ERROR - 2021-10-28 17:37:59 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:59 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:59 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:59 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:59 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:59 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:59 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:59 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:59 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:59 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:59 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:59 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:59 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:59 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:59 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:59 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:59 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:37:59 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+INFO - 2021-10-28 17:37:59 --> Final output sent to browser
+DEBUG - 2021-10-28 17:37:59 --> Total execution time: 0.0462
+INFO - 2021-10-28 14:08:00 --> Config Class Initialized
+INFO - 2021-10-28 14:08:00 --> Hooks Class Initialized
+DEBUG - 2021-10-28 14:08:00 --> UTF-8 Support Enabled
+INFO - 2021-10-28 14:08:00 --> Utf8 Class Initialized
+INFO - 2021-10-28 14:08:00 --> URI Class Initialized
+INFO - 2021-10-28 14:08:00 --> Router Class Initialized
+INFO - 2021-10-28 14:08:00 --> Output Class Initialized
+INFO - 2021-10-28 14:08:00 --> Security Class Initialized
+DEBUG - 2021-10-28 14:08:00 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 14:08:00 --> CSRF cookie sent
+INFO - 2021-10-28 14:08:00 --> CSRF token verified
+INFO - 2021-10-28 14:08:00 --> Input Class Initialized
+INFO - 2021-10-28 14:08:00 --> Language Class Initialized
+INFO - 2021-10-28 14:08:00 --> Loader Class Initialized
+INFO - 2021-10-28 14:08:00 --> Helper loaded: url_helper
+INFO - 2021-10-28 14:08:00 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 14:08:00 --> Helper loaded: form_helper
+INFO - 2021-10-28 14:08:00 --> Helper loaded: file_helper
+INFO - 2021-10-28 14:08:00 --> Helper loaded: download_helper
+INFO - 2021-10-28 14:08:00 --> Helper loaded: date_helper
+INFO - 2021-10-28 14:08:00 --> Helper loaded: security_helper
+INFO - 2021-10-28 14:08:00 --> Helper loaded: option_helper
+INFO - 2021-10-28 14:08:00 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 14:08:00 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 14:08:00 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 14:08:00 --> Form Validation Class Initialized
+INFO - 2021-10-28 14:08:00 --> Upload Class Initialized
+INFO - 2021-10-28 14:08:00 --> Parser Class Initialized
+INFO - 2021-10-28 14:08:00 --> Email Class Initialized
+DEBUG - 2021-10-28 14:08:00 --> Encrypt Class Initialized
+INFO - 2021-10-28 14:08:00 --> Table Class Initialized
+INFO - 2021-10-28 14:08:00 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 14:08:00 --> Pagination Class Initialized
+INFO - 2021-10-28 14:08:00 --> Model "Leadmod" initialized
+INFO - 2021-10-28 14:08:00 --> Controller Class Initialized
+INFO - 2021-10-28 14:08:00 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:38:00 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:38:00 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:38:00 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:38:00 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:38:00 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:38:00 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:38:00 --> Model "SMS_Model" initialized
+ERROR - 2021-10-28 17:38:00 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:00 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:00 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:00 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:00 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:00 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:00 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:00 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:00 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:00 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:00 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:00 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:00 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:00 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:00 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:00 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:00 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:00 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+INFO - 2021-10-28 17:38:00 --> Final output sent to browser
+DEBUG - 2021-10-28 17:38:00 --> Total execution time: 0.0657
+INFO - 2021-10-28 14:08:01 --> Config Class Initialized
+INFO - 2021-10-28 14:08:01 --> Hooks Class Initialized
+DEBUG - 2021-10-28 14:08:01 --> UTF-8 Support Enabled
+INFO - 2021-10-28 14:08:01 --> Utf8 Class Initialized
+INFO - 2021-10-28 14:08:01 --> URI Class Initialized
+INFO - 2021-10-28 14:08:01 --> Router Class Initialized
+INFO - 2021-10-28 14:08:01 --> Output Class Initialized
+INFO - 2021-10-28 14:08:01 --> Security Class Initialized
+DEBUG - 2021-10-28 14:08:01 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-10-28 14:08:01 --> CSRF cookie sent
+INFO - 2021-10-28 14:08:01 --> CSRF token verified
+INFO - 2021-10-28 14:08:01 --> Input Class Initialized
+INFO - 2021-10-28 14:08:01 --> Language Class Initialized
+INFO - 2021-10-28 14:08:01 --> Loader Class Initialized
+INFO - 2021-10-28 14:08:01 --> Helper loaded: url_helper
+INFO - 2021-10-28 14:08:01 --> Helper loaded: cookie_helper
+INFO - 2021-10-28 14:08:01 --> Helper loaded: form_helper
+INFO - 2021-10-28 14:08:01 --> Helper loaded: file_helper
+INFO - 2021-10-28 14:08:01 --> Helper loaded: download_helper
+INFO - 2021-10-28 14:08:01 --> Helper loaded: date_helper
+INFO - 2021-10-28 14:08:01 --> Helper loaded: security_helper
+INFO - 2021-10-28 14:08:01 --> Helper loaded: option_helper
+INFO - 2021-10-28 14:08:01 --> Database Driver Class Initialized
+DEBUG - 2021-10-28 14:08:01 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-10-28 14:08:01 --> Session: Class initialized using 'files' driver.
+INFO - 2021-10-28 14:08:01 --> Form Validation Class Initialized
+INFO - 2021-10-28 14:08:01 --> Upload Class Initialized
+INFO - 2021-10-28 14:08:01 --> Parser Class Initialized
+INFO - 2021-10-28 14:08:01 --> Email Class Initialized
+DEBUG - 2021-10-28 14:08:01 --> Encrypt Class Initialized
+INFO - 2021-10-28 14:08:01 --> Table Class Initialized
+INFO - 2021-10-28 14:08:01 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2021-10-28 14:08:01 --> Pagination Class Initialized
+INFO - 2021-10-28 14:08:01 --> Model "Leadmod" initialized
+INFO - 2021-10-28 14:08:01 --> Controller Class Initialized
+INFO - 2021-10-28 14:08:01 --> Model "Leadmod" initialized
+INFO - 2021-10-28 17:38:01 --> Model "Task_Model" initialized
+INFO - 2021-10-28 17:38:01 --> Model "Admin_Model" initialized
+INFO - 2021-10-28 17:38:01 --> Model "Status_Model" initialized
+INFO - 2021-10-28 17:38:01 --> Model "CAM_Model" initialized
+INFO - 2021-10-28 17:38:01 --> Model "Docs_Model" initialized
+INFO - 2021-10-28 17:38:01 --> Model "Email_Model" initialized
+INFO - 2021-10-28 17:38:01 --> Model "SMS_Model" initialized
+ERROR - 2021-10-28 17:38:01 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:01 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:01 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:01 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:01 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:01 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:01 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:01 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:01 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:01 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:01 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:01 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:01 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:01 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:01 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:01 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:01 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+ERROR - 2021-10-28 17:38:01 --> Severity: Warning --> Undefined property: stdClass::$created_on E:\VIN\xampp\htdocs\2021\cloud\application\controllers\TaskController.php 419
+INFO - 2021-10-28 17:38:01 --> Final output sent to browser
+DEBUG - 2021-10-28 17:38:01 --> Total execution time: 0.0714
