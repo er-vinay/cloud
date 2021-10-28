@@ -387,7 +387,7 @@
 			$data = '<div class="table-responsive">
 		        <table class="table table-hover table-striped table-bordered">
                   	<thead>
-                    <tr class="table-primary"><th>Sr.&nbsp;No</th><th>Status</th><th>Application&nbsp;No</th><th>Loan&nbsp;No</th><th>Borrower</th><th>PAN</th><th>Aadhar</th><th>Email</th><th>Mobile</th><th>State</th><th>City</th><th>Loan&nbsp;Amount</th><th>Applied&nbsp;On</th><th>Source</th>
+                    <tr class="table-primary"><th>Sr.&nbsp;No</th><th>Status</th><th>Application&nbsp;No</th><th>Loan&nbsp;No</th><th>Borrower</th><th>PAN</th><th>Aadhar</th><th>Email</th><th>Mobile</th><th>State</th><th>City</th><th>Loan&nbsp;Amount</th><th>Applied&nbsp;On</th><th>Disbursed&nbsp;On</th><th>Product</th><th>Source</th>
                     </tr>
                   	</thead>';
             if($leadData->num_rows() > 0)
@@ -395,10 +395,10 @@
       			$i = 1; 
 				foreach($leadData->result() as $colum)
 				{
-	    			// $sql2 = $this->Tasks->getProducts($colum->product_id);
-	    			// $sql3 = $this->Tasks->select(['lead_id'=> $colum->lead_id], 'disbursal_date', 'credit_analysis_memo');
-	       //  		$product = $sql2->row();
-	       //  		$cam = $sql3->row();
+	    			$sql2 = $this->Tasks->getProducts($colum->product_id);
+	    			$sql3 = $this->Tasks->select(['lead_id'=> $colum->lead_id], 'disbursal_date', 'credit_analysis_memo');
+	        		$product = $sql2->row();
+	        		$cam = $sql3->row();
 				    // if($colum->status == 'Full Payment' || $colum->status == 'Settelment')
 				    // {
 				    //     $optn = '<i class="fa fa-check" style="font-size:24px;color:green"></i>';
@@ -421,6 +421,8 @@
                             <td>'. $colum->city .'</td>
                             <td>'. $colum->loan_amount .'</td>
                             <td>'. date('d/m/Y', strtotime($colum->lead_initiated_date)) .'</td> 
+                            <td>'. (($cam->disbursal_date) ? date('d/m/Y', strtotime($cam->disbursal_date)) : '-') .'</td> 
+                            <td>'. $product->product_name .'</td>
                             <td>'. $colum->source .'</td>
 						</tr>';
 					$i++;
