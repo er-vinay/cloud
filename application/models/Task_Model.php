@@ -150,9 +150,9 @@
 		    return $this->db->insert($this->table, $data);
 		}
 
-		public function getProducts()
+		public function getProducts($product_id)
 	    {
-	        return $this->db->select('PD.product_code, PD.product_name, PD.source')->where('PD.product_id', product_id)->from('tbl_product as PD')->get();
+	        return $this->db->select('PD.product_code, PD.product_name, PD.source')->where('PD.product_id', $product_id)->from('tbl_product as PD')->get();
 	    }
 	    
 	    public function getLeadStatus($type)
