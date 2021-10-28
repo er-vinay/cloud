@@ -8,9 +8,9 @@
 
     <div class="container-fluid">
 
-        <div class="taskPageSize taskPageSizeDashboard">
+        <div class="taskPageSize taskPageSizeDashboard  default-page-height">
 
-            <div class="row default-page-height">
+            <div class="row">
 
                 <div class="col-md-6 col-md-offset-3">
 

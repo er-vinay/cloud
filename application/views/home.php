@@ -10,7 +10,7 @@
 
 <section>
 
-    <div class="container dashboard-wid">
+    <div class="container dashboard-wid  default-page-height">
 
         <div class="taskPageSizeDashboard dashboardMargin" style="margin-top: 53px !important;">
 
