@@ -27,7 +27,7 @@
                 <th>Loan Applied</th>
                 <td><?= ($leadDetails->loan_amount) ? round($leadDetails->loan_amount) :'-' ?></td>
                 <th>Loan Tenure</th>
-                <td><?= ($leadDetails->tenure != 0 || $leadDetails->tenure != '') ? round($leadDetails->tenure) :'-' ?></td>
+                <td><?= ($leadDetails->tenure != 0 && $leadDetails->tenure != '') ? round($leadDetails->tenure) :'-' ?></td>
             </tr>
             <tr>
                 <th>Loan Purpose</th>
