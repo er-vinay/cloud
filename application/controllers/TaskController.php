@@ -395,10 +395,10 @@
       			$i = 1; 
 				foreach($leadData->result() as $colum)
 				{
-	    			$sql2 = $this->Tasks->getProducts($colum->product_id);
-	    			$sql3 = $this->Tasks->select(['lead_id'=> $colum->lead_id], 'disbursal_date', 'credit_analysis_memo');
-	        		$product = $sql2->row();
-	        		$cam = $sql3->row();
+	    			// $sql2 = $this->Tasks->getProducts($colum->product_id);
+	    			// $sql3 = $this->Tasks->select(['lead_id'=> $colum->lead_id], 'disbursal_date', 'credit_analysis_memo');
+	       //  		$product = $sql2->row();
+	       //  		$cam = $sql3->row();
 				    // if($colum->status == 'Full Payment' || $colum->status == 'Settelment')
 				    // {
 				    //     $optn = '<i class="fa fa-check" style="font-size:24px;color:green"></i>';
