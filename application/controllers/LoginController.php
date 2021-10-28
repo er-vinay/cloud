@@ -207,7 +207,7 @@
             	$centerName = explode(", ", $result['center']);
             	$cityArr = array();
 		    	foreach($centerName as $city_id){
-		    		$cityLists = $this->db->select('tb_city.city_id, tb_city.city')->where('city_id', $city_id)->get('tb_city')->row();
+		    		$cityLists = $this->db->select('CT.id, CT.city')->where('CT.id', $city_id)->from('tbl_city CT')->get()->row();
 		    		$cityArr[] = $cityLists->city;
 		    	}
             	$center = implode(",\n", $cityArr);

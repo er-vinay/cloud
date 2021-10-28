@@ -55,20 +55,21 @@
     	            );
 
                     $conditions = ['lead_id' => $lead_id];
-                    $result = $this->Tasks->updateLeads($conditions, $data, 'leads');
-                    $result = $this->Tasks->insert($data2, 'lead_followup');
-                    if($result == true)
-                    {
-                        $json['msg'] = 'Application Rejected Successfully.';
-                    } else {
-                        $json['err'] = 'Failed to Reject Application.';
-                    }
-                    echo json_encode($json);
+                    // $result = $this->Tasks->updateLeads($conditions, $data, 'leads');
+                    // $result = $this->Tasks->insert($data2, 'lead_followup');
+                    // if($result == true)
+                    // {
+                    //     $json['msg'] = 'Application Rejected Successfully.';
+                    // } else {
+                    //     $json['err'] = 'Failed to Reject Application.';
+                    // }
+                    // echo json_encode($json);
 
     				$fetch = "first_name, email, mobile";
     				$conditions2 = ['customer_id' => $customer_id];
                     $leadsDetails = $this->Tasks->select($conditions2, $fetch, 'customer');
     				$leads = $leadsDetails->row();
+    				$name = $leads->first_name;
                     
                     $rowMail = $this->Email->getMailAndSendTocustomer(company_id, product_id, $status);
                     if($rowMail->num_rows() > 0)
@@ -77,11 +78,13 @@
                         $this->sentmail($leads, $mail);
                     }
                     
-    				$rejectionSMS = $this->SMS->getRejectionSMS(company_id, product_id);
+    				$rejectionSMS = $this->SMS->getRejectionSMS(company_id, product_id, 'REJECT');
+
     				if($rejectionSMS->num_rows() > 0)
     				{
     				    $smsReject = $rejectionSMS->row();
-    				    $rejectionSMS = $this->SMS->notification($leads->mobile, $smsReject->message);
+    				    $res = $this->SMS->notification($leads->mobile, $smsReject->message);
+    				echo "<pre>"; print_r($res); exit;
     				}
 	        	}
 	        }else{

@@ -47,9 +47,9 @@
 
                         <div class="footer-support">
 
-                            <h2>CONTACT SUPPORT</h2>
+                            <h2>ADMIN</h2>
 
-                            <p><i class="fa fa-envelope"></i>&nbsp;<a href="mailto:vinay.kumar@loanwalle.com">vinay.kumar@loanwalle.com</a></p>
+                            <p><i class="fa fa-envelope"></i>&nbsp;<a href="mailto:vinay.kumar@loanwalle.com">fintech@loanwalle.com</a></p>
 
                             <p><i class="fa fa-phone"></i>&nbsp;<a href="tel:+918936962573">+91 89369 62573</a></p> 
 

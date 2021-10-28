@@ -84,7 +84,7 @@ $route['getCity/(:num)'] = 'TaskController/getCity/$1';
 
 /////////////////////////// Senction task /////////////////////////////
 
-$route['inProcess/(:any)(/:any)?(/:any)?'] = 'TaskController/index/$1';
+$route['inProcess/(:any)(/:any)?'] = 'TaskController/index/$1';
 $route['screeninLeads/(:any)(/:any)?'] = 'TaskController/index/$1';
 $route['holdleads/(:any)(/:any)?'] = 'TaskController/index/$1';
 

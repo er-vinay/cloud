@@ -4,22 +4,24 @@
     class SMS_Model extends CI_Model
     {
         private $table_send_sms = 'ftc_send_sms';
-		
-		public function getRejectionSMS($company_id, $product_id)
+
+		public function getRejectionSMS($company_id, $product_id, $smsType)
 		{
-		    $where = array('company_id' => $company_id, 'product_id' => $product_id, 'sms_type'=> "Reject", 'is_active'=> 1);
+		    $where = array('company_id' => $company_id, 'product_id' => $product_id, 'sms_type'=> $smsType, 'is_active'=> 1);
 	        return $this->db->select('message')->where($where)->from($this->table_send_sms)->get();
 		}
 		
 	    public function notification($mobile, $msg)
 		{
 			$username = urlencode("namanfinl");
-			$password = urlencode("6I1c0TdZ");
+			$password = urlencode("ASX1@#SD");
 			$message = urlencode($msg);
 			$destination = $mobile;
-			$source = "LOANPL";
+			$source = "LWALLE";
 			$type = "0";
 			$dlr = "1";
+            $entityid 		= 1201159134511282286;
+            $tempid 		= 1207162031164486731;
 			
 			$data = "username=$username&password=$password&type=$type&dlr=$dlr&destination=$destination&source=$source&message=$message";
 			$url = "http://sms6.rmlconnect.net/bulksms/bulksms";

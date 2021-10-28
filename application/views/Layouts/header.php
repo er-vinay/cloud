@@ -71,7 +71,7 @@
                                 <li><a href="<?= base_url('dashboard') ?>" class="logout-lac" title="Dashboard"><i class="fa fa-home"></i>&nbsp;Home</a></li>
 
                          <li><a href="<?= base_url('search') ?>" class="logout-lac" title="Search"><i class="fa fa-search"></i> &nbsp;Search</a></li>
-                        <li><a href="<?= base_url('search') ?>" class="logout-lac" title="Notification"><i class="fa fa-bell"></i>&nbsp;Notification</a></li>
+                        <!-- <li><a href="<?= base_url('search') ?>" class="logout-lac" title="Notification"><i class="fa fa-bell"></i>&nbsp;Notification</a></li> -->
 
 
 
@@ -85,7 +85,7 @@
                     <div class="col-md-7 col-xs-4 text-right nav-hidee" style="padding-top:10px;">    
                         <a href="<?= base_url('dashboard') ?>" class="logout-lac" title="Dashboard"><i class="fa fa-home"></i></a>  
                         <a href="<?= base_url('search') ?>" class="logout-lac" title="Search"><i class="fa fa-search"></i> </a>
-                        <a href="<?= base_url('search') ?>" class="logout-lac" title="Notification"><i class="fa fa-bell"></i><span style="display: table-caption;">10</span></a>  
+                        <!-- <a href="<?= base_url('search') ?>" class="logout-lac" title="Notification"><i class="fa fa-bell"></i><span style="display: table-caption;">10</span></a> -->
                         <a href="<?= base_url('logout'); ?>" class="logout-lac" title="Logout"><i class="fa fa-sign-out"></i></a>  
                          
                         <a href="<?= base_url('myProfile') ?>" class="logout-lac" title="<?= $userDetails->user_id ?>"><?= $_SESSION['isUserSession']['name'] ?></a>

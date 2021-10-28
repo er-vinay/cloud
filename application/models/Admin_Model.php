@@ -54,14 +54,13 @@
 
 		public function getUserProfileById($user_id)
 		{
-            $stateList = $this->db->select('tb_states.id, tb_states.state')
-                ->from('tb_states')->get()->result();
+            $stateList = $this->db->select('ST.state_id, ST.state')->from('tbl_state ST')->get()->result();
             foreach($stateList as $state){
 	            $this->db->select('u.user_id, u.name, u.email, u.mobile, u.password, u.dob, u.gender, u.marital_status, u.father_name, u.role, u.branch, u.center, 
-	                u.status, u.created_on, tb_states.state') 
+	                u.status, u.created_on, ST.state') 
 	            	->where('u.user_id', $user_id)
 	                ->from('users as u')
-	                ->join('tb_states', 'u.branch = tb_states.id');
+	                ->join('tbl_state ST', 'u.branch = ST.state_id');
 	            return $query = $this->db->order_by('u.user_id', 'desc')->get();
 	        }
 		}
