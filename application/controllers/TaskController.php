@@ -387,7 +387,7 @@
 			$data = '<div class="table-responsive">
 		        <table class="table table-hover table-striped table-bordered">
                   	<thead>
-                    <tr class="table-primary"><th>Sr.&nbsp;No</th><th>Status</th><th>Application&nbsp;No</th><th>Loan&nbsp;No</th><th>Borrower</th><th>PAN</th><th>Aadhar</th><th>Email</th><th>Mobile</th><th>State</th><th>City</th><th>Loan&nbsp;Amount</th><th>Applied&nbsp;On</th><th>Disbursed&nbsp;On</th><th>Product</th><th>Source</th>
+                    <tr class="table-primary"><th>Sr.&nbsp;No</th><th>Status</th><th>Application&nbsp;No</th><th>Loan&nbsp;No</th><th>Borrower</th><th>PAN</th><th>Aadhar</th><th>Email</th><th>Mobile</th><th>State</th><th>City</th><th>Loan&nbsp;Amount</th><th>Applied&nbsp;On</th><th>Source</th>
                     </tr>
                   	</thead>';
             if($leadData->num_rows() > 0)
@@ -421,8 +421,6 @@
                             <td>'. $colum->city .'</td>
                             <td>'. $colum->loan_amount .'</td>
                             <td>'. date('d/m/Y', strtotime($colum->lead_initiated_date)) .'</td> 
-                            <td>'. (($cam->disbursal_date) ? date('d/m/Y', strtotime($cam->disbursal_date)) : '-') .'</td> 
-                            <td>'. $product->product_name .'</td>
                             <td>'. $colum->source .'</td>
 						</tr>';
 					$i++;
