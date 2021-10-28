@@ -413,17 +413,17 @@
 							<td class="whitespace"><a href="#">'. $colum->application_no .'</a></td>
                             <td class="whitespace"><a href="#">'. $colum->loan_no .'</a></td>
 							<td class="whitespace">'. $colum->first_name.''.$colum->middle_name.''.$colum->sur_name .'</td>
-                            <td class="whitespace">'. $colum->pancard .'</td>
-                            <td class="whitespace">'. $colum->aadhar_no .'</td>
-                            <td class="whitespace">'. $colum->email .'</td>
-                            <td class="whitespace">'. $colum->mobile .'</td>
-                            <td class="whitespace">'. $colum->state .'</td>
-                            <td class="whitespace">'. $colum->city .'</td>
-                            <td class="whitespace">'. $colum->loan_amount .'</td>
+                            <td class="whitespace">'. (($colum->pancard) ? $colum->pancard : '-') .'</td>
+                            <td class="whitespace">'. (($colum->aadhar_no) ? $colum->aadhar_no : '-') .'</td>
+                            <td class="whitespace">'. (($colum->email) ? $colum->email : '-') .'</td>
+                            <td class="whitespace">'. (($colum->mobile) ? $colum->mobile : '-') .'</td>
+                            <td class="whitespace">'. (($colum->state) ? $colum->state : '-') .'</td>
+                            <td class="whitespace">'. (($colum->city) ? $colum->city : '-') .'</td>
+                            <td class="whitespace">'. (($colum->loan_amount) ? $colum->loan_amount : '-') .'</td>
                             <td class="whitespace">'. date('d-m-Y', strtotime($colum->lead_initiated_date)) .'</td> 
                             <td class="whitespace">'. (($cam->disbursal_date) ? date('d-m-Y', strtotime($cam->disbursal_date)) : '-') .'</td> 
-                            <td class="whitespace">'. $product->product_name .'</td>
-                            <td class="whitespace">'. $colum->source .'</td>
+                            <td class="whitespace">'. (($product->product_name) ? $product->product_name : '-') .'</td>
+                            <td class="whitespace">'. (($colum->source) ? $colum->source : '-') .'</td>
 						</tr>';
 					$i++;
 				}
