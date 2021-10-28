@@ -387,7 +387,7 @@
 			$data = '<div class="table-responsive">
 		        <table class="table table-hover table-striped table-bordered">
                   	<thead>
-                    <tr class="table-primary"><th>Sr.&nbsp;No</th><th>Status</th><th>Application&nbsp;No</th><th>Loan&nbsp;No</th><th>Borrower</th><th>PAN</th><th>Aadhar</th><th>Email</th><th>Mobile</th><th>State</th><th>City</th><th>Loan&nbsp;Amount</th><th>Applied&nbsp;On</th><th>Disbursed&nbsp;On</th><th>Product</th><th>Source</th>
+                    <tr class="table-primary"><th class="whitespace">Sr.&nbsp;No</th><th class="whitespace">Status</th><th class="whitespace">Application&nbsp;No</th><th class="whitespace">Loan&nbsp;No</th><th class="whitespace">Borrower</th><th class="whitespace">PAN</th><th class="whitespace">Aadhar</th><th class="whitespace">Email</th><th class="whitespace">Mobile</th><th class="whitespace">State</th><th class="whitespace">City</th><th class="whitespace">Loan&nbsp;Amount</th><th class="whitespace">Applied&nbsp;On</th><th class="whitespace">Disbursed&nbsp;On</th><th class="whitespace">Product</th><th class="whitespace">Source</th>
                     </tr>
                   	</thead>';
             if($leadData->num_rows() > 0)
@@ -408,22 +408,22 @@
 				    // }
 				    $data .='<tbody>
                 		<tr>
-							<td>'. $i .'</th>
-                            <td>'. $colum->status .'</td>
-							<td><a href="#">'. $colum->application_no .'</a></td>
-                            <td><a href="#">'. $colum->loan_no .'</a></td>
-							<td>'. $colum->first_name.''.$colum->middle_name.''.$colum->sur_name .'</td>
-                            <td>'. $colum->pancard .'</td>
-                            <td>'. $colum->aadhar_no .'</td>
-                            <td>'. $colum->email .'</td>
-                            <td>'. $colum->mobile .'</td>
-                            <td>'. $colum->state .'</td>
-                            <td>'. $colum->city .'</td>
-                            <td>'. $colum->loan_amount .'</td>
-                            <td>'. date('d-m-Y', strtotime($colum->lead_initiated_date)) .'</td> 
-                            <td>'. (($cam->disbursal_date) ? date('d-m-Y', strtotime($cam->disbursal_date)) : '-') .'</td> 
-                            <td>'. $product->product_name .'</td>
-                            <td>'. $colum->source .'</td>
+							<td class="whitespace">'. $i .'</th>
+                            <td class="whitespace">'. $colum->status .'</td>
+							<td class="whitespace"><a href="#">'. $colum->application_no .'</a></td>
+                            <td class="whitespace"><a href="#">'. $colum->loan_no .'</a></td>
+							<td class="whitespace">'. $colum->first_name.''.$colum->middle_name.''.$colum->sur_name .'</td>
+                            <td class="whitespace">'. $colum->pancard .'</td>
+                            <td class="whitespace">'. $colum->aadhar_no .'</td>
+                            <td class="whitespace">'. $colum->email .'</td>
+                            <td class="whitespace">'. $colum->mobile .'</td>
+                            <td class="whitespace">'. $colum->state .'</td>
+                            <td class="whitespace">'. $colum->city .'</td>
+                            <td class="whitespace">'. $colum->loan_amount .'</td>
+                            <td class="whitespace">'. date('d-m-Y', strtotime($colum->lead_initiated_date)) .'</td> 
+                            <td class="whitespace">'. (($cam->disbursal_date) ? date('d-m-Y', strtotime($cam->disbursal_date)) : '-') .'</td> 
+                            <td class="whitespace">'. $product->product_name .'</td>
+                            <td class="whitespace">'. $colum->source .'</td>
 						</tr>';
 					$i++;
 				}
