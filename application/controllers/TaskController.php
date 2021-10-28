@@ -420,8 +420,8 @@
                             <td>'. $colum->state .'</td>
                             <td>'. $colum->city .'</td>
                             <td>'. $colum->loan_amount .'</td>
-                            <td>'. date('d/m/Y', strtotime($colum->lead_initiated_date)) .'</td> 
-                            <td>'. (($cam->disbursal_date) ? date('d/m/Y', strtotime($cam->disbursal_date)) : '-') .'</td> 
+                            <td>'. date('d-m-Y', strtotime($colum->lead_initiated_date)) .'</td> 
+                            <td>'. (($cam->disbursal_date) ? date('d-m-Y', strtotime($cam->disbursal_date)) : '-') .'</td> 
                             <td>'. $product->product_name .'</td>
                             <td>'. $colum->source .'</td>
 						</tr>';
