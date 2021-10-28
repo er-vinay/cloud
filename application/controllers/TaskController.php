@@ -409,9 +409,9 @@
 				    $data .='<tbody>
                 		<tr>
 							<td class="whitespace">'. $i .'</th>
-                            <td class="whitespace">'. $colum->status .'</td>
-							<td class="whitespace"><a href="#">'. $colum->application_no .'</a></td>
-                            <td class="whitespace"><a href="#">'. $colum->loan_no .'</a></td>
+                            <td class="whitespace">'. (($colum->status) ? $colum->status : '-') .'</td>
+							<td class="whitespace"><a href="#">'. (($colum->application_no) ? $colum->application_no : '-') .'</a></td>
+                            <td class="whitespace"><a href="#">'. (($colum->loan_no) ? $colum->loan_no : '-') .'</a></td>
 							<td class="whitespace">'. $colum->first_name.''.$colum->middle_name.''.$colum->sur_name .'</td>
                             <td class="whitespace">'. (($colum->pancard) ? $colum->pancard : '-') .'</td>
                             <td class="whitespace">'. (($colum->aadhar_no) ? $colum->aadhar_no : '-') .'</td>
