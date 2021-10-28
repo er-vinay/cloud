@@ -27,7 +27,7 @@
                 <th>Loan Applied</th>
                 <td><?= ($leadDetails->loan_amount) ? round($leadDetails->loan_amount) :'-' ?></td>
                 <th>Loan Tenure</th>
-                <td><?= ($leadDetails->tenure) ? round($leadDetails->tenure) :'-' ?></td>
+                <td><?= ($leadDetails->tenure != 0 || $leadDetails->tenure != '') ? round($leadDetails->tenure) :'-' ?></td>
             </tr>
             <tr>
                 <th>Loan Purpose</th>
@@ -62,7 +62,7 @@
             <tr>
                 <th>Pincode</th>
                 <td><?= ($leadDetails->pincode) ? $leadDetails->pincode :'-' ?></td>
-                <th>District</th>
+                <th>City</th>
                 <td><?= ($leadDetails->city) ? strtoupper($leadDetails->city) :'-' ?></td>
                 <!-- <th style="background: #ddd;">Post Office</th>
                 <td style="background: #ddd;">-</td> -->
