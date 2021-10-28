@@ -132,9 +132,9 @@
             </div>
 
             <div class="col-md-6">
-                <label class="labelField">District</label>
+                <!-- <label class="labelField">District</label>
                 <select class="form-control inputField" id="district1" name="district1" autocomplete="off">
-                </select>
+                </select> -->
             </div>
 
             <div class="col-md-6">
@@ -180,9 +180,9 @@
             </div>
 
             <div class="col-md-6">
-                <label class="labelField">District</label>
+                <!-- <label class="labelField">District</label>
                 <select class="form-control inputField" id="district2" name="district2" autocomplete="off">
-                </select>
+                </select> -->
             </div>
 
             <div class="col-md-6">
@@ -290,9 +290,9 @@
             </div>
 
             <div class="col-md-6">
-                <label class="labelField">District</label>
+                <!-- <label class="labelField">District</label>
                 <select class="form-control inputField" id="district3" name="district3" autocomplete="off">
-                </select>
+                </select> -->
             </div>
 
             <div class="col-md-6">

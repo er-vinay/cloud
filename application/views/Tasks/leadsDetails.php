@@ -27,7 +27,7 @@
                 <th>Loan Applied</th>
                 <td><?= ($leadDetails->loan_amount) ? round($leadDetails->loan_amount) :'-' ?></td>
                 <th>Loan Tenure</th>
-                <td><?= ($leadDetails->tenure != 0 && $leadDetails->tenure != '') ? round($leadDetails->tenure) :'-' ?></td>
+                <td><?= ($leadDetails->tenure != 0 && $leadDetails->tenure != '') ? $leadDetails->tenure :'-' ?></td>
             </tr>
             <tr>
                 <th>Loan Purpose</th>
@@ -77,7 +77,7 @@
                 <th>Mobile</th>
                 <td><a href="tel:<?= $leadDetails->mobile ?>"><i class="fa fa-phone"></i></a>&nbsp;<?= ($leadDetails->mobile) ? $leadDetails->mobile :'-' ?></td>
                 <th>Mobile Alternate</th>
-                <td><a href="tel:<?= $leadDetails->alternate_mobile ?>"><i class="fa fa-phone"></i></a>&nbsp;<?= ($leadDetails->alternate_mobile) ? $leadDetails->alternate_mobile :'-' ?></td>
+                <td><?php if($leadDetails->alternate_mobile != "-") { ?><a href="tel:<?= $leadDetails->alternate_mobile ?>"><i class="fa fa-phone"></i></a><?php } ?>&nbsp;<?= ($leadDetails->alternate_mobile) ? $leadDetails->alternate_mobile :'-' ?></td>
             </tr>
             <tr>
                 <th>Email (Personal)</th>

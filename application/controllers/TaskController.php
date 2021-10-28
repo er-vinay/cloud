@@ -80,7 +80,7 @@
             $table2 = 'customer C';
             $join2 	= 'C.customer_id = LD.customer_id';
             $table3 = 'customer_employment CE';
-            $join3 	= 'CE.customer_id = LD.customer_id';
+            $join3 	= 'CE.lead_id = LD.lead_id';
             $table4 = 'tbl_state ST';
             $join4 	= 'ST.state_id = LD.state_id';
 

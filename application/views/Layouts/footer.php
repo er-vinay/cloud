@@ -624,7 +624,24 @@
                 $('#chatAudio')[0].play();
 
                 flash(notify, {'bgColor' : '#d4ac1a'})
+            }
 
+            function tenure(t)
+            {
+                var val = $(t).val();
+                if(val.length > 2){
+                    $(t).val('');
+                    $(t).attr('placeholder', 'Tenure should be between 1 to 90 days');
+                }
+            }
+            
+            function monthlyIncome(t)
+            {
+                var val = $(t).val();
+                if(val.length < 5){
+                    $(t).val('');
+                    $(t).attr('placeholder', 'Monthly Salary should be 10000 minimum');
+                }
             }
 
             

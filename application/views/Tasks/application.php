@@ -8,12 +8,8 @@
         <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>" />
 
         <div class="col-md-6">
-            <label class="labelField">Borrower Type&nbsp;<strong class="required_Fields">*</strong></label>
-            <select class="form-control inputField" id="borrower_type" name="borrower_type" autocomplete="off">
-                <option value="">SELECT</option>
-                <option value="NEW">NEW</option>
-                <option value="REPEAT">REPEAT</option>
-            </select>
+            <label class="labelField">Borrower Type</label>
+            <input type="text" class="form-control inputField" id="borrower_type" name="borrower_type" autocomplete="off" value="NEW" readonly>
         </div>
 
         <div class="col-md-6">
@@ -28,17 +24,20 @@
 
         <div class="col-md-6">
             <label class="labelField" class="labelField">Loan Tenure&nbsp;<strong class="required_Fields">*</strong></label>
-            <input type="text" class="form-control inputField" id="loan_tenure" name="loan_tenure" autocomplete="off">
+            <input type="text" class="form-control inputField" id="loan_tenure" name="loan_tenure" onchange="tenure(this)" autocomplete="off">
         </div>
 
         <div class="col-md-6">
             <label class="labelField">Loan Purpose&nbsp;<strong class="required_Fields">*</strong></label>
-            <input class="form-control inputField" id="loan_purpose" name="loan_purpose" autocomplete="off" readonly>
-            <!-- <select class="form-control inputField" id="loan_purpose" name="loan_purpose" autocomplete="off">
+            <select class="form-control inputField" id="loan_purpose" name="loan_purpose" autocomplete="off">
                 <option value="">SELECT</option>
-                <option value="PERSONAL">PERSONAL</option>
+                <option value="TRAVEL">TRAVEL</option>
                 <option value="MEDICAL">MEDICAL</option>
-            </select> -->
+                <option value="ACADEMICS">ACADEMICS</option>
+                <option value="OBLIGATIONS">OBLIGATIONS</option>
+                <option value="OCCASION">OCCASION</option>
+                <option value="PURCHASE">PURCHASE</option>
+            </select>
         </div>
 
         <div class="col-md-6">
@@ -82,7 +81,7 @@
 
         <div class="col-md-6">
             <label class="labelField">Salary&nbsp;<strong class="required_Fields">*</strong></label>
-            <input type="text" class="form-control inputField" id="monthly_income" name="monthly_income" autocomplete="off">
+            <input type="text" class="form-control inputField" id="monthly_income" name="monthly_income" onchange="monthlyIncome(this)" autocomplete="off">
         </div>
 
         <div class="col-md-6">
@@ -96,7 +95,7 @@
         </div>
 
         <div class="col-md-6">
-            <label class="labelField">Mobile Alternate &nbsp;<strong class="required_Fields">*</strong></label>
+            <label class="labelField">Mobile Alternate</label>
             <input type="text" class="form-control inputField" id="alternate_mobile" name="alternate_mobile" autocomplete="off">
         </div>
 
