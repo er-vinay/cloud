@@ -109,7 +109,7 @@
                                                                             <td class="whitespace"><?= ($row->source) ? strtoupper($row->source) : '-' ?></td>
                                                                             <td class="whitespace"><?= ($row->status) ? strtoupper($row->status) : '-' ?></td>
                                                                             <?php if($this->uri->segment(1) == "holdleads") { ?>
-                                                                            <td class="whitespace"><?= $row->scheduled_date ?></td>
+                                                                            <td class="whitespace"><?= date('d-m-Y h:i:s', strtotime($row->scheduled_date)) ?></td>
                                                                             <?php } ?>
                                                                             <td class="whitespace"><?= date('d-m-Y h:i', strtotime($row->created_on)) ?></td>
                                                                         </tr>
