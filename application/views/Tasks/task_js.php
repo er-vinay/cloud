@@ -2,6 +2,7 @@
 <?php 
     $url =  $this->uri->segment(1); 
     $hold_date = date('d-m-Y', strtotime(timestamp .' + 2 days'));
+    echo "hold : ". $hold_date;
 ?>
 
 <div class="width-my">
