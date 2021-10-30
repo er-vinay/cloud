@@ -1,6 +1,7 @@
 <?php $this->load->view('Layouts/header') ?>
 <?php 
     $url =  $this->uri->segment(1); 
+    $hold_date = date('d-m-Y', strtotime(timestamp .' + 2 days'));
 ?>
 
 <div class="width-my">
@@ -237,7 +238,7 @@
                                     </div> 
                                     
                                     <div class="col-md-3 text-left">
-                                      <input type="datetime-local" class="form-control inputField" name="holdDurationDate" id="holdDurationDate" placeholder="Enter Remarks" style="width:100% !important;">
+                                      <input type="datetime-local" class="form-control inputField" name="holdDurationDate" id="holdDurationDate" placeholder="Enter Remarks" min="<?= timestamp ?>" max="<?= $hold_date ?>" style="width:100% !important;">
                                     </div>
                                     
                                     <div class="col-md-2 text-left">
