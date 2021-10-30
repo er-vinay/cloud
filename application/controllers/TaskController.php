@@ -28,19 +28,9 @@
 	    	$login = new IsLogin();
 	    	$login->index();
 		}
-	    
-	    // public function index1($stage)
-	    // {
-		   //  $conditions = "company_id='". company_id ."' AND product_id='". product_id ."' AND stage='". $stage ."'"; 
-	    //     $data['leadDetails'] = $this->Tasks->index($conditions); 
-	    // 	$user = $this->Admin->getUser(user_id);
-	    // 	$data['user'] = $user->row();
-     //    	$this->load->view('Tasks/GetLeadTaskList', $data);
-	    // }
 
 		public function index($stage)
 		{
-			// echo "<pre>".$this->uri->segment(1);
 	        $url = (base_url() . $this->uri->segment(1) ."/". $this->uri->segment(2));
 	        $totalCount = $this->Tasks->getLeadsCount($stage);
 	        $rowperpage = 10;
@@ -69,7 +59,14 @@
 	        $this->pagination->initialize($config);
 	        $data['links'] = $this->pagination->create_links();
 	        $data['pageURL'] = $url;
-	        $data['leadDetails'] = $this->Tasks->index($conditions, $rowperpage, $page);
+
+
+			if($this->uri->segment(1) == "holdleads") 
+			{
+	        	$data['leadDetails'] = $this->Tasks->holdleads($conditions, $rowperpage, $page);
+			}else{
+	        	$data['leadDetails'] = $this->Tasks->index($conditions, $rowperpage, $page);
+			}	
 	    	$this->load->view('Tasks/GetLeadTaskList', $data);
 		}
 
