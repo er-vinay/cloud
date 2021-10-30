@@ -19,7 +19,7 @@
             data : csrf_token,
             dataType : "json",
             success: function(response) {
-                $("#state"+ count).val(response[0].State);
+                $("#state"+ count).val(response[0].State.toUpperCase());
                 $("#city"+ count).empty().append('<option value="">Select</option>');
                 $("#district"+ count).empty().append('<option value="">Select</option>');
                 $("#city"+ count).append('<option value="'+ response[0].Division +'">'+ response[0].Division +'</option>');
