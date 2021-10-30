@@ -872,7 +872,7 @@
                     $("#p_alternate_mobile").val((res.alternate_mobile)?res.alternate_mobile:'-');
                     $("#p_email").val((res.email)?res.email:'-');
                     $("#p_alternate_email").val((res.alternate_email)?res.alternate_email:'-');
-                    $("#screenedBy").val((res.screenedBy)?res.screenedBy:'-');
+                    $("#screenedBy").val((res.screenedBy)?res.screenedBy.toUpperCase():'-');
                     $("#screenedOn").val((res.screenedOn)?res.screenedOn:'-');
 
 
