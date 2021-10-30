@@ -1,8 +1,9 @@
 <?php $this->load->view('Layouts/header') ?>
 <?php 
     $url =  $this->uri->segment(1); 
-    $hold_date = date('d-m-Y', strtotime(timestamp .' + 2 days'));
-    echo "hold : ". $hold_date;
+    $hold_date = date('d-m-Y h:i', strtotime(timestamp .' + 2 days'));
+    // echo "timestamp : ". timestamp . '<br>';
+    // echo "hold : ". $hold_date; exit;
 ?>
 
 <div class="width-my">
