@@ -1,6 +1,7 @@
 <?php $this->load->view('Layouts/header') ?>
 <?php 
-    $stage =  $this->uri->segment(2);
+    $uri = $this->uri->segment(1);
+    $stage = $this->uri->segment(2);
     
 ?>
 <span id="response" style="width: 100%;float: left;text-align: center;padding-top:-20%;"></span>
@@ -71,7 +72,7 @@
                                                                             <th class="whitespace"><b>User&nbsp;Type</b></th>
                                                                             <th class="whitespace"><b>Source</b></th>
                                                                             <th class="whitespace"><b>Status</b></th>
-                                                                            <?php if($this->uri->segment(1) == "holdleads") { ?>
+                                                                            <?php if($uri == "holdleads" || $uri == 'applicationHold') { ?>
                                                                             <th class="whitespace"><b>Hold&nbsp;On</b></th>
                                                                             <?php } ?>
                                                                             <th class="whitespace"><b>Applied&nbsp;On</b></th>
@@ -108,7 +109,7 @@
                                                                             <td class="whitespace"><?= ($row->user_type) ? strtoupper($row->user_type) : '-' ?></td>
                                                                             <td class="whitespace"><?= ($row->source) ? strtoupper($row->source) : '-' ?></td>
                                                                             <td class="whitespace"><?= ($row->status) ? strtoupper($row->status) : '-' ?></td>
-                                                                            <?php if($this->uri->segment(1) == "holdleads") { ?>
+                                                                            <?php if($uri == "holdleads" || $uri == 'applicationHold') { ?>
                                                                             <td class="whitespace"><?= (($row->scheduled_date) ? date('d-m-Y h:i', strtotime($row->scheduled_date)) : '-') ?></td>
                                                                             <?php } ?>
                                                                             <td class="whitespace"><?= date('d-m-Y h:i', strtotime($row->created_on)) ?></td>
