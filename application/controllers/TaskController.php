@@ -61,7 +61,7 @@
 	        $data['pageURL'] = $url;
 
 
-			if($this->uri->segment(1) == "holdleads") 
+			if($this->uri->segment(1) == "holdleads" || $this->uri->segment(1) == "applicationHold") 
 			{
 	        	$data['leadDetails'] = $this->Tasks->holdleads($conditions, $rowperpage, $page);
 			}else{
