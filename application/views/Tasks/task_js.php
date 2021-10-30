@@ -1,7 +1,8 @@
 <?php $this->load->view('Layouts/header') ?>
 <?php 
     $url =  $this->uri->segment(1); 
-    $hold_date = date('d-m-Y h:i', strtotime(timestamp .' + 2 days'));
+    // 2018-06-07T00:00
+    $hold_date = date('Y-m-d h:i:s', strtotime(timestamp .' + 2 days'));
     // echo "timestamp : ". timestamp . '<br>';
     // echo "hold : ". $hold_date; exit;
 ?>
