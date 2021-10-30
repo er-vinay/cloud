@@ -131,7 +131,7 @@
                 <input type="text" class="form-control inputField" id="state1" name="state1" datalist autocomplete="off" readonly>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-6">&nbsp;
                 <!-- <label class="labelField">District</label>
                 <select class="form-control inputField" id="district1" name="district1" autocomplete="off">
                 </select> -->
@@ -179,7 +179,7 @@
                 <input type="text" class="form-control inputField" id="state2" name="state2" datalist autocomplete="off" readonly>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-6">&nbsp;
                 <!-- <label class="labelField">District</label>
                 <select class="form-control inputField" id="district2" name="district2" autocomplete="off">
                 </select> -->
@@ -289,7 +289,7 @@
                 <input type="text" class="form-control inputField" id="state3" name="state3" datalist autocomplete="off" readonly>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-6">&nbsp;
                 <!-- <label class="labelField">District</label>
                 <select class="form-control inputField" id="district3" name="district3" autocomplete="off">
                 </select> -->
