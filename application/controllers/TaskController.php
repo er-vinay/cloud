@@ -89,7 +89,7 @@
             $data['leadDetails'] = $sql;
 
 	        $sql2 = $this->Tasks->select(['CAM.lead_id' => $lead_id], 'CAM.cam_status', $this->tbl_cam);
-	        $data['camDetails'] = json_encode(['cam_status' => 0]);
+	        $data['camDetails'] = (object) ['cam_status' => 0];
 	        if($sql2->num_rows() > 0){
 		        $data['camDetails'] = $sql2->row();
 		    }

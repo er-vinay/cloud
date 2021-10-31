@@ -251,49 +251,6 @@
                             </div>
                             <?php } ?>
 
-                                        <!-- <div calss="row" style="border-top: solid 1px #ddd;text-align: center; padding-top : 20px; padding-bottom: 20px; background: #f3f3f3;">
-                                            <div calss="col-md-12 text-center">
-                                                <button class="btn btn-primary" id="btnFormSaveCAM" style="text-align: center; padding-left: 50px; padding-right: 50px; font-weight: bold;height: 42px;">Save</button>
-                                                <button class="btn btn-success reject-button" onclick="RejectedLoan()">Reject</button>
-                                                <button class="btn btn-success lead-hold-button" onclick="holdLeadsRemark()">Hold</button>
-                                                <button class="btn btn-success lead-sanction-button" onclick="LeadRecommendation()">Recommend</button>
-                                            </div>  
-                                        </div> -->
-                                        <?php if($_SESSION['isUserSession']['role'] == creditManager){ ?>
-                                            <!-- <div id="divExpendReason" class="marging-footer-verifa">
-                                                <div style="margin-top: 15px">
-                                                    <div class="col-md-3 text-center">&nbsp;</div>
-                                                    <div class="col-md-4 text-center">
-                                                        <select class="js-select2 form-control inputField" name="resonForReject" id="resonForReject" autocomplete="off" style="float: right;width: 100% !important;height: 43px !important;">  
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-md-2 text-left">
-                                                     <button class="btn btn-primary" id="btnRejectApplication" onclick="ResonForRejectLoan()">Reject Application</button>
-                                                    </div>
-                                                    <div class="col-md-3 text-center">
-                                                      &nbsp;
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div id="divExpendReason2" class="marging-footer-verifa">
-                                                <div style="margin-top: 15px">
-                                                     <div class="col-md-3 text-left">&nbsp;</div>
-                                                    <div class="col-md-2 text-left">
-                                                      <input type="text" class="form-control inputField" name="remark" id="hold_remark" placeholder="Enter Remarks" style="width:100% !important;">
-                                                    </div> 
-                                                    
-                                                    <div class="col-md-2 text-left">
-                                                      <input type="date" class="form-control inputField" name="holdDurationDate" id="holdDurationDate" placeholder="Enter Remarks" style="width:100% !important;">
-                                                    </div>
-                                                    
-                                                    <div class="col-md-2 text-left">
-                                                        <button class="btn btn-primary" id="btnRejectApplication" onclick="saveHoldleads(<?= $leadDetails->lead_id ?>)">Hold Application</button>
-                                                    </div>
-                                                </div>
-                                            </div> -->
-                                        <?php } ?>
-                                        <!-- <span id="ResonBoxForHold"></span> -->
                         </div>
                     </div>
                 </div> 
