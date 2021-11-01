@@ -97,24 +97,6 @@
     		$this->load->view('Tasks/task_js.php', $data);
 			$this->load->view('Tasks/main_js.php');
 	    }
-	    
-	    // public function applicationinprocess()
-	    // {
-	    // 	$data['leadDetails'] = $this->Tasks->applicationinprocess(); 
-	    // 	$user = $this->Admin->getUser(user_id);
-	    // 	$data['user'] = $user->row();
-     //    	$this->load->view('Screener/applicationInProcess', $data);
-	    // }
-	    
-	    //  public function applicationHold()
-	    // {
-	    //     $data['title'] = "Applications Hold";
-	    // 	$data['leadDetails'] = $this->Tasks->applicationHold(); 
-	    // 	$user = $this->Admin->getUser(user_id);
-	    // 	$data['user'] = $user->row();
-	    	
-     //    	$this->load->view('Screener/applicationHold', $data);
-	    // }
 
 		public function getCity($state_id)
 	    {
@@ -154,31 +136,6 @@
 
         	echo json_encode($array);
 	    }
-	    
-	  //   public function inProcess($stage)
-	  //   {
-			// $conditions = "company_id='". company_id ."' AND product_id='". product_id ."' AND stage='". $stage ."'";
-	  //       $data['leadDetails'] = $this->Tasks->index($conditions); 
-	  //   	$user = $this->Admin->getUser(user_id);
-	  //   	$data['user'] = $user->row();
-   //      	$this->load->view('Tasks/GetLeadTaskList', $data);
-	  //   }
-	    
-	  //   public function leadSanctioned()
-	  //   {
-	  //   	$data['leadSanctioned'] = $this->Tasks->leadSanctioned();
-	  //   	$user = $this->Admin->getUser(user_id);
-	  //   	$data['user'] = $user->row();
-   //      	$this->load->view('Tasks/leadSanctioned', $data);
-	  //   }
-	    
-	  //   public function leadDisbursed()
-	  //   {
-	  //   	$data['leadDisbursed'] = $this->Tasks->leadDisbursed();
-	  //   	$user = $this->Admin->getUser(user_id);
-	  //   	$data['user'] = $user->row();
-   //      	$this->load->view('Tasks/leadDisbursed', $data);
-	  //   }
 	    
 	    public function scmConfRequest()
 	    {
