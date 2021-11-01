@@ -14,7 +14,7 @@
 
     	public function docs_type_master() {
 
-    	    return $this->db->select('distinct(docs_type)')->from($this->table_docs_master)->get();
+    	    return $this->db->select('distinct(docs_type), docs_required')->from($this->table_docs_master)->get();
 
     	}
 

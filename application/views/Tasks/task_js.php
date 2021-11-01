@@ -112,7 +112,7 @@
                                             <p id="selectDocsTypes" style="text-transform:uppercase; margin-top:20px;padding-left: 10px;padding-bottom: 15px;">
                                                 <?php $i = 1; foreach ($docs_master->result() as $row) : ?>
                                                 <label class="radio-inline">
-                                                    <input type="radio" name="selectdocradio" id="selectdocradio<?= $i ?>" value="<?= $row->docs_type ?>">&nbsp;<?= $row->docs_type ?>  
+                                                    <input type="radio" name="selectdocradio" id="selectdocradio<?= $i ?>" value="<?= $row->docs_type ?>">&nbsp;<?= $row->docs_type ?>  &nbsp;<strong class="required_Fields"><?php if($row->docs_required == 1) { echo "*"; } ?></strong>
                                                 </label>
                                                 <?php $i++; endforeach; ?>
                                             </p>
