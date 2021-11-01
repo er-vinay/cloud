@@ -1048,7 +1048,8 @@
                         html1 += '<tr><th>Bank&nbsp;A/C&nbsp;No.</th><td>'+ res.account +'</td><th>IFSC&nbsp;Code</th><td>'+ res.ifsc_code +'</td></tr>';
                         html1 += '<tr><th>Bank&nbsp;A/C&nbsp;Type</th><td>'+ res.account_type +'</td><th>Bank&nbsp;Name</th><td>'+ res.bank_name +'</td></tr>'; 
                         html1 += '<tr><th>Branch&nbsp;Name</th><td>'+ res.branch +'</td><th>Verification&nbsp;Status</th><td style="color: green">'+ res.account_status +'</td></tr>'; 
-                        html1 += '<tr><th>Created&nbsp;ON</th><td>'+ res.created_on +'</td><th>Verified&nbsp;ON</th><td>'+ res.updated_on +'</td></tr>';
+                        html1 += '<tr><th>Verified&nbsp;ON</th><td colspan="3">'+ res.updated_on +'</td></tr>';
+                        // <th>Created&nbsp;ON</th><td>'+ res.created_on +'</td>
                         // html1 += '<tr><th>Remark</th><td>'+ res.remark +'</td></tr>';
                         html1 += '<tbody></table>'; 
                         $('#disbursalBanking').html(html1);
