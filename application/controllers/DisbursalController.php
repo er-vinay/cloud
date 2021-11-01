@@ -145,7 +145,7 @@
         public function getCustomerDisbBanking($customer_id)
         {
         	$fetch = 'CB.id, CB.customer_id, CB.lead_id, CB.bank_name, CB.ifsc_code, CB.branch, CB.account, CB.confirm_account, CB.account_type, CB.account_status, CB.remark, CB.created_on, CB.updated_on';
-        	$conditions = ['CB.customer_id' => $customer_id, 'CB.account_status' => "YES"];
+        	$conditions = ['CB.customer_id' => $customer_id, 'CB.account_status' => "ACCOUNT AND NAME VERIFIED SUCCESSFULLY"];
         	$join2 = 'LD.customer_id = CB.customer_id';
         	return $this->Tasks->select($conditions, $fetch, $this->tbl_customer_banking);
         }
