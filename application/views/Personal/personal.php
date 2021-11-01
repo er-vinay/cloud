@@ -195,7 +195,7 @@
             </div>
             
             <div class="col-md-6">
-                <label class="labelField">Residing Since Required<span class="required_Fields">*</span></label>
+                <label class="labelField">Residing Since Required</label>
                 <input type="text" class="form-control inputField" id="residenceSince" name="residenceSince" autocomplete="off">
             </div>
 

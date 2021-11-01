@@ -1046,19 +1046,19 @@
                         html1 += '<tr><th>Customer&nbsp;ID</th><td>'+ res.customer_id +'</td><th>Bank&nbsp;A/C&nbsp;No.</th><td>'+ res.account +'</td></tr>';
                         html1 += '<tr><th>IFSC&nbsp;Code</th><td>'+ res.ifsc_code +'</td><th>Reconfirm&nbsp;Bank&nbsp;A/C&nbsp;No.</th><td>'+ res.confirm_account +'</td></tr>';
                         html1 += '<tr><th>Bank&nbsp;A/C&nbsp;Type</th><td>'+ res.account_type +'</td><th>Bank&nbsp;Name</th><td>'+ res.bank_name +'</td></tr>'; 
-                        html1 += '<tr><th>Branch&nbsp;Name</th><td>'+ res.branch +'</td><th>Active&nbsp;Account</th><td style="color: green">'+ res.account_status +'&nbsp;<i class="fa fa-check"></i></td></tr>'; 
+                        html1 += '<tr><th>Branch&nbsp;Name</th><td>'+ res.branch +'</td><th>Verification&nbsp;Status</th><td style="color: green">'+ res.account_status +'&nbsp;<i class="fa fa-check"></i></td></tr>'; 
                         html1 += '<tr><th>Created&nbsp;ON</th><td>'+ res.created_on +'</td><th>Updated&nbsp;ON</th><td>'+ res.updated_on +'</td></tr>';
                         html1 += '<tr><th>Remark</th><td>'+ res.remark +'</td></tr><tbody></table>'; 
                         $('#disbursalBanking').html(html1);
                     }
 
-                    var html = '<div class="table-responsive"><table class="table table-bordered table-striped"><thead><tr><th>#</th><th>Customer&nbsp;ID</th><th>Bank&nbsp;A/C&nbsp;No.</th><th>Reconfirm&nbsp;Bank&nbsp;A/C&nbsp;No.</th><th>IFSC&nbsp;Code</th><th>Bank&nbsp;A/C&nbsp;Type</th><th>Bank&nbsp;Name</th><th>Branch&nbsp;Name</th><th>Active&nbsp;Account</th><th>Remark</th><th>Created&nbsp;ON</th><th>Updated&nbsp;ON</th></tr></thead><tbody>';
+                    var html = '<div class="table-responsive"><table class="table table-bordered table-striped"><thead><tr><th class="whitespace">#</th><th class="whitespace">Customer&nbsp;ID</th><th class="whitespace">Bank&nbsp;A/C&nbsp;No.</th><th class="whitespace">Reconfirm&nbsp;Bank&nbsp;A/C&nbsp;No.</th><th class="whitespace">IFSC&nbsp;Code</th><th class="whitespace">Bank&nbsp;A/C&nbsp;Type</th><th class="whitespace">Bank&nbsp;Name</th><th class="whitespace">Branch&nbsp;Name</th><th class="whitespace">Active&nbsp;Account</th><th class="whitespace">Remark</th><th class="whitespace">Created&nbsp;ON</th><th class="whitespace">Updated&nbsp;ON</th></tr></thead><tbody>';
                     if(response.allDisbursalBankCount > 0)
                     {
                         var i = 1;
                         var html2 = "<option value=''>SELECT</option>";
                         $.each(response.allDisbursalBank, function(key, value){
-                            html += '<tr><td>'+ i +'</td><td>'+ value.customer_id +'</td><td>'+ value.account +'</td><td>'+ value.confirm_account +'</td><td>'+ value.ifsc_code +'</td><td>'+ value.account_type +'</td><td>'+ value.bank_name +'</td><td>'+ value.branch +'</td><td>'+ value.account_status +'</td><td>'+ value.remark +'</td><td>'+ value.created_on +'</td><td>'+ value.updated_on +'</td></tr>';
+                            html += '<tr><td class="whitespace">'+ i +'</td><td class="whitespace">'+ value.customer_id +'</td><td class="whitespace">'+ value.account +'</td><td class="whitespace">'+ value.confirm_account +'</td><td class="whitespace">'+ value.ifsc_code +'</td><td class="whitespace">'+ value.account_type +'</td><td class="whitespace">'+ value.bank_name +'</td><td class="whitespace">'+ value.branch +'</td><td class="whitespace">'+ value.account_status +'</td><td class="whitespace">'+ value.remark +'</td><td class="whitespace">'+ value.created_on +'</td><td class="whitespace">'+ value.updated_on +'</td></tr>';
                             $('#list_bank_AC_No option').val(value.account);
                             html2 += ("<option value='"+ value.id +"'>"+ value.account +"</option>");
                             i++;
@@ -1659,9 +1659,9 @@
                     $('#eligible_loan').val(response.eligible_loan);
                 }
             });
-            $('#scm_conf_init').val('<?= date('d-m-Y h:i:s', strtotime(timestamp)) ?>');
+            //$('#scm_conf_init').val('<?= date('d-m-Y h:i:s', strtotime(timestamp)) ?>');
         }else{
-            $('#scm_conf_init').val('');
+            //$('#scm_conf_init').val('');
         }
     }
 </script>

@@ -275,14 +275,13 @@
 	        	{
 	        		$id = $this->input->post('list_bank_AC_No');
 	        		$customer_id = $this->input->post('customer_id');
-	        		$bankVerification = $this->input->post('bank_ac_verification');
 					$conditions2 = ['CB.customer_id' => $customer_id];
 					$data2 = ['CB.account_status' => "NO"];
 	        		$this->Tasks->globalUpdate($conditions2, $data2, $this->tbl_customer_banking);
 					
 					$data = [
-					    'account_status' 			=> ($bankVerification == "ACCOUNT AND NAME VERIFIED SUCCESSFULLY") ? "YES" : "NO",
-					    'remark' 					=> $bankVerification ." - ". $this->input->post('remarks'),
+					    'account_status' 			=> $this->input->post('bank_ac_verification'),
+					    'remark' 					=> $this->input->post('remarks'),
 					    'updated_on' 				=> timestamp
 					];
 

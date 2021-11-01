@@ -1425,7 +1425,7 @@
 	        		$json['err'] = validation_errors();
 	        	} else {
 	        		$conditions = ['C.customer_id' => $this->input->post('customer_id')];
-	        		
+	        		$scm_conf = $this->input->post('district2');
 					$dataResidence = [
 					    'current_house' 			=> $this->input->post('hfBulNo1'),
 					    'current_locality' 			=> $this->input->post('lcss1'),
@@ -1446,6 +1446,12 @@
 					    'current_residence_type' 	=> ($this->input->post('presentResidenceType'))?$this->input->post('presentResidenceType') : "OWNED",
 					    'current_residence_since' 	=> $this->input->post('residenceSince')
 					];
+					$leadConfirmation = [
+						'scm_conf' 					=> ($scm_conf == "YES") ? $scm_conf : "NO",
+						'scm_conf_initiated_on' 	=> ($scm_conf == "YES") ? timestamp : "-"
+					];
+
+	        		// $this->Tasks->globalUpdate($conditions, $leadConfirmation, 'leads');
 	        		$result = $this->Tasks->globalUpdate($conditions, $dataResidence, $this->tbl_customer);
 	        		if($result == true)
 	        		{

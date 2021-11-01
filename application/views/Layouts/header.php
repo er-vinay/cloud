@@ -35,7 +35,8 @@
             <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/summernote/0.8.7/summernote.css">
             
             <link rel="stylesheet" href="<?= base_url('public/front/css/dataTable/dataTables_1.10.25.min.css') ?>"> <!-- datatable -->
-        
+            <link rel="stylesheet" href="<?= base_url('public/front'); ?>/dist/accordion.css">
+            
         </head>
     <body>
         <!-- <div id="cover"> 
@@ -81,14 +82,85 @@
                             </ul>
                         </nav>
                     </div>
-        
-                    <div class="col-md-7 col-xs-4 text-right nav-hidee" style="padding-top:10px;">    
-                        <a href="<?= base_url('dashboard') ?>" class="logout-lac" title="Dashboard"><i class="fa fa-home"></i></a>  
-                        <a href="<?= base_url('search') ?>" class="logout-lac" title="Search"><i class="fa fa-search"></i> </a>
-                        <!-- <a href="<?= base_url('search') ?>" class="logout-lac" title="Notification"><i class="fa fa-bell"></i><span style="display: table-caption;">10</span></a> -->
-                        <a href="<?= base_url('logout'); ?>" class="logout-lac" title="Logout"><i class="fa fa-sign-out"></i></a>  
+                    <div class="col-md-7 col-xs-4 text-right nav-hidee my-ul">
+<style>
+.my-ul ul {
+}
+.my-ul ul {
+float: right;
+margin-left: -10px;
+}
+.my-ul ul li {
+float: left;
+border-right: solid 1px #ccc;
+padding: 15px 10px;
+}
+.drop-menu {
+width: 100% !important;
+float: left !important;
+padding: 0px !important;
+border-top: solid 1px #ccc;
+border-right: none !important;
+}
+.drop-menu a{
+color: #747373 !important;
+font-size: 12px;
+}
+.drop-menu a:hover{
+color: #000 !important;
+}
+.dropdown-menu {
+padding-top: 0px !important;
+margin-top: 16px !important;
+box-shadow: 0 0 7px #ccc;
+}
+.my-ul ul .fa
+{color:#0d638f !important;}
+.noti-ellips
+{
+position: absolute;
+border-radius: 100%;
+font-size: 8px;
+top: -11px;
+z-index: 9999;
+background: #e48d48;
+color: #fff;
+width: 17px;
+height: 18px;
+float: left;
+line-height:19px;
+left: 7px;
+text-align: center;
+}
+</style>
+                    <ul>
+                    <li><a href="<?= base_url('dashboard') ?>" class="logout-lac" title="Dashboard"><i class="fa fa-home"></i></a>  </li>
+                    <li> <a href="<?= base_url('search') ?>" class="logout-lac" title="Search"><i class="fa fa-search"></i> </a></li>
+
+                    <li><div class="dropdown">
+                    <i class="fa fa-bell dropdown-toggle" id="menu1" data-toggle="dropdown"></i> <span class="noti-ellips">100</span>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    <li role="presentation" class="drop-menu"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
+                    <li role="presentation" class="drop-menu"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
+                    <li role="presentation" class="drop-menu"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
+                    <li role="presentation" class="drop-menu"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+                    </ul>
+                    </div></li>
+
+                    <li><a href="<?= base_url('logout'); ?>" class="logout-lac" title="Logout"><i class="fa fa-sign-out"></i></a>  </li>
+                    <li><a href="<?= base_url('myProfile') ?>" class="logout-lac" title="<?= $userDetails->user_id ?>"><?= $_SESSION['isUserSession']['name'] ?></a></li>
+
+                    </ul>
+                        
+                       
+                           
+                            
+                        
+
+
+                        
                          
-                        <a href="<?= base_url('myProfile') ?>" class="logout-lac" title="<?= $userDetails->user_id ?>"><?= $_SESSION['isUserSession']['name'] ?></a>
+                        
                     </div>
                     <div class="col-md-3 col-xs-4">
                         <a href="<?= $logo->link ?>" target="_blank">
