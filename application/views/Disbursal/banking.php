@@ -100,7 +100,7 @@
         </div>
 
         <div class="col-md-12">
-            <label class="labelField">Remark&nbsp;<strong class="required_Fields">*</strong> </label>
+            <label class="labelField">Remark</label>
             <textarea class="form-control" id="remarks" name="remarks" autocomplete="off" style="width: 76%;"></textarea>
         </div>
     </form>

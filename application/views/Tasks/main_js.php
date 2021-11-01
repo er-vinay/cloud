@@ -1043,12 +1043,14 @@
                         $('#btnAddBank').toggle();
                         var res = response.disbursalBank;
                         var html1 = '<table class="table table-bordered table-striped"><tbody>';
-                        html1 += '<tr><th>Customer&nbsp;ID</th><td>'+ res.customer_id +'</td><th>Bank&nbsp;A/C&nbsp;No.</th><td>'+ res.account +'</td></tr>';
-                        html1 += '<tr><th>IFSC&nbsp;Code</th><td>'+ res.ifsc_code +'</td><th>Reconfirm&nbsp;Bank&nbsp;A/C&nbsp;No.</th><td>'+ res.confirm_account +'</td></tr>';
+                        // <th>Customer&nbsp;ID</th><td>'+ res.customer_id +'</td>
+                        // <th>Reconfirm&nbsp;Bank&nbsp;A/C&nbsp;No.</th><td>'+ res.confirm_account +'</td>
+                        html1 += '<tr><th>Bank&nbsp;A/C&nbsp;No.</th><td>'+ res.account +'</td><th>IFSC&nbsp;Code</th><td>'+ res.ifsc_code +'</td></tr>';
                         html1 += '<tr><th>Bank&nbsp;A/C&nbsp;Type</th><td>'+ res.account_type +'</td><th>Bank&nbsp;Name</th><td>'+ res.bank_name +'</td></tr>'; 
-                        html1 += '<tr><th>Branch&nbsp;Name</th><td>'+ res.branch +'</td><th>Verification&nbsp;Status</th><td style="color: green">'+ res.account_status +'&nbsp;<i class="fa fa-check"></i></td></tr>'; 
-                        html1 += '<tr><th>Created&nbsp;ON</th><td>'+ res.created_on +'</td><th>Updated&nbsp;ON</th><td>'+ res.updated_on +'</td></tr>';
-                        html1 += '<tr><th>Remark</th><td>'+ res.remark +'</td></tr><tbody></table>'; 
+                        html1 += '<tr><th>Branch&nbsp;Name</th><td>'+ res.branch +'</td><th>Verification&nbsp;Status</th><td style="color: green">'+ res.account_status +'</td></tr>'; 
+                        html1 += '<tr><th>Created&nbsp;ON</th><td>'+ res.created_on +'</td><th>Verified&nbsp;ON</th><td>'+ res.updated_on +'</td></tr>';
+                        // html1 += '<tr><th>Remark</th><td>'+ res.remark +'</td></tr>';
+                        html1 += '<tbody></table>'; 
                         $('#disbursalBanking').html(html1);
                     }
 
