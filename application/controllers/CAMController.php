@@ -218,6 +218,7 @@
 		public function calculateMedian($date) 
 		{
 			$salary_amount = explode("-", $date);
+
 			$dt = explode("-", $date);
 			$d = 0;
 			$daysGay = 0;
@@ -249,51 +250,76 @@
 				$salary_on_time = "HIGH";
 			}
 
-			$data['average_salary'] = $this->averageSalary($salary_amount);
-			$data['salary_variance'] = $this->salaryVariance($salary_amount);
 			$data['salary_on_time'] = $salary_on_time;
 			$data['next_pay_date'] = $next_pay_date;
 			echo json_encode($data);
 		}
 
-		public function averageSalary($arr) {
-		    sort($arr);
-		    $count = count($arr);
-		    $middleval = floor(($count-1)/2);
-		    if ($count % 2) {
-		        $median = $arr[$middleval];
-		    } else {
-		        $low = $arr[$middleval];
-		        $high = $arr[$middleval+1];
-		        $median = (($low+$high)/2);
-		    }
-		    return $median;
+		public function averageSalary($arr) 
+		{
+			$arr = explode("-", $arr);
+			// echo "<pre>"; print_r($arr); exit;
+			$salary1 = ($arr[0] != "") ? $arr[0] : 0;
+			$salary2 = ($arr[1] != "") ? $arr[1] : 0;
+			$salary3 = ($arr[2] != "") ? $arr[2] : 0;
+
+			$average_salary = $salary1;
+			if($salary1 >= $salary2 && $salary1 >= $salary3){
+				$average_salary = ($salary1 + $salary2 + $salary3)/3;
+			} else if($salary2 >= $salary1 && $salary2 >= $salary3){
+				$average_salary = ($salary1 + $salary2 + $salary3)/3;
+			} else if($salary3 >= $salary1 && $salary3 >= $salary2){
+				$average_salary = ($salary1 + $salary2 + $salary3)/3;
+			}
+			$data['average_salary'] = round($average_salary);
+			$data['salary_variance'] = $this->salaryVariance($arr);
+			echo json_encode($data);
 		}
+
+		// public function averageSalary($arr) {
+		//     sort($arr);
+		//     $count = count($arr);
+		//     $middleval = floor(($count-1)/2);
+		//     if ($count % 2) {
+		//         $median = $arr[$middleval];
+		//     } else {
+		//         $low = $arr[$middleval];
+		//         $high = $arr[$middleval+1];
+		//         $median = (($low+$high)/2);
+		//     }
+		//     return $median;
+		// }
 
 		public function salaryVariance($salary) 
 		{
-		    sort($salary);	
+		    sort($salary);
 		    $x = 0;
 		    $y = 0;
-			if($salary[0] > $salary[1]){
-				$x = $salary[0] - $salary[1] / $salary[0];
-			} else if($salary[1] >= $salary[0]) {
-				$x = $salary[1] - $salary[0] / $salary[1];
-			} 
-			if($salary[1] >= $salary[2]) {
-				$y = $salary[1] - $salary[2] / $salary[1];
-			} else if($salary[2] >= $salary[1]) {
-				$y = $salary[2] - $salary[1] / $salary[2];
-			} else if($salary[0] >= $salary[2]) {
-				$x = $salary[0] - $salary[2] / $salary[0];
-			}
-			$variance = "-";
-			$sVariance = ($x + $y) / 2;
-			if($sVariance <= 5){
-				$variance = "LOW";
-			} else if($sVariance > 5 && $sVariance <= 9){
-				$variance = "MEDIUM";
-			} else if($sVariance <= 10){
+		    if($salary[0] != '' && $salary[1] != '' && $salary[2] != '')
+		    {
+				if($salary[0] > $salary[1]){
+					$x = ($salary[0] - $salary[1]) / $salary[0];
+				} else if($salary[1] >= $salary[0]) {
+					$x = ($salary[1] - $salary[0]) / $salary[1];
+				} 
+				if($salary[1] >= $salary[2]) {
+					$y = ($salary[1] - $salary[2]) / $salary[1];
+				} else if($salary[2] >= $salary[1]) {
+					$y = ($salary[2] - $salary[1]) / $salary[2];
+				} else if($salary[0] >= $salary[2]) {
+					$x = ($salary[0] - $salary[2]) / $salary[0];
+				}
+
+				$variance = "-";
+				$sVariance = ($x + $y) / 2;
+				if($sVariance <= 5){
+					$variance = "LOW";
+				} else if($sVariance > 5 && $sVariance <= 9){
+					$variance = "MEDIUM";
+				} else if($sVariance <= 10){
+					$variance = "HIGH";
+				}
+			} else {
 				$variance = "HIGH";
 			}
 		    return $variance;

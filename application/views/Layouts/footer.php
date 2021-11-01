@@ -62,7 +62,7 @@
             </div>
 
         </footer>
-        
+
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
          <script src="<?= base_url('public/front'); ?>/dist/jquery.expander.min.js"></script>
 
@@ -339,18 +339,19 @@
 
 
 
-                $("#cc_paymentDueDate, #repayment_date, #repayment_date").datepicker({
-
+                $("#cc_paymentDueDate, #repayment_date").datepicker({
                     format: 'dd-mm-yyyy',
-
                     todayHighlight: true,
-
                     autoclose: true,
-
                     startDate: new Date(),
-
                     endDate: '+30d'
-
+                });
+                $("#next_pay_date").datepicker({
+                    format: 'dd-mm-yyyy',
+                    todayHighlight: true,
+                    autoclose: true,
+                    startDate: new Date(),
+                    endDate: '+60d'
                 });
 
                 

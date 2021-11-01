@@ -78,7 +78,7 @@
                 </div>
                 
                 <div class="col-sm-6">
-                    <label class="labelField">Salary Credit&nbsp;<span class="required_Fields">*</span></label>
+                    <label class="labelField">Salary Credit</label>
                     <select class="form-control inputField" id="salary_credit2" name="salary_credit2" autocomplete="off">
                         <option value="">SELECT</option>
                         <option value="01">JANUARY</option>
@@ -105,7 +105,7 @@
                 </div>
                 
                 <div class="col-sm-6">
-                    <label class="labelField">Salary Credit&nbsp;<span class="required_Fields">*</span> </label>
+                    <label class="labelField">Salary Credit </label>
                     <select class="form-control inputField" id="salary_credit3" name="salary_credit3" autocomplete="off">
                         <option value="">SELECT</option>
                         <option value="01">JANUARY</option>
@@ -133,7 +133,7 @@
 
                 <div class="col-md-6">
                     <label class="labelField">Next Pay Date</label>
-                    <input type="text" class="form-control inputField" id="next_pay_date" name="next_pay_date" value="-" autocomplete="off" readonly>
+                    <input type="text" class="form-control inputField" id="next_pay_date" name="next_pay_date" value="-" autocomplete="off">
                 </div>
 
                 <div class="col-md-6">

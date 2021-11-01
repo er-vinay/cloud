@@ -189,6 +189,7 @@ $route['getReferenceDetails/(:num)'] = 'TaskController/getReferenceDetails/$1';
 $route['calculateAmount'] = 'CAMController/calculateAmount';
 $route['checkLoanEligibility'] = 'CAMController/checkLoanEligibility';
 $route['calculateMedian/(:any)'] = 'CAMController/calculateMedian/$1';
+$route['averageSalary/(:any)'] = 'CAMController/averageSalary/$1';
 $route['viewCAM/(:num)/(:any)'] = 'CAMController/viewCAM/$1/$2';
 $route['downloadCAM/(:num)'] = 'CAMController/downloadCAM/$1';
 $route['getCAMDetails/(:num)'] = 'CAMController/getCAMDetails/$1';

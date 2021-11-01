@@ -1287,16 +1287,17 @@
         var s_cr2 = $('#salary_credit2_amount').val();
         var s_cr3 = $('#salary_credit3_amount').val();
 
-        if (s_cr1 != "" && s_cr2 != "" && s_cr3 != "")
+        if (s_cr1 != "" || s_cr2 != "" || s_cr3 != "")
         {
             var salaryAmt = s_cr1 +'-'+ s_cr2 +'-'+ s_cr3;
             $.ajax({
-                url: "<?= base_url('calculateMedian/'); ?>"+salaryAmt,
+                url: "<?= base_url('averageSalary/'); ?>"+salaryAmt,
                 type: "POST",
                 data : {csrf_token},
                 dataType : "json",
                 success: function(response) {
                     $('#median_salary').val(response['average_salary']);
+                    $('#salary_variance').val(response['salary_variance']);
                 }
             });
         }
@@ -1322,8 +1323,7 @@
                 dataType : "json",
                 success: function(response) {
                     $('#salary_on_time').val(response['salary_on_time']);
-                    $('#next_pay_date').val(response['next_pay_date']);
-                    $('#salary_variance').val(response['salary_variance']);
+                    // $('#next_pay_date').val(response['next_pay_date']);
                 }
             });
         }
