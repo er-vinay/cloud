@@ -294,12 +294,29 @@
                             $ApplicationId = (string)$xx->ResponseInfo->ApplicationId;
                             
                             $data = [
-                                    'lead_id'               => $lead_id,
-                                    'customer_id'           => $customer_id,
-                                    'applicationId'         => $ApplicationId,
-                                    'created_at'            => timestamp,
-                                ];
+                                'lead_id'               => $lead_id,
+                                'customer_id'           => $customer_id,
+                                'applicationId'         => $ApplicationId,
+                                'created_at'            => timestamp,
+                            ];
+
+                            $data2 = [
+                                'lead_id'               => $lead_id,
+                                'customer_name'         => $name,
+                                'customer_mobile'       => $mobile,
+                                'pancard'               => $pancard,
+                                'loan_amount'            => $loan_amount,
+                                'dob'                   => $dateOfBirth,
+                                'gender'                => $gender,
+                                'city'                  => $city,
+                                'state_id'              => $state_id,
+                                'pincode'               => $pincode,
+                                'api1_request'          => $input_xml,
+                                'api1_response'         => $dataResponse,
+                                'applicationId'         => $ApplicationId,
+                            ];
                             $this->db->insert('tbl_cibil', $data);
+                            $this->db->insert('tbl_cibil_log', $data2);
                             $this->getApplication($lead_id, $ApplicationId, $customer_id);
 
                             // echo "else called : <pre>"; print_r($dataResponse); exit;
@@ -367,8 +384,15 @@
             $documentId = (string)$xx->ResponseInfo->DocumentDetails->DocumentMetaData->DocumentId;
             
             $data = ['document_Id' => $documentId];
+
+            $data2 = [
+                    'api2_request'          => $xml2,
+                    'api2_response'         => $data2,
+                    'document_Id'           => $documentId,
+                ];
                 
             $this->db->where('lead_id', $lead_id)->update('tbl_cibil', $data);
+            $this->db->where('lead_id', $lead_id)->update('tbl_cibil_log', $data2);
             $this->getDocument($lead_id, $ApplicationId, $documentId, $customer_id);
         }
         
@@ -445,8 +469,21 @@
                 'overDueAmount'         => strval($xml->body->table->tr[29]->td->table->tr[4]->td[3]->span[0]),
                 'zeroBalance'           => strval($xml->body->table->tr[29]->td->table->tr[5]->td[1]->span[0])
             ];
+            $data2 = [
+                'api3_request'          => $xml3,
+                'api3_response'         => $data3,
+                'cibil_file'            => $htmlResult,
+                'memberCode'            => $xml->body->table->tr[1]->td->table->tr[1]->td[0]->table->tr[1]->td[1],
+                'cibilScore'            => $cibilScore,
+                'totalAccount'          => strval($xml->body->table->tr[29]->td->table->tr[3]->td[1]->span[0]),
+                'totalBalance'          => strval($xml->body->table->tr[29]->td->table->tr[3]->td[2]->span[0]),
+                'overDueAccount'        => strval($xml->body->table->tr[29]->td->table->tr[4]->td[1]->span[0]),
+                'overDueAmount'         => strval($xml->body->table->tr[29]->td->table->tr[4]->td[3]->span[0]),
+                'zeroBalance'           => strval($xml->body->table->tr[29]->td->table->tr[5]->td[1]->span[0])
+            ];
             $this->db->where('lead_id', $lead_id)->update('leads', ['check_cibil_status'=> 1, 'cibil'=> $cibilScore]); 
             $this->db->where('lead_id', $lead_id)->update('tbl_cibil', $data); 
+            $this->db->where('lead_id', $lead_id)->update('tbl_cibil_log', $data2); 
             $json['customer_id'] = $customer_id;
             $json['msg'] = 'Cibil generated successfully.';
             echo json_encode($json);
