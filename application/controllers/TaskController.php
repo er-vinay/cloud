@@ -60,14 +60,16 @@
 	        $data['pageURL'] = $url;
 
 		    $conditions = "LD.company_id='". company_id ."' AND LD.product_id='". product_id ."' AND LD.stage='". $stage ."'";
-		    
+
 			if($this->uri->segment(1) == "holdleads" || $this->uri->segment(1) == "applicationHold") {
 	        	$data['leadDetails'] = $this->Tasks->holdleads($conditions, $config["per_page"], $page);
 			}else{
         		$data['leadDetails'] = $this->Tasks->index($conditions, $config["per_page"], $page);
 			}
-			echo "<pre>". $conditions; print_r($data['leadDetails']->num_rows()); exit;
-	    	$this->load->view('Tasks/GetLeadTaskList', $data);
+			echo "<pre>". $conditions. ', per_page : '. $config["per_page"]. ', page: '. $page. ', '; print_r($data['leadDetails']->num_rows());
+
+			echo $data['links'];
+	    	// $this->load->view('Tasks/GetLeadTaskList', $data);
 		}
 
 		public function getLeadDetails($lead_id)
