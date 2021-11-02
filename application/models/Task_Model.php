@@ -80,7 +80,7 @@
 
 		public function getLeadsCount($conditions)
 	    {
-			$result = $this->db->select("LD.lead_id")->where($conditions)->from($this->table . ' LD')->get();
+			$result = $this->db->select("LD.lead_id")->where($conditions)->from('leads LD')->get();
 			return $result->num_rows();
 	    }
 
