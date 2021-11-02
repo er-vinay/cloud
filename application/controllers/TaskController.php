@@ -32,7 +32,6 @@
 		public function index($stage)
 		{
 	        $url = (base_url() . $this->uri->segment(1) ."/". $this->uri->segment(2));
-	        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
 	        $config = array();
 	        $config["base_url"] = $url;
@@ -55,6 +54,7 @@
 	        $config['last_tag_close']  = '</span></li>';
 
 	        $this->pagination->initialize($config);
+	        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 	        $data['links'] = $this->pagination->create_links();
 	        $data['pageURL'] = $url;
 
