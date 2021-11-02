@@ -22,14 +22,6 @@
                 $query = $this->Tasks->join_two_table_with_where($conditions, $fetch, $table1, $table2, $join2);
                 $leadDetails = $query->row();
 
-                // $f_name = (($leadDetails->first_name != '-') || ($leadDetails->first_name != '')) : $leadDetails->first_name : '';
-                // $m_name = (($leadDetails->middle_name != '-') || ($leadDetails->middle_name != '')) : $leadDetails->middle_name : '';
-                // $s_name = (($leadDetails->sur_name != '-') || ($leadDetails->sur_name != '')) : $leadDetails->sur_name : '';
-
-                // $name = $f_name ." ". $m_name ." ". $s_name;
-
-                // if($leadDetails->check_cibil_status == 0)
-
                 // if($leadDetails->check_cibil_status == 0)
                 // {
                     if(!empty($lead_id))
@@ -46,7 +38,7 @@
                         $city       = $leadDetails->city;
                         $address    = $leadDetails->city;
                         $pincode    = $leadDetails->pincode;
-                        $loan_amount    = $leadDetails->loan_amount;
+                        $loan_amount    = ($leadDetails->loan_amount) ? $leadDetails->loan_amount : 10000;
     
                         if(empty($name) || empty($mobile) || empty($pancard) || empty($gender) || empty($dob) || empty($state_id) || empty($city) || empty($pincode))
                         {
@@ -61,7 +53,6 @@
                         } 
                         else 
                         {
-                            $loanAmount = $loan_amount;
                             $day = date('d', strtotime($dob));
                             $month = date("m", strtotime($dob));
                             $year = date("Y", strtotime($dob));
@@ -70,7 +61,6 @@
                             $scoreType = '08';
                             $purpose = '06';  // 01 - 06
                             $solutionSetId = '140';
-                            
             
                             $query_state = $this->db->select("state")->where("state_id", $state_id)->get('tbl_state')->row_array();
                             $stateName = ucwords(strtolower($query_state['state']));
@@ -245,7 +235,7 @@
                                   <Field key="ApplicationData">
                                    &lt;ApplicationData&gt;
                                   &lt;Purpose&gt;10&lt;/Purpose&gt;
-                                  &lt;Amount&gt;'. $loanAmount .'&lt;/Amount&gt;
+                                  &lt;Amount&gt;'. $loan_amount .'&lt;/Amount&gt;
                                   &lt;ScoreType&gt;08&lt;/ScoreType&gt;
                                   &lt;GSTStateCode&gt;07&lt;/GSTStateCode&gt;
                                   
