@@ -78,9 +78,10 @@
 				->from('tbl_city CT')->get();
 		}
 
-		public function getLeadsCount($conditions)
+		public function getLeadsCount($stage)
 	    {
-			return $this->db->select("LD.lead_id")->where($conditions)->from('leads LD')->get()->num_rows();
+			$result = $this->db->select("LD.lead_id")->where('LD.stage', $stage)->from($this->table . ' LD')->get();
+			return $result->num_rows();
 	    }
 
 		public function insert($data=null, $table=null)
