@@ -59,7 +59,7 @@
 	        $data['links'] = $this->pagination->create_links();
 	        $data['pageURL'] = $url;
 
-		    $conditions = "LD.company_id='". company_id ."' AND LD.product_id='". product_id ."' AND LD.stage='". $stage ."'";
+		    $conditions = "LD.stage='". $stage ."'";
 
 			if($this->uri->segment(1) == "holdleads" || $this->uri->segment(1) == "applicationHold") {
 	        	$data['leadDetails'] = $this->Tasks->holdleads($conditions, $config["per_page"], $page);
