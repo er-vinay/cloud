@@ -67,7 +67,7 @@
 			}else{
 	        	$data['leadDetails'] = $this->Tasks->index($conditions, $rowperpage, $page);
 			}
-			echo "<pre>". $data['links']; print_r($data['leadDetails']->num_rows()); exit;
+			echo "<pre>". $totalCount; print_r($data['leadDetails']->num_rows()); exit;
 	    	$this->load->view('Tasks/GetLeadTaskList', $data);
 		}
 
