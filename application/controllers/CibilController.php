@@ -14,7 +14,7 @@
             if ($this->input->server('REQUEST_METHOD') == 'POST') 
             {   
                 $lead_id = $this->input->post('lead_id');
-                $fetch = 'C.customer_id, C.first_name as name, C.middle_name, C.sur_name, C.mobile, C.dob, C.pancard, C.gender, LD.state_id, LD.city, LD.pincode, LD.check_cibil_status, LD.loan_amount';
+                $fetch = 'C.customer_id, C.first_name, C.middle_name, C.sur_name, C.mobile, C.dob, C.pancard, C.gender, LD.state_id, LD.city, LD.pincode, LD.check_cibil_status, LD.loan_amount';
                 $conditions = ['LD.lead_id' => $lead_id];
                 $table1 = 'leads LD';
                 $table2 = 'customer C';
@@ -22,13 +22,19 @@
                 $query = $this->Tasks->join_two_table_with_where($conditions, $fetch, $table1, $table2, $join2);
                 $leadDetails = $query->row();
 
+                $f_name = ($leadDetails->first_name != '-' || $leadDetails->first_name != '') : $leadDetails->first_name : '';
+                $m_name = ($leadDetails->middle_name != '-' || $leadDetails->middle_name != '') : $leadDetails->middle_name : '';
+                $s_name = ($leadDetails->sur_name != '-' || $leadDetails->sur_name != '') : $leadDetails->sur_name : '';
+
+                $name = $f_name ." ". $m_name ." ". $s_name;
+
                 // if($leadDetails->check_cibil_status == 0)
                 if($leadDetails->check_cibil_status == 0)
                 {
                     if(!empty($lead_id))
                     {
                         $customer_id= $leadDetails->customer_id;
-                        $name       = $leadDetails->name;
+                        $name       = $name;
                         $mobile     = $leadDetails->mobile;
                         $pancard    = $leadDetails->pancard;
                         $gender     = $leadDetails->gender;
@@ -41,6 +47,7 @@
     
                         if(empty($name) || empty($mobile) || empty($pancard) || empty($gender) || empty($dob) || empty($state_id) || empty($city) || empty($pincode))
                         {
+                            echo "if called : <pre>"; print_r($name); exit;
                             foreach($leadDetails as $key => $value) {
                                 if(empty($value)){
                                     $error .= $key .", ";
@@ -52,6 +59,7 @@
                         } 
                         else 
                         {
+                            echo "else called : <pre>"; print_r($name); exit;
                             $loanAmount = $loan_amount;
                             $day = date('d', strtotime($dob));
                             $month = date("m", strtotime($dob));
