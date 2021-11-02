@@ -37,7 +37,7 @@
 
 	        $config = array();
 	        $config["base_url"] = $url;
-	        $config["total_rows"] = $this->Tasks->getLeadsCount($conditions); // get count leads
+	        $config["total_rows"] = $this->Tasks->getLeadsCount($stage); // get count leads
 	        $config["per_page"] = 10;
 	        $config["uri_segment"] = 3;
 	        $config['full_tag_open']    = '<div class="pagging text-right"><nav><ul class="pagination">';
