@@ -33,7 +33,7 @@
 		{
             $this->db->select('LD.lead_id, LD.customer_id, LD.application_no, L.loan_no, CAM.tenure, C.first_name, C.middle_name, C.sur_name, C.email, C.dob, C.mobile, C.pancard, LD.user_type, ST.state, LD.city, LD.created_on, LD.source, LD.status, LD.ip, LD.coordinates, LD.imei_no, CE.salary_mode, CE.monthly_income');
             $this->db->from($this->table. ' LD');
-            $this->db->join($this->table_state.' ST', 'ST.state_id = LD.state_id');
+            $this->db->join($this->table_state.' ST', 'ST.state_id = LD.state_id', 'left');
             $this->db->join('customer C', 'C.customer_id = LD.customer_id', 'left');
             $this->db->join('customer_employment CE', 'CE.lead_id = LD.lead_id', 'left');
             $this->db->join('credit_analysis_memo CAM', 'CAM.lead_id = LD.lead_id', 'left');
