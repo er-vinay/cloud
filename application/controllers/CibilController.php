@@ -29,6 +29,8 @@
                 // $name = $f_name ." ". $m_name ." ". $s_name;
 
                 // if($leadDetails->check_cibil_status == 0)
+                echo "if called : <pre>"; print_r($leadDetails); exit;
+                
                 if($leadDetails->check_cibil_status == 0)
                 {
                     if(!empty($lead_id))
@@ -47,7 +49,6 @@
     
                         if(empty($name) || empty($mobile) || empty($pancard) || empty($gender) || empty($dob) || empty($state_id) || empty($city) || empty($pincode))
                         {
-                            echo "if called : <pre>"; print_r($name); exit;
                             foreach($leadDetails as $key => $value) {
                                 if(empty($value)){
                                     $error .= $key .", ";
@@ -118,7 +119,8 @@
                             // $define_url = "UAT";
                             $define_url = "LIVE";
                             
-                            if($define_url == "UAT") {
+                            if($define_url == "UAT") 
+                            {
                                 define("userId", "NB4235DC01_UAT001");
                                 define("password", "TempPass@cibil2");
                                 define("memberId", "NB42358888_UATC2C");
