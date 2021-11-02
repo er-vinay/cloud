@@ -55,7 +55,7 @@
 	        $config['last_tag_close']  = '</span></li>';
 
 	        $this->pagination->initialize($config);
-	        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+	        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : "0";
 	        $data['links'] = $this->pagination->create_links();
 	        $data['pageURL'] = $url;
 
