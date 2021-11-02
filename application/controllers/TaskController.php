@@ -32,15 +32,12 @@
 		public function index($stage)
 		{
 	        $url = (base_url() . $this->uri->segment(1) ."/". $this->uri->segment(2));
-	        $totalCount = $this->Tasks->getLeadsCount($stage);
-	        $rowperpage = 10;
 	        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
-		    $conditions = "LD.company_id='". company_id ."' AND LD.product_id='". product_id ."' AND LD.stage='". $stage ."'";
 
 	        $config = array();
 	        $config["base_url"] = $url;
-	        $config["total_rows"] = $totalCount; // get count leads
-	        $config["per_page"] = $rowperpage;
+	        $config["total_rows"] = $this->Tasks->getLeadsCount($stage); // get count leads
+	        $config["per_page"] = 10;
 	        $config['full_tag_open']    = '<div class="pagging text-right"><nav><ul class="pagination">';
 	        $config['full_tag_close']   = '</ul></nav></div>';
 	        $config['num_tag_open']     = '<li class="page-item"><span class="page-link">';
@@ -60,10 +57,11 @@
 	        $data['links'] = $this->pagination->create_links();
 	        $data['pageURL'] = $url;
 
-
-        	$data['leadDetails'] = $this->Tasks->index($conditions, $rowperpage, $page);
+		    $conditions = "LD.company_id='". company_id ."' AND LD.product_id='". product_id ."' AND LD.stage='". $stage ."'";
 			if($this->uri->segment(1) == "holdleads" || $this->uri->segment(1) == "applicationHold") {
-	        	$data['leadDetails'] = $this->Tasks->holdleads($conditions, $rowperpage, $page);
+	        	$data['leadDetails'] = $this->Tasks->holdleads($conditions, $config["per_page"], $page);
+			}else{
+        		$data['leadDetails'] = $this->Tasks->index($conditions, $config["per_page"], $page);
 			}
 			// echo "<pre>". $totalCount; print_r($data['leadDetails']->num_rows()); exit;
 	    	$this->load->view('Tasks/GetLeadTaskList', $data);
