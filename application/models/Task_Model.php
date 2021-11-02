@@ -80,7 +80,7 @@
 
 		public function getLeadsCount($stage)
 	    {
-			$result = $this->db->select("lead_id")->where('stage', $stage)->from($this->table)->get();
+			$result = $this->db->select("LD.lead_id")->where('LD.stage', $stage)->from($this->table . 'LD')->get();
 			return $result->num_rows();
 	    }
 

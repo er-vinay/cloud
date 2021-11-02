@@ -55,17 +55,18 @@
 	        $config['last_tag_close']  = '</span></li>';
 
 	        $this->pagination->initialize($config);
-	        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+	        $page = ($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
 	        $data['links'] = $this->pagination->create_links();
 	        $data['pageURL'] = $url;
 
 		    $conditions = "LD.company_id='". company_id ."' AND LD.product_id='". product_id ."' AND LD.stage='". $stage ."'";
+		    
 			if($this->uri->segment(1) == "holdleads" || $this->uri->segment(1) == "applicationHold") {
 	        	$data['leadDetails'] = $this->Tasks->holdleads($conditions, $config["per_page"], $page);
 			}else{
         		$data['leadDetails'] = $this->Tasks->index($conditions, $config["per_page"], $page);
 			}
-			// echo "<pre>". $totalCount; print_r($data['leadDetails']->num_rows()); exit;
+			echo "<pre>". $conditions; print_r($data['leadDetails']->num_rows()); exit;
 	    	$this->load->view('Tasks/GetLeadTaskList', $data);
 		}
 
