@@ -48,7 +48,6 @@
     
                         if(empty($name) || empty($mobile) || empty($pancard) || empty($gender) || empty($dob) || empty($state_id) || empty($city) || empty($pincode))
                         {
-                echo "if called : <pre>"; print_r($leadDetails); exit;
                             foreach($leadDetails as $key => $value) {
                                 if(empty($value)){
                                     $error .= $key .", ";
@@ -60,7 +59,6 @@
                         } 
                         else 
                         {
-                            echo "else called : <pre>"; print_r($name); exit;
                             $loanAmount = $loan_amount;
                             $day = date('d', strtotime($dob));
                             $month = date("m", strtotime($dob));
@@ -74,6 +72,7 @@
             
                             $query_state = $this->db->select("state")->where("state_id", $state_id)->get('tbl_state')->row_array();
                             $stateName = ucwords(strtolower($query_state['state']));
+                            echo "else called : <pre>"; print_r($stateName); exit;
                             
                             $stateNameData = array(
                                 '01' => 'Jammu & Kashmir',
