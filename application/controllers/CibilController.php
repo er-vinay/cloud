@@ -22,9 +22,9 @@
                 $query = $this->Tasks->join_two_table_with_where($conditions, $fetch, $table1, $table2, $join2);
                 $leadDetails = $query->row();
 
-                $f_name = ($leadDetails->first_name != '-' || $leadDetails->first_name != '') : $leadDetails->first_name : '';
-                $m_name = ($leadDetails->middle_name != '-' || $leadDetails->middle_name != '') : $leadDetails->middle_name : '';
-                $s_name = ($leadDetails->sur_name != '-' || $leadDetails->sur_name != '') : $leadDetails->sur_name : '';
+                $f_name = (($leadDetails->first_name != '-') || ($leadDetails->first_name != '')) : $leadDetails->first_name : '';
+                $m_name = (($leadDetails->middle_name != '-') || ($leadDetails->middle_name != '')) : $leadDetails->middle_name : '';
+                $s_name = (($leadDetails->sur_name != '-') || ($leadDetails->sur_name != '')) : $leadDetails->sur_name : '';
 
                 $name = $f_name ." ". $m_name ." ". $s_name;
 
