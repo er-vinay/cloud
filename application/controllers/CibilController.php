@@ -294,9 +294,6 @@
                             curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
                             
                             $dataResponse = curl_exec($ch); 
-
-                            echo "else called : <pre>"; print_r($dataResponse); exit;
-                            curl_close($ch);
                             
                             $soap = simplexml_load_string($dataResponse);
                             $response = $soap->children('http://schemas.xmlsoap.org/soap/envelope/')->Body->children()->ExecuteXMLStringResponse;
@@ -311,11 +308,11 @@
                                     'created_at'            => timestamp,
                                 ];
                             $this->db->insert('tbl_cibil', $data);
-                            $this->getApplication($lead_id, $ApplicationId);
+                            $this->getApplication($lead_id, $ApplicationId, $customer_id);
+
+                            // echo "else called : <pre>"; print_r($dataResponse); exit;
+                            curl_close($ch);
                             
-                            $json['customer_id'] = $customer_id;
-                            $json['msg'] = 'Cibil generated successfully.';
-                            echo json_encode($json);
                         }
                     } else {
                         $json['err'] = "Lead Id is Required";
@@ -329,7 +326,7 @@
             }
         }
         
-        public function getApplication($lead_id, $ApplicationId)
+        public function getApplication($lead_id, $ApplicationId, $customer_id)
         {
             $xml2 = '
                 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
@@ -380,10 +377,10 @@
             $data = ['document_Id' => $documentId];
                 
             $this->db->where('lead_id', $lead_id)->update('tbl_cibil', $data);
-            $this->getDocument($lead_id, $ApplicationId, $documentId);
+            $this->getDocument($lead_id, $ApplicationId, $documentId, $customer_id);
         }
         
-        public function getDocument($lead_id, $ApplicationId, $documentId)
+        public function getDocument($lead_id, $ApplicationId, $documentId, $customer_id)
         {
             $xml3 = '
                 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
@@ -458,6 +455,9 @@
             ];
             $this->db->where('lead_id', $lead_id)->update('leads', ['check_cibil_status'=> 1, 'cibil'=> $cibilScore]); 
             $this->db->where('lead_id', $lead_id)->update('tbl_cibil', $data); 
+            $json['customer_id'] = $customer_id;
+            $json['msg'] = 'Cibil generated successfully.';
+            echo json_encode($json);
         }
         
         public function ViewCivilStatement()
