@@ -60,11 +60,11 @@
 	        $data['pageURL'] = $url;
 
 			if($this->uri->segment(1) == "holdleads" || $this->uri->segment(1) == "applicationHold") {
-	        	$data['leadDetails'] = $this->Tasks->holdleads($conditions, $config["per_page"], $page);
+	        	$data['leadDetails'] = $this->Tasks->holdleads($conditions, $page, $config["per_page"]);
 			}else{
-        		$data['leadDetails'] = $this->Tasks->index($conditions, $config["per_page"], $page);
+        		$data['leadDetails'] = $this->Tasks->index($conditions, $page, $config["per_page"]);
 			}
-			
+
 			echo "<pre>"; print_r($this->db->last_query()); exit;
 			// echo "<pre>". $conditions. ', per_page : '. $config["per_page"]. ', page: '. $page. ', '; print_r($data['leadDetails']->num_rows());
 
