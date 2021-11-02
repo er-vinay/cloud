@@ -278,12 +278,12 @@
                 
                             $url = api_url;
                 
-                            $ch = curl_init();
                             $headers = [
                                 'Content-Type: text/xml', 
                                 'soapAction: http://tempuri.org/IExternalSolutionExecution/ExecuteXMLString'
                             ];
                             
+                            $ch = curl_init();
                             curl_setopt($ch, CURLOPT_URL,$url);
                             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
                             // curl_setopt($ch, CURLOPT_TIMEOUT, 10);
@@ -292,6 +292,8 @@
                             curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
                             
                             $dataResponse = curl_exec($ch); 
+                            
+                            echo "else called : <pre>"; print_r($dataResponse); exit;
                             curl_close($ch);
                             
                             $soap = simplexml_load_string($dataResponse);
