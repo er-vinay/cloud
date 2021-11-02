@@ -23,7 +23,7 @@
                 $leadDetails = $query->row();
 
                 // if($leadDetails->check_cibil_status == 0)
-                if($leadDetails->check_cibil_status)
+                if($leadDetails->check_cibil_status == 0)
                 {
                     if(!empty($lead_id))
                     {
