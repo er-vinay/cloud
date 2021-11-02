@@ -29,16 +29,16 @@
             // define('teamCollection', "Collection");
 		}
 
-		public function index($conditions = null, $rowperpage = null, $start = null)
+		public function index($conditions = null, $limit, $start = null)
 		{
             $this->db->select('LD.lead_id, LD.customer_id, LD.application_no, L.loan_no, CAM.tenure, C.first_name, C.middle_name, C.sur_name, C.email, C.dob, C.mobile, C.pancard, LD.user_type, ST.state, LD.city, LD.created_on, LD.source, LD.status, LD.ip, LD.coordinates, LD.imei_no, CE.salary_mode, CE.monthly_income');
             $this->db->from($this->table. ' LD');
-			$this->db->limit($rowperpage, $start);
             $this->db->join($this->table_state.' ST', 'ST.state_id = LD.state_id');
             $this->db->join('customer C', 'C.customer_id = LD.customer_id', 'left');
             $this->db->join('customer_employment CE', 'CE.lead_id = LD.lead_id', 'left');
             $this->db->join('credit_analysis_memo CAM', 'CAM.lead_id = LD.lead_id', 'left');
             $this->db->join('loan L', 'L.lead_id = LD.lead_id', 'left');
+			$this->db->limit($limit, $start);
 
 			if($this->uri->segment(1) == "collection") 
 			{
