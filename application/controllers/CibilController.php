@@ -30,11 +30,11 @@
 
                 // if($leadDetails->check_cibil_status == 0)
 
-                if($leadDetails->check_cibil_status == 0)
-                {
-                echo "if called : <pre>"; print_r($leadDetails); exit;
+                // if($leadDetails->check_cibil_status == 0)
+                // {
                     if(!empty($lead_id))
                     {
+                echo "if called : <pre>"; print_r($leadDetails); exit;
                         $customer_id= $leadDetails->customer_id;
                         $name       = $leadDetails->first_name;
                         $mobile     = $leadDetails->mobile;
@@ -319,11 +319,11 @@
                         $json['err'] = "Lead Id is Required";
                         echo json_encode($json);
                     }
-                } else {
-                    $json['msg'] = "Recently cibil generated.";
-                    echo json_encode($json);
-                    return false;
-                }
+                // } else {
+                //     $json['msg'] = "Recently cibil generated.";
+                //     echo json_encode($json);
+                //     return false;
+                // }
             }
         }
         
