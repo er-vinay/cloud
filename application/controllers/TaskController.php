@@ -33,10 +33,11 @@
 		{
         	$this->load->library("pagination");
 	        $url = (base_url() . $this->uri->segment(1) ."/". $this->uri->segment(2));
+		    $conditions = "LD.company_id='". company_id ."' AND LD.product_id='". product_id ."' AND LD.stage='". $stage ."'";
 
 	        $config = array();
 	        $config["base_url"] = $url;
-	        $config["total_rows"] = $this->Tasks->getLeadsCount($stage); // get count leads
+	        $config["total_rows"] = $this->Tasks->getLeadsCount($conditions); // get count leads
 	        $config["per_page"] = 10;
 	        $config["uri_segment"] = 3;
 	        $config['full_tag_open']    = '<div class="pagging text-right"><nav><ul class="pagination">';
@@ -59,7 +60,6 @@
 	        $data['links'] = $this->pagination->create_links();
 	        $data['pageURL'] = $url;
 
-		    $conditions = "LD.stage='". $stage ."'";
 
 			if($this->uri->segment(1) == "holdleads" || $this->uri->segment(1) == "applicationHold") {
 	        	$data['leadDetails'] = $this->Tasks->holdleads($conditions, $config["per_page"], $page);
