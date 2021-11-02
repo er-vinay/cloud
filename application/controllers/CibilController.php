@@ -29,10 +29,10 @@
                 // $name = $f_name ." ". $m_name ." ". $s_name;
 
                 // if($leadDetails->check_cibil_status == 0)
-                echo "if called : <pre>"; print_r($leadDetails); exit;
-                
+
                 if($leadDetails->check_cibil_status == 0)
                 {
+                echo "if called : <pre>"; print_r($leadDetails); exit;
                     if(!empty($lead_id))
                     {
                         $customer_id= $leadDetails->customer_id;
@@ -73,7 +73,7 @@
                             
             
                             $query_state = $this->db->select("state")->where("state_id", $state_id)->get('tbl_state')->row_array();
-                            $stateName = $query_state['state'];
+                            $stateName = ucwords(strtolower($query_state['state']));
                             
                             $stateNameData = array(
                                 '01' => 'Jammu & Kashmir',
