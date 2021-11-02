@@ -65,7 +65,7 @@
         		$data['leadDetails'] = $this->Tasks->index($conditions, $page, $config["per_page"]);
 			}
 
-			echo "<pre>"; print_r($this->db->last_query()); exit;
+			// echo "<pre>"; print_r($this->db->last_query()); exit;
 			// echo "<pre>". $conditions. ', per_page : '. $config["per_page"]. ', page: '. $page. ', '; print_r($data['leadDetails']->num_rows());
 
 			// echo $data['links'];
