@@ -80,8 +80,7 @@
 
 		public function getLeadsCount($conditions)
 	    {
-			$result = $this->db->select("LD.lead_id")->where($conditions)->from('leads LD')->get();
-			return $result->num_rows();
+			return $this->db->select("LD.lead_id")->where($conditions)->from('leads LD')->get()->num_rows();
 	    }
 
 		public function insert($data=null, $table=null)
