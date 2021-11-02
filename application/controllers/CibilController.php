@@ -274,7 +274,7 @@
                                 'Content-Type: text/xml', 
                                 'soapAction: http://tempuri.org/IExternalSolutionExecution/ExecuteXMLString'
                             ];
-                            echo "<pre>"; print_r($input_xml); exit;
+                            echo "<pre>".$input_xml; exit;
                             
                             $ch = curl_init();
                             curl_setopt($ch, CURLOPT_URL,$url);
