@@ -34,8 +34,10 @@
                 // {
                     if(!empty($lead_id))
                     {
+                        $m_name = str_replace("-", "", $leadDetails->middle_name);
+                        $s_name = str_replace("-", "", $leadDetails->sur_name);
                         $customer_id= $leadDetails->customer_id;
-                        $name       = $leadDetails->first_name;
+                        $name       = $leadDetails->first_name.' '.$m_name.' '.$s_name;
                         $mobile     = $leadDetails->mobile;
                         $pancard    = $leadDetails->pancard;
                         $gender     = $leadDetails->gender;
@@ -292,7 +294,7 @@
                             curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
                             
                             $dataResponse = curl_exec($ch); 
-                            
+
                             echo "else called : <pre>"; print_r($dataResponse); exit;
                             curl_close($ch);
                             
