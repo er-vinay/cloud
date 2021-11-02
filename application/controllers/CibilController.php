@@ -72,7 +72,6 @@
             
                             $query_state = $this->db->select("state")->where("state_id", $state_id)->get('tbl_state')->row_array();
                             $stateName = ucwords(strtolower($query_state['state']));
-                            echo "else called : <pre>"; print_r($stateName); exit;
                             
                             $stateNameData = array(
                                 '01' => 'Jammu & Kashmir',
@@ -115,6 +114,7 @@
     
                             $stateKey = array_search($stateName, $stateNameData);
                         
+                            echo "else called : <pre>"; print_r($stateKey); exit;
                             // $define_url = "UAT";
                             $define_url = "LIVE";
                             
