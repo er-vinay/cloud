@@ -61,13 +61,11 @@
 	        $data['pageURL'] = $url;
 
 
-			if($this->uri->segment(1) == "holdleads" || $this->uri->segment(1) == "applicationHold") 
-			{
+        	$data['leadDetails'] = $this->Tasks->index($conditions, $rowperpage, $page);
+			if($this->uri->segment(1) == "holdleads" || $this->uri->segment(1) == "applicationHold") {
 	        	$data['leadDetails'] = $this->Tasks->holdleads($conditions, $rowperpage, $page);
-			}else{
-	        	$data['leadDetails'] = $this->Tasks->index($conditions, $rowperpage, $page);
 			}
-			echo "<pre>". $totalCount; print_r($data['leadDetails']->num_rows()); exit;
+			// echo "<pre>". $totalCount; print_r($data['leadDetails']->num_rows()); exit;
 	    	$this->load->view('Tasks/GetLeadTaskList', $data);
 		}
 
