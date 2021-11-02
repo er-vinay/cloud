@@ -47,6 +47,7 @@
 			}else{
         		$this->db->where($conditions);
 			}
+			echo "<pre>"; print_r($this->db->last_query()); exit;
             return $this->db->order_by('LD.lead_id', 'desc')->get();   
 		}
 
