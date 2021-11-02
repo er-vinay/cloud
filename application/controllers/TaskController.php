@@ -31,6 +31,7 @@
 
 		public function index($stage)
 		{
+        	$this->load->library("pagination");
 	        $url = (base_url() . $this->uri->segment(1) ."/". $this->uri->segment(2));
 
 	        $config = array();
