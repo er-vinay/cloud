@@ -245,17 +245,17 @@
                                   
                                   
                                   &lt;CibilBureauFlag&gt;False&lt;/CibilBureauFlag&gt;
-                                &lt;DSTuNtcFlag&gt;True&lt;/DSTuNtcFlag&gt;
-                                &lt;IDVerificationFlag&gt;False&lt;/IDVerificationFlag&gt;
-                                &lt;MFIBureauFlag&gt;True&lt;/MFIBureauFlag&gt;
-                                &lt;NTCProductType&gt;PL&lt;/NTCProductType&gt;
-                                &lt;ConsumerConsentForUIDAIAuthentication&gt;N&lt;/ConsumerConsentForUIDAIAuthentication&gt;
-                                &lt;MFIEnquiryAmount&gt;&lt;/MFIEnquiryAmount&gt;
-                                &lt;MFILoanPurpose&gt;&lt;/MFILoanPurpose&gt;
-                                &lt;MFICenterReferenceNo&gt;&lt;/MFICenterReferenceNo&gt;
-                                &lt;MFIBranchReferenceNo&gt;&lt;/MFIBranchReferenceNo&gt;
-                                &lt;FormattedReport&gt;True&lt;/FormattedReport&gt;
-                              &lt;/ApplicationData&gt;
+                                    &lt;DSTuNtcFlag&gt;True&lt;/DSTuNtcFlag&gt;
+                                    &lt;IDVerificationFlag&gt;False&lt;/IDVerificationFlag&gt;
+                                    &lt;MFIBureauFlag&gt;True&lt;/MFIBureauFlag&gt;
+                                    &lt;NTCProductType&gt;PL&lt;/NTCProductType&gt;
+                                    &lt;ConsumerConsentForUIDAIAuthentication&gt;N&lt;/ConsumerConsentForUIDAIAuthentication&gt;
+                                    &lt;MFIEnquiryAmount&gt;&lt;/MFIEnquiryAmount&gt;
+                                    &lt;MFILoanPurpose&gt;&lt;/MFILoanPurpose&gt;
+                                    &lt;MFICenterReferenceNo&gt;&lt;/MFICenterReferenceNo&gt;
+                                    &lt;MFIBranchReferenceNo&gt;&lt;/MFIBranchReferenceNo&gt;
+                                    &lt;FormattedReport&gt;True&lt;/FormattedReport&gt;
+                                &lt;/ApplicationData&gt;
                             
                                
                                             </Field>
