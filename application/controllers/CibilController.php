@@ -34,7 +34,6 @@
                 // {
                     if(!empty($lead_id))
                     {
-                echo "if called : <pre>"; print_r($leadDetails); exit;
                         $customer_id= $leadDetails->customer_id;
                         $name       = $leadDetails->first_name;
                         $mobile     = $leadDetails->mobile;
@@ -49,6 +48,7 @@
     
                         if(empty($name) || empty($mobile) || empty($pancard) || empty($gender) || empty($dob) || empty($state_id) || empty($city) || empty($pincode))
                         {
+                echo "if called : <pre>"; print_r($leadDetails); exit;
                             foreach($leadDetails as $key => $value) {
                                 if(empty($value)){
                                     $error .= $key .", ";
