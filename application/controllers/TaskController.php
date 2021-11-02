@@ -66,7 +66,8 @@
 	        	$data['leadDetails'] = $this->Tasks->holdleads($conditions, $rowperpage, $page);
 			}else{
 	        	$data['leadDetails'] = $this->Tasks->index($conditions, $rowperpage, $page);
-			}	
+			}
+			echo "<pre>"; print_r($data); exit;
 	    	$this->load->view('Tasks/GetLeadTaskList', $data);
 		}
 

@@ -52,7 +52,7 @@
                 
                 <div class="col-sm-6">
                     <label class="labelField">Salary Credit&nbsp;<span class="required_Fields">*</span></label>
-                    <select class="form-control inputField" id="salary_credit1" name="salary_credit1" autocomplete="off">
+                    <select class="form-control inputField" id="salary_credit1" name="salary_credit1" onchange="SalaryCredit(this)" autocomplete="off">
                         <option value="">SELECT</option>
                         <option value="01">JANUARY</option>
                         <option value="02">February</option>
@@ -79,7 +79,7 @@
                 
                 <div class="col-sm-6">
                     <label class="labelField">Salary Credit</label>
-                    <select class="form-control inputField" id="salary_credit2" name="salary_credit2" autocomplete="off">
+                    <select class="form-control inputField" id="salary_credit2" name="salary_credit2" onchange="SalaryCredit(this)" autocomplete="off">
                         <option value="">SELECT</option>
                         <option value="01">JANUARY</option>
                         <option value="02">February</option>
@@ -106,7 +106,7 @@
                 
                 <div class="col-sm-6">
                     <label class="labelField">Salary Credit </label>
-                    <select class="form-control inputField" id="salary_credit3" name="salary_credit3" autocomplete="off">
+                    <select class="form-control inputField" id="salary_credit3" name="salary_credit3" onchange="SalaryCredit(this)" autocomplete="off">
                         <option value="">SELECT</option>
                         <option value="01">JANUARY</option>
                         <option value="02">February</option>

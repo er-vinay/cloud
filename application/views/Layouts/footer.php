@@ -290,20 +290,7 @@
                 $('#salary_credit1').change(function(){
                     currentM = $(this).val();
                     console.log(currentM);
-                });
-
-                $("#salary_credit1_date, #salary_credit2_date, #salary_credit3_date").datepicker({
-                    format: 'dd-mm',
-                    todayHighlight: true,
-                    autoclose: true,
-                    // startView: 2,
-                    viewMode: "months", 
-                    // minViewMode: "months",
-                    startMonth : currentM,
-                    endMonth : currentM
-                });
-
-                
+                });                
 
                 $("#DOB").datepicker({
 
@@ -601,6 +588,24 @@
 
         <script type="text/javascript">
 
+            function SalaryCredit(month){ 
+                var m = $(month).val();
+                console.log(m);
+                
+                $("#salary_credit1_date, #salary_credit2_date, #salary_credit3_date").datepicker({
+                    format: 'dd-mm',
+                    todayHighlight: true,
+                    changeMonth: true,
+                    autoclose: true,
+                    minDate: m,
+                    // startView: 2,
+                    // viewMode: "months", 
+                    // minViewMode: "months",
+                    // startMonth : m,
+                    // endMonth : m
+                });
+            }
+            
             function catchSuccess(success){ 
 
                 $('<audio id="chatAudio"><source src="<?= base_url() ?>public/ringtone/success.mp3" type="audio/ogg"><source src="<?= base_url() ?>public/ringtone/success.mp3" type="audio/mpeg"></audio>').appendTo('body');
