@@ -66,10 +66,10 @@
 			}else{
         		$data['leadDetails'] = $this->Tasks->index($conditions, $config["per_page"], $page);
 			}
-			echo "<pre>". $conditions. ', per_page : '. $config["per_page"]. ', page: '. $page. ', '; print_r($data['leadDetails']->num_rows());
+			// echo "<pre>". $conditions. ', per_page : '. $config["per_page"]. ', page: '. $page. ', '; print_r($data['leadDetails']->num_rows());
 
-			echo $data['links'];
-	    	// $this->load->view('Tasks/GetLeadTaskList', $data);
+			// echo $data['links'];
+	    	$this->load->view('Tasks/GetLeadTaskList', $data);
 		}
 
 		public function getLeadDetails($lead_id)
