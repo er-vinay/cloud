@@ -39,7 +39,7 @@
 	        $config["base_url"] = $url;
 	        $config["total_rows"] = $this->Tasks->getLeadsCount($conditions); // get count leads
 	        $config["per_page"] = 10;
-	        $config["uri_segment"] = 3;
+	        $config["uri_segment"] = 2;
 	        $config['full_tag_open']    = '<div class="pagging text-right"><nav><ul class="pagination">';
 	        $config['full_tag_close']   = '</ul></nav></div>';
 	        $config['num_tag_open']     = '<li class="page-item"><span class="page-link">';

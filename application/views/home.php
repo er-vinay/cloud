@@ -16,9 +16,7 @@
 
             <div class="row default-page-height">
 
-                <?php //echo "<pre>";print_r($menusList->result());
-
-                 $i = 0; foreach($menusList->result() as $menu) : ?>
+                <?php $i = 0; foreach($menusList->result() as $menu) : ?>
 
                 <div class="col-md-2 col-sm-6 col-xs-6 col-md-2-me">
 
