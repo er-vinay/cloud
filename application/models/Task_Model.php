@@ -84,6 +84,11 @@
 			return $result->num_rows();
 	    }
 
+		public function countLeads($conditions)
+	    {
+			return $this->db->select("LD.lead_id")->where($conditions)->from($this->table . ' LD')->get()->num_rows();
+	    }
+
 		public function insert($data=null, $table=null)
 		{
 			return $this->db->insert($table, $data);
