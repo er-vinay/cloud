@@ -9,6 +9,7 @@
             $this->load->model('Admin_Model');
             $this->load->model('Users/Rejection_Model', 'Reject');
             $this->load->model('Users/Email_Model', 'Email');
+            // $this->load->model('SMS_Model', 'SMS');
             $this->load->model('Users/SMS_Model', 'SMS');
             $this->load->model('CAM_Model', 'CAM');
 	        $this->load->library('encrypt');
@@ -26,6 +27,7 @@
 			if ($this->input->server('REQUEST_METHOD') == 'POST') 
 	        {
 	        	$this->form_validation->set_rules('lead_id', 'Lead ID', 'required|trim|numeric');
+	        	$this->form_validation->set_rules('customer_id', 'Customer ID', 'required|trim');
                 $this->form_validation->set_rules('reason', 'Reject reason', 'required|trim');
 	        	if($this->form_validation->run() == FALSE) {
 	        		$json['err'] = validation_errors();
@@ -33,12 +35,12 @@
 	        	} 
 	        	else 
 	        	{
-	        	    $status = "REJECT";
-                    $stage = "S9";
-    				$lead_id = $this->input->post('lead_id');
-    				$user_id = $this->input->post('user_id');
-    				$customer_id = $this->input->post('customer_id');
-    				$reason = $this->input->post('reson');
+	        	    $status 		= "REJECT";
+                    $stage 			= "S9";
+    				$lead_id 		= $this->input->post('lead_id');
+    				$user_id 		= $this->input->post('user_id');
+    				$customer_id 	= $this->input->post('customer_id');
+    				$reason 		= $this->input->post('reson');
 
     	            $data = array (
     	                'status'           => $status,
@@ -54,22 +56,13 @@
     	                'created_on'      	=> timestamp
     	            );
 
-                    $conditions = ['lead_id' => $lead_id];
-                    // $result = $this->Tasks->updateLeads($conditions, $data, 'leads');
-                    // $result = $this->Tasks->insert($data2, 'lead_followup');
-                    // if($result == true)
-                    // {
-                    //     $json['msg'] = 'Application Rejected Successfully.';
-                    // } else {
-                    //     $json['err'] = 'Failed to Reject Application.';
-                    // }
-                    // echo json_encode($json);
 
     				$fetch = "first_name, email, mobile";
     				$conditions2 = ['customer_id' => $customer_id];
                     $leadsDetails = $this->Tasks->select($conditions2, $fetch, 'customer');
     				$leads = $leadsDetails->row();
     				$name = $leads->first_name;
+    				$application_no = $lead_id;
                     
                     $rowMail = $this->Email->getMailAndSendTocustomer(company_id, product_id, $status);
                     if($rowMail->num_rows() > 0)
@@ -78,14 +71,18 @@
                         $this->sentmail($leads, $mail);
                     }
                     
-    				$rejectionSMS = $this->SMS->getRejectionSMS(company_id, product_id, 'REJECT');
-
-    				if($rejectionSMS->num_rows() > 0)
-    				{
-    				    $smsReject = $rejectionSMS->row();
-    				    $res = $this->SMS->notification($leads->mobile, $smsReject->message);
-    				echo "<pre>"; print_r($res); exit;
-    				}
+				    $res = $this->SMS->smsForRejectLeads($application_no, $leads->first_name, $leads->mobile);
+	            	
+                    $conditions = ['lead_id' => $lead_id];
+                    $result = $this->Tasks->updateLeads($conditions, $data, 'leads');
+                    $result = $this->Tasks->insert($data2, 'lead_followup');
+                    if($result == true)
+                    {
+                        $json['msg'] = 'Application Rejected Successfully.';
+                    } else {
+                        $json['err'] = 'Failed to Reject Application.';
+                    }
+                    echo json_encode($json);
 	        	}
 	        }else{
 	            $json['err'] = "Lead Id is missing";

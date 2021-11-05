@@ -317,13 +317,10 @@
         var reason = $("#resonForReject").val();
         if(lead_id == ""){
             catchError("Lead ID is required.");
-            return false;
         } else if(user_id == ""){
             catchError("Session Expore. Please re-login.");
-            return false;
         } else if(reason == ""){
             catchError("Reason is required.");
-            return false;
         }else{
             $.ajax({
                 url : '<?= base_url("resonForRejectLoan") ?>',
