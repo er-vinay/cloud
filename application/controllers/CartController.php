@@ -36,7 +36,7 @@
                     $fetch = 'D.docs_id, D.lead_id, D.customer_id, D.docs_type, D.docs_type, D.file, D.pwd';
                     $conditions = ['D.customer_id' => $customer_id, 'D.docs_type' => 'BANK STATEMENT'];
                     $table1 = 'docs D';
-                    $table2 = 'Customer C';
+                    $table2 = 'customer C';
                     $join2 = 'C.customer_id = D.customer_id';
                     $docs = $this->Tasks->join_two_table_with_where($conditions, $fetch, $table1, $table2, $join2);
                     $this->db->order_by('D.docs_type', 'desc');
