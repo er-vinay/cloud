@@ -7,73 +7,54 @@
         public function __construct()
         {
             parent::__construct();
-            $this->load->model('Task_Model');
-            
+            $this->load->model('Task_Model', 'Tasks');
         }
 
         public function index()
         {
             $this->load->view('Tasks/bank');
         }
-        public function saveBankAnalysis()
+
+        public function bankAnalysis()
         {
-            if($_SERVER['REQUEST_METHOD'] == 'POST')
+            if($this->input->post('user_id') == ""){
+                $json['errSession'] = "Session Expired.";
+                echo json_encode($json);
+            }
+            if ($this->input->server('REQUEST_METHOD') == 'POST') 
             {
-                $ipaddress = '';
-                if (getenv('HTTP_CLIENT_IP')){
-                    $ipaddress = getenv('HTTP_CLIENT_IP');
-                }
-                else if(getenv('HTTP_X_FORWARDED_FOR')){
-                    $ipaddress = getenv('HTTP_X_FORWARDED_FOR');
-                }
-                else if(getenv('HTTP_X_FORWARDED')){
-                    $ipaddress = getenv('HTTP_X_FORWARDED');
-                }
-                else if(getenv('HTTP_FORWARDED_FOR')){
-                    $ipaddress = getenv('HTTP_FORWARDED_FOR');
-                }
-                else if(getenv('HTTP_FORWARDED')){
-                   $ipaddress = getenv('HTTP_FORWARDED');
-                }
-                else if(getenv('REMOTE_ADDR')){
-                    $ipaddress = getenv('REMOTE_ADDR');
-                }
-                else{
-                    $ipaddress = 'UNKNOWN';
-                }
-    
-                $filename = "";
-                $password = "";
-                $json = [];
-
-                if(!empty($_POST['password'])) {
-                    $password = $this->input->post('password');
-                }
-
-                $config['upload_path'] = 'public/BankAnalysis/';
-                $config['allowed_types'] = 'pdf';
-                $this->upload->initialize($config);
-                if(!$this->upload->do_upload('file'))
-                {
-                    $json['err'] = $this->upload->display_errors(); 
-                }
-                else
+                $this->form_validation->set_rules('lead_id', 'Lead ID', 'required|trim');
+                $this->form_validation->set_rules('customer_id', 'Customer ID', 'required|trim');
+                if($this->form_validation->run() == FALSE) {
+                    $json['err'] = validation_errors();
+                    echo json_encode($json);
+                } 
+                else 
                 {
                     $lead_id = $this->input->post('lead_id');
-                    $file = array('upload_data' => $this->upload->data());
-                    $filename = $file['upload_data']['file_name'];
+                    $customer_id = $this->input->post('customer_id');
+                    $fetch = 'D.docs_id, D.lead_id, D.customer_id, D.docs_type, D.docs_type, D.file, D.pwd';
+                    $conditions = ['D.customer_id' => $customer_id, 'D.docs_type' => 'BANK STATEMENT'];
+                    $table1 = 'docs D';
+                    $table2 = 'Customer C';
+                    $join2 = 'C.customer_id = D.customer_id';
+                    $docs = $this->Tasks->join_two_table_with_where($conditions, $fetch, $table1, $table2, $join2);
+                    $this->db->order_by('D.docs_type', 'desc');
+                    echo "<pre>"; print_r($docs->num_rows()); exit;
+                    $document = $docs->row();
+                    $filename = $document->file;
+
                     $url = 'https://cartbi.com/api/upload';
-                    
-                    // $Auth_Token = "UAT";
                     $Auth_Token = "LIVE";
-                    
+                    // $Auth_Token = "UAT";
                     if($Auth_Token == "UAT") {
                         define('api_token', 'API://IlJKyP5wUwzCvKQbb796ZSjOITkMSRN8rifQTMrNM1/NUUv8/tuaN6Lun6d1NG4S');
                     } else {
                         define('api_token', 'API://9jwoyrhfdtDuDt0epG4VsisYdBHMsZMGC7IlUhwN8t1Qb2bgwxFqrn7K0LgWIly1');
                     }
                     
-                    $cartJsonData = [ 'file' => new CURLFile (FCPATH.'public/BankAnalysis/'.$filename, '', $filename)];
+                    // $cartJsonData = [ 'file' => new CURLFile (FCPATH.'public/BankAnalysis/'.$filename, '', $filename)];
+                    $cartJsonData = [ 'file' => new CURLFile (FCPATH .'upload/'. $filename, '', $filename)];
                     $headers = [
                         'Content-Type: multipart/form-data', 
                         'auth-token: '. api_token
@@ -116,27 +97,27 @@
                         
                         ///////////////////////////// download cart data as csv ///////////////////////////////////////
                         
-                            $docId = "DOC00231319";
-                            $urlDownload = 'https://cartbi.com/api/downloadFile';
-                            $header2 = [
-                                'Content-Type: text/plain', 
-                                'auth-token: '. api_token
-                                ];
-                            
-                            $ch2 = curl_init($urlDownload);
-                            curl_setopt($ch2, CURLOPT_HTTPHEADER, $header2);
-                            curl_setopt($ch2, CURLOPT_RETURNTRANSFER, true);
-                            curl_setopt($ch2, CURLOPT_POSTFIELDS, $docId);
-                            
-                            $downloadCartData = curl_exec($ch2);
-                            curl_close($ch2);
-                            $this->db->where('lead_id', $lead_id)->where('docId', $docId)->update('tbl_cart', ['downloadCartData' => $downloadCartData]);
+                        $docId = "DOC00231319";
+                        $urlDownload = 'https://cartbi.com/api/downloadFile';
+                        $header2 = [
+                            'Content-Type: text/plain', 
+                            'auth-token: '. api_token
+                            ];
+                        
+                        $ch2 = curl_init($urlDownload);
+                        curl_setopt($ch2, CURLOPT_HTTPHEADER, $header2);
+                        curl_setopt($ch2, CURLOPT_RETURNTRANSFER, true);
+                        curl_setopt($ch2, CURLOPT_POSTFIELDS, $docId);
+                        
+                        $downloadCartData = curl_exec($ch2);
+                        curl_close($ch2);
+                        $this->db->where('lead_id', $lead_id)->where('docId', $docId)->update('tbl_cart', ['downloadCartData' => $downloadCartData]);
                         
                     } else {
                         $json['err'] = "Failed to Upload Docs.";
                     }
+                    echo json_encode($json); 
                 }
-                echo json_encode($json); 
             }
         }
         
@@ -149,10 +130,10 @@
 		    
 	        $response = 1;
 		    if(empty($query->downloadCartData)){
-		        $response = $this->Task_Model->DownloadBankingAnalysis($doc_id); // 1
+		        $response = $this->Tasks->DownloadBankingAnalysis($doc_id); // 1
 		    }
             if($response > 0){
-                $result     = $this->Task_Model->ViewBankingAnalysis($doc_id);
+                $result     = $this->Tasks->ViewBankingAnalysis($doc_id);
                 // echo $result;exit;
                 // $data       = $result->row_array();
                 // $num_rows   = $result->num_rows();
@@ -174,7 +155,7 @@
         
         public function getBankAnalysis($lead_id)
         {
-            $data = $this->Task_Model->bank_analiysis($lead_id);
+            $data = $this->Tasks->bank_analiysis($lead_id);
     		echo json_encode($data);
         }
         

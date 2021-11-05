@@ -270,9 +270,9 @@ $route['exportReport'] = "SearchController/exportReport";
 
 $route['CustomerFollowUp/(:num)'] = "CustomerFollowUpController/CustomerFollowUp/$1";
 
-///////////////////////// Car Integration /////////////////////////////////////////////////////////
+///////////////////////// Cart Integration /////////////////////////////////////////////////////////
 
-$route['saveBankAnalysis'] = "CartController/saveBankAnalysis";
+$route['bankAnalysis'] = "CartController/bankAnalysis";
 $route['bank'] = "CartController/index";
 $route['ViewBankingAnalysis'] = "CartController/ViewBankingAnalysis";
 $route['getBankAnalysis/(:num)'] = "CartController/getBankAnalysis/$1";

@@ -1399,6 +1399,31 @@
         $('#ViewCAMDetails').html(html);
     }
 
+    function bankingAnalysis(lead_id, customer_id, user_id)
+    {
+        $.ajax({
+            url : '<?= base_url("bankAnalysis") ?>',
+            type : 'POST',
+            dataType : "json",
+            data : {lead_id : lead_id, customer_id : customer_id, user_id : user_id, csrf_token},
+            beforeSend: function() {
+                $('#btnBankingAnalysis').html('<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Processing...').addClass('disabled', true);
+            },
+            success : function(response) {
+                if(response.err) {
+                    catchError(response.err);
+                } else {
+                    $('#ViewBankingAnalysis').html(response);
+                    catchSuccess(response.msg);
+                }
+            },
+            complete: function() {
+                $('#btnBankingAnalysis').html('Banking Analysis').removeClass('disabled'); 
+            },
+        });
+    }
+
+
     $(document).ready(function(){
 
         $('#addharAddressSameasAbove').click(function(){

@@ -109,6 +109,7 @@
                                     <?php if(agent == "CR2" || agent == "CA") { ?>
                                         <div style="background:#fff !important;">
                                             <button class="btn btn-primary" style="background:#ddd !important; color: #000 !important; border: none;" id="sendRequestToCustomerForUploadDocs" onclick="sendRequestToCustomerForUploadDocs()" disabled>Send Request For Upload Docs</button>
+                                            <button class="btn btn-primary" id="btnBankingAnalysis" onclick="bankingAnalysis('<?= $leadDetails->lead_id ?>', '<?= $leadDetails->customer_id ?>', '<?= user_id ?>')">Banking Analysis</button>
                                             <p id="selectDocsTypes" style="text-transform:uppercase; margin-top:20px;padding-left: 10px;padding-bottom: 15px;">
                                                 <?php $i = 1; foreach ($docs_master->result() as $row) : ?>
                                                 <label class="radio-inline">
