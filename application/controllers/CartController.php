@@ -40,7 +40,7 @@
                     $join2 = 'C.customer_id = D.customer_id';
                     $docs = $this->Tasks->join_two_table_with_where($conditions, $fetch, $table1, $table2, $join2);
                     $this->db->order_by('D.docs_type', 'desc');
-                    echo "<pre>"; print_r($docs->num_rows()); exit;
+                    echo "<pre>"; print_r($docs->row()); exit;
                     $document = $docs->row();
                     $filename = $document->file;
 
