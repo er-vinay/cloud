@@ -131,6 +131,16 @@
                 ->join($table2, $join2, 'left')
                 ->get();
         }
+        
+        public function join_two_table_with_where_order_by($conditions = null, $data = null, $table1 = null, $table2 = null, $join2=null)
+        {
+            return $this->db->select($data)
+                ->where($conditions)
+                ->from($table1)
+                ->join($table2, $join2, 'left')
+                ->order_by('desc')
+                ->get();
+        }
 
         public function three_join_table($conditions = null, $data = null, $table2 = null, $table3 = null) 
         {
