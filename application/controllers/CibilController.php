@@ -30,7 +30,7 @@
                         $m_name = str_replace("-", "", $leadDetails->middle_name);
                         $s_name = str_replace("-", "", $leadDetails->sur_name);
                         $customer_id= $leadDetails->customer_id;
-                        $name       = $leadDetails->first_name.' '.$m_name.' '.$s_name;
+                        $name       = $leadDetails->first_name;
                         $mobile     = $leadDetails->mobile;
                         $pancard    = $leadDetails->pancard;
                         $gender     = $leadDetails->gender;
@@ -164,8 +164,8 @@
                                     &lt;Applicant&gt;
                                       &lt;ApplicantType&gt;Main&lt;/ApplicantType&gt;
                                       &lt;ApplicantFirstName&gt;'. $name .'&lt;/ApplicantFirstName&gt;
-                                      &lt;ApplicantMiddleName&gt;&lt;/ApplicantMiddleName&gt;
-                                      &lt;ApplicantLastName&gt;&lt;/ApplicantLastName&gt;
+                                      &lt;ApplicantMiddleName&gt;'. $m_name .'&lt;/ApplicantMiddleName&gt;
+                                      &lt;ApplicantLastName&gt;'. $s_name .'&lt;/ApplicantLastName&gt;
                                       &lt;DateOfBirth&gt;'. $dateOfBirth .'&lt;/DateOfBirth&gt;
                                       &lt;Gender&gt;'. $gender .'&lt;/Gender&gt;
                                       &lt;EmailAddress&gt;&lt;/EmailAddress&gt;
