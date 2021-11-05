@@ -190,6 +190,7 @@
                 <select class="form-control inputField" id="presentResidenceType" name="presentResidenceType" autocomplete="off">
                     <option value="OWNED">OWNED</option>
                     <option value="RENTED">RENTED</option>
+                    <option value="SHARED">SHARED</option>
                     <option value="PARENTAL">PARENTAL</option>
                 </select>
             </div>
@@ -306,6 +307,8 @@
                     <option value="GOVT./ PSU">GOVT./ PSU</option>
                     <option value="MNC/ LISTED">MNC/ LISTED</option>
                     <option value="PVT LTD">PVT LTD</option>
+                    <option value="PARTNERSHIP">PARTNERSHIP</option>
+                    <option value="PROPREITORSHIP">PROPREITORSHIP</option>
                 </select>
             </div>
 

@@ -152,12 +152,12 @@
                 </div>
 
                 <div class="col-md-6">
-                    <label class="labelField">Monthly Salary (Rs)&nbsp;<span class="required_Fields">*</span></label>
+                    <label class="labelField">Appraised Salary (Rs)&nbsp;<span class="required_Fields">*</span></label>
                     <input type="text" class="form-control inputField" id="monthly_salary" name="monthly_salary" onchange="checkLoanEligibility()" value="<?= $leadDetails->monthly_income ?>" autocomplete="off">
                 </div>
 
                 <div class="col-md-6">
-                    <label class="labelField">Obligations (Rs)&nbsp;<span class="required_Fields">*</span></label>
+                    <label class="labelField">Appraised Obligations (Rs)&nbsp;<span class="required_Fields">*</span></label>
                     <input type="number" class="form-control inputField" id="obligations" name="obligations" value="<?= round($leadDetails->obligations) ?>" autocomplete="off">
                 </div>
 
@@ -167,7 +167,7 @@
                 </div>
 
                 <div class="col-md-6">
-                    <label class="labelField">End Use&nbsp;<span class="required_Fields">*</span></label>
+                    <label class="labelField">Loan Purpose&nbsp;<span class="required_Fields">*</span></label>
                     <input type="text" class="form-control inputField" id="end_use" name="end_use" autocomplete="off" value="<?= (($leadDetails->purpose) ? $leadDetails->purpose : '-') ?>" readonly>
                 </div>
 
@@ -177,15 +177,16 @@
                 </div>
 
                 <div class="col-md-6">
-                    <label class="labelField">Scheme</label>
-                    <select class="form-control inputField" id="end_use" name="end_use" autocomplete="off" disabled>
+                    <label class="labelField">Promo Code</label>
+                    <input type="text" class="form-control inputField" id="promo_code" name="promo_code" value="-" autocomplete="off" readonly disabled>
+                    <!-- <select class="form-control inputField" id="end_use" name="end_use" autocomplete="off" disabled>
                         <option value="">SELECT</option>
                         <option value="TRAVEL">REGULAR</option>
                         <option value="MEDICAL">MONSOON HUNGAMA</option>
                         <option value="ACADEMICS">REFERRAL</option>
                         <option value="OBLIGATIONS">WINTER FEST</option>
                         <option value="OCCASION">APPROVAL</option>
-                    </select>
+                    </select> -->
                 </div>
 
                 <div class="col-md-6">

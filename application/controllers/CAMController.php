@@ -68,7 +68,8 @@
 			$months = floor(($diff - $years * 365*60*60*24) / (30*60*60*24));
 			$days = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24)/ (60*60*24));
 
-			$data['borrower_age'] = $years .' year, '. $months .' months, '. $days .' days';
+			// $data['borrower_age'] = $years .' Y, '. $months .' M, '. $days .' days';
+			$data['borrower_age'] = $years .'Y, '. $months .'M';
 
 			if($presentServiceTenure > 12) {
 				$pst = "HIGH";
