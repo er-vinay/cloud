@@ -302,6 +302,7 @@
 
                             $data2 = [
                                 'lead_id'               => $lead_id,
+                                'customer_id'           => $customer_id,
                                 'customer_name'         => $name,
                                 'customer_mobile'       => $mobile,
                                 'pancard'               => $pancard,
