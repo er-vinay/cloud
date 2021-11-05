@@ -38,8 +38,9 @@
                     $table1 = 'docs D';
                     $table2 = 'customer C';
                     $join2 = 'C.customer_id = D.customer_id';
-                    $docs = $this->Tasks->join_two_table_with_where_order_by($conditions, $fetch, $table1, $table2, $join2);
-                    $this->db->order_by('D.docs_id', 'desc');
+                    $order_by = 'D.docs_id, desc'; 
+                    $docs = $this->Tasks->join_two_table_with_where_order_by($conditions, $fetch, $table1, $table2, $join2, $order_by);
+                    // $this->db->order_by('D.docs_id', 'desc');
                     echo "<pre>"; print_r($docs->row()); exit;
                     $document = $docs->row();
                     $filename = $document->file;

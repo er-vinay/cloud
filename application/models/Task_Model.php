@@ -132,13 +132,13 @@
                 ->get();
         }
         
-        public function join_two_table_with_where_order_by($conditions = null, $data = null, $table1 = null, $table2 = null, $join2=null)
+        public function join_two_table_with_where_order_by($conditions = null, $data = null, $table1 = null, $table2 = null, $join2=null, $order_by)
         {
             return $this->db->select($data)
                 ->where($conditions)
                 ->from($table1)
                 ->join($table2, $join2, 'left')
-                ->order_by('desc')
+                ->order_by($order_by)
                 ->get();
         }
 
