@@ -145,7 +145,9 @@
 	        	if($this->form_validation->run() == FALSE) {
 	        		$this->session->set_flashdata('err', validation_errors());
 		            return redirect(base_url(), 'refresh');
-	        	}else{
+	        	}
+	        	else
+	        	{
 		        	$input_email = $_POST['email'];
 		        	$input_password = MD5($_POST['password']);
 
@@ -153,9 +155,8 @@
 		        			->where('email', $input_email)
 		        			->where('password', $input_password)
 		        			->get('users');
-        			$num_rows = $sql->num_rows();
 
-					if($num_rows === 1)
+					if($sql->num_rows() > 0)
 					{
         				$row = $sql->row_array();
 						$user_id = $row['user_id'];
@@ -167,7 +168,7 @@
 						$product_id = $row['product_id'];
 						$company_id = $row['company_id'];
 
-						if($input_email == $db_email && $input_password == $db_password)
+						if(($input_email == $db_email) && ($input_password == $db_password))
 			        	{
 			        		$role = $db_role;
 			        		$sessionData = [
