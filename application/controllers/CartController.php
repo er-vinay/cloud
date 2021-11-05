@@ -41,10 +41,9 @@
                     $order_by_key = 'D.docs_id'; 
                     $order_by_val = 'desc'; 
                     $docs = $this->Tasks->join_two_table_with_where_order_by($conditions, $fetch, $table1, $table2, $join2, $order_by_key, $order_by_val);
-                    // $this->db->order_by('D.docs_id', 'desc');
-                    echo "<pre>"; print_r($docs->row()); exit;
                     $document = $docs->row();
                     $filename = $document->file;
+                    $pwd = $document->pwd;
 
                     $url = 'https://cartbi.com/api/upload';
                     $Auth_Token = "LIVE";
@@ -69,8 +68,10 @@
                     
                     $UploadResponse = curl_exec($ch);
                     
+                    
                     curl_close($ch);
                     $response = json_decode($UploadResponse);
+                    echo "<pre>"; print_r($response); exit;
                     
                     if(!empty($response->docId))
                     {
