@@ -39,7 +39,7 @@
                     $table2 = 'customer C';
                     $join2 = 'C.customer_id = D.customer_id';
                     $order_by_key = 'D.docs_id'; 
-                    $order_by_val = 'decs'; 
+                    $order_by_val = 'desc'; 
                     $docs = $this->Tasks->join_two_table_with_where_order_by($conditions, $fetch, $table1, $table2, $join2, $order_by_key, $order_by_val);
                     // $this->db->order_by('D.docs_id', 'desc');
                     echo "<pre>"; print_r($docs->row()); exit;
