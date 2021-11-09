@@ -46,8 +46,8 @@
                     $pwd = $document->pwd;
 
                     $url = 'https://cartbi.com/api/upload';
-                    $Auth_Token = "LIVE";
-                    // $Auth_Token = "UAT";
+                    // $Auth_Token = "LIVE";
+                    $Auth_Token = "UAT";
                     if($Auth_Token == "UAT") {
                         define('api_token', 'API://IlJKyP5wUwzCvKQbb796ZSjOITkMSRN8rifQTMrNM1/NUUv8/tuaN6Lun6d1NG4S');
                     } else {
