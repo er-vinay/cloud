@@ -90,7 +90,7 @@
                             'cartJson'          => json_encode($cartJsonData),
                             'cartJsonResponse'  => $UploadResponse,
                             'status'            => $status,
-                            'ip'                => $ipaddress,
+                            'ip'                => ip,
                             'created_by'        => $_SESSION['isUserSession']['user_id'],
                         );
     
