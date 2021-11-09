@@ -71,7 +71,7 @@
                     
                     curl_close($ch);
                     $response = json_decode($UploadResponse);
-                    echo "<pre>"; print_r($response); exit;
+                    // echo "<pre>"; print_r($response); exit;
                     
                     if(!empty($response->docId))
                     {
