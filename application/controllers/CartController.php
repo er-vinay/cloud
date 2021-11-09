@@ -43,7 +43,7 @@
                     $docs = $this->Tasks->join_two_table_with_where_order_by($conditions, $fetch, $table1, $table2, $join2, $order_by_key, $order_by_val);
                     $document = $docs->row();
                     $filename = $document->file;
-                    $pwd = $document->pwd;
+                    $password = $document->pwd;
 
                     $url = 'https://cartbi.com/api/upload';
                     // $Auth_Token = "LIVE";
