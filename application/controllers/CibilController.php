@@ -613,7 +613,7 @@
                 $file = substr($newFile, 0, strpos($newFile, "</html>"));
                 $file .= "</html>";
                 $temp = preg_replace('/&(?!(quot|amp|pos|lt|gt);)/', '&amp;', $file);
-                // echo "<pre>"; print_r($temp); exit;
+                echo "<pre>"; print_r($temp); exit;
                 $result = mb_convert_encoding($temp, 'UTF-16', 'UTF-8');
 
                 libxml_use_internal_errors(true);
