@@ -481,7 +481,7 @@
             $overDueAmount = 0;
             $zeroBalance = 0;
             $i = 0;
-            
+
             foreach($overdue->children() as $key =>$child) {
                 if($i == 11){
                     $overDueAmount = $child;
@@ -575,12 +575,14 @@
                 $zeroBalance = 0;
                 $i = 0;
                 foreach($overdue->children() as $key =>$child) {
+                echo $i. "child node: " . $child->getName(). " = ". $key ." val : " . $child . "</br>";
                     if($i == 11){
                         $overDueAmount = $child;
                     }
                     $i++;
                 }
                 foreach($summary->children() as $key =>$child) {
+                echo $i. "child node: " . $child->getName(). " = ". $key ." val : " . $child . "</br>";
                     if($i == 0){
                     } else if($i == 11){
                         $totalAccount = $child;
