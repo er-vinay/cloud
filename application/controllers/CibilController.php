@@ -472,51 +472,51 @@
             // ];
 
 
-                $summary = $xml->body->table->tr[29]->td->table->tr[3]; //->td[1]
-                $overdue = $xml->body->table->tr[29]->td->table->tr[4]; //->td[1]
-                $zerobalanceAcccount = $xml->body->table->tr[29]->td->table->tr[5]; //->td[1]
-                $totalAccount = 0;
-                $totalBalance = 0;
-                $overDueAccount = 0;
-                $overDueAmount = 0;
-                $zeroBalance = 0;
-                $i = 0;
-                foreach($overdue->children() as $key =>$child) {
-                    if($i == 1){
-                    // echo "child node: " . $child->getName(). " = ". $key ." val : " . $child . "</br>";
-                        $overDueAmount = $child;
-                    }
-                    $i++;
+            $summary = $xml->body->table->tr[29]->td->table->tr[3]; //->td[1]
+            $overdue = $xml->body->table->tr[29]->td->table->tr[4]; //->td[1]
+            $zerobalanceAcccount = $xml->body->table->tr[29]->td->table->tr[5]; //->td[1]
+            $totalAccount = 0;
+            $totalBalance = 0;
+            $overDueAccount = 0;
+            $overDueAmount = 0;
+            $zeroBalance = 0;
+            $i = 0;
+            foreach($overdue->children() as $key =>$child) {
+                if($i == 1){
+                // echo "child node: " . $child->getName(). " = ". $key ." val : " . $child . "</br>";
+                    $overDueAmount = $child;
                 }
-                foreach($summary->children() as $key =>$child) {
-                    if($i == 0){
-                    } else if($i == 1){
-                        $totalAccount = $child;
-                    } else if($i == 2){
-                        $totalBalance = $child;
-                    } else if($i == 3){
-                        $overDueAccount = $child;
-                    }
-                    $i++;
+                $i++;
+            }
+            foreach($summary->children() as $key =>$child) {
+                if($i == 0){
+                } else if($i == 1){
+                    $totalAccount = $child;
+                } else if($i == 2){
+                    $totalBalance = $child;
+                } else if($i == 3){
+                    $overDueAccount = $child;
                 }
-                foreach($zerobalanceAcccount->children() as $key =>$child) {
-                    // echo "child node: " . $child->getName(). " = ". $key ." val : " . $child . "</br>";
-                    if($i == 1){
-                        $zeroBalance = $child;
-                    } 
-                    $i++;
-                }
-                // echo '<pre>'; print_r($summary->children()); exit;
-                
-                $data = [
-                    'memberCode'     => $xml->body->table->tr[1]->td->table->tr[1]->td[0]->table->tr[1]->td[1],
-                    'cibilScore'     => ($cibilScore) ? $cibilScore : 0,
-                    'totalAccount'   => $totalAccount,
-                    'totalBalance'   => $totalBalance,
-                    'overDueAccount' => $overDueAccount,
-                    'overDueAmount'  => $overDueAmount,
-                    'zeroBalance'    => $zeroBalance
-                ];
+                $i++;
+            }
+            foreach($zerobalanceAcccount->children() as $key =>$child) {
+                // echo "child node: " . $child->getName(). " = ". $key ." val : " . $child . "</br>";
+                if($i == 1){
+                    $zeroBalance = $child;
+                } 
+                $i++;
+            }
+            // echo '<pre>'; print_r($summary->children()); exit;
+            
+            $data = [
+                'memberCode'     => $xml->body->table->tr[1]->td->table->tr[1]->td[0]->table->tr[1]->td[1],
+                'cibilScore'     => ($cibilScore) ? $cibilScore : 0,
+                'totalAccount'   => $totalAccount,
+                'totalBalance'   => $totalBalance,
+                'overDueAccount' => $overDueAccount,
+                'overDueAmount'  => $overDueAmount,
+                'zeroBalance'    => $zeroBalance
+            ];
 
             $data2 = [
                 'api3_request'          => $xml3,
@@ -600,7 +600,13 @@
                     } 
                     $i++;
                 }
-                // echo '<pre>'; print_r($summary->children()); exit;
+                echo 'totalAccount : <pre>'. $totalAccount. "<br>"; 
+                echo 'totalBalance : <pre>'. $totalBalance. "<br>"; 
+                echo 'overDueAccount : <pre>'. $overDueAccount. "<br>"; 
+                echo 'overDueAmount : <pre>'. $overDueAmount. "<br>"; 
+                echo 'zeroBalance : <pre>'. $zeroBalance. "<br>"; 
+
+                print_r($summary->children()); exit;
                 
                 $data = [
                     'memberCode'     => $xml->body->table->tr[1]->td->table->tr[1]->td[0]->table->tr[1]->td[1],
