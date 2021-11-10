@@ -594,9 +594,17 @@
                     $i++;
                 }
                 foreach($zerobalanceAcccount->children() as $key =>$child) {
-                    echo "child node: " . $child->getName(). " = ". $key ." val : " . $child[1] . "</br>";
-                    if($i == 1){
-                        $zeroBalance = $child;
+                    if($i == 0){
+                    echo $i. "child node: " . $child->getName(). " = ". $key ." val : " . $child[1] . "</br>";
+                    }else if($i == 1){
+                    echo $i. "child node: " . $child->getName(). " = ". $key ." val : " . $child[1] . "</br>";
+                    }else if($i == 2){
+                    echo $i. "child node: " . $child->getName(). " = ". $key ." val : " . $child[1] . "</br>";
+                        // $zeroBalance = $child;
+                    }else if($i == 3){
+                    echo $i. "child node: " . $child->getName(). " = ". $key ." val : " . $child[1] . "</br>";
+                    }else if($i == 4){
+                    echo $i. "child node: " . $child->getName(). " = ". $key ." val : " . $child[1] . "</br>";
                     } 
                     $i++;
                 }
