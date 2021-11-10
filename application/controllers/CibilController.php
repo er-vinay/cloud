@@ -39,7 +39,7 @@
                         $city       = $leadDetails->city;
                         $address    = $leadDetails->city;
                         $pincode    = $leadDetails->pincode;
-                        $loan_amount    = ($leadDetails->loan_amount) ? $leadDetails->loan_amount : 5000;
+                        $loan_amount    = ($leadDetails->loan_amount) ? round($leadDetails->loan_amount) : 5000;
     
                         if(empty($name) || empty($mobile) || empty($pancard) || empty($gender) || empty($dob) || empty($state_id) || empty($city) || empty($pincode))
                         {
