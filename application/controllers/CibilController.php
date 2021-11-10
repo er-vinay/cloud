@@ -608,26 +608,26 @@
             
             if ($filename) 
             {
-              $file1 = file_get_contents('readdata.xml', $filename);
-              $newFile = strstr($filename, "<?xml");
-              $file = substr($newFile, 0, strpos($newFile, "</html>"));
-              $file .= "</html>";
-              $temp = preg_replace('/&(?!(quot|amp|pos|lt|gt);)/', '&amp;', $file);
+                $file1 = file_get_contents('readdata.xml', $filename);
+                $newFile = strstr($filename, "<?xml");
+                $file = substr($newFile, 0, strpos($newFile, "</html>"));
+                $file .= "</html>";
+                $temp = preg_replace('/&(?!(quot|amp|pos|lt|gt);)/', '&amp;', $file);
                 $result = mb_convert_encoding($temp, 'UTF-16', 'UTF-8');
-                
+
                 libxml_use_internal_errors(true);
-                $xml=simplexml_load_string($result); //or simplexml_load_file
-                
+                $xml = simplexml_load_string($result); //or simplexml_load_file
+
                 foreach( libxml_get_errors() as $error ) {
                     print_r($error);
                 }
                 
-              if (false === $result)
-              {
-                  throw new Exception('Input string could not be converted.');
-              }
-              $xml = simplexml_load_string( $result) or die("xml not loading");
-              echo "<pre>"; var_dump($xml); exit;
+                if (false === $result)
+                {
+                    throw new Exception('Input string could not be converted.');
+                }
+                $xml = simplexml_load_string( $result) or die("xml not loading");
+                echo "<pre>"; print_r($result); exit;
                 
                 // $data = [
                 //     'memberCode'     => $xml->body->table->tr[1]->td->table->tr[1]->td[0]->table->tr[1]->td[1],
