@@ -594,7 +594,7 @@
                     $i++;
                 }
                 foreach($zerobalanceAcccount->children() as $key =>$child) {
-                    // echo "child node: " . $child->getName(). " = ". $key ." val : " . $child . "</br>";
+                    echo "child node: " . $child->getName(). " = ". $key ." val : " . $child . "</br>";
                     if($i == 1){
                         $zeroBalance = $child;
                     } 
