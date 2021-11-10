@@ -629,7 +629,7 @@
                     throw new Exception('Input string could not be converted.');
                 }
                 $xml = simplexml_load_string( $result) or die("xml not loading");
-                $overdue = $xml->body->table->tr[29]->td->table->tr[4]->td[1];
+                $overdue = $xml->body->table->tr[29]->td->table->tr[4]; //->td[1]
 
                 
                 foreach($overdue->children() as $child) {
