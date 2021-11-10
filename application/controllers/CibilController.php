@@ -632,7 +632,7 @@
                 $overdue = $xml->body->table->tr[29]->td->table->tr[4]; //->td[1]
 
                 
-                echo '<pre>'; print_r($$overdue->children()); exit;
+                echo '<pre>'; print_r($overdue->children()); exit;
                 foreach($overdue->children() as $child) {
                     echo "child node: " . $child->getName(). " = " . $child . "</br>";
                 }
