@@ -575,16 +575,15 @@
                 $zeroBalance = 0;
                 $i = 0;
                 foreach($overdue->children() as $key =>$child) {
-                echo $i. "child node: " . $child->getName(). " = ". $key ." val : " . $child . "</br>";
                     if($i == 1){
+                echo $i. "overdue node: " . $child->getName(). " = ". $key ." val : " . $child . "</br>";
                         $overDueAmount = $child;
                     }
                     $i++;
                 }
                 foreach($summary->children() as $key =>$child) {
-                echo $i. "child node: " . $child->getName(). " = ". $key ." val : " . $child . "</br>";
-                    if($i == 0){
-                    } else if($i == 6){
+                echo $i. "summary node: " . $child->getName(). " = ". $key ." val : " . $child . "</br>";
+                    if($i == 6){
                         $totalAccount = $child;
                     } else if($i == 7){
                         $totalBalance = $child;
