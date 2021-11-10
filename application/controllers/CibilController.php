@@ -460,27 +460,75 @@
             $xml = simplexml_load_string( $result) or die("xml not loading");
             // echo "<pre>"; print_r($xml); exit;
             $cibilScore = $xml->body->table->tr[8]->td->table->tr->td[1];
-            $data = [   
-                'cibil_file'            => $htmlResult,
-                'memberCode'            => $xml->body->table->tr[1]->td->table->tr[1]->td[0]->table->tr[1]->td[1],
-                'cibilScore'            => ($cibilScore) ? $cibilScore : 0,
-                'totalAccount'          => strval($xml->body->table->tr[29]->td->table->tr[3]->td[1]->span[0]),
-                'totalBalance'          => strval($xml->body->table->tr[29]->td->table->tr[3]->td[2]->span[0]),
-                'overDueAccount'        => strval($xml->body->table->tr[29]->td->table->tr[4]->td[1]->span[0]),
-                'overDueAmount'         => strval($xml->body->table->tr[29]->td->table->tr[4]->td[3]->span[0]),
-                'zeroBalance'           => strval($xml->body->table->tr[29]->td->table->tr[5]->td[1]->span[0])
-            ];
+            // $data = [   
+            //     'cibil_file'            => $htmlResult,
+            //     'memberCode'            => $xml->body->table->tr[1]->td->table->tr[1]->td[0]->table->tr[1]->td[1],
+            //     'cibilScore'            => ($cibilScore) ? $cibilScore : 0,
+            //     'totalAccount'          => strval($xml->body->table->tr[29]->td->table->tr[3]->td[1]->span[0]),
+            //     'totalBalance'          => strval($xml->body->table->tr[29]->td->table->tr[3]->td[2]->span[0]),
+            //     'overDueAccount'        => strval($xml->body->table->tr[29]->td->table->tr[4]->td[1]->span[0]),
+            //     'overDueAmount'         => strval($xml->body->table->tr[29]->td->table->tr[4]->td[3]->span[0]),
+            //     'zeroBalance'           => strval($xml->body->table->tr[29]->td->table->tr[5]->td[1]->span[0])
+            // ];
+
+
+                $summary = $xml->body->table->tr[29]->td->table->tr[3]; //->td[1]
+                $overdue = $xml->body->table->tr[29]->td->table->tr[4]; //->td[1]
+                $zerobalanceAcccount = $xml->body->table->tr[29]->td->table->tr[5]; //->td[1]
+                $totalAccount = 0;
+                $totalBalance = 0;
+                $overDueAccount = 0;
+                $overDueAmount = 0;
+                $zeroBalance = 0;
+                $i = 0;
+                foreach($overdue->children() as $key =>$child) {
+                    if($i == 1){
+                    // echo "child node: " . $child->getName(). " = ". $key ." val : " . $child . "</br>";
+                        $overDueAmount = $child;
+                    }
+                    $i++;
+                }
+                foreach($summary->children() as $key =>$child) {
+                    if($i == 0){
+                    } else if($i == 1){
+                        $totalAccount = $child;
+                    } else if($i == 2){
+                        $totalBalance = $child;
+                    } else if($i == 3){
+                        $overDueAccount = $child;
+                    }
+                    $i++;
+                }
+                foreach($zerobalanceAcccount->children() as $key =>$child) {
+                    // echo "child node: " . $child->getName(). " = ". $key ." val : " . $child . "</br>";
+                    if($i == 1){
+                        $zeroBalance = $child;
+                    } 
+                    $i++;
+                }
+                // echo '<pre>'; print_r($summary->children()); exit;
+                
+                $data = [
+                    'memberCode'     => $xml->body->table->tr[1]->td->table->tr[1]->td[0]->table->tr[1]->td[1],
+                    'cibilScore'     => ($cibilScore) ? $cibilScore : 0,
+                    'totalAccount'   => $totalAccount,
+                    'totalBalance'   => $totalBalance,
+                    'overDueAccount' => $overDueAccount,
+                    'overDueAmount'  => $overDueAmount,
+                    'zeroBalance'    => $zeroBalance
+                ];
+
             $data2 = [
                 'api3_request'          => $xml3,
                 'api3_response'         => $data3,
                 'cibil_file'            => $htmlResult,
                 'memberCode'            => $xml->body->table->tr[1]->td->table->tr[1]->td[0]->table->tr[1]->td[1],
-                'cibilScore'            => $cibilScore,
-                'totalAccount'          => strval($xml->body->table->tr[29]->td->table->tr[3]->td[1]->span[0]),
-                'totalBalance'          => strval($xml->body->table->tr[29]->td->table->tr[3]->td[2]->span[0]),
-                'overDueAccount'        => strval($xml->body->table->tr[29]->td->table->tr[4]->td[1]->span[0]),
-                'overDueAmount'         => strval($xml->body->table->tr[29]->td->table->tr[4]->td[3]->span[0]),
-                'zeroBalance'           => strval($xml->body->table->tr[29]->td->table->tr[5]->td[1]->span[0])
+                'cibilScore'            => ($cibilScore) ? $cibilScore : 0,
+                'totalAccount'          => $totalAccount,
+                'totalBalance'          => $totalBalance,
+                'overDueAccount'        => $overDueAccount,
+                'overDueAmount'         => $overDueAmount,
+                'zeroBalance'           => $zeroBalance
             ];
             $this->db->where('lead_id', $lead_id)->update('leads', ['check_cibil_status'=> 1, 'cibil'=> $cibilScore]); 
             $this->db->where('lead_id', $lead_id)->update('tbl_cibil', $data); 
@@ -488,6 +536,88 @@
             $json['customer_id'] = $customer_id;
             $json['msg'] = 'Cibil generated successfully.';
             echo json_encode($json);
+        }
+        
+        public function viewCibilScore($cibil_id)
+        {
+            $data = $this->getCibilFile($cibil_id);
+            $filename = $data['cibil_file'];
+            
+            if ($filename) 
+            {
+                $file1 = file_get_contents('readdata.xml', $filename);
+                $newFile = strstr($filename, "<?xml");
+                $file = substr($newFile, 0, strpos($newFile, "</html>"));
+                $file .= "</html>";
+                $temp = preg_replace('/&(?!(quot|amp|pos|lt|gt);)/', '&amp;', $file);
+                // echo "<pre>"; print_r($temp); exit;
+                $result = mb_convert_encoding($temp, 'UTF-16', 'UTF-8');
+
+                libxml_use_internal_errors(true);
+                $xml = simplexml_load_string($result); //or simplexml_load_file
+
+                // echo "<pre>"; print_r($result); exit;
+                foreach( libxml_get_errors() as $error ) {
+                    print_r($error);
+                }
+                
+                if (false === $result)
+                {
+                    throw new Exception('Input string could not be converted.');
+                }
+                $xml = simplexml_load_string( $result) or die("xml not loading");
+                $summary = $xml->body->table->tr[29]->td->table->tr[3]; //->td[1]
+                $overdue = $xml->body->table->tr[29]->td->table->tr[4]; //->td[1]
+                $zerobalanceAcccount = $xml->body->table->tr[29]->td->table->tr[5]; //->td[1]
+                $totalAccount = 0;
+                $totalBalance = 0;
+                $overDueAccount = 0;
+                $overDueAmount = 0;
+                $zeroBalance = 0;
+                $i = 0;
+                foreach($overdue->children() as $key =>$child) {
+                    if($i == 1){
+                    // echo "child node: " . $child->getName(). " = ". $key ." val : " . $child . "</br>";
+                        $overDueAmount = $child;
+                    }
+                    $i++;
+                }
+                foreach($summary->children() as $key =>$child) {
+                    if($i == 0){
+                    } else if($i == 1){
+                        $totalAccount = $child;
+                    } else if($i == 2){
+                        $totalBalance = $child;
+                    } else if($i == 3){
+                        $overDueAccount = $child;
+                    }
+                    $i++;
+                }
+                foreach($zerobalanceAcccount->children() as $key =>$child) {
+                    // echo "child node: " . $child->getName(). " = ". $key ." val : " . $child . "</br>";
+                    if($i == 1){
+                        $zeroBalance = $child;
+                    } 
+                    $i++;
+                }
+                // echo '<pre>'; print_r($summary->children()); exit;
+                
+                $data = [
+                    'memberCode'     => $xml->body->table->tr[1]->td->table->tr[1]->td[0]->table->tr[1]->td[1],
+                    'cibilScore'     => $xml->body->table->tr[8]->td->table->tr->td[1],
+                    'totalAccount'   => $totalAccount,
+                    'totalBalance'   => $totalBalance,
+                    'overDueAccount' => $overDueAccount,
+                    'overDueAmount'  => $overDueAmount,
+                    'zeroBalance'    => $zeroBalance
+                ];
+                // // $this->db->where('cibil_id', $cibil_id)->update('tbl_cibil');
+                
+                
+              // echo "<pre>";print_r($xml->body->table->tr[1]->td->table->tr[1]->td[0]->table); exit;
+            } else {
+                exit('Failed to open readdata.xml.');
+            }
         }
         
         public function ViewCivilStatement()
@@ -599,72 +729,6 @@
           $mpdf->WriteHTML($data);
           $mpdf->defaultfooterline = 1;
           $mpdf->Output();
-        }
-        
-        public function viewCibilScore($cibil_id)
-        {
-            $data = $this->getCibilFile($cibil_id);
-            $filename = $data['cibil_file'];
-            
-            if ($filename) 
-            {
-                $file1 = file_get_contents('readdata.xml', $filename);
-                $newFile = strstr($filename, "<?xml");
-                $file = substr($newFile, 0, strpos($newFile, "</html>"));
-                $file .= "</html>";
-                $temp = preg_replace('/&(?!(quot|amp|pos|lt|gt);)/', '&amp;', $file);
-                // echo "<pre>"; print_r($temp); exit;
-                $result = mb_convert_encoding($temp, 'UTF-16', 'UTF-8');
-
-                libxml_use_internal_errors(true);
-                $xml = simplexml_load_string($result); //or simplexml_load_file
-
-                // echo "<pre>"; print_r($result); exit;
-                foreach( libxml_get_errors() as $error ) {
-                    print_r($error);
-                }
-                
-                if (false === $result)
-                {
-                    throw new Exception('Input string could not be converted.');
-                }
-                $xml = simplexml_load_string( $result) or die("xml not loading");
-                $overdue = $xml->body->table->tr[29]->td->table->tr[4]; //->td[1]
-                $summary = $xml->body->table->tr[29]->td->table->tr[3]; //->td[1]
-                $overdueAmount = 0;
-                $i = 0;
-                foreach($overdue->children() as $key =>$child) {
-                    if($i == 1){
-                    // echo "child node: " . $child->getName(). " = ". $key ." val : " . $child . "</br>";
-                        $overdueAmount = $child;
-                    }
-                    $i++;
-                }
-                foreach($summary->children() as $key =>$child) {
-                    echo "child node: " . $child->getName(). " = ". $key ." val : " . $child . "</br>";
-                    // if($i == 1){
-                    //     $overdueAmount = $child;
-                    // }
-                    $i++;
-                }
-                echo '<pre>'; print_r($summary->children()); exit;
-                
-                // $data = [
-                //     'memberCode'     => $xml->body->table->tr[1]->td->table->tr[1]->td[0]->table->tr[1]->td[1],
-                //     'cibilScore'     => $xml->body->table->tr[8]->td->table->tr->td[1],
-                //     'totalAccount'     => $xml->body->table->tr[29]->td->table->tr[3]->td[1]->span[0],
-                //     'totalBalance'     => $xml->body->table->tr[29]->td->table->tr[3]->td[2]->span[0],
-                //     'overDueAccount'   => $xml->body->table->tr[29]->td->table->tr[4]->td[1]->span[0],
-                //     'overDueAmount'  => $xml->body->table->tr[29]->td->table->tr[4]->td[3]->span[0],
-                //     'zeroBalance'    => $xml->body->table->tr[29]->td->table->tr[5]->td[1]->span[0]
-                // ];
-                // // $this->db->where('cibil_id', $cibil_id)->update('tbl_cibil');
-                
-                
-              // echo "<pre>";print_r($xml->body->table->tr[1]->td->table->tr[1]->td[0]->table); exit;
-            } else {
-                exit('Failed to open readdata.xml.');
-            }
         }
         
         
