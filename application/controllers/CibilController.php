@@ -619,7 +619,7 @@
                 libxml_use_internal_errors(true);
                 $xml = simplexml_load_string($result); //or simplexml_load_file
 
-                echo "<pre>"; print_r($xml); exit;
+                echo "<pre>"; print_r($result); exit;
                 foreach( libxml_get_errors() as $error ) {
                     print_r($error);
                 }
