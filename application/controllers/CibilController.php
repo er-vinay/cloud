@@ -630,16 +630,24 @@
                 }
                 $xml = simplexml_load_string( $result) or die("xml not loading");
                 $overdue = $xml->body->table->tr[29]->td->table->tr[4]; //->td[1]
-
+                $summary = $xml->body->table->tr[29]->td->table->tr[3]; //->td[1]
+                $overdueAmount = 0;
                 $i = 0;
                 foreach($overdue->children() as $key =>$child) {
                     if($i == 1){
-
-                    echo "child node: " . $child->getName(). " = ". $key ." val : " . $child . "</br>";
+                    // echo "child node: " . $child->getName(). " = ". $key ." val : " . $child . "</br>";
+                        $overdueAmount = $child;
                     }
                     $i++;
                 }
-                echo '<pre>'; print_r($overdue->children()); exit;
+                foreach($summary->children() as $key =>$child) {
+                    echo "child node: " . $child->getName(). " = ". $key ." val : " . $child . "</br>";
+                    // if($i == 1){
+                    //     $overdueAmount = $child;
+                    // }
+                    $i++;
+                }
+                echo '<pre>'; print_r($summary->children()); exit;
                 
                 // $data = [
                 //     'memberCode'     => $xml->body->table->tr[1]->td->table->tr[1]->td[0]->table->tr[1]->td[1],
