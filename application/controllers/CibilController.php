@@ -633,7 +633,7 @@
 
                 
                 foreach($overdue->children() as $key =>$child) {
-                    echo "child node: " . $child->getName(). " = ". $key " val : " . $child . "</br>";
+                    echo "child node: " . $child->getName(). " = ". $key ." val : " . $child . "</br>";
                 }
                 echo '<pre>'; print_r($overdue->children()); exit;
                 
