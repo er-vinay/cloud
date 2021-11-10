@@ -619,7 +619,7 @@
                 libxml_use_internal_errors(true);
                 $xml = simplexml_load_string($result); //or simplexml_load_file
 
-                echo "<pre>"; print_r($result); exit;
+                // echo "<pre>"; print_r($result); exit;
                 foreach( libxml_get_errors() as $error ) {
                     print_r($error);
                 }
@@ -632,10 +632,10 @@
                 $overdue = $xml->body->table->tr[29]->td->table->tr[4]; //->td[1]
 
                 
-                echo '<pre>'; print_r($overdue->children()); exit;
-                foreach($overdue->children() as $child) {
-                    echo "child node: " . $child->getName(). " = " . $child . "</br>";
+                foreach($overdue->children() as $key =>$child) {
+                    echo "child node: " . $child->getName(). " = ". $key " val : " . $child . "</br>";
                 }
+                echo '<pre>'; print_r($overdue->children()); exit;
                 
                 // $data = [
                 //     'memberCode'     => $xml->body->table->tr[1]->td->table->tr[1]->td[0]->table->tr[1]->td[1],
