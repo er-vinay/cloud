@@ -628,7 +628,7 @@
                     throw new Exception('Input string could not be converted.');
                 }
                 $xml = simplexml_load_string( $result) or die("xml not loading");
-                echo $xml->body->table->tr[29]->td->table->tr[4]->td[1]->span[0]; exit;
+                echo $xml->body->table->tr[29]->td->table->tr[4]->td[1]; exit;
                 echo "<pre>"; print_r($xml); exit;
                 
                 // $data = [
