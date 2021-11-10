@@ -631,9 +631,13 @@
                 $xml = simplexml_load_string( $result) or die("xml not loading");
                 $overdue = $xml->body->table->tr[29]->td->table->tr[4]; //->td[1]
 
-                
+                $i = 0;
                 foreach($overdue->children() as $key =>$child) {
+                    if($i == 1){
+
                     echo "child node: " . $child->getName(). " = ". $key ." val : " . $child . "</br>";
+                    }
+                    $i++;
                 }
                 echo '<pre>'; print_r($overdue->children()); exit;
                 
