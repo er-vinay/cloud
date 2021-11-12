@@ -100,7 +100,7 @@
                         
                         ///////////////////////////// download cart data as csv ///////////////////////////////////////
                         
-                        $docId = "DOC00231319";
+                        // $docId = "DOC00231319";
                         $urlDownload = 'https://cartbi.com/api/downloadFile';
                         $header2 = [
                             'Content-Type: text/plain', 
