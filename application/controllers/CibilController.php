@@ -471,7 +471,6 @@
             //     'zeroBalance'           => strval($xml->body->table->tr[29]->td->table->tr[5]->td[1]->span[0])
             // ];
 
-
             $summary = $xml->body->table->tr[29]->td->table->tr[3]; //->td[1]
             $overdue = $xml->body->table->tr[29]->td->table->tr[4]; //->td[1]
             $zerobalanceAcccount = $xml->body->table->tr[29]->td->table->tr[5]; //->td[1]
