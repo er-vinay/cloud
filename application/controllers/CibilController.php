@@ -484,7 +484,7 @@
 
             foreach($summary->children() as $key =>$child) {
                 if($i == 6){
-                    $totalAccount = $child
+                    $totalAccount = $child;
                 } else if($i == 7){
                     $totalBalance = $child;
                 } else if($i == 8){
