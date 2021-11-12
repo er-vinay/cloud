@@ -495,7 +495,7 @@
                 }
                 $i++;
             }
-            
+
             foreach($overdue->children() as $key =>$child) {
                 if($i == 1){
             // echo $i. "overdue node: " . $child->getName(). " = ". $key ." val : " . $child . "</br>";
@@ -587,14 +587,14 @@
                 }
                 foreach($summary->children() as $key =>$child) {
                     if($i == 6){
-                        $totalAccount = $child;
-                echo $i. "totalAccount node: " . $child->getName(). " = ". $key ." val : " . $totalAccount . "</br>";
+                        echo $totalAccount = $child;
+                // echo $i. "totalAccount node: " . $child->getName(). " = ". $key ." val : " . $totalAccount . "</br>";
                     } else if($i == 7){
-                        $totalBalance = $child;
-                echo $i. "totalBalance node: " . $child->getName(). " = ". $key ." val : " . $totalBalance . "</br>";
+                        echo $totalBalance = $child;
+                // echo $i. "totalBalance node: " . $child->getName(). " = ". $key ." val : " . $totalBalance . "</br>";
                     } else if($i == 8){
-                        $overDueAccount = $child;
-                echo $i. "overDueAccount node: " . $child->getName(). " = ". $key ." val : " . $overDueAccount . "</br>";
+                        echo $overDueAccount = $child;
+                // echo $i. "overDueAccount node: " . $child->getName(). " = ". $key ." val : " . $overDueAccount . "</br>";
                     }
                     $i++;
                 }
