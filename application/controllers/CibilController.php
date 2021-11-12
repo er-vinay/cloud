@@ -484,14 +484,11 @@
 
             foreach($summary->children() as $key =>$child) {
                 if($i == 6){
-                    $totalAccount = $child;
-            echo $i. "overdue node: " . $child->getName(). " = ". $key ." val : " . $child . "</br>";
+                    $totalAccount = $child
                 } else if($i == 7){
                     $totalBalance = $child;
-            echo $i. "totalBalance node: " . $child->getName(). " = ". $key ." val : " . $child . "</br>";
                 } else if($i == 8){
                     $overDueAccount = $child;
-            echo $i. "overDueAccount node: " . $child->getName(). " = ". $key ." val : " . $child . "</br>";
                 }
                 $i++;
             }
