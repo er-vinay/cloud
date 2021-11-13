@@ -55,7 +55,8 @@
                     }
                     
                     // $cartJsonData = [ 'file' => new CURLFile (FCPATH.'public/BankAnalysis/'.$filename, '', $filename)];
-                    $cartJsonData = [ 'file' => new CURLFile (FCPATH .'upload/'. $filename, '', $filename)];
+                    $filePath = FCPATH .'upload/'. $filename;
+                    $cartJsonData = [ 'file' => new CURLFile ($filePath, '', $filename)];
                     $headers = [
                         'Content-Type: multipart/form-data', 
                         'auth-token: '. api_token
@@ -77,10 +78,38 @@
                     {
                         $docId = $response->docId;
                         $status = $response->status;
+                        $message = $response->message;
                         
                         // if($status == 'Submitted'){
                         //     $status = 'In Process';
                         // }
+
+
+                        // $docId = "DOC00231319";
+                        $urlCart_callback = 'https://cartbi.com/api/cart_callback';
+                        $header3 = [
+                            'Content-Type: text/plain', 
+                            'MediaType: APPLICATION_FORM_URLENCODED',
+                            'MediaType: TEXT_PLAIN'
+                            'auth-token: '. api_token
+                        ];
+                        $dataCalback = [
+                            'docId'         => $docId, 
+                            'requestId'     => null, 
+                            'status'        => $status, 
+                            'reportFileName'=> $filename, 
+                            'endTime'       => '', 
+                            'message'       => $message, 
+                            'fileNo'        => ''
+                        ];
+                        
+                        $ch2 = curl_init($urlCart_callback);
+                        curl_setopt($ch2, CURLOPT_HTTPHEADER, $header3);
+                        curl_setopt($ch2, CURLOPT_RETURNTRANSFER, true);
+                        curl_setopt($ch2, CURLOPT_POSTFIELDS, $docId);
+                        
+                        $downloadCartData = curl_exec($ch2);
+                        curl_close($ch2);
                         
                         $data = array (
                             'lead_id'           => $lead_id,
@@ -119,7 +148,7 @@
                     } else {
                         $json['err'] = "Failed to Upload Docs.";
                     }
-                    echo json_encode($json); 
+                    echo json_encode($json);
                 }
             }
         }
